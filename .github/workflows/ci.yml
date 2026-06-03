@@ -42,7 +42,8 @@ jobs:
 
       - name: Populate docs folder
         run: |
-          rm -rf docs
+          # Don't override existing files
+          # rm -rf docs
           mkdir docs
 
           # Copy all wiki pages
@@ -108,6 +109,21 @@ jobs:
       
               md_file.write_text("\n".join(out) + "\n", encoding="utf-8")
       
+          PY
+
+      - name: Convert GitHub line breaks
+        run: |
+          python << 'PY'
+          from pathlib import Path
+          import re
+
+          for md_file in Path("docs").rglob("*.md"):
+              text = md_file.read_text(encoding="utf-8")
+
+              # Replace a backslash at end-of-line with <br>
+              text = re.sub(r'\\\r?\n', '<br>\n', text)
+
+              md_file.write_text(text, encoding="utf-8")
           PY
 
       - run: mkdocs gh-deploy --force
