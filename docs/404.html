@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>404 - Kingdom Not Found | KingdomsX</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=UnifrakturCook:wght@700&display=swap');
+
+        :root {
+            --gold: #d4af37;
+            --dark: #0a0a0a;
+            --stone: #2c2c2c;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            overflow: hidden;
+            background: #0a0a0a;
+            color: #ddd;
+            font-family: 'Cinzel', serif;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+        }
+
+        /* Animated Background */
+        #background {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: 
+                linear-gradient(rgba(10, 10, 10, 0.85), rgba(10, 10, 10, 0.9)),
+                url('https://images.unsplash.com/photo-1616594039960-4f0a5a7c4c3e?q=80&w=2070') center/cover;
+            filter: contrast(1.1) brightness(0.7);
+            z-index: -2;
+        }
+
+        .fog {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle at var(--mouse-x, 50%) var(--mouse-y, 50%), 
+                        rgba(212, 175, 55, 0.08) 0%, 
+                        transparent 60%);
+            z-index: -1;
+            transition: all 0.1s ease;
+            pointer-events: none;
+        }
+
+        .particles {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            overflow: hidden;
+        }
+
+        .particle {
+            position: absolute;
+            background: var(--gold);
+            border-radius: 50%;
+            opacity: 0.6;
+            animation: floatParticle 25s linear infinite;
+        }
+
+        @keyframes floatParticle {
+            0% { transform: translateY(100vh) scale(0.5); }
+            100% { transform: translateY(-100vh) scale(1.2); }
+        }
+
+        .content {
+            text-align: center;
+            z-index: 10;
+            padding: 2rem;
+            max-width: 800px;
+        }
+
+        .kingdom-logo {
+            font-family: 'UnifrakturCook', cursive;
+            font-size: 5.5rem;
+            color: var(--gold);
+            text-shadow: 
+                0 0 20px rgba(212, 175, 55, 0.8),
+                0 0 40px rgba(212, 175, 55, 0.4);
+            margin-bottom: 1rem;
+            letter-spacing: 4px;
+        }
+
+        .error-code {
+            font-size: 9rem;
+            font-weight: 700;
+            color: #fff;
+            text-shadow: 
+                0 0 30px var(--gold),
+                4px 4px 0 #000,
+                -4px -4px 0 #000;
+            line-height: 0.8;
+            margin-bottom: 1rem;
+        }
+
+        .subtitle {
+            font-size: 1.8rem;
+            color: #aaa;
+            margin-bottom: 2rem;
+            letter-spacing: 3px;
+        }
+
+        .message {
+            font-size: 1.4rem;
+            max-width: 600px;
+            margin: 0 auto 3rem;
+            line-height: 1.6;
+            color: #ccc;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 14px 40px;
+            background: transparent;
+            color: var(--gold);
+            border: 2px solid var(--gold);
+            font-size: 1.1rem;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            border-radius: 4px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .btn:hover {
+            background: var(--gold);
+            color: #000;
+            transform: scale(1.05);
+            box-shadow: 0 0 30px rgba(212, 175, 55, 0.6);
+        }
+
+        .footer {
+            position: absolute;
+            bottom: 30px;
+            font-size: 0.9rem;
+            opacity: 0.6;
+        }
+
+        /* Castle silhouette overlay */
+        .castle {
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100%;
+            max-width: 900px;
+            height: 280px;
+            background: linear-gradient(transparent, #111);
+            z-index: 2;
+            opacity: 0.7;
+        }
+    </style>
+</head>
+<body>
+    <!-- Background -->
+    <div id="background"></div>
+    <div class="fog" id="fog"></div>
+    <div class="particles" id="particles"></div>
+
+    <!-- Castle Silhouette -->
+    <div class="castle"></div>
+
+    <div class="content">
+        <div class="kingdom-logo">KINGDOMSX</div>
+        <div class="error-code">404</div>
+        <div class="subtitle">THE REALM WAS LOST</div>
+        <p class="message">
+            The kingdom you seek has fallen into the mists of time. Its Nexus has been destroyed, 
+            and its banners no longer fly. Return to safer lands, traveler.
+        </p>
+        <a href="https://kingdomsx.com/" class="btn">Return to the Main Lands</a>
+    </div>
+
+    <div class="footer">
+        © 2026 KingdomsX • All Realms Reserved
+    </div>
+
+    <script>
+        // Mouse-responsive fog effect
+        const fog = document.getElementById('fog');
+        
+        document.addEventListener('mousemove', (e) => {
+            const x = (e.clientX / window.innerWidth) * 100;
+            const y = (e.clientY / window.innerHeight) * 100;
+            
+            fog.style.setProperty('--mouse-x', `${x}%`);
+            fog.style.setProperty('--mouse-y', `${y}%`);
+        });
+
+        // Create floating particles (embers / magic sparks)
+        function createParticle() {
+            const particle = document.createElement('div');
+            particle.classList.add('particle');
+            
+            const size = Math.random() * 4 + 2;
+            particle.style.width = `${size}px`;
+            particle.style.height = `${size}px`;
+            particle.style.left = `${Math.random() * 100}vw`;
+            particle.style.opacity = Math.random() * 0.6 + 0.3;
+            particle.style.animationDuration = `${Math.random() * 20 + 15}s`;
+            particle.style.animationDelay = `-${Math.random() * 20}s`;
+            
+            document.getElementById('particles').appendChild(particle);
+            
+            // Remove after animation
+            setTimeout(() => {
+                particle.remove();
+            }, 40000);
+        }
+
+        // Spawn particles
+        setInterval(() => {
+            if (Math.random() > 0.3) createParticle();
+        }, 120);
+
+        // Initial particles
+        for (let i = 0; i < 35; i++) {
+            createParticle();
+        }
+
+        // Add subtle pulsing to the 404 text
+        setInterval(() => {
+            const errorCode = document.querySelector('.error-code');
+            errorCode.style.transition = 'all 1.5s ease';
+            errorCode.style.opacity = '0.85';
+            setTimeout(() => {
+                errorCode.style.opacity = '1';
+            }, 1500);
+        }, 4000);
+
+        // Keyboard support - press any key to return home
+        document.addEventListener('keydown', () => {
+            window.location.href = 'https://kingdomsx.com/';
+        });
+    </script>
+</body>
+</html>
