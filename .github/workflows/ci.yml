@@ -44,7 +44,7 @@ jobs:
         run: |
           # Don't override existing files
           # rm -rf docs
-          mkdir docs
+          # mkdir docs
 
           # Copy all wiki pages
           find wiki -maxdepth 1 -name "*.md" -exec cp {} docs/ \;
