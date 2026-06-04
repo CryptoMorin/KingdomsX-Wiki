@@ -29,12 +29,12 @@ jobs:
 
       - uses: actions/cache@v4
         with:
-          key: mkdocs-material-${{ env.cache_id }}
+          key: properdocs-${{ env.cache_id }}
           path: ~/.cache
           restore-keys: |
-            mkdocs-material-
+            properdocs-
 
-      - run: pip install mkdocs-material pymdown-extensions
+      - run: pip install properdocs pymdown-extensions
 
       - name: Clone Wiki
         run: |
@@ -126,4 +126,4 @@ jobs:
               md_file.write_text(text, encoding="utf-8")
           PY
 
-      - run: mkdocs gh-deploy --force
+      - run: properdocs gh-deploy --force
