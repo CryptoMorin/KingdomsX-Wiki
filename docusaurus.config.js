@@ -1,3 +1,4 @@
+import remarkGithubAdmonitionsToDirectives from "remark-github-admonitions-to-directives";
 export default {
   title: 'KingdomsX Wiki',
   url: 'https://cryptomorin.github.io',
@@ -34,14 +35,15 @@ export default {
       '@docusaurus/preset-classic',
       {
         docs: {
-          path: './docs',                    // Points to the cloned folder
-          routeBasePath: '/',                // Wiki at root URL
+          path: './docs',                  // Points to the cloned folder
+          routeBasePath: '/',              // Wiki at root URL
           sidebarPath: require.resolve('./sidebars.js'),
           editUrl: (blogDirPath, blogPath, permaLink, locale) => `https://github.com/CryptoMorin/KingdomsX/wiki/${blogPath}/_edit`,
 
+          beforeDefaultRemarkPlugins: [remarkGithubAdmonitionsToDirectives],
+
           remarkPlugins: [
-            require('remark-gfm').default,
-            require('remark-github-blockquote-admonitions').default,
+            require('remark-gfm').default
           ],
         },
 
