@@ -1,17 +1,33 @@
-const config = {
+export default {
   title: 'KingdomsX Wiki',
-  url: 'https://wiki.kingdomsx.com',
+  url: 'https://cryptomorin.github.io/KingdomsX-Wiki',
   baseUrl: '/',
+  favicon: '/assets/favicon.ico',
+  tagline: 'The official KingdomsX comprehensive wiki.',
 
   organizationName: 'CryptoMorin',
   projectName: 'KingdomsX',
+  deploymentBranch: 'gh-pages',
+  githubHost: 'github.io',
 
   trailingSlash: false,
   onBrokenLinks: 'warn',
-  onBrokenMarkdownLinks: 'warn',
+
+  themes: ['@docusaurus/theme-classic'],
+  themeConfig: {
+    colorMode: {
+      defaultMode: 'dark',
+      disableSwitch: false,
+      respectPrefersColorScheme: true,
+    },
+  },
 
   markdown: {
-    format: 'detect'
+    format: 'detect',
+    hooks: {
+      onBrokenMarkdownLinks: 'warn',
+      onBrokenMarkdownImages: 'warn',
+    },
   },
 
   presets: [
@@ -35,5 +51,3 @@ const config = {
     ],
   ],
 };
-
-module.exports = config;
