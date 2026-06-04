@@ -7,13 +7,11 @@ const config = {
   projectName: 'KingdomsX',
 
   trailingSlash: false,
+  onBrokenLinks: 'warn',
+  onBrokenMarkdownLinks: 'warn',
 
   markdown: {
     format: 'mdx',
-    hooks: {
-      onBrokenLinks: 'warn',
-      onBrokenMarkdownLinks: 'warn',
-    },
     mdx1Compat: {
       comments: true,
       admonitions: false,
