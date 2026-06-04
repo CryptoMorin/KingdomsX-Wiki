@@ -27,9 +27,9 @@ jobs:
       - name: Clone Source Wiki Repository
         uses: actions/checkout@v4
         with:
-          repository: CryptoMorin/KingdomsX.wiki.git     # ← CHANGE THIS
-          path: docs                             # Clone directly into docs/
-          ref: main                              # or any branch
+          repository: CryptoMorin/KingdomsX.wiki
+          path: docs # Clone directly into docs/
+          ref: main
 
       - name: Setup Node.js
         uses: actions/setup-node@v4
