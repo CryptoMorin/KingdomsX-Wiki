@@ -2,6 +2,7 @@ import remarkGithubAdmonitionsToDirectives from "remark-github-admonitions-to-di
 import remarkMath from 'remark-math';
 import rehypeKatex from 'rehype-katex';
 import remarkGFM from 'remark-gfm';
+import rehypeSlug from 'rehype-slug';
 import {themes} from 'prism-react-renderer';
 
 export default {
@@ -28,7 +29,7 @@ export default {
     prism: {
       theme: themes.github,
       darkTheme: themes.dracula,
-      additionalLanguages: ['ruby'],
+      additionalLanguages: ['ruby', 'haskell'],
     },
   },
 
@@ -57,6 +58,7 @@ export default {
             remarkMath
           ],
           rehypePlugins: [
+            rehypeSlug,
             [rehypeKatex, { strict: false }]
           ],
         },
