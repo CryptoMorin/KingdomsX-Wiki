@@ -2,8 +2,9 @@ site_name: KingdomsX
 site_url: https://wiki.kingdomsx.com/
 
 plugins:
+  - search
   - literate-nav:
-        nav_file: _Sidebar.md
+      nav_file: _Sidebar.md
 
 theme:
   name: mkdocs
