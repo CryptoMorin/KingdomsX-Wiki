@@ -8,31 +8,18 @@ const config = {
 
   trailingSlash: false,
 
-  onBrokenLinks: 'warn',
-  onBrokenMarkdownLinks: 'warn',
-
   markdown: {
     format: 'mdx',
+    hooks: {
+      onBrokenLinks: 'warn',
+      onBrokenMarkdownLinks: 'warn',
+    },
     mdx1Compat: {
       comments: true,
       admonitions: false,
       headingIds: true,
     },
   },
-
-//   // Other common settings for a wiki
-//   favicon: 'img/favicon.ico',
-//   themeConfig: {
-//     navbar: {
-//       title: 'Your Wiki',
-//       logo: { /* ... */ },
-//       items: [
-//         { to: '/docs/intro', label: 'Docs', position: 'left' },
-//         // Add more nav items
-//       ],
-//     },
-//     footer: { /* ... */ },
-//   },
 
   presets: [
     [
@@ -45,7 +32,7 @@ const config = {
           editUrl: 'https://github.com/CryptoMorin/KingdomsX.wiki/edit/main/',
 
           remarkPlugins: [
-            require('remark-gfm'),
+            require('remark-gfm').default,
           ],
         },
 
