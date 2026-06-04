@@ -11,8 +11,6 @@
   * 🗺️ [Map Viewers](Map-Viewers-Addon.md)
   * 🏬 [EngineHub](EngineHub-Addon.md)
   * 🛠  [Admin Tools](Admin-Tools.md)
-
-# Basics
 * ❇️ [Introduction](Introduction.md)
 * ⌨️ [Commands](Commands.md)
   * 👨‍🦱 [Players](Commands.md#players)
@@ -26,8 +24,6 @@
   * 📃 [YAML](YAML.md)
   * 💱 [Languages](Languages.md)
   * 📱 [GUI](GUIs.md)
-
-# Advanced
 * 🔒 [Protection Signs](Protection-Signs.md)
 * ✉️ [Mails](Mails.md)
 * 📚 [Mechanics](Mechanics.md)
