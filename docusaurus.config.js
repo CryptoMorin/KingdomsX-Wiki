@@ -3,12 +3,14 @@ import remarkMath from 'remark-math';
 import rehypeKatex from 'rehype-katex';
 import remarkGFM from 'remark-gfm';
 import rehypeSlug from 'rehype-slug';
+
 import {themes} from 'prism-react-renderer';
+import prism from 'prismjs';
 
 export default {
   title: 'KingdomsX Wiki',
   url: 'https://cryptomorin.github.io',
-  baseUrl: 'KingdomsX-Wiki',
+  baseUrl: '/KingdomsX-Wiki/',
   favicon: '/assets/favicon.ico',
   tagline: 'The official KingdomsX comprehensive wiki.',
 
@@ -58,7 +60,6 @@ export default {
             remarkMath
           ],
           rehypePlugins: [
-            rehypeSlug,
             [rehypeKatex, { strict: false }]
           ],
         },
@@ -76,3 +77,5 @@ export default {
     },
   ],
 };
+
+prism.languages.hs = prism.languages.haskell;
