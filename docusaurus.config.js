@@ -1,6 +1,8 @@
 import remarkGithubAdmonitionsToDirectives from "remark-github-admonitions-to-directives";
 import remarkMath from 'remark-math';
 import rehypeKatex from 'rehype-katex';
+import remarkGFM from 'remark-gfm';
+import {themes} from 'prism-react-renderer';
 
 export default {
   title: 'KingdomsX Wiki',
@@ -22,6 +24,11 @@ export default {
       defaultMode: 'dark',
       disableSwitch: false,
       respectPrefersColorScheme: true,
+    },
+    prism: {
+      theme: themes.github,
+      darkTheme: themes.dracula,
+      additionalLanguages: ['ruby'],
     },
   },
 
@@ -46,10 +53,12 @@ export default {
           beforeDefaultRemarkPlugins: [remarkGithubAdmonitionsToDirectives],
 
           remarkPlugins: [
-            require('remark-gfm').default,
+            remarkGFM,
             remarkMath
           ],
-          rehypePlugins: [[rehypeKatex, { strict: false }]],
+          rehypePlugins: [
+            [rehypeKatex, { strict: false }]
+          ],
         },
 
         blog: false,

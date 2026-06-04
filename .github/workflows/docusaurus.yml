@@ -31,6 +31,9 @@ jobs:
           path: docs # Clone directly into docs/
           ref: master
 
+      - name: Convert LaTeX \color{Name} to \Color{RGB}
+        run: python scripts/normalize_latex.py docs/
+
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
