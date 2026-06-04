@@ -40,7 +40,7 @@ jobs:
         run: git clone "https://github.com/CryptoMorin/KingdomsX.wiki.git" wiki
 
       - name: Populate docs folder
-        run: scripts/populate_docs.sh
+        run: bash scripts/populate_docs.sh
 
       - name: Convert GitHub formats to MkDocs formats (e.g. admonitions and backslashes)
         run: python scripts/github_to_mkdocs.py
