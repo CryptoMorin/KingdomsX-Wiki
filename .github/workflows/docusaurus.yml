@@ -37,7 +37,7 @@ jobs:
           node-version: 20
 
       - name: Install Dependencies
-        run: npm ci
+        run: npm install
 
       - name: Build Docusaurus
         run: npm run build
