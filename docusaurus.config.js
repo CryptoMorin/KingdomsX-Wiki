@@ -11,12 +11,7 @@ const config = {
   onBrokenMarkdownLinks: 'warn',
 
   markdown: {
-    format: 'mdx',
-    mdx1Compat: {
-      comments: true,
-      admonitions: false,
-      headingIds: true,
-    },
+    format: 'detect'
   },
 
   presets: [
