@@ -35,14 +35,22 @@ presets: [
           sidebarPath: require.resolve('./sidebars.js'),
           editUrl: 'https://github.com/CryptoMorin/KingdomsX.wiki/edit/main/',
 
-          mdxOptions: {
-            remarkPlugins: [
-              require('remark-gfm'),
-            ],
-            rehypePlugins: [],
+          // Correct way in Docusaurus v3:
+          remarkPlugins: [
+            require('remark-gfm'),           // GitHub Flavored Markdown
+          ],
+
+          // Optional: Disable some strict MDX behaviors
+          markdown: {
+            format: 'mdx',
+            mdx1Compat: {
+              comments: true,
+              admonitions: false,     // Turn off if causing issues
+              headingIds: true,
+            },
           },
         },
-        
+
         blog: false,
         pages: false,
       },
