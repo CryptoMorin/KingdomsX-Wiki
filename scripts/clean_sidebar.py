@@ -1,52 +1,69 @@
 #!/usr/bin/env python3
 """
-Clean GitHub Wiki _Sidebar.md for use with mkdocs-literate-nav
+Clean GitHub Wiki _Sidebar.md for mkdocs-literate-nav
+Handles emojis, external links, and strict parsing requirements.
 """
 
 import re
-import sys
 from pathlib import Path
+import sys
 
-def clean_wiki_sidebar(input_path: str, output_path: str, repo_name: str = None):
+def clean_wiki_sidebar(input_path: str, output_path: str):
     content = Path(input_path).read_text(encoding="utf-8")
 
-    # Convert GitHub Wiki links to relative MkDocs links
-    def replace_link(match):
-        text = match.group(1)
+    # 1. Convert GitHub wiki links to local .md links
+    def replace_wiki_link(match):
+        text = match.group(1).strip()
         url = match.group(2)
         
-        # Extract page name from GitHub wiki URL
-        if "github.com" in url and "/wiki/" in url:
-            page_name = url.split("/wiki/")[-1]
-            # Convert to kebab-case filename (common practice)
-            filename = page_name.replace(" ", "-").lower()
-            if not filename.endswith(".md"):
-                filename += ".md"
+        if "/wiki/" in url:
+            # Extract page name
+            page = url.split("/wiki/")[-1].strip()
+            filename = re.sub(r'[^a-zA-Z0-9\-_]', '-', page).lower()
+            filename = re.sub(r'-+', '-', filename).strip('-')
+            if not filename.endswith('.md'):
+                filename += '.md'
             return f"[{text}]({filename})"
         
-        # Keep external links as-is
+        # Keep other links as-is
         return match.group(0)
 
-    # Regex for Markdown links: [text](url)
-    content = re.sub(r'\[([^\]]+)\]\(([^)]+)\)', replace_link, content)
+    content = re.sub(r'\[([^\]]+)\]\(([^)]+)\)', replace_wiki_link, content)
 
-    # Optional: Clean up common wiki issues
-    content = re.sub(r'^\s*-\s*\[', '- [', content, flags=re.MULTILINE)  # Fix spacing
+    # 2. Fix emoji + link pattern: "🧰 [Text](file.md)" → "[🧰 Text](file.md)"
+    # This is the main fix for your current error
+    content = re.sub(
+        r'([-\*]\s+)([^\s\[]+?)\s*\[([^\]]+)\]\(([^)]+)\)', 
+        r'\1[\2 \3](\4)', 
+        content,
+        flags=re.MULTILINE
+    )
 
-    # Write cleaned file
+    # Alternative stricter version if above doesn't catch everything:
+    # content = re.sub(r'([-\*]\s+)([\u2600-\u27FF\u1F000-\u1FAFF]+)\s*\[', r'\1[\2 ', content)
+
+    # 3. Clean extra whitespace and empty lines
+    lines = content.splitlines()
+    cleaned_lines = []
+    for line in lines:
+        stripped = line.strip()
+        if stripped:
+            # Fix common list spacing issues
+            if stripped.startswith('-') or stripped.startswith('*'):
+                line = re.sub(r'^\s*[-*]\s+', '- ', line)
+            cleaned_lines.append(line)
+    
+    content = '\n'.join(cleaned_lines) + '\n'
+
+    # Write output
     Path(output_path).parent.mkdir(parents=True, exist_ok=True)
     Path(output_path).write_text(content, encoding="utf-8")
     
-    print(f"✅ Cleaned sidebar saved to: {output_path}")
-    print("   External wiki links converted to local .md links.")
+    print(f"✅ Sidebar cleaned and saved to: {output_path}")
 
 if __name__ == "__main__":
     if len(sys.argv) < 3:
-        print("Usage: python clean_sidebar.py <input_sidebar> <output_sidebar> [repo_name]")
+        print("Usage: python clean_sidebar.py <input_file> <output_file>")
         sys.exit(1)
 
-    input_file = sys.argv[1]
-    output_file = sys.argv[2]
-    repo = sys.argv[3] if len(sys.argv) > 3 else None
-
-    clean_wiki_sidebar(input_file, output_file, repo)
+    clean_wiki_sidebar(sys.argv[1], sys.argv[2])
