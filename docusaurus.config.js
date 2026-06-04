@@ -34,7 +34,15 @@ presets: [
           routeBasePath: '/',                // Wiki at root URL
           sidebarPath: require.resolve('./sidebars.js'),
           editUrl: 'https://github.com/CryptoMorin/KingdomsX.wiki/edit/main/',
+
+          mdxOptions: {
+            remarkPlugins: [
+              require('remark-gfm'),
+            ],
+            rehypePlugins: [],
+          },
         },
+        
         blog: false,
         pages: false,
       },
