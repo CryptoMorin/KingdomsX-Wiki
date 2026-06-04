@@ -36,19 +36,21 @@ extra_javascript:
 
 markdown_extensions:
   - admonition
+  - tables
   - attr_list
   - md_in_html
   - nl2br
   - pymdownx.details
   - pymdownx.superfences
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
   - pymdownx.highlight:
       anchor_linenums: true
       line_spans: __span
       pygments_lang_class: true
   - pymdownx.arithmatex:
       generic: true
-  - pymdownx.inlinehilite
-  - pymdownx.snippets
-  - tables
+  - pymdownx.tabbed:
+      alternate_style: true
   - toc:
       permalink: true

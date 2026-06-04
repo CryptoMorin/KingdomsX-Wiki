@@ -34,7 +34,7 @@ jobs:
           restore-keys: |
             properdocs-
 
-      - run: pip install properdocs pymdown-extensions
+      - run: pip install properdocs pymdown-extensions properdocs-theme-mkdocs mkdocs-literate-nav
 
       - name: Clone Wiki
         run: |
@@ -126,4 +126,4 @@ jobs:
               md_file.write_text(text, encoding="utf-8")
           PY
 
-      - run: properdocs gh-deploy --force
+      - run: properdocs gh-deploy --force -f mkdocs.yml
