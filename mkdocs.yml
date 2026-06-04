@@ -14,7 +14,7 @@ theme:
         icon: material/weather-sunny
         name: Dark mode
       primary: green
-      accent: deep purple
+      accent: deep orange
 
     # Light Mode
     - scheme: default
@@ -41,8 +41,12 @@ markdown_extensions:
       anchor_linenums: true
       line_spans: __span
       pygments_lang_class: true
+  - pymdownx.arithmatex:
+      generic: true
   - pymdownx.inlinehilite
   - pymdownx.snippets
   - tables
   - toc:
       permalink: true
+  - literate-nav:
+        nav_file: _Sidebar.md
