@@ -1,7 +1,7 @@
 export default {
   title: 'KingdomsX Wiki',
-  url: 'https://cryptomorin.github.io/KingdomsX-Wiki',
-  baseUrl: '/',
+  url: 'https://cryptomorin.github.io',
+  baseUrl: 'KingdomsX-Wiki',
   favicon: '/assets/favicon.ico',
   tagline: 'The official KingdomsX comprehensive wiki.',
 
