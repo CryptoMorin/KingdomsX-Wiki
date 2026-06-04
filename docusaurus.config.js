@@ -8,8 +8,17 @@ const config = {
 
   trailingSlash: false,
 
-//   onBrokenLinks: 'throw',
-//   onBrokenMarkdownLinks: 'warn',
+  onBrokenLinks: 'warn',
+  onBrokenMarkdownLinks: 'warn',
+
+  markdown: {
+    format: 'mdx',
+    mdx1Compat: {
+      comments: true,
+      admonitions: false,
+      headingIds: true,
+    },
+  },
 
 //   // Other common settings for a wiki
 //   favicon: 'img/favicon.ico',
@@ -25,7 +34,7 @@ const config = {
 //     footer: { /* ... */ },
 //   },
 
-presets: [
+  presets: [
     [
       '@docusaurus/preset-classic',
       {
@@ -35,20 +44,9 @@ presets: [
           sidebarPath: require.resolve('./sidebars.js'),
           editUrl: 'https://github.com/CryptoMorin/KingdomsX.wiki/edit/main/',
 
-          // Correct way in Docusaurus v3:
           remarkPlugins: [
-            require('remark-gfm'),           // GitHub Flavored Markdown
+            require('remark-gfm'),
           ],
-
-          // Optional: Disable some strict MDX behaviors
-          markdown: {
-            format: 'mdx',
-            mdx1Compat: {
-              comments: true,
-              admonitions: false,     // Turn off if causing issues
-              headingIds: true,
-            },
-          },
         },
 
         blog: false,
