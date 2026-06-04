@@ -4,7 +4,7 @@ site_url: https://wiki.kingdomsx.com/
 plugins:
   - search
   - literate-nav:
-      nav_file: _Sidebar.md
+      nav_file: sidenav/Sidebar.md
 
 theme:
   name: mkdocs

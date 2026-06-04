@@ -11,7 +11,7 @@ ALERT_MAP = {
 }
 
 for md_file in Path("../docs" if DEBUGGING else "docs").rglob("*.md"):
-    if DEBUGGING: print(f"[GitHub->Admonitions] Processing {md_file.name}...")
+    print(f"[GitHub->Admonitions] Processing {md_file.name}...")
     if md_file == "_Sidebar.md":
         print(f"Skipping {md_file}...")
         continue
