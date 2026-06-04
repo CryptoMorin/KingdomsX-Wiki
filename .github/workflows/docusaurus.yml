@@ -1,0 +1,57 @@
+name: Deploy Wiki from External Repo
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+  workflow_dispatch:   # Allows manual trigger
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+jobs:
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Docusaurus repo
+        uses: actions/checkout@v4
+
+      # === AUTOMATIC PULL FROM SOURCE WIKI REPO ===
+      - name: Clone Source Wiki Repository
+        uses: actions/checkout@v4
+        with:
+          repository: CryptoMorin/KingdomsX.wiki.git     # ← CHANGE THIS
+          path: docs                             # Clone directly into docs/
+          ref: main                              # or any branch
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: 'npm'
+          cache-dependency-path: ./package-lock.json
+
+      - name: Install Dependencies
+        run: npm ci
+
+      - name: Build Docusaurus
+        run: npm run build
+
+      - name: Setup GitHub Pages
+        uses: actions/configure-pages@v5
+
+      - name: Upload Artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: './build'
+
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4

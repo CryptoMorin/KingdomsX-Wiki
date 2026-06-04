@@ -1,4 +1,4 @@
-name: ci
+name: mkdocs
 
 on:
   push:
@@ -29,10 +29,10 @@ jobs:
 
       - uses: actions/cache@v4
         with:
-          key: properdocs-${{ env.cache_id }}
+          key: mkdocs-${{ env.cache_id }}
           path: ~/.cache
           restore-keys: |
-            properdocs-
+            mkdocs-
 
       - run: pip install properdocs pymdown-extensions properdocs-theme-mkdocs mkdocs-literate-nav
 
@@ -45,8 +45,9 @@ jobs:
       - name: Convert GitHub formats to MkDocs formats (e.g. admonitions and backslashes)
         run: python scripts/github_to_mkdocs.py
 
-      - name: Clean Sidebar for MkDocs
+      - name: Clean Sidebar
         run: python scripts/clean_sidebar.py docs/_Sidebar.md docs/_Sidebar.md
 
-      - name: "PaperDocs"
-        run: properdocs gh-deploy --force -f mkdocs.yml
+      - name: "MkDocs"
+        run: mkdocs gh-deploy --force
+        # run: properdocs gh-deploy --force -f mkdocs.yml

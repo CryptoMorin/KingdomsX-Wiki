@@ -4,7 +4,7 @@ window.MathJax = {
   },
   startup: {
     pageReady: () => {
-      alert('Running MathJax');
+      console.log('Running MathJax');
       return MathJax.startup.defaultPageReady();
     }
   },
