@@ -13,7 +13,6 @@ export default {
   trailingSlash: false,
   onBrokenLinks: 'warn',
 
-  themes: ['@docusaurus/theme-classic'],
   themeConfig: {
     colorMode: {
       defaultMode: 'dark',
