@@ -1,6 +1,10 @@
 site_name: KingdomsX
 site_url: https://wiki.kingdomsx.com/
 
+plugins:
+  - literate-nav:
+        nav_file: _Sidebar.md
+
 theme:
   name: material
   custom_dir: overrides
@@ -48,5 +52,3 @@ markdown_extensions:
   - tables
   - toc:
       permalink: true
-  - literate-nav:
-        nav_file: _Sidebar.md
