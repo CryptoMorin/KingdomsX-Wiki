@@ -1,4 +1,7 @@
 import remarkGithubAdmonitionsToDirectives from "remark-github-admonitions-to-directives";
+import remarkMath from 'remark-math';
+import rehypeKatex from 'rehype-katex';
+
 export default {
   title: 'KingdomsX Wiki',
   url: 'https://cryptomorin.github.io',
@@ -43,13 +46,22 @@ export default {
           beforeDefaultRemarkPlugins: [remarkGithubAdmonitionsToDirectives],
 
           remarkPlugins: [
-            require('remark-gfm').default
+            require('remark-gfm').default,
+            remarkMath
           ],
+          rehypePlugins: [[rehypeKatex, { strict: false }]],
         },
 
         blog: false,
         pages: false,
       },
     ],
+  ],
+
+  stylesheets: [
+    {
+      href: 'https://cdn.jsdelivr.net/npm/katex@0.16.22/dist/katex.min.css',
+      type: 'text/css',
+    },
   ],
 };
