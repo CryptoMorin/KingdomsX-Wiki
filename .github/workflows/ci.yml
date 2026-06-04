@@ -111,6 +111,10 @@ jobs:
       
           PY
 
+      - name: Clean Sidebar for MkDocs
+        run: |
+          python scripts/clean_sidebar.py docs/_Sidebar.md docs/_Sidebar.md
+
       - name: Convert GitHub line breaks
         run: |
           python << 'PY'
