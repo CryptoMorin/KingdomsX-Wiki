@@ -1,4 +1,4 @@
-name: Deploy Wiki from External Repo
+name: Docusaurus
 
 on:
   push:
@@ -29,7 +29,7 @@ jobs:
         with:
           repository: CryptoMorin/KingdomsX.wiki
           path: docs # Clone directly into docs/
-          ref: main
+          ref: master
 
       - name: Setup Node.js
         uses: actions/setup-node@v4
