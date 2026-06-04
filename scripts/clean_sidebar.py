@@ -30,7 +30,22 @@ def clean_wiki_sidebar(input_path: str, output_path: str):
     content = re.sub(r'&amp;', '&', content)
 
     # 3. Move emojis inside the link text
-    content = re.sub(r'([-\*]\s*)([🧰💻🔹📘🔧➕▶→])\s*\[', r'\1[\2 ', content)
+    emojis = (    r"(?:"
+    # Flags
+    r"[\U0001F1E6-\U0001F1FF]{2}"
+    r"|"
+    # Base emoji + optional VS16 + optional modifiers + ZWJ chains
+    r"[\u203C-\u3299\U0001F000-\U0001FAFF]"
+    r"(?:\uFE0F)?"
+    r"(?:[\U0001F3FB-\U0001F3FF])?"
+    r"(?:"
+        r"\u200D"
+        r"[\u203C-\u3299\U0001F000-\U0001FAFF]"
+        r"(?:\uFE0F)?"
+        r"(?:[\U0001F3FB-\U0001F3FF])?"
+    r")*"
+    r")")
+    content = re.sub(r'([-\*]\s*)(' + emojis + r')\s*\[', r'\1[\2 ', content)
 
     # 4. Convert flat <br> sub-items into proper nested lists
     lines = content.splitlines()
