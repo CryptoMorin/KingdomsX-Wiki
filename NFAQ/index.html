@@ -1,0 +1,651 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="light">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        <link rel="canonical" href="https://wiki.kingdomsx.com/NFAQ/">
+        <link rel="shortcut icon" href="../img/favicon.ico">
+        <title>⁉️ NFAQ - KingdomsX</title>
+        <link href="../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../css/fontawesome.min.css" rel="stylesheet">
+        <link href="../css/brands.min.css" rel="stylesheet">
+        <link href="../css/solid.min.css" rel="stylesheet">
+        <link href="../css/v4-font-face.min.css" rel="stylesheet">
+        <link href="../css/base.css" rel="stylesheet">
+        <link id="hljs-light" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" >
+        <link id="hljs-dark" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github-dark.min.css" disabled>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+        <script>hljs.highlightAll();</script> 
+    </head>
+
+    <body>
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="..">KingdomsX</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar-collapse" aria-controls="navbar-collapse" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="nav-item">
+                                <a href="../Home.md.md" class="nav-link">🏠 Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../Features/" class="nav-link">🔰 Features</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../Installation/" class="nav-link">📥 Installation</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../Installation.md#setup" class="nav-link">📗 Setup</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../Installation.md#compatibility" class="nav-link">📘 Compatibility</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../FAQ/" class="nav-link">❓ FAQ</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="./" class="nav-link active" aria-current="page">⁉️ NFAQ</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../Addons/" class="nav-link">⚜️ Addons</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../Outposts/" class="nav-link">🚩 Outposts</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../Peace-Treaties/" class="nav-link">☮️ Peace Treaties</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../Map-Viewers-Addon/" class="nav-link">🗺️ Map Viewers</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../EngineHub-Addon/" class="nav-link">🏬 EngineHub</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../Admin-Tools/" class="nav-link">🛠  Admin Tools</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../Introduction/" class="nav-link">❇️ Introduction</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../Commands/" class="nav-link">⌨️ Commands</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../Commands.md#players" class="nav-link">👨‍🦱 Players</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../Commands.md#admins" class="nav-link">👩‍⚖️ Admins</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../Permissions/" class="nav-link">🔓 Permissions</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../Placeholders/" class="nav-link">🔣 Placeholders</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../Placeholders.md#players" class="nav-link">🚹 Players</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../Placeholders.md#kingdoms" class="nav-link">🏛 Kingdoms</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../Placeholders.md#nations" class="nav-link">🏢 Nations</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../Config/" class="nav-link">📁 Config</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../YAML/" class="nav-link">📃 YAML</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../Languages/" class="nav-link">💱 Languages</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../GUIs/" class="nav-link">📱 GUI</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../Protection-Signs/" class="nav-link">🔒 Protection Signs</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../Mails/" class="nav-link">✉️ Mails</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../Mechanics/" class="nav-link">📚 Mechanics</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"  aria-expanded="false">⚔️ Invasion</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../Mechanics.md#Invasion" class="dropdown-item">None</a>
+</li>
+                                    
+<li>
+    <a href="../Mechanics.md#Preparing" class="dropdown-item">🛡️ Preparing</a>
+</li>
+                                    
+<li>
+    <a href="../Mechanics.md#Champion" class="dropdown-item">🧟 Champion</a>
+</li>
+                                    
+<li>
+    <a href="../Mechanics.md#mass-wars" class="dropdown-item">🗡  Masswar</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../Mechanics.md#Structures" class="nav-link">📡 Structures</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../Mechanics.md#Turrets" class="nav-link">🔫 Turrets</a>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ms-md-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-bs-toggle="modal" data-bs-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                            <li class="nav-item">
+                                <a rel="prev" href="../FAQ/" class="nav-link">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a rel="next" href="../Addons/" class="nav-link">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-bs-toggle="collapse" data-bs-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-body-tertiary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-bs-level="1"><a href="#not-frequently-asked-questions" class="nav-link">Not Frequently Asked Questions</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-bs-level="1"><a href="#creating-custom-turrets" class="nav-link">Creating custom turrets</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-bs-level="1"><a href="#making-custom-misc-upgrades" class="nav-link">Making custom misc upgrades</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-bs-level="1"><a href="#database-issues" class="nav-link">Database Issues</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-bs-level="1"><a href="#entityremoveevent-warning" class="nav-link">EntityRemoveEvent Warning</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-bs-level="1"><a href="#possible-malware-detections" class="nav-link">Possible Malware Detections</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-bs-level="2"><a href="#plugin-integrity-check-failed" class="nav-link">Plugin integrity check failed</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-bs-level="1"><a href="#how-to-disable-the-nexus" class="nav-link">How to disable the nexus?</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-bs-level="1"><a href="#advanced-pvp-settings" class="nav-link">Advanced PvP Settings</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-bs-level="1"><a href="#how-to-change-build-duration-for-turrets-and-structures" class="nav-link">How to change build duration for turrets and structures?</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-bs-level="1"><a href="#private-support-conversations" class="nav-link">Private Support &amp; Conversations</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<h1 id="not-frequently-asked-questions">Not Frequently Asked Questions<a class="headerlink" href="#not-frequently-asked-questions" title="Permanent link">&para;</a></h1>
+<p>But we're here to answer them anyways.</p>
+<h3 id="table-of-contents">Table of Contents<a class="headerlink" href="#table-of-contents" title="Permanent link">&para;</a></h3>
+<ul>
+<li><a href="#creating-custom-turrets">Creating custom turrets</a></li>
+<li><a href="#making-custom-misc-upgrades">Making custom misc upgrades</a></li>
+<li><a href="#database-issues">Database Issues</a></li>
+<li><a href="#entityremoveevent-warning">EntityRemoveEvent Warning</a></li>
+<li><a href="#possible-malware-detections">Possible Malware Detections</a></li>
+<li><a href="#how-to-disable-the-nexus">How to disable the nexus?</a></li>
+<li><a href="#advanced-pvp-settings">Advanced PvP Settings</a></li>
+<li><a href="#how-to-change-build-duration-for-turrets-and-structures">How to change build duration for turrets and structures?</a></li>
+<li><a href="#private-support--conversations">Private Support &amp; Conversations</a></li>
+</ul>
+<hr />
+<h1 id="creating-custom-turrets">Creating custom turrets<a class="headerlink" href="#creating-custom-turrets" title="Permanent link">&para;</a></h1>
+<p>Kingdoms comes with several powerful turrets by default, but also allows server owners to create their own custom ones. All the turret configuration files are located in the <code>Turrets</code> folder.</p>
+<p><strong>The basic workflow for creating a new turret is as follows:</strong><br />
+1. Begin by creating a new YML file for your turret in the <code>Turrets</code> folder.<br />
+2. Copy the configuration of one of the existing turrets (from <code>arrow.yml</code> for example) and paste it into your new one.<br />
+3. Modify the settings to make your new turret unique.<br />
+4. Make your turret available for purchase in the Nexus by adding it to the GUI in <code>guis</code> -&gt; <code>&lt;lang&gt;</code> -&gt; <code>structures</code> -&gt; <code>nexus</code> -&gt; <code>turrets.yml</code>. Simply copy one of the purchase buttons for other turrets and use it for your new one. Make sure that the button is named the same as in step 1 (without the .yml part; see example for <a href="https://github.com/CryptoMorin/KingdomsX/blob/250e64c359d580e76916aad3a5482c27e8ad7470/core/src/main/resources/guis/en/structures/nexus/turrets.yml#L6">arrow</a> turret), and don't forget to change the <code>posx</code> and <code>posy</code> so it doesn't overlap existing items.<br />
+5. In <code>guis</code> -&gt; <code>&lt;lang&gt;</code> -&gt; <code>turrets</code> create a new YML file that is named exactly the same as in step 1. This will be the GUI shown when you right-click the turret after it's been placed, containing upgrade, ammo and buttons for other options.<br />
+6. Copy one of the guis of existing turret (eg. <code>arrow.yml</code>) and paste it into your new file. Configure it to your liking.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Please refer to <a href="https://github.com/CryptoMorin/KingdomsX/wiki/Mechanics#making-custom-turrets">this</a> section for a more detailed explanation and an example custom turret that you can use for your server.</p>
+</div>
+<h1 id="making-custom-misc-upgrades">Making custom misc upgrades<a class="headerlink" href="#making-custom-misc-upgrades" title="Permanent link">&para;</a></h1>
+<p>We're going to be making a custom misc upgrade that adds permission for players. Thankfully <a href="https://luckperms.net/wiki/Context">LuckPerms Contextual Permissions</a> make this easier.</p>
+<ol>
+<li>In <a href="https://github.com/CryptoMorin/KingdomsX/blob/master/core/src/main/resources/misc-upgrades.yml">misc-upgrades.yml</a> we're going to add a new entry.</li>
+</ol>
+<pre class="highlight"><code class="language-yml">custom-misc-upgrade: # The name here will be important later for permissions and GUIs
+  enabled: true
+  can-be-disabled: true
+  max-level: 3</code></pre>
+<ol>
+<li>
+<p>Make a new permission group using <a href="https://luckperms.net/wiki/General-Commands#lp-creategroup-name-weight-displayname">/lp creategroup kingdoms</a>. This is where all kingdom related permissions will be defined. It's mostly for organization purposes.</p>
+</li>
+<li>
+<p>We need to install <a href="https://github.com/LuckPerms/ExtraContexts">ExtraContexts</a> official LuckPerms addon to work with <a href="https://github.com/CryptoMorin/KingdomsX/wiki/Placeholders">PlaceholderAPI</a>-oriented contexts.</p>
+</li>
+<li>
+<p>Enable placeholder API support in <a href="https://github.com/LuckPerms/ExtraContexts/blob/f554d7170ff9c94bf0d12fa64713f4071f0d0437/src/main/resources/config.yml#L45-L47">ExtraContexts config.yml</a> and add the a new placeholder for the misc upgrade:<br />
+<pre class="highlight"><code class="language-yml">placeholderapi: true
+placeholderapi-placeholders:
+  allowflight: "%player_allow_flight%"
+  customMiscUpgrade: "%kingdoms_kingdom_upgrade:level type=misc, of=CUSTOM_MISC_UPGRADE%"</code></pre></p>
+</li>
+</ol>
+<p>Here we used a complicated <a href="https://github.com/CryptoMorin/KingdomsX/wiki/Placeholders#placeholder-functions">functional placeholder</a>. The <code>of</code> option is determined by the config entry name. We used <code>custom-misc-upgrade</code>. A rule of thumb is that whatever name you used, make all the characters uppercase and replace <code>-</code> with <code>_</code>.</p>
+<ol>
+<li>Add contextual permissions:</li>
+<li><code>/lp group kingdoms permission set kingdoms.misc.custom.1 true customMiscUpgrade=1</code></li>
+<li><code>/lp group kingdoms permission set kingdoms.misc.custom.2 true customMiscUpgrade=2</code></li>
+<li><code>/lp group kingdoms permission set kingdoms.misc.custom.3 true customMiscUpgrade=3</code></li>
+</ol>
+<p><img alt="image" src="https://github.com/CryptoMorin/KingdomsX/assets/25098093/fc5a4903-6149-4769-819a-1e712914ba6d" /></p>
+<p>Here we chose <code>kingdoms.misc.custom.x</code>, but really, it could be any permission! <code>customMiscUpgrade</code> is the context which relies on a single integer.<br><br />
+We only added 3 of them, because the max level is 3. If you want more levels, go back to step 1 and change the <code>max-level</code> option.</p>
+<ol>
+<li>Make the default group inherit our newly created group: <code>/lp group default parent add kingdoms</code><br><br />
+This will allow all permissions to automatically use this group no matter what. Now, you might be asking, doesn't this give them the permissions right away whether they have the upgrade or not, or even in a kingdom at all? No, it doesn't because we used contextual permissions which is basically a way of saying "you only have this permission if a certain condition is met" and those conditions being our contexts, i.e. <code>customMiscUpgrade=x</code></li>
+</ol>
+<p>If your higher groups (donator ranks, mod, admin, etc) don't inherit the <code>default</code> group for some reasons, you also have to add them to these groups too.</p>
+<p><img alt="image" src="https://github.com/CryptoMorin/KingdomsX/assets/25098093/7986f745-e140-4f37-ba4c-4a81b90585bb" /></p>
+<ol>
+<li>Finally we can verify that it works: <code>/lp user &lt;player&gt; permission check kingdoms.misc.custom.1</code></li>
+</ol>
+<p>We can also check what's the current context of the player using <code>/lp user &lt;player&gt; info</code></p>
+<p>Note that contextual permissions are not that perfect. If you for whatever reason needed to check these permission for a player that's offline, it won't work correctly due to performance issues from LuckPerms side.</p>
+<ol>
+<li>Add it to the GUI so players can actually upgrade it.<br />
+Just adding it to the <code>misc-upgrade.yml</code> is not enough, we need to manually open a slot for it inside <a href="https://github.com/CryptoMorin/KingdomsX/blob/master/core/src/main/resources/guis/structures/nexus/misc-upgrades.yml">misc-upgrades.yml GUI</a></li>
+</ol>
+<p>The GUI's layout is designed to look nice with the default amount of upgrades. So if you want to add it, you should reposition all options.<br />
+<pre class="highlight"><code class="language-yml">options:
+ custom-misc-upgrade: # We just reused the same name as it is
+   name: "&amp;2My Custom Misc Upgrade"
+   material: DIAMOND_BLOCK
+   lore: |
+     &amp;7Gives you cool permissions
+   posx: x
+   posy: y</code></pre></p>
+<p>Also to translate the name shown in chat for <code>%upgrade%</code> placeholder, you can add it to your language file <code>upgrades -&gt; misc -&gt; custom-misc-upgrade -&gt; name</code></p>
+<p><strong>9. Bonus Step:</strong> Upgrade Trees &amp; Commands</p>
+<p>You can make another upgrade to be only enabled if a certain condition is met, this works for all upgrades as well. Let's say we only want someone to upgrade this permission if they upgraded <code>max members</code> to the maximum level and they have at least 10 members.</p>
+<pre class="highlight"><code class="language-yml">custom-misc-upgrade:
+  enabled: true
+  can-be-disabled: true
+  max-level: 3
+  condition:
+    "{kingdoms_kingdom_upgrade:level type=misc, of=MAX_MEMBERS} &lt; 10": "miscupgrades.required.max-members"
+    "kingdoms_members &lt; 10": "miscupgrades.required.members"</code></pre>
+<p>Here the keys are conditions and the values are paths to the entry to the error message to send to that player and prevent them from upgrading it if that condition is met. These entries are not defined by default and it can be any entry. You have to add them to your language files like en.yml</p>
+<h1 id="database-issues">Database Issues<a class="headerlink" href="#database-issues" title="Permanent link">&para;</a></h1>
+<h3 id="outdated-mysql">Outdated MySQL<a class="headerlink" href="#outdated-mysql" title="Permanent link">&para;</a></h3>
+<pre class="highlight"><code class="language-hs">java.lang.RuntimeException: java.sql.BatchUpdateException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'JSON NULL,`claims` JSON NULL,`protectedBlocks` JSON NULL,`mutedChannels` JSON NU' at line 1
+Caused by: java.sql.BatchUpdateException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'JSON NULL,`claims` JSON NULL,`protectedBlocks` JSON NULL,`mutedChannels` JSON NU' at line 1
+Caused by: java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'JSON NULL,`claims` JSON NULL,`protectedBlocks` JSON NULL,`mutedChannels` JSON NU' at line 1
+        at org.kingdoms.libs.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:120) ~[KingdomsX-1.16.19.jar:?]
+        at org.kingdoms.libs.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122) ~[KingdomsX-1.16.19.jar:?]
+        at org.kingdoms.libs.mysql.cj.jdbc.StatementImpl.executeInternal(StatementImpl.java:763) ~[KingdomsX-1.16.19.jar:?]
+        at org.kingdoms.libs.mysql.cj.jdbc.StatementImpl.execute(StatementImpl.java:780) ~[KingdomsX-1.16.19.jar:?]
+        at org.kingdoms.libs.mysql.cj.jdbc.StatementImpl.executeBatchUsingMultiQueries(StatementImpl.java:1019) ~[KingdomsX-1.16.19.jar:?]
+        at org.kingdoms.libs.mysql.cj.jdbc.StatementImpl.executeBatchInternal(StatementImpl.java:839) ~[KingdomsX-1.16.19.jar:?]
+        at org.kingdoms.libs.mysql.cj.jdbc.StatementImpl.executeBatch(StatementImpl.java:795) ~[KingdomsX-1.16.19.jar:?]        at org.kingdoms.libs.hikari.pool.ProxyStatement.executeBatch(ProxyStatement.java:127) ~[KingdomsX-1.16.19.jar:?]        at org.kingdoms.libs.hikari.pool.HikariProxyStatement.executeBatch(HikariProxyStatement.java) ~[KingdomsX-1.16.19.jar:?]
+        at org.kingdoms.data.database.sql.SQLDatabase.&lt;init&gt;(SQLDatabase.java:60) ~[KingdomsX-1.16.19.jar:?]
+        ... 16 more</code></pre>
+<p>This simply means that your MySQL server is outdated and needs to be updated. If your host provides a panel, you can update your MySQL from there, if not, you can manually download and install from the <a href="https://dev.mysql.com/downloads/mysql/">official MySQL download page</a>.</p>
+<h3 id="ssl">SSL<a class="headerlink" href="#ssl" title="Permanent link">&para;</a></h3>
+<pre class="highlight"><code class="language-hs">Caused by: org.kingdoms.libs.mysql.cj.jdbc.exceptions.CommunicationsException: Communications link failure
+Caused by: javax.net.ssl.SSLHandshakeException: java.security.cert.CertPathValidatorException: Path does not chain with any of the trust anchors
+Caused by: java.security.cert.CertificateException: java.security.cert.CertPathValidatorException: Path does not chain with any of the trust anchors
+Caused by: java.security.cert.CertPathValidatorException: Path does not chain with any of the trust anchors
+
+// or
+
+Caused by: java.sql.SQLNonTransientConnectionException: SSL Connection required, but not provided by server.
+Caused by: org.kingdoms.libs.mysql.cj.exceptions.UnableToConnectException: SSL Connection required, but not provided by server.</code></pre>
+<p>You simply need to set <a href="https://github.com/CryptoMorin/KingdomsX/blob/ea04792129a5165909bc5ea657eb447b63dda2f0/core/src/main/resources/config.yml#L307-L308">ssl</a> option to <code>false</code> and restart the server.</p>
+<h3 id="public-key-retrieval-is-not-allowed">Public Key Retrieval is not allowed<a class="headerlink" href="#public-key-retrieval-is-not-allowed" title="Permanent link">&para;</a></h3>
+<pre class="highlight"><code class="language-hs">Caused by: java.sql.SQLNonTransientConnectionException: Public Key Retrieval is not allowed
+Caused by: org.kingdoms.libs.mysql.cj.exceptions.UnableToConnectException: Public Key Retrieval is not allowed</code></pre>
+<p>You simply need to stop your server first, then set <a href="https://github.com/CryptoMorin/KingdomsX/blob/6233c255858c4d834e697fb9267ea2155ac71605/core/src/main/resources/config.yml#L335-L337"><code>config.yml</code> -&gt; <code>allow-public-key-retrieval</code></a> to <strong>true</strong> and restart.</p>
+<h3 id="maxlifetime-vs-wait_timeout">maxLifeTime vs wait_timeout<a class="headerlink" href="#maxlifetime-vs-wait_timeout" title="Permanent link">&para;</a></h3>
+<pre class="highlight"><code class="language-hs">[org.kingdoms.libs.hikari.pool.PoolBase] kingdoms-hikari - Failed to validate connection org.kingdoms.libs.mysql.cj.jdbc.ConnectionImpl@... (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.</code></pre>
+<p>This can occur because of several reasons:<br />
+* Your <a href="https://github.com/CryptoMorin/KingdomsX/blob/5d6af30cedfadac58c2246b9412438d1f7252d50/core/src/main/resources/config.yml#L309-L314"><code>maximum-lifetime</code> option in config.yml</a> is higher than your <a href="https://dev.mysql.com/doc/refman/8.4/en/server-system-variables.html#sysvar_wait_timeout"><code>wait_timout</code> option in MySQL/MariaDB</a>. The solution would be to simply either decrease <code>maximum-lifetime</code> or increase <code>wait_timeout</code>.<br />
+* There's a firewall between your Minecraft server and the MySQL server that terminates MySQL connections itself. Obviously the fix would be to check your firewall settings.<br />
+* Can be caused by <strong>SQL Proxies</strong> or <strong>HAProxy</strong>. You should check their timeouts and max connection settings as well.<br />
+* There's a chance that this might happen because you're running your server in a VM.<br />
+* This can also happen when a low <code>net.core.somaxconn</code> kernal parameter is set for your system.</p>
+<h3 id="host-is-blocked-because-of-many-connection-errors">Host is blocked because of many connection errors<a class="headerlink" href="#host-is-blocked-because-of-many-connection-errors" title="Permanent link">&para;</a></h3>
+<pre class="highlight"><code class="language-hs">Caused by: java.sql.SQLException: CLI-specific condition,  message from server: "Host '...' is blocked because of many connection errors; unblock with 'mysqladmin flush-hosts'"</code></pre>
+<p>This means that you had an error in your previous restarts that you didn't pay attention to, now your database has locked down any connection until you fix the issue. What you need to do is to go back in your logs and see when this error started happening. You'll likely find another error message that is slightly different than this message. If you couldn't find the solution to the first error in this FAQ, you can report the logs to the developers.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>After you fixed the error, you need to run <code>mysqladmin flush-hosts</code> like the error says.<br />
+Otherwise this error will continue to happen. If you don't have direct SSH access to the<br />
+database server, you can manually run the <code>FLUSH HOSTS</code> SQL statement instead.<br />
+Make sure all of this is done when your server is not running.</p>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>If you're unable to find the first error, you can also flush hosts which lets you see the actual error<br />
+the next time you restart. However, in rare cases the error might be hidden and require you to directly check<br />
+your database logs for more information (for example, using the <code>SET GLOBAL log_warnings = 2</code> SQL statement.)</p>
+</div>
+<p>Number of interrupted connect requests allowed is determined by the value of the <code>max_connect_errors</code> system variable. After <code>max_connect_errors</code> number of  failed requests, mysqld assumes that something is wrong (for example, that someone is trying to break in), and blocks the host from further connections.</p>
+<h1 id="entityremoveevent-warning">EntityRemoveEvent Warning<a class="headerlink" href="#entityremoveevent-warning" title="Permanent link">&para;</a></h1>
+<pre class="highlight"><code class="language-hs">[Server thread/WARN]: [KingdomsX] "Kingdoms v..." has registered a listener for org.bukkit.event.entity.EntityRemoveEvent on method "private static void org.kingdoms.utils.hash.EntityHashHandler$a.a(org.bukkit.event.entity.EntityRemoveEvent)", but the event is Deprecated. "Server performance will be affected"; please notify the authors [Crypto Morin].</code></pre>
+<p>This is a misleading message added by Paper in one of their recent v1.21 updates. This error claims that this affects server performance which is wrong and it's simply a generic message for server owners to bother developers for no reason. <a href="https://github.com/PaperMC/Paper/pull/11961">This however was fixed in newer Paper versions.</a> So you simply have to update your Paper to the latest <strong>v1.21.4</strong> build in order to fix this issue or you could simply ignore it as it doesn't really affect anything.</p>
+<h1 id="possible-malware-detections">Possible Malware Detections<a class="headerlink" href="#possible-malware-detections" title="Permanent link">&para;</a></h1>
+<p>In this section I'll answer some questions about the plugin being detected as possible malware due to the heavy "hacky" code it uses to bypass some limitations. Keep in mind that Minecraft developers were forced to resort to hacky solutions from the start due to how Minecraft's code works.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>As of Kingdoms <strong>v1.17.13-BETA</strong>, the plugin will automatically verify itself using an internal hash without requiring an internet connection.<br />
+This is only useful when a virus is designed to inject files/code into other plugins. However, it's obviously not useful against MITM attacks.<br />
+However this verification currently doesn't work on JARs downloaded from Spigot as Spigot itself injects some code after the JAR is downloaded.</p>
+<p>This system has had more than 10 true-positives as of 10/15/2025 with zero false-positives.<br />
+You can read <a href="#plugin-integrity-check-failed">here</a> to see an example of how it works.</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The plugin is obfuscated merely because of Spigot's file size limit. The standard file size limit for direct uploads to Spigot is 4MB and we had to have several discussions with Spigot's team to increase this file size limit now that our plugin is around 6MB. However, this obfuscation is designed to minimize the size as much as possible, not to make the code harder to read, so most of the plugins code is still readable after being de-obfuscated, except some Kotlin classes that use advanced syntax and are pretty unreadable even without obfuscation.</p>
+</div>
+<p><strong>Last Update Info:</strong><br />
+* 04/09/2025<br />
+* <a href="https://discord.com/channels/429132410748141579/430983456932102154/1357030242602057748">KingdomsX v1.17.12.1-BETA</a><br />
+* <a href="https://www.spigotmc.org/resources/luckperms.28140/download?version=544174">LuckPerms (Bukkit) v5.4.131</a><br />
+* <a href="https://scan.rikonardo.com/">PluginScan v1.0.3</a><br />
+* <a href="https://discord.gg/vMAvuA6k">ByteScan Discord v1.1.4</a></p>
+<h3 id="virustotal">VirusTotal<a class="headerlink" href="#virustotal" title="Permanent link">&para;</a></h3>
+<p>If you run the plugin through <a href="https://www.virustotal.com/gui/file/9830aacfd74f140419fe9eaf9738d32c753a063e39582c476f7044cac2551213/">VirusTotal</a>, you'll see that the plugin comes back with zero threats.</p>
+<p><img alt="Image showing VirusTotal's report summary of Kingdoms" src="https://github.com/user-attachments/assets/d215b039-e0a9-409b-b12d-64d33f11b791" /></p>
+<h3 id="pluginscan-bytescan">PluginScan &amp; ByteScan<a class="headerlink" href="#pluginscan-bytescan" title="Permanent link">&para;</a></h3>
+<p>If you use services that are designed with Minecraft plugins in mind, such as <a href="https://scan.rikonardo.com/">PluginScan</a> and <a href="https://discord.gg/vMAvuA6k">ByteScan Discord</a> you'll see several threats which are reasonable. The threats shown here are only from PluginScan, however ByteScan will basically show the same threats.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This section requires you to have advanced knowledge of Minecraft plugins and Java in general. If you don't, you will not understand any of the things mentioned here and you'll need to discuss this with your server developers. If you have any questions, I'll try to answer them.</p>
+</div>
+<p><img alt="Image showing PluginScan's report of Kingdoms" src="https://github.com/user-attachments/assets/e772611e-c9c4-4c7d-9819-d01229549339" /></p>
+<h4 id="orgkingdomsutilsinternalproxybytecodemanipulator">org.kingdoms.utils.internal.ProxyBytecodeManipulator<a class="headerlink" href="#orgkingdomsutilsinternalproxybytecodemanipulator" title="Permanent link">&para;</a></h4>
+<p>A class that contains experimental code, some code in that class are never used, but they're all quite "dangerous" in the fact that it may simply break things or its functionality might break in future spigot updates. Right now the only thing it does is injecting custom kingdoms command and loading/unloading addons.</p>
+<h4 id="orgkingdomsasmsafeclassdefiner">org.kingdoms.asm.SafeClassDefiner<a class="headerlink" href="#orgkingdomsasmsafeclassdefiner" title="Permanent link">&para;</a></h4>
+<p>This is entirely an experimental class as well, it's not used anywhere in the plugin. It's basically kept for future updates when Forge and Fabric support is added. It basically makes it possible to register custom events to all platforms other than Bukkit.</p>
+<h4 id="class-loaders">Class Loaders<a class="headerlink" href="#class-loaders" title="Permanent link">&para;</a></h4>
+<pre class="highlight"><code class="language-hs">in org.kingdoms.dependencies.classpath.IsolatedClassLoader
+in org.kingdoms.dependencies.classpath.JarInJarClassLoader
+in org.kingdoms.dependencies.classpath.JarInJarClassPathAppender
+in org.kingdoms.dependencies.classpath.ReflectionClassPathAppender
+
+in org.kingdoms.libs.asm.ClassReader
+in org.kingdoms.libs.asm.Constants</code></pre>
+<p>These all do one thing. They basically download and load external libraries. This is marked as dangerous because it really is as it basically fiddles with low-level Java mechanics (basically similar to machine code for computers) due to how Minecraft plugins work in general. The library marked here is <a href="https://asm.ow2.io/">ASM</a> it's pretty much industry-standard.</p>
+<ul>
+<li>Why does the plugin download libraries in the first place? Because if the mentioned file size limit libraries cannot be shaded and the fact that the plugin shouldn't be shipped with unnecessary libraries if your server doesn't even use them. For example, if you use H2 database, there is no reason to load MySQL drivers as well.</li>
+<li>What libraries does the plugin download? Mostly utility classes which most of them are open sourced. Such as <a href="https://github.com/CryptoMorin/XSeries">XSeries</a>, <a href="https://docs.oracle.com/javase/8/docs/technotes/guides/jdbc">database drivers</a> and Java utilities such as <a href="https://github.com/ben-manes/caffeine">caffeine</a> that help with performance.</li>
+<li>Where are the libraries downloaded from? <a href="https://central.sonatype.com/">Maven</a>. While any malware can easily be uploaded to Maven, the plugin only uses the known libraries which are mostly open source. You can check these downloaded libraries in the <code>Kingdoms/libs</code> folder.</li>
+</ul>
+<p>If you run the same scan using PluginScan but for <strong>LuckPerms</strong>, you'll receive a similar detection. Kingdoms pretty much uses the same thing for loading libraries as LuckPerms. The reason why it isn't being fully detected is because LuckPerms jar itself is nested. It's basically a .jar in another .jar file and anti-viruses cant property detect these:</p>
+<p><img alt="Image showing PluginScan's report of LuckPerms with 2 threats" src="https://github.com/user-attachments/assets/7af10b83-fe60-4f67-9f2b-61d77d2c57c6" /> <img alt="Image showing LuckPerms JAR archive content" src="https://github.com/user-attachments/assets/2906cc22-0735-4eee-ac09-cd2a58c3d2da" /></p>
+<h4 id="others">Others<a class="headerlink" href="#others" title="Permanent link">&para;</a></h4>
+<p><img alt="Image showing ByteScan's report" src="https://github.com/user-attachments/assets/e8f51e50-376d-4e49-a819-a3d0911fda7e" /></p>
+<ul>
+<li><strong>[MODERATE] Possible binary embedded in class file</strong>: This is simply because the class is too complex and its size is unusually big.</li>
+<li><strong>[MODERATE] Plugin can load new plugins in runtime (CommandUpdates)</strong>: Yes, it can! That's how Kingdoms handles addons with <code>/k admin addons</code></li>
+<li><strong>[MODERATE] Plugin can set player's op status (ConfigCommand)</strong>: Yes, it can! That's used when you define a <code>OP:command...</code> option inside a config and it runs the command as the player as if they were OP and had all permissions.</li>
+<li><strong>[LOW] Plugin can hide malicious references by using reflection</strong>: This simply goes back to Minecraft limitations. A lot of developers use reflection to bypass limitations and shortcomings of Spigot's API to access great features.</li>
+<li><strong>[LOW] Multiple listeners found</strong>: I'm not sure how this is even a threat, most plugins have listeners, it's a pretty documented Bukkit API.</li>
+<li><strong>[LOW] Possible class injection (or just a library)</strong>: They're just utility classes for the plugin.</li>
+</ul>
+<h2 id="plugin-integrity-check-failed">Plugin integrity check failed<a class="headerlink" href="#plugin-integrity-check-failed" title="Permanent link">&para;</a></h2>
+<p><img align="right" width="360" height="240" alt="image of hazard sign" src="https://github.com/user-attachments/assets/70109bf8-4652-4274-b980-df1997c0e9a8" /></p>
+<p>If you get any messages in your console saying that the plugin failed to load because of <code>Plugin integrity check failed</code> that most likely means you have a virus that injected malicious things into Kingdoms JAR! If a developer gave you a link to this location, it means you 100% have a virus.</p>
+<p>This usually happens because you downloaded some plugin from an untrusted source (such as cracking websites like BlackSpigot.com, Spigotunlocked.com, etc.)<br><br />
+When this happens, it means that <strong>all your plugins are infected as well</strong>, so you can't just find the source and delete it, you have to take care of everything.</p>
+<p>But do not worry. These viruses are usually easy to fix. You have to follow these steps:</p>
+<ul>
+<li>Stop the server</li>
+<li>Delete <strong>all</strong> the plugins inside the plugins folder.</li>
+<li>Delete the entire <code>plugins/.paper-remapped</code> folder (if you have one).</li>
+<li>Re-download kingdoms plugin again and put it inside the plugins folder. (Do not put any other plugins in the server)</li>
+<li>Start the server.</li>
+</ul>
+<p>If your server started successfully, that means the virus has only spread to plugin JAR files and you can now re-download all your plugins again and start the server. After starting the server, make sure Kingdoms doesn't fail to start with the same error message.</p>
+<div class="admonition danger">
+<p class="admonition-title">Danger</p>
+<p>Do not re-use the old plugin JAR files you had, delete all of them. They're all infected.</p>
+</div>
+<p>If your server was hosted by another provider (you didn't self-host it on your computer) you and your server are most likely going to be fine, but if you executed one of the infected JARs on your own computer (by double-clicking it like an <code>.exe</code> file) or used it to run a server locally, that could have hidden effects of the virus that can linger in your computer in the background and it's recommended to run an anti-virus to be sure.<br><br />
+If the issue persists, contact the KingdomsX developers and they will help you further.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>There have been reported cases in which the server JAR itself was infected. This is highly unlikely because usually you're not able to change<br />
+a JAR that's already in use by Java class loaders, unless you were tricked to use custom JVM flags to use Java Agents or Java Instruments.</p>
+<p>If you deleted all your plugins and kingdoms still fails to load for the same reason, try deleting your server JAR and<br />
+download it from <a href="https://papermc.io/downloads/paper">trusted sources</a> or choose it again from your hosting provider's panel.</p>
+</div>
+<h1 id="how-to-disable-the-nexus">How to disable the nexus?<a class="headerlink" href="#how-to-disable-the-nexus" title="Permanent link">&para;</a></h1>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Disabling the nexus will prevent you from doing the following:<br />
+  * Upgrading misc, champion and powerup upgrades.<br />
+  * Managing your relationship attribute settings.<br />
+  * Changing your ranks and permissions.<br />
+  * Changing other settings like public homes, being pacifist, buying shields, etc.</p>
+</div>
+<ul>
+<li>You need to disable the <a href="https://github.com/CryptoMorin/KingdomsX/wiki/Commands#k-nexus">/k nexus</a> command. See <a href="https://github.com/CryptoMorin/KingdomsX/wiki/FAQ#how-to-disable-a-command">this FAQ</a> for disabling commands. </li>
+<li>You should disable placing the nexus on <code>/k create</code> in <a href="https://github.com/CryptoMorin/KingdomsX/blob/c4b0475b0dc10c573690d230ab9899691d02062b/core/src/main/resources/config.yml#L1446-L1447">config.yml</a></li>
+</ul>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>If you simply do not like the building itself, you can still<br />
+leave <a href="https://github.com/CryptoMorin/KingdomsX/wiki/Commands#k-nexus">/k nexus open</a> and give players permission to use that command (they can't use it by default) however this won't<br />
+let them upgrade the kingdom itself as it requires a nexus to be placed.</p>
+</div>
+<h1 id="advanced-pvp-settings">Advanced PvP Settings<a class="headerlink" href="#advanced-pvp-settings" title="Permanent link">&para;</a></h1>
+<p>Currently the plugin offers a wide range of <a href="https://github.com/CryptoMorin/KingdomsX/blob/c8f86497aceb250fdf5b23feff07c088aa3561fc/core/src/main/resources/relations.yml#L26-L40">predefined PvP modes</a> that you can select which controls who can hit who.<br><br />
+If none of these settings match your requirements, you'd have to get a little more creative by using <a href="https://github.com/CryptoMorin/KingdomsX/wiki/Placeholders">placeholders</a> and <a href="https://github.com/CryptoMorin/KingdomsX/wiki/Config#conditions">conditions</a> on the <a href="https://github.com/CryptoMorin/KingdomsX/blob/c8f86497aceb250fdf5b23feff07c088aa3561fc/core/src/main/resources/relations.yml#L42-L54"><code>pvp-advanced</code> option in <code>relations.yml</code></a>.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>In the two examples below, we'll focus on applying special rules to <a href="https://github.com/CryptoMorin/KingdomsX/wiki/Introduction#pacifism--shields">pacifist kingdoms</a>. Make sure that <a href="https://github.com/CryptoMorin/KingdomsX/blob/c8f86497aceb250fdf5b23feff07c088aa3561fc/core/src/main/resources/invasions.yml#L255-L256">PvP is disabled for pacifists (should be: <code>disable-pvp: true</code>)</a> because otherwise the examples below won't work properly.\</p>
+</div>
+<p>Also make sure MassWar is not running, as you might've configured <a href="https://github.com/CryptoMorin/KingdomsX/blob/c8f86497aceb250fdf5b23feff07c088aa3561fc/core/src/main/resources/invasions.yml#L352-L360">special PvP settings for MassWar</a>.</p>
+<h3 id="applying-territory-pvp-rules-for-pacifists-only">Applying territory pvp rules for pacifists only<a class="headerlink" href="#applying-territory-pvp-rules-for-pacifists-only" title="Permanent link">&para;</a></h3>
+<p>Let's say you want pacifist kingdoms to be able to PvP as long as they're both in unclaimed lands (wilderness), but everyone else who aren't part of a pacifist kingdom should have normal PvP rules based on their relationship everywhere.</p>
+<p>To make that work, we can use:<br />
+* <code>yml
+  pvp: territory</code><br />
+* <code>yml
+  pvp-advanced: '!(!can_fight &amp;&amp; (kingdoms_kingdom_is_pacifist || {other*kingdoms_kingdom_is_pacifist})) || !ceasefire'</code></p>
+<p>This will prevent players from attacking each other if either of them is in their own land and is a pacifist. Other players that are not pacifists will have PvP enabled everywhere unless they're allied/members</p>
+<p><strong>Breakdown:</strong><br />
+  * <code>!(!can_fight &amp;&amp; (kingdoms_kingdom_is_pacifist || {other*kingdoms_kingdom_is_pacifist}))</code><br />
+    * <code>!can_fight</code>: If they can't fight (based on the <strong>territory</strong> rule)<br />
+    * <strong>and</strong><br />
+    * <code>(kingdoms_kingdom_is_pacifist || {other*kingdoms_kingdom_is_pacifist})</code>: Either kingdom is pacifist.<br />
+  * <strong>or</strong><br />
+  * <code>!ceasefire</code>: Don't allow players to fight if they have some kind of ceasefire relationship attribute.</p>
+<h3 id="enable-pvp-for-pacifist-players-when-theyre-in-someone-elses-territory">Enable PvP for pacifist players when they're in someone else's territory<a class="headerlink" href="#enable-pvp-for-pacifist-players-when-theyre-in-someone-elses-territory" title="Permanent link">&para;</a></h3>
+<p>In our previous example, pacifists were protected when they're inside their own land, however let's make it so that they're protected everywhere even in wilderness except when they're in an enemy's land:<br />
+* <code>yml
+  pvp: normal</code><br />
+* <code>yml
+  pvp-advanced: 'can_fight || ((kingdoms_kingdom_is_pacifist &amp;&amp; kingdoms_land_relation == 'ENEMY') || ({other*kingdoms_kingdom_is_pacifist} &amp;&amp; {other*kingdoms_land_relation} == 'ENEMY'))'</code></p>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>Make sure to restart to apply the changes.</p>
+</div>
+<h1 id="how-to-change-build-duration-for-turrets-and-structures">How to change build duration for turrets and structures?<a class="headerlink" href="#how-to-change-build-duration-for-turrets-and-structures" title="Permanent link">&para;</a></h1>
+<p>Turrets and structures use a shared set of settings in <a href="https://github.com/CryptoMorin/KingdomsX/blob/7b69207d4622e1981565d13b9430889b96603cf8/core/src/main/resources/declarations/building.yml#L17-L23">declarations/building.yml</a> for the build duration.<br><br />
+As you can see, each type of building has its own duration, and these duration use <a href="https://github.com/CryptoMorin/KingdomsX/wiki/Config#math">math equations</a>.</p>
+<ul>
+<li><strong>Opening:</strong> When the building is placed for the first time. This is also used when you remove a certain building and place it again.</li>
+<li><strong>Upgrading:</strong> Obviously when the building is upgraded.</li>
+<li><strong>Repairing:</strong> When the building has hit 0 durability and needs a full repair.</li>
+<li><strong>Demolishing:</strong> Used for breaking the building. Usually a low build duration is preferred for this.</li>
+</ul>
+<p>As you can see the default options use complicated math equations. Specially the <code>&lt;build-duration-factor&gt;</code> variable which is from <a href="https://github.com/CryptoMorin/KingdomsX/wiki/YAML#yaml-modules">YAML modules</a>.<br><br />
+This variable is used as a factor to avoid repeating the same settings in each structure and turret. You can see examples in <a href="https://github.com/CryptoMorin/KingdomsX/blob/7b69207d4622e1981565d13b9430889b96603cf8/core/src/main/resources/Turrets/arrow.yml#L5">Turrets/arrow.yml</a> and <a href="https://github.com/CryptoMorin/KingdomsX/blob/7b69207d4622e1981565d13b9430889b96603cf8/core/src/main/resources/Structures/nexus.yml#L8">Structures/nexus.yml</a>.</p>
+<p>If you can get what you want by modifying the <code>&lt;build-duration-factor&gt;</code> variable, that'd make things a lot faster, otherwise if you need specific math equations or values for a specific turret/structure, then you need to take advantage of <a href="https://github.com/CryptoMorin/KingdomsX/wiki/YAML#yaml-modules">YAML module override feature</a>.</p>
+<p>Let's say you want to make it so that placing a nexus at any level takes no time at all. You can't just set <code>&lt;build-duration-factor&gt;</code> to a really negative duration since the <code>upgrading</code> build duration also depends on that variable. Instead, you have to copy the build duration settings from <code>declarations/building.yml</code> to <code>Structures/nexus.yml</code>:</p>
+<pre class="highlight"><code class="language-yml">build-duration:
+  opening: 0</code></pre>
+<p>Let's say you wanted to make it so that upgrading the arrow turret needs 24hrs for every level. You have to put this in <code>Turrets/arrow.yml</code>:</p>
+<pre class="highlight"><code class="language-yml">build-duration:
+  upgrading: 'level * [24hrs]'</code></pre>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Obviously these settings do not apply to buildings that are already in the process of being changed.<br />
+You'd have to either restart the server or cancel the building construction to update the duration.</p>
+</div>
+<h1 id="private-support-conversations">Private Support &amp; Conversations<a class="headerlink" href="#private-support-conversations" title="Permanent link">&para;</a></h1>
+<p>You can't have private conversations with any of the moderation team on the Discord server. Here is a list of common things people would like to have private conversations about and what they should do instead:</p>
+<ul>
+<li><strong>I want the source code</strong> -&gt; <a href="https://github.com/CryptoMorin/KingdomsX/wiki/FAQ#source-code">About the source code on FAQ</a>.</li>
+<li><strong>Do you accept commissions?</strong> -&gt; No all new features must go through the process of <a href="https://github.com/CryptoMorin/KingdomsX/wiki/Features#feature-cycles">feature cycles</a> and must be suggested in the Discord's <a href="https://discord.com/channels/429132410748141579/996396983633858560">#suggestions</a> channel or <a href="https://github.com/CryptoMorin/KingdomsX/issues">GitHub Issues</a> (Discord is preferred as GitHub is rarely used for these things.)</li>
+<li><strong>Will you accept any of the above for a certain amount of money?</strong> -&gt; No.</li>
+<li><strong>I want to report an exploit/security issue.</strong> -&gt; Ask in the general chat for the moderation team to open a ticket for you (mention that it's for an exploit)</li>
+<li><strong>I just want to ask questions related to the plugin privately!</strong> -&gt; Sure, you can have private support for normal questions that are related to the plugin. Ask for a ticket to be opened (mention that it's just related to simple questions about the plugin.)</li>
+</ul>
+<p>If what you want isn't listed here that probably means you need to ask it in the general support chat.</p></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script src="../js/bootstrap.bundle.min.js"></script>
+        <script>
+            var base_url = "..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../js/base.js"></script>
+        <script src="../javascripts/mathjax.js"></script>
+        <script src="https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js"></script>
+        <script src="../search/main.js"></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p>From here you can search these documents. Enter your search terms below.</p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results" data-no-results-text="No results found"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>

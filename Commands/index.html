@@ -1,0 +1,992 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="light">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        <link rel="canonical" href="https://wiki.kingdomsx.com/Commands/">
+        <link rel="shortcut icon" href="../img/favicon.ico">
+        <title>⌨️ Commands - KingdomsX</title>
+        <link href="../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../css/fontawesome.min.css" rel="stylesheet">
+        <link href="../css/brands.min.css" rel="stylesheet">
+        <link href="../css/solid.min.css" rel="stylesheet">
+        <link href="../css/v4-font-face.min.css" rel="stylesheet">
+        <link href="../css/base.css" rel="stylesheet">
+        <link id="hljs-light" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" >
+        <link id="hljs-dark" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github-dark.min.css" disabled>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+        <script>hljs.highlightAll();</script> 
+    </head>
+
+    <body>
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="..">KingdomsX</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar-collapse" aria-controls="navbar-collapse" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="nav-item">
+                                <a href="../Home.md.md" class="nav-link">🏠 Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../Features/" class="nav-link">🔰 Features</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../Installation/" class="nav-link">📥 Installation</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../Installation.md#setup" class="nav-link">📗 Setup</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../Installation.md#compatibility" class="nav-link">📘 Compatibility</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../FAQ/" class="nav-link">❓ FAQ</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../NFAQ/" class="nav-link">⁉️ NFAQ</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../Addons/" class="nav-link">⚜️ Addons</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../Outposts/" class="nav-link">🚩 Outposts</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../Peace-Treaties/" class="nav-link">☮️ Peace Treaties</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../Map-Viewers-Addon/" class="nav-link">🗺️ Map Viewers</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../EngineHub-Addon/" class="nav-link">🏬 EngineHub</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../Admin-Tools/" class="nav-link">🛠  Admin Tools</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../Introduction/" class="nav-link">❇️ Introduction</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="./" class="nav-link active" aria-current="page">⌨️ Commands</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../Commands.md#players" class="nav-link">👨‍🦱 Players</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../Commands.md#admins" class="nav-link">👩‍⚖️ Admins</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../Permissions/" class="nav-link">🔓 Permissions</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../Placeholders/" class="nav-link">🔣 Placeholders</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../Placeholders.md#players" class="nav-link">🚹 Players</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../Placeholders.md#kingdoms" class="nav-link">🏛 Kingdoms</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../Placeholders.md#nations" class="nav-link">🏢 Nations</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../Config/" class="nav-link">📁 Config</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../YAML/" class="nav-link">📃 YAML</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../Languages/" class="nav-link">💱 Languages</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../GUIs/" class="nav-link">📱 GUI</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../Protection-Signs/" class="nav-link">🔒 Protection Signs</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../Mails/" class="nav-link">✉️ Mails</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../Mechanics/" class="nav-link">📚 Mechanics</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"  aria-expanded="false">⚔️ Invasion</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../Mechanics.md#Invasion" class="dropdown-item">None</a>
+</li>
+                                    
+<li>
+    <a href="../Mechanics.md#Preparing" class="dropdown-item">🛡️ Preparing</a>
+</li>
+                                    
+<li>
+    <a href="../Mechanics.md#Champion" class="dropdown-item">🧟 Champion</a>
+</li>
+                                    
+<li>
+    <a href="../Mechanics.md#mass-wars" class="dropdown-item">🗡  Masswar</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../Mechanics.md#Structures" class="nav-link">📡 Structures</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../Mechanics.md#Turrets" class="nav-link">🔫 Turrets</a>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ms-md-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-bs-toggle="modal" data-bs-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                            <li class="nav-item">
+                                <a rel="prev" href="../Introduction/" class="nav-link">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a rel="next" href="../Permissions/" class="nav-link">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-bs-toggle="collapse" data-bs-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-body-tertiary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-bs-level="2"><a href="#tab-completion" class="nav-link">Tab Completion</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-bs-level="1"><a href="#commands" class="nav-link">Commands</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-bs-level="2"><a href="#players" class="nav-link">Players</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#admins" class="nav-link">Admins</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<p>All the kingdoms commands are accessed from a main command <strong>/kingdoms</strong><br><br />
+<strong>Aliases:</strong><br />
+* /kingdomx<br />
+* /kingdomsx<br />
+* /kingdom<br />
+* /k</p>
+<p>The main name and its aliases can be changed in <a href="https://github.com/CryptoMorin/KingdomsX/blob/ba67389957e53635613cb8d0080f93390eacd99e/core/src/main/resources/config.yml#L397-L400">config.yml</a>.</p>
+<p>All the command names and aliases are customizable inside language files. With their entries being <code>commands.[groups].name</code> and <code>commands.[groups].description</code> and <code>commands.[groups].aliases</code> (Aliases are separated by space.) Difference between <code>name</code> and <code>aliases</code> is that the <code>name</code> is the primary command name that is shown in most places, (for example in <code>/k help</code>) but the aliases are only used when actually running the command or tab-completing. Make sure to restart the server after changing these options.</p>
+<p>For example, if you look at <code>/k create</code> in <a href="https://github.com/CryptoMorin/KingdomsX/blob/956bcc647e200ff8245b2aef9ab6c16842b82295/resources/languages/en/en.yml#L1468-L1487">en.yml here</a> you see that there's an <a href="https://github.com/CryptoMorin/KingdomsX/blob/956bcc647e200ff8245b2aef9ab6c16842b82295/resources/languages/en/en.yml#L1487">aliases option</a>, but no <code>name</code> option. That's just because all translations use the internal name of the command (in this case "create") by default. If you want to use a different name, just add the <code>name</code> option yourself. (make sure to use the correct amount of spaces before the option)</p>
+<p>It's also possible to create a main command such as <code>/claim</code> as an alias for <code>/k claim</code>, but you have to do this from <code>commands.yml</code> in your server's <strong>root folder</strong> (where your <code>spigot.yml</code> and <code>world</code> folders are.) <strong>Make sure to restart the server after changing.</strong><br />
+<pre class="highlight"><code class="language-yml">aliases:
+  icanhasbukkit:
+    - version $1-
+  claim:
+    - k claim
+  ally:
+    - k chat a
+  chat:
+    - k chat $1-</code></pre></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The <code>$1-</code> refers to the provided command parameters. You need to put that in order to be able to use things like <code>/chat kingdom</code>.<br />
+However, Bukkit aliases cannot properly handle tab-completion and writing <code>/chat ...</code> will not properly tab-complete the list of available channels.<br />
+You can find more information about <code>commands.yml</code> file <a href="https://bukkit.fandom.com/wiki/Commands.yml">here</a>.</p>
+</div>
+<p><br></p>
+<p>If you want to disable a command entirely, it's recommended that you disable it via <a href="https://github.com/CryptoMorin/KingdomsX/blob/5953c9719f8f920369b48e791aee04d82ed66d5a/core/src/main/resources/config.yml#L266-L289">config.yml</a> instead of removing the permission.<br><br />
+Also, it's possible to disable commands per WorldGuard region, for example if you don't want players to use <a href="https://github.com/CryptoMorin/KingdomsX/wiki/Commands#k-fly">/k fly</a> in certain regions, you can use the command <code>/rg flag &lt;region&gt; blocked-cmds k_fly</code></p>
+<p>You can read about command permissions on the <a href="https://github.com/CryptoMorin/KingdomsX/wiki/Permissions">Permissions</a> page.<br><br />
+Command options (arguments) are either in <strong>&lt;&gt;</strong> or <strong>[]</strong><br />
+<strong>Options:</strong><br />
+* <code>&lt;required&gt;</code> - You <strong>must</strong> to use this argument in the command.<br />
+* <code>[optional]</code> - This argument <strong>can</strong> be used in the command.<br />
+The parameter names that are possible to be used in that specific parameter, are separated with <strong>/</strong> (e.g. <code>&lt;first/second/third/...&gt;</code>)<br><br />
+All these rules mostly follow the <a href="https://minecraft.fandom.com/wiki/Commands#Command_guide">official Minecraft command syntax</a>.</p>
+<p>Nation commands are not mentioned here since their purpose are quite similar to the kingdoms' commands.</p>
+<h2 id="tab-completion">Tab Completion<a class="headerlink" href="#tab-completion" title="Permanent link">&para;</a></h2>
+<p>When you're writing a command such as <code>/k cla</code> you'll notice that the plugin will suggest a few commands with a small box above your chat box. To use one of the suggested commands, you can use the <a href="https://en.wikipedia.org/wiki/Tab_key">Tab key</a> to navigate through this list and select one of the suggestions without writing the full command yourself. The plugin takes advantage of the new Minecraft command system and provides a very smart tab completion system. Unlike other plugins, this plugin will go through multiple analysis of your message and suggest the best matches that it can find. This robust system saves your players from going through the help page one by one just to find a command.</p>
+<p>This system also works with translated commands and removes any duplicated suggestions.</p>
+<p>Certain commands have arguments that aren't names of other players, kingdoms or nations. These arguments help the command to adjust its settings such as <code>#KINGDOM</code> and <code>#PLAYER</code> <a href="https://github.com/CryptoMorin/KingdomsX/wiki/Commands/#selectors">selectors</a> which can be used to specify what the name you're passing to the command is referring to exactly. These can be translated for different languages, but if you ever wanted to use these commands in a config, you should always use the English identifiers since those always work regardless of the player's locale.</p>
+<h3 id="selectors">Selectors<a class="headerlink" href="#selectors" title="Permanent link">&para;</a></h3>
+<p>Command selectors are words use to help some commands pick exact values when there are more than one possibilities. The concept is similar to Minecraft's <a href="https://minecraft.fandom.com/wiki/Target_selectors">target selectors</a> for commands.</p>
+<h4 id="general-selectors">General Selectors<a class="headerlink" href="#general-selectors" title="Permanent link">&para;</a></h4>
+<p>For example, when using <a href="https://github.com/CryptoMorin/KingdomsX/wiki/Commands#k-show">/k show</a> command, you could just write <code>/k show &lt;name&gt;</code>, most people would assume that <strong><name></strong> refers to a kingdom name since you're requesting information of a kingdom, but other times it's more convenient to write the player name instead and let the plugin check the kingdom they're in, so the plugin accepts both, but this causes an ambiguity issue. If a player have the same name as a kingdom, the plugin will prioritize the kingdom name, but sometimes you just want to be more precise if you don't want to memorize the ordering rules (or more importantly fore admins, you don't want a fail-safe behavior and execute certain important commands for the wrong kingdom)</p>
+<p>For these reasons, general selectors are defined as follows:<br />
+<code>#NATION</code>: The specified name is for a nation.<br />
+<code>#KINGDOM</code>: The specified name is for a kingdom.<br />
+<code>#PLAYER</code>: The specified name is for a player.</p>
+<p>These are the default English identifiers (which admins should use in configs), but they might differ for different languages.<br><br />
+When none of them are specified, the plugin checks the names in the order they're specified above.</p>
+<p><strong>Examples:</strong><br />
+* <code>/k nation show test</code>: First checks if <strong>test</strong> is a nation name, if not, checks if it's a kingdom name, if not, checks if it's a player name, and if not, it'll fail.<br />
+* <code>/k show #PLAYER Domingo</code>: Checks if a player with the name <strong>Domingo</strong> exists (doesn't matter if they're online or not) and if they're in a kingdom, otherwise fails.<br />
+* <code>/k show #KINGDOM CORE</code>: Checks if a kingdom with the name <strong>CORE</strong> exists, otherwise fails.</p>
+<p><br></p>
+<hr />
+<h1 id="commands">Commands<a class="headerlink" href="#commands" title="Permanent link">&para;</a></h1>
+<h2 id="players">Players<a class="headerlink" href="#players" title="Permanent link">&para;</a></h2>
+<h4 id="k-help"><code>/k help</code><a class="headerlink" href="#k-help" title="Permanent link">&para;</a></h4>
+<p><strong>Syntax:</strong> <code>/k help [ page | command ]</code><br><br />
+Opens the interactive kingdoms help pages for the players. Only the commands that players have permission to are displayed in this list. So if you're op, you can see all the commands, or... can you?<br><br />
+<strong>Options:</strong><br />
+* <code>[page]</code> The page number.<br />
+* <code>[command]</code> Gets information about a specific command. This command is similar to <a href="https://github.com/CryptoMorin/KingdomsX/wiki/Commands#k-admin-command">/k admin command</a> but with reduced information for players.</p>
+<h4 id="k-create"><code>/k create</code><a class="headerlink" href="#k-create" title="Permanent link">&para;</a></h4>
+<p><strong>Syntax:</strong> <code>/k create &lt;name&gt;</code><br><br />
+Create a new kingdom with the specified name. Duplicated and blacklisted names depend on the config options. This also can cost money if you're using Vault. Can be changed in <code>config.yml</code> -&gt; <code>economy</code><br><br />
+<strong>Options:</strong><br />
+* <code>&lt;name&gt;</code> The name of the kingdom. Must follow the naming convention specified in <code>config.yml</code> -&gt; <code>kingdoms-name</code></p>
+<hr />
+<h4 id="k-rename"><code>/k rename</code><a class="headerlink" href="#k-rename" title="Permanent link">&para;</a></h4>
+<p><strong>Syntax:</strong> <code>/k rename &lt;name&gt;</code><br><br />
+Rename your kingdom. Duplicated and blacklisted names depend on the config options. This also can cost money if you're using Vault. Can be changed in <code>config.yml</code> -&gt; <code>economy</code><br><br />
+<strong>Options:</strong><br />
+* <code>&lt;name&gt;</code> The new name of the kingdom. Must follow the naming convention specified in <code>config.yml</code> -&gt; <code>kingdoms-name</code></p>
+<hr />
+<h4 id="k-claim"><code>/k claim</code><a class="headerlink" href="#k-claim" title="Permanent link">&para;</a></h4>
+<p>Claims the current land that the player is standing on.</p>
+<h5 id="k-claim_1">/k claim <x> <z><a class="headerlink" href="#k-claim_1" title="Permanent link">&para;</a></h5>
+<ul>
+<li><code>x</code> The x axis of the chunk you want to claim. <code>&lt;y&gt;</code> Used only if <code>[x]</code> parameter from the previous parameter is used. The y axis of the chunk you want to claim. This is mostly meant to be used when players click on claims in <a href="">/k map</a></li>
+</ul>
+<h5 id="k-claim-auto">/k claim auto<a class="headerlink" href="#k-claim-auto" title="Permanent link">&para;</a></h5>
+<p>Begin to automatically claim lands as you go from one chunk to another. This will start by attempting to claim the current land you're standing in.</p>
+<p>The following commands don't instantly claim the chunks, but adds them to a clipboard where it shows which lands cannot be claimed and which will be claimed so the player can check and even add/remove extra lands and confirm the final process.</p>
+<h5 id="k-claim-fill">/k claim fill<a class="headerlink" href="#k-claim-fill" title="Permanent link">&para;</a></h5>
+<p><strong>Attempts</strong> to fill the shape (by claiming them) with connected borders that are marked by claimed lands. There are default limits to stop the server from lagging if the shape is not found or is too huge to claim. These options can be found in <code>claims.yml</code> -&gt; <code>fill</code></p>
+<h5 id="k-claim-square">/k claim square <radius><a class="headerlink" href="#k-claim-square" title="Permanent link">&para;</a></h5>
+<p>Claims a square with an area of radius*radius chunks.</p>
+<h5 id="k-claim-corner-pos1-pos2">/k claim corner &lt; pos1 | pos2 &gt;<a class="headerlink" href="#k-claim-corner-pos1-pos2" title="Permanent link">&para;</a></h5>
+<p>This is simply just a WorldEdit <code>//wand</code> version of claiming. You go to a location and set <code>/k claim corner pos1</code> then go to another location and <code>/k claim corner pos2</code> and the plugin will get all the chunks between these two set corners as a rectangle.</p>
+<h5 id="k-claim-line">/k claim line <chunks><a class="headerlink" href="#k-claim-line" title="Permanent link">&para;</a></h5>
+<p>Claims x chunks in a straight line where the player is facing.</p>
+<h5 id="k-claim-clipboard">/k claim clipboard<a class="headerlink" href="#k-claim-clipboard" title="Permanent link">&para;</a></h5>
+<p>Shows all the selected lands from the previous claiming operations.</p>
+<h5 id="k-claim-confirm">/k claim confirm<a class="headerlink" href="#k-claim-confirm" title="Permanent link">&para;</a></h5>
+<p>Confirms to claim all the lands in the clipboard.</p>
+<hr />
+<h4 id="k-unclaim"><code>/k unclaim</code><a class="headerlink" href="#k-unclaim" title="Permanent link">&para;</a></h4>
+<h5 id="k-unclaim-all">/k unclaim all<a class="headerlink" href="#k-unclaim-all" title="Permanent link">&para;</a></h5>
+<p>Unclaims all lands that don't have a turret or structure in them.</p>
+<hr />
+<h4 id="k-lore"><code>/k lore</code><a class="headerlink" href="#k-lore" title="Permanent link">&para;</a></h4>
+<p><strong>Syntax:</strong> <code>/k lore &lt;description/remove&gt;</code><br><br />
+Set your kingdom lore. This lore will display when players come from another land to your land. It might not display the lore depending if you came from the same land type. (Wilderness -&gt; Wilderness, Another Kingdom -&gt; Your Kingdom, etc...)<br><br />
+You need to have <code>LORE</code> kingdom permission to use this command.<br><br />
+<strong>Options:</strong><br />
+* <code>&lt;description&gt;</code> The description of the lore. Supports color codes and must follow the rules specified in <code>config.yml</code> -&gt; <code>kingdoms-lore</code> There also some special keyword such as <code>remove</code> to completely remove this lore.</p>
+<hr />
+<h4 id="k-tag"><code>/k tag</code><a class="headerlink" href="#k-tag" title="Permanent link">&para;</a></h4>
+<p><strong>Syntax:</strong> <code>/k tag &lt;name/remove&gt;</code><br><br />
+Set your kingdom's tag. This tag is usually a small name (smaller than the kingdom's name) that serves as a cosmetic placeholder <code>%kingdoms_tag%</code> that can be used in different places where a compact name is preferred.<br />
+<strong>Options:</strong><br />
+* <code>&lt;name&gt;</code> Supports color codes and must follow the rules specified in <code>config.yml</code> -&gt; <code>kingdoms-tag</code> There also some special keyword such as <code>remove</code> to completely remove this lore.</p>
+<hr />
+<h4 id="k-home"><code>/k home</code><a class="headerlink" href="#k-home" title="Permanent link">&para;</a></h4>
+<p>Teleport to your kingdom's home. Moving or getting damaged during the teleportation, will cancel it.<br><br />
+Once you make a new kingdom, the plugin will automatically set your home at where you're standing if the land was automatically claimed successfully.</p>
+<hr />
+<h4 id="k-sethome"><code>/k sethome</code><a class="headerlink" href="#k-sethome" title="Permanent link">&para;</a></h4>
+<p><strong>Syntax:</strong> <code>/k sethome [center/centerAxis/centerDirection]</code><br><br />
+Sets your kingdom home at your location. You need to have <code>SET_HOME</code> kingdom permission to use this command. Your kingdom home is probably already set after you create your kingdom.<br><br />
+<strong>Options:</strong><br />
+* <code>[Safe Options]</code><br />
+  * <code>centerDirection</code> Center the player pitch and yaw.<br />
+  * <code>centerAxis</code> Centers the player xyz block axis.<br />
+  * <code>center</code> Centers both player xyz block axis and player yaw and pitch (direction).</p>
+<hr />
+<h4 id="k-unsethome"><code>/k unsethome</code><a class="headerlink" href="#k-unsethome" title="Permanent link">&para;</a></h4>
+<p>Removes your kingdom home. You need to have <code>SET_HOME</code> kingdom permission to use this command.</p>
+<hr />
+<h4 id="k-nexus"><code>/k nexus</code><a class="headerlink" href="#k-nexus" title="Permanent link">&para;</a></h4>
+<p><strong>Syntax:</strong> <code>/k nexus [open/remove]</code><br><br />
+Changes your kingdom <a href="https://github.com/CryptoMorin/KingdomsX/wiki/Introductions#nexus">nexus</a> location. You need to have <code>NEXUS</code> kingdom permission to use this command.<br><br />
+<strong>Options:</strong><br />
+* <code>[open/remove]</code><br />
+  * <code>open</code> If you have the permission, you can open your nexus remotely.<br />
+  * <code>remove</code> Remove your kingdom's nexus remotely. You may want to check <code>nexus</code> -&gt; <code>allow-removal</code> option in <code>config</code>.</p>
+<hr />
+<h4 id="k-vault"><code>/k vault</code><a class="headerlink" href="#k-vault" title="Permanent link">&para;</a></h4>
+<p><strong>Syntax:</strong> <code>/k vault [kingdom]</code><br><br />
+Opens your kingdom's chest directly. Opening others chest requires <code>kingdoms.command.vault.others</code> permission.</p>
+<hr />
+<h4 id="k-bank"><code>/k bank</code><a class="headerlink" href="#k-bank" title="Permanent link">&para;</a></h4>
+<p><strong>Syntax:</strong> <code>/k bank &lt;deposit/withdraw&gt; &lt;amount&gt;</code><br />
+Put or take money from your kingdom. Kingdom banks are used for taxes.<br />
+You need to have <code>WITHDRAW</code> permission to take money from your kingdom's bank.<br><br />
+<strong>Options:</strong><br />
+* <code>&lt;deposit/withdraw&gt;</code> Whether you want to put or take money.<br />
+* <code>&lt;amount&gt;</code> The amount of money to take from or put to your account.</p>
+<hr />
+<h3 id="k-resourcepoints"><code>/k resourcepoints</code><a class="headerlink" href="#k-resourcepoints" title="Permanent link">&para;</a></h3>
+<ol>
+<li><code>/k resourcepoints converter</code><br><br />
+Opens the resource point converter GUI from the nexus remotely.</li>
+</ol>
+<p><br></p>
+<ol>
+<li><code>/k resourcepoints &lt;"deposit" | "withdraw"&gt; &lt;amount&gt;</code></li>
+<li><code>&lt;deposit | withdraw&gt;</code></li>
+<li><code>deposit</code> Convert your money to resource points.</li>
+<li><code>withdraw</code> Convert your kingdom's resource points to money.</li>
+<li><code>&lt;amount&gt;</code> The amount of resource points.</li>
+</ol>
+<p><br></p>
+<ol>
+<li><code>/k resourcepoints transfer &lt;"kingdom" | "nation"&gt; &lt;amount&gt;</code><br><br />
+Transfers resource points from your kingdom/nation to your kingdom/nation. This is not used for transferring resource points to other kingdom/nations. You should use <a href="#k-donate">/k donate</a> command for that instead.</li>
+<li><code>&lt;"kingdom" | "nation"&gt;</code></li>
+<li><code>kingdom</code> Transfer resource points to your kingdom from your nation.</li>
+<li><code>nation</code> Transfer resource points to your nation from your kingdom.</li>
+<li><code>&lt;amount&gt;</code> The amount of resource points to transfer.</li>
+</ol>
+<hr />
+<h4 id="k-sell"><code>/k sell</code><a class="headerlink" href="#k-sell" title="Permanent link">&para;</a></h4>
+<p>Sell a kingdom item (turret &amp; structure) with the price specified in the config for resource points. For example, the price of selling an arrow turret is defined in <a href="https://github.com/CryptoMorin/KingdomsX/blob/2332be4c1b5ceda01cead8774eaf41d56d7ce8b8/core/src/main/resources/Turrets/arrow.yml#L18">Turrets/arrow.yml</a>.</p>
+<hr />
+<h4 id="k-tradable"><code>/k tradable</code><a class="headerlink" href="#k-tradable" title="Permanent link">&para;</a></h4>
+<p>Shows a list of special items that can give you a specific amount of resource points for each item.<br><br />
+Note that this command uses special Minecraft translatable components if your server version supports it. Meaning that<br />
+the material names shown in the command are translated based on the client settings not based on their <a href="https://github.com/CryptoMorin/KingdomsX/wiki/Commands#k-language">/k lang</a> settings.</p>
+<hr />
+<h4 id="k-promote"><code>/k promote</code><a class="headerlink" href="#k-promote" title="Permanent link">&para;</a></h4>
+<p><strong>Syntax:</strong> <code>/k promote &lt;player&gt;</code><br />
+Promote a player in your kingdom to a lower priority rank.<br><br />
+<strong>Options:</strong><br />
+* <code>&lt;player&gt;</code> The player to promote.</p>
+<hr />
+<h4 id="k-allytruceenemy"><code>/k ally/truce/enemy</code><a class="headerlink" href="#k-allytruceenemy" title="Permanent link">&para;</a></h4>
+<p><strong>Syntax:</strong> <code>/k ally/truce/enemy &lt;kingdom&gt;</code><br />
+Send a request to a kingdom to change your relationship status with them.<br><br />
+<strong>Options:</strong><br />
+* <code>&lt;kingdom&gt;</code> The kingdom to request the relation.</p>
+<hr />
+<h4 id="k-revoke"><code>/k revoke</code><a class="headerlink" href="#k-revoke" title="Permanent link">&para;</a></h4>
+<p><strong>Syntax:</strong> <code>/k revoke &lt;kingdom&gt;</code><br />
+Revoke your relationship with a kingdom.<br><br />
+<strong>Options:</strong><br />
+* <code>&lt;kingdom&gt;</code> The kingdom to revoke relations with.</p>
+<hr />
+<h4 id="k-demote"><code>/k demote</code><a class="headerlink" href="#k-demote" title="Permanent link">&para;</a></h4>
+<p><strong>Syntax:</strong> <code>/k demote &lt;player&gt;</code><br />
+Demote a player in your kingdom to a higher priority rank.<br><br />
+<strong>Options:</strong><br />
+* <code>&lt;player&gt;</code> The player to demote.</p>
+<hr />
+<h4 id="k-gui"><code>/k gui</code><a class="headerlink" href="#k-gui" title="Permanent link">&para;</a></h4>
+<p><strong>Syntax:</strong> <code>/k gui &lt;name&gt;</code><br><br />
+Opens a GUI remotely with its name.<br />
+<strong>Options:</strong><br />
+* <code>&lt;gui&gt;</code> The name of the GUI to open. These names are the full path relative to the <code>guis</code> folder, however since almost all GUIs that can be accessed remotely are nexus GUIs, this command can accept relative names to <code>guis/lang/structures/nexus</code> folder.</p>
+<p><strong>Examples:</strong><br />
+* <code>/k gui nexus</code><br />
+* <code>/k gui champion-upgrades</code></p>
+<hr />
+<h4 id="k-pvp"><code>/k pvp</code><a class="headerlink" href="#k-pvp" title="Permanent link">&para;</a></h4>
+<p>By default, you can't PvP with your own kingdom members and allies due to <a href="https://github.com/CryptoMorin/KingdomsX/wiki/Introduction#relations">relations</a> attributes.<br><br />
+What this command does is only allow you to PvP these players that you normally can't.<br><br />
+If you don't have a kingdom, it'll only have effect when a kingdom set their PvP relation attribute for Naturals to false.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Both players need to have this enabled for it work. That basically means you can PvP anyone that has this enabled.\<br />
+This does not allow PvP if another plugin prevents it. For example, it does not work if WorldGuard's PvP flag is denied.</p>
+</div>
+<hr />
+<h4 id="k-top"><code>/k top</code><a class="headerlink" href="#k-top" title="Permanent link">&para;</a></h4>
+<p>View the top ranking kingdoms with the highest mights.</p>
+<hr />
+<h4 id="k-teleport"><code>/k teleport</code><a class="headerlink" href="#k-teleport" title="Permanent link">&para;</a></h4>
+<p>If you're under attack by another kingdom, use this command to teleport to the champion. Moving or getting damaged during the teleportation, will cancel it.<br><br />
+This will teleport you to where the invasion was <strong>started</strong> to avoid getting stuck in traps.</p>
+<hr />
+<h4 id="k-undo"><code>/k undo</code><a class="headerlink" href="#k-undo" title="Permanent link">&para;</a></h4>
+<p>Undo the last action in your claim history.</p>
+<hr />
+<h4 id="k-redo"><code>/k redo</code><a class="headerlink" href="#k-redo" title="Permanent link">&para;</a></h4>
+<p>Redo the last action in your claim history.</p>
+<hr />
+<h4 id="k-map"><code>/k map</code><a class="headerlink" href="#k-map" title="Permanent link">&para;</a></h4>
+<p><strong>Syntax:</strong> <code>/k map [ auto | reset | height] [width]</code><br><br />
+Show the map for your current location or change its settings. You can also claim lands from the map.<br><br />
+<strong>Options:</strong><br />
+* <code>[auto/reset/height]</code><br />
+  * <code>auto</code> When you go from a land to another land, the map will automatically update.<br />
+  * <code>reset</code> Reset your map's height and width to the default size.<br />
+  * <code>height</code> Set your map's height.<br />
+* <code>[width]</code> Set your map's width.</p>
+<hr />
+<h4 id="k-extractor"><code>/k extractor</code><a class="headerlink" href="#k-extractor" title="Permanent link">&para;</a></h4>
+<p><strong>Syntax:</strong> /k extractor [kingdom]<br><br />
+Collects resource points from all extractors in your kingdom. The permission for this command is not given by default. It's mostly intended to be used as a VIP command.</p>
+<p><strong>Options:</strong><br />
+* <code>[kingdom]</code> Only for admins that have <code>kingdoms.command.extractor.others</code> permission to collect resource points of all extractors of another kingdom.</p>
+<hr />
+<h4 id="k-broadcast-message"><code>/k broadcast &lt;message&gt;</code><a class="headerlink" href="#k-broadcast-message" title="Permanent link">&para;</a></h4>
+<p>Broadcast a message to all your kingdom members. You need to have <code>BROADCAST</code> kingdom permission to use this.<br />
+This broadcast will also play a sound to the members.</p>
+<p><strong>Options:</strong><br />
+* <code>&lt;message&gt;</code> The message to broadcast. Supports color codes.</p>
+<hr />
+<h4 id="k-chat"><code>/k chat</code><a class="headerlink" href="#k-chat" title="Permanent link">&para;</a></h4>
+<p><strong>Syntax:</strong> /k chat <channel> [message]<br><br />
+Change your current chat channel.<br><br />
+<strong>Options:</strong><br />
+* <code>&lt;channel&gt;</code> The channel to switch to. Can be <code>Nation (n)</code>, <code>Kingdom (k)</code>, <code>Ally (a)</code> and <code>Global (g)</code><br />
+* <code>[message]</code> Send a message to this channel without switching your main channel.</p>
+<hr />
+<h4 id="k-disband"><code>/k disband</code><a class="headerlink" href="#k-disband" title="Permanent link">&para;</a></h4>
+<p>Disbands your kingdom and all the lands and members will be lost. Only the kingdom king can do this.</p>
+<hr />
+<h4 id="k-donate"><code>/k donate</code><a class="headerlink" href="#k-donate" title="Permanent link">&para;</a></h4>
+<p><strong>Syntax:</strong> <code>/k donate &lt;kingdom&gt; &lt;amount&gt;</code><br><br />
+Donate resource points to another kingdom. You need to have <code>WITHDRAW</code> kingdom permission to use this.<br><br />
+<strong>Options:</strong><br />
+* <code>&lt;kingdom&gt;</code> The kingdom that you want to donate resource points to.<br />
+* <code>&lt;amount&gt;</code> The amount of resource points you want to donate.</p>
+<hr />
+<h4 id="k-fly"><code>/k fly</code><a class="headerlink" href="#k-fly" title="Permanent link">&para;</a></h4>
+<p>Toggle kingdoms flight. You need to have <code>FLY</code> kingdom permission to use this. This will also disable fly if you want to toggle fly from other plugins too.</p>
+<p>Players will be charged <strong><span class="arithmatex">\(100** and their kingdom will be charged **100 resource points** for players to activate the flight.&lt;br&gt;
+Players will also be charged **\)</span>1</strong> which and their kingdom will be charged that <strong>1 resource points</strong> for every second players have flight enabled. Failing to pay this amount will disable their flight.</p>
+<p>This will get disabled by the following things:<br />
+* If you get close to someone with <code>fly</code> attribute (by default only <code>enemies</code> if the person in the kingdom didn't change their relation attributes.)<br />
+* If you go to an unclaimed land or a land that the kingdom doesn't allow <code>fly</code> attribute for your relation.<br />
+* If a player damages you even if the first scenario above is not happening.</p>
+<p>Things that prevent kingdom flight from being disabled:<br />
+* Getting close to a player without a kingdom.<br />
+* Getting close to a player that has <a href="https://github.com/CryptoMorin/KingdomsX/wiki/Commands#k-sneak">/k sneak</a> on.<br />
+* Getting damaged by natural causes.<br />
+* When in admin mode.<br />
+* When you are in creative or spectator mode.<br />
+* When the nearby enemies are in creative or spectator mode.<br />
+* If you're op or have one of the kingdom flight bypass <a href="https://github.com/CryptoMorin/KingdomsX/wiki/Permissions#other-permissions">permissions</a>.<br />
+* Going from your land to a WorldGuard region that allows flying using ExtraWorldGuardFlags plugin.</p>
+<p>Your flight will not be disabled instantly by default, you'll be given a few seconds before returning and if you fail to do this or do this but instantly go again, your flight will be disabled.</p>
+<hr />
+<h4 id="k-sneak"><code>/k sneak</code><a class="headerlink" href="#k-sneak" title="Permanent link">&para;</a></h4>
+<p>Normally if you <a href="https://github.com/CryptoMorin/KingdomsX/wiki/Commands#k-fly">/k fly</a> around a player that you're not friendly with, your flight will get disabled.<br><br />
+Now if that player enables <code>/k sneak</code>, that won't happen again for any nearby players.<br><br />
+It's like the <a href="https://github.com/CryptoMorin/KingdomsX/wiki/Commands#k-pvp">/k pvp</a> version of kingdom flight.</p>
+<hr />
+<h4 id="k-language"><code>/k language</code><a class="headerlink" href="#k-language" title="Permanent link">&para;</a></h4>
+<p><strong>Syntax:</strong> <code>/k language [language]</code><br><br />
+Sets the language of each individual player. For more information see <a href="https://github.com/CryptoMorin/KingdomsX/wiki/Languages">languages</a> section.<br />
+<strong>Options:</strong><br />
+* <code>[langauge]</code> If it's not specified, the plugin will open a GUI instead.</p>
+<hr />
+<h4 id="k-invade"><code>/k invade</code><a class="headerlink" href="#k-invade" title="Permanent link">&para;</a></h4>
+<p>Invade another kingdom's land. You need to have <code>INVADE</code> kingdom permission to use this.</p>
+<hr />
+<h3 id="k-ransack"><code>/k ransack</code><a class="headerlink" href="#k-ransack" title="Permanent link">&para;</a></h3>
+<p>Same as <strong>/k invade</strong> with the difference that after a successful invasion, the lands are not transferred to the winner, however extra bonuses are gained from invading the kingdom. These include more money and resource points.</p>
+<hr />
+<h4 id="k-kick-member"><code>/k kick &lt;member&gt;</code><a class="headerlink" href="#k-kick-member" title="Permanent link">&para;</a></h4>
+<p>Kicks a member out of your kingdom. You need to have <code>KICK</code> kingdom permission to use this.<br><br />
+<strong>Options:</strong><br />
+* <code>&lt;member&gt;</code> The member in your kingdom that you want to kick.</p>
+<hr />
+<h4 id="k-king-member"><code>/k king &lt;member&gt;</code><a class="headerlink" href="#k-king-member" title="Permanent link">&para;</a></h4>
+<p>Transfers kingdom ownership to another member in your kingdom. This will announce a message to all the online kingdom members by default. There's also an option to announce it to all the online players.<br><br />
+<strong>Options:</strong><br />
+* <code>&lt;member&gt;</code> The member in your kingdom that you want to transfer the kingdom's ownership to.</p>
+<hr />
+<h4 id="k-show"><code>/k show</code><a class="headerlink" href="#k-show" title="Permanent link">&para;</a></h4>
+<p><strong>Syntax:</strong> /k show <a href="https://github.com/CryptoMorin/KingdomsX/wiki/Commands/#selectors">general-selectors</a><br />
+Shows detail about a kingdom. These details can be different whether you're an admin, a member of the kingdom, or an outsider.<br><br />
+<strong>Options:</strong><br />
+* <code>[#KINGDOM/#PLAYER/kingdom/player]</code><br />
+  * <code>#KINGDOM</code> It's a special parameter used to indicate that the 2nd parameter that's going to be used, is referring to a kingdom name.<br />
+  * <code>#PLAYER</code> It's a special parameter used to indicate that the 2nd parameter that's going to be used, is referring to a player name.<br />
+  * <code>kingdom/player</code> If the 1st parameter is not one of above, it'll first look for a kingdom named after the 1st parameter, if it couldn't find it, it'll look for a player name.<br />
+* <code>[kingdom/player]</code> Only works if the 1st parameter is <code>#KINGDOM</code> or <code>#PLAYER</code> It'll look for the specific element based on the first parameter.</p>
+<hr />
+<h4 id="k-surrender"><code>/k surrender</code><a class="headerlink" href="#k-surrender" title="Permanent link">&para;</a></h4>
+<p>Surrender during an invasion. If you're invading a kingdom and you surrender, the champion will despawn and the land owner will not change. If you're under attack and surrender, the champion will despawn and the attackers will get the land. You need to have <code>SURRENDER</code> kingdom permission for this to work.</p>
+<hr />
+<h3 id="k-elections"><code>/k elections</code><a class="headerlink" href="#k-elections" title="Permanent link">&para;</a></h3>
+<p>For more information on what elections are, refer to <a href="https://github.com/CryptoMorin/KingdomsX/wiki/Introduction#elections">this</a> section.<br><br />
+Commands below only work when elections are in progress.</p>
+<h5 id="k-elections-statement"><code>/k elections statement</code><a class="headerlink" href="#k-elections-statement" title="Permanent link">&para;</a></h5>
+<p><strong>Syntax:</strong> /k elections statement <statement><br><br />
+Sign up as a candidate for the election. The statement that you set, will appear in the voting GUI that other members access via <a href="https://github.com/CryptoMorin/KingdomsX/wiki/Commands#k-elections-vote">/k elections vote</a> command.</p>
+<h5 id="k-elections-vote"><code>/k elections vote</code><a class="headerlink" href="#k-elections-vote" title="Permanent link">&para;</a></h5>
+<p>Opens a GUI which allows kingdom members to vote for available candidates. Members can only vote for one person.</p>
+<hr />
+<h4 id="k-challenge"><code>/k challenge</code><a class="headerlink" href="#k-challenge" title="Permanent link">&para;</a></h4>
+<p><strong>Syntax:</strong> <code>/k challenge &lt;kingdom&gt;</code></p>
+<p>When challenges are <a href="https://github.com/CryptoMorin/KingdomsX/blob/d4f9e9279535d10ec80fb012b099c3971e935d94/core/src/main/resources/invasions.yml#L508">enabled</a>, kingdoms need to send a war declaration warning in advance before being able to <a href="#k-invade">/k invade</a> them. The kingdom who wants to challenge another kingdom can choose the amount of preparation time before the other kingdom can be invaded. Each kingdom must challenge the kingdom that they want to invade individually. Once the challenge preparation time has ended, the invader kingdom has <a href="https://github.com/CryptoMorin/KingdomsX/blob/d4f9e9279535d10ec80fb012b099c3971e935d94/core/src/main/resources/invasions.yml#L512">6hrs</a> to invade any of the other kingdom's lands. Once the time is over, they'd have to challenge them again and wait.</p>
+<p><strong>Options:</strong><br />
+* <code>&lt;kingdom&gt;</code> The kingdom you want to challenge.</p>
+<hr />
+<h4 id="k-visualize"><code>/k visualize</code><a class="headerlink" href="#k-visualize" title="Permanent link">&para;</a></h4>
+<p>Settings related to land visualizers and indicators.<br />
+If no argument is specified, this will show the land indicators and the title of the kingdom.<br />
+If the player has <code>kingdoms.command.visualize.details</code> permission, it'll also show almost every detail associated with this land.</p>
+<p><br></p>
+<p><strong>Arguments:</strong></p>
+<h5 id="k-visualize-toggle"><code>/k visualize toggle</code><a class="headerlink" href="#k-visualize-toggle" title="Permanent link">&para;</a></h5>
+<p>Toggle land indicators when you go from a land to another.</p>
+<h5 id="k-visualize-permanent"><code>/k visualize permanent</code><a class="headerlink" href="#k-visualize-permanent" title="Permanent link">&para;</a></h5>
+<p>Permanently keep the land indicators. (The titles will stay go away)</p>
+<h5 id="k-visualize-markers-type"><code>/k visualize markers &lt;type&gt;</code><a class="headerlink" href="#k-visualize-markers-type" title="Permanent link">&para;</a></h5>
+<p>Set your land indicators markers type. The difference between this and the <a href="https://minecraft.gamepedia.com/Debug_screen?section=6#More_debug-keys">F3+G Chunk Boundaries</a> is that this option shows the borders in a different way for each relation.<br><br />
+<strong>Options:</strong><br />
+  * <code>&lt;type&gt;</code> the markers type. These names are customizable in <code>claims.yml</code> config. The players need <code>kingdoms.markers.&lt;type&gt;</code> permission for these to work which are given by default.<br />
+    * <code>Default</code> The default markers type. The default markers type is <code>Blocks</code>, however if you use the default option and change the default markers method in <code>claims.yml</code> config, the player will also automatically use the new method.<br />
+    * <code>Blocks</code> The fake blocks shown in the corner of chunks.<br />
+    * <code>Horizontal</code> Horizontal fake particles that are displayed at the chunk borders.<br />
+    * <code>Vertical</code> Vertical fake particles that are displayed at the chunk borders.</p>
+<hr />
+<h4 id="k-requestjoin"><code>/k requestJoin</code><a class="headerlink" href="#k-requestjoin" title="Permanent link">&para;</a></h4>
+<p><strong>Syntax:</strong> /k requestJoin <em><kingdom></em></p>
+<p>Requests the specified kingdom to join their kingdom.</p>
+<h4 id="k-joinrequests"><code>/k joinRequests</code><a class="headerlink" href="#k-joinrequests" title="Permanent link">&para;</a></h4>
+<p>Anyone with <strong>INVITE</strong> permission will be able to open this GUI which shows a list of players who have requested your kingdom to join you. You can deny or accept their request here.</p>
+<h4 id="k-invitecodes"><code>/k inviteCodes</code><a class="headerlink" href="#k-invitecodes" title="Permanent link">&para;</a></h4>
+<p>Invite codes are physical produced invitation papers that any player can use to join the kingdom that produced them. You can add, remove and produce papers from this GUI.</p>
+<h4 id="k-merge"><code>/k merge</code><a class="headerlink" href="#k-merge" title="Permanent link">&para;</a></h4>
+<p><strong>Syntax:</strong> /k merge <em><kingdom></em></p>
+<p>Requests the specified kingdom to have your kingdom merged with them. It's important to note that the kingdom that requested the merge first will get <strong>merged into the other</strong> kingdom and not the other way around. When your kingdom gets merged to another kingdom, all your members, lands, resource points and bank money will be transferred to the other kingdom. Your upgrade levels will be transferred only if they're higher than the other kingdom's upgrade levels.</p>
+<p>If there are issues while merging on either side, you'll be warned. These issues are usually related to limits, such as member limit, land limit, etc.</p>
+<hr />
+<h2 id="admins">Admins<a class="headerlink" href="#admins" title="Permanent link">&para;</a></h2>
+<h4 id="k-reload"><code>/k reload</code><a class="headerlink" href="#k-reload" title="Permanent link">&para;</a></h4>
+<p>Reloads the plugin completely, including configs, GUIs and language files. Some options will not be updated properly with this command and require a full server restart. Please read <a href="https://github.com/CryptoMorin/KingdomsX/wiki/Installation#reloading">here</a> as well.</p>
+<hr />
+<h4 id="k-updates"><code>/k updates</code><a class="headerlink" href="#k-updates" title="Permanent link">&para;</a></h4>
+<p>Check for available updates on the Spigot page.</p>
+<hr />
+<h4 id="k-admin-create"><code>/k admin create</code><a class="headerlink" href="#k-admin-create" title="Permanent link">&para;</a></h4>
+<h5 id="k-admin-create-simple"><code>/k admin create simple</code><a class="headerlink" href="#k-admin-create-simple" title="Permanent link">&para;</a></h5>
+<p><strong>Syntax:</strong> /k admin create simple <name> <player></p>
+<p>Creates a kingdom for another player with the given name.</p>
+<h5 id="k-admin-create-any"><code>/k admin create any</code><a class="headerlink" href="#k-admin-create-any" title="Permanent link">&para;</a></h5>
+<p><strong>Syntax:</strong> /k admin create any <name></p>
+<p>Searches for players that don't have a kingdom and creates a kingdom for them. This is mostly only useful for testing purposes.</p>
+<h5 id="k-admin-create-super"><code>/k admin create super</code><a class="headerlink" href="#k-admin-create-super" title="Permanent link">&para;</a></h5>
+<p><strong>Syntax:</strong> /k admin create super</p>
+<p>Creates a super kingdom for the player who used the command. A super kingdom will gain random resources and upgrades which can be useful for testing:<br />
+* 50k+ money &amp; resource points<br />
+* You're given all the turret and structure types in your inventory.<br />
+* 5x5 claim in your current position.</p>
+<h5 id="k-admin-create-kingless"><code>/k admin create kingless</code><a class="headerlink" href="#k-admin-create-kingless" title="Permanent link">&para;</a></h5>
+<p><strong>Syntax:</strong> /k admin create kingless <name></p>
+<p>Create a server-managed kingdom. A kingdom with no specific player as king. This can be useful when you want players to only join specific kingdoms or nations without creating one themselves. Daily checks such as inactivity checks and taxes do not apply to these types of kingdoms, even after setting a king.</p>
+<hr />
+<h4 id="k-admin-claim-kingdom"><code>/k admin claim &lt;kingdom&gt;</code><a class="headerlink" href="#k-admin-claim-kingdom" title="Permanent link">&para;</a></h4>
+<p>Claim a land forcefully for a specific kingdom.<br><br />
+<strong>Options:</strong><br />
+* <code>&lt;kingdom&gt;</code> The kingdom to claim the land for.</p>
+<hr />
+<h4 id="k-admin-kick-player"><code>/k admin kick &lt;player&gt;</code><a class="headerlink" href="#k-admin-kick-player" title="Permanent link">&para;</a></h4>
+<p>Forcefully kick a player out of their kingdom.<br><br />
+<strong>Options:</strong><br />
+* <code>&lt;player&gt;</code> The player to kick.</p>
+<hr />
+<h4 id="k-admin-disband-kingdom"><code>/k admin disband &lt;kingdom&gt;</code><a class="headerlink" href="#k-admin-disband-kingdom" title="Permanent link">&para;</a></h4>
+<p>Disbands a kingdom.<br><br />
+<strong>Options:</strong><br />
+* <code>&lt;kingdom&gt;</code> The kingdom to disband.</p>
+<hr />
+<h4 id="k-admin-join-player-kingdom"><code>/k admin join &lt;player&gt; &lt;kingdom&gt;</code><a class="headerlink" href="#k-admin-join-player-kingdom" title="Permanent link">&para;</a></h4>
+<p>Forcefully make a player join a specific kingdom.<br><br />
+<strong>Options:</strong><br />
+* <code>&lt;player&gt;</code> The player to join the kingdom.<br />
+* <code>&lt;kingdom&gt;</code> The kingdom to make the player join.</p>
+<hr />
+<h4 id="k-admin-maxlandmodifier"><code>/k admin maxLandModifier</code><a class="headerlink" href="#k-admin-maxlandmodifier" title="Permanent link">&para;</a></h4>
+<p><strong>Syntax:</strong> <code>/k maxLandModifier &lt;kingdom&gt; &lt;amount&gt;</code><br><br />
+Gives a kingdom extra lands to claim to exceed their default max claims. This amount is not related to or affected by <code>max-claims</code> equation in <code>claims.yml</code> config at all.<br><br />
+<strong>Options:</strong><br />
+* <code>&lt;kingdom&gt;</code> The kingdom to give extra lands to.<br />
+* <code>&lt;amount&gt;</code> The amount of extra lands to give to the kingdom.</p>
+<hr />
+<h4 id="k-admin-nexus-kingdom-tp"><code>/k admin nexus &lt;kingdom&gt; [tp]</code><a class="headerlink" href="#k-admin-nexus-kingdom-tp" title="Permanent link">&para;</a></h4>
+<p>Open another kingdom's nexus. This uses the kingdom's king instance for a few things. So you might see some things such as taxes differently.<br><br />
+<strong>Options:</strong><br />
+* <code>&lt;kingdom&gt;</code> The kingdom to open their nexus.<br />
+* <code>[tp]</code> Teleport to this kingdom's nexus.</p>
+<hr />
+<h4 id="k-admin-home-kingdom"><code>/k admin home &lt;kingdom&gt;</code><a class="headerlink" href="#k-admin-home-kingdom" title="Permanent link">&para;</a></h4>
+<p>Teleport to a kingdom's home.<br><br />
+<strong>Options:</strong><br />
+* <code>&lt;kingdom&gt;</code> The kingdom to teleport to their home.</p>
+<hr />
+<h4 id="k-admin-dailycheck"><code>/k admin dailycheck</code><a class="headerlink" href="#k-admin-dailycheck" title="Permanent link">&para;</a></h4>
+<p>Performs a manual daily check for taxes, rewards and everything else related to daily checks and restarts the current daily timer.</p>
+<hr />
+<h4 id="k-admin-rank-player-rank"><code>/k admin rank &lt;player&gt; &lt;rank&gt;</code><a class="headerlink" href="#k-admin-rank-player-rank" title="Permanent link">&para;</a></h4>
+<p>Change a player's rank in a kingdom.<br><br />
+<strong>Options:</strong><br />
+* <code>&lt;player&gt;</code> The player to change their kingdom rank.<br />
+* <code>&lt;rank&gt;</code> Their new kingdom rank. It has to be a rank name from their kingdom. Auto tab completion will make this easier.</p>
+<hr />
+<h4 id="k-admin-resourcepoints-kingdom-addsetremove-amount"><code>/k admin resourcepoints &lt;kingdom&gt; [add/set/remove] &lt;amount&gt;</code><a class="headerlink" href="#k-admin-resourcepoints-kingdom-addsetremove-amount" title="Permanent link">&para;</a></h4>
+<p>Gives, sets or takes a kingdom's resource points.<br><br />
+<strong>Options:</strong><br />
+* <code>&lt;kingdom&gt;</code> The kingdom to modify their resource points.<br />
+* <code>[add/set/remove]</code><br />
+  * <code>add</code> Add x amount of resource points.<br />
+  * <code>set</code> Set the kingdom's resource points value to x.<br />
+  * <code>remove</code> Remove x amount of resource points.<br />
+* <code>&lt;amount&gt;</code> The amount of resource points to modify.</p>
+<hr />
+<h4 id="k-admin-bank-kingdom-addsetremove-amount"><code>/k admin bank &lt;kingdom&gt; [add/set/remove] &lt;amount&gt;</code><a class="headerlink" href="#k-admin-bank-kingdom-addsetremove-amount" title="Permanent link">&para;</a></h4>
+<p>Change a kingdom's bank.<br><br />
+<strong>Options:</strong><br />
+* <code>&lt;kingdom&gt;</code> The kingdom to modify their bank.<br />
+* <code>[add/set/remove]</code><br />
+  * <code>add</code> Add x amount of money to bank.<br />
+  * <code>set</code> Set the kingdom's bank value to x.<br />
+  * <code>remove</code> Remove x amount of money from bank.<br />
+* <code>&lt;amount&gt;</code> The amount of money to modify.</p>
+<hr />
+<h4 id="k-admin-spy"><code>/k admin spy</code><a class="headerlink" href="#k-admin-spy" title="Permanent link">&para;</a></h4>
+<p>Toggle chat spy. Spies are able to see private channels of other kingdoms (kingdoms, ally and truce chats) and they also see all ranged channels automatically.</p>
+<hr />
+<h4 id="k-admin-sound"><code>/k admin sound</code><a class="headerlink" href="#k-admin-sound" title="Permanent link">&para;</a></h4>
+<p><strong>Syntax:</strong> <code>/k admin sound &lt;sound&gt; [volume] [pitch]</code><br><br />
+Test sound names before using them in the config.<br />
+You can read <a href="https://github.com/CryptoMorin/KingdomsX/wiki/Config">here</a> about how Minecraft sounds work.<br><br />
+<strong>Options:</strong><br />
+* <code>&lt;sound&gt;</code> The sound to play. It has to be one of the names from <a href="https://hub.spigotmc.org/javadocs/spigot/org/bukkit/Sound.html">here</a>.<br />
+* <code>[volume]</code> The volume of the sound.<br />
+* <code>[pitch]</code> The pitch of the sound.</p>
+<hr />
+<h4 id="k-admin-test"><code>/k admin test</code><a class="headerlink" href="#k-admin-test" title="Permanent link">&para;</a></h4>
+<p><strong>Syntax:</strong> <code>/k admin test &lt;message&gt;</code><br><br />
+Test the unique features of the plugin <a href="https://github.com/CryptoMorin/KingdomsX/wiki/Config">message system</a> before using it in the config. Note that some of these features will not work for normal chat formatting. This command is special and will format the message in a way to make some special features such as the line breaks to work.<br><br />
+<strong>Options:</strong><br />
+* <code>&lt;message&gt;</code> The message to display. Supports line breaks, complex messages, hex color codes and etc...</p>
+<hr />
+<h4 id="k-admin-hologram"><code>/k admin hologram</code><a class="headerlink" href="#k-admin-hologram" title="Permanent link">&para;</a></h4>
+<p><strong>Syntax:</strong> <code>/k admin hologram &lt;radius&gt;</code></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This command is useless as of <code>v1.15.3</code> since the holograms are "fake". Even if you get duplicated holograms, it can be fixed with a simple relog or in worst case it's a simple bug that needs to be fixed. This command will not work on fake holograms.</p>
+</div>
+<p>Remove bugged structure and turret holograms for any reason (such as force stops and server crashes) in a given radius.<br />
+This won't affect normal <a href="https://minecraft.fandom.com/wiki/Armor_Stand">armor stands</a> or holograms that are not <strong>markers</strong> (you don't really need to understand what a marker hologram is, but it might remove non-kingdoms related holograms by other plugins when used near them.)<br><br />
+<strong>Options:</strong><br />
+* <code>&lt;radius&gt;</code> The block radius to delete the holograms.</p>
+<hr />
+<h4 id="k-admin-unclaim"><code>/k admin unclaim</code><a class="headerlink" href="#k-admin-unclaim" title="Permanent link">&para;</a></h4>
+<p>Forcefully unclaim the land that you're currently standing on.</p>
+<hr />
+<h4 id="k-admin-toggle"><code>/k admin toggle</code><a class="headerlink" href="#k-admin-toggle" title="Permanent link">&para;</a></h4>
+<p>Toggles <a href="https://github.com/CryptoMorin/KingdomsX/wiki/Permissions#admin-mode">admin mode</a>.</p>
+<hr />
+<h4 id="k-admin-evaluate"><code>/k admin evaluate</code><a class="headerlink" href="#k-admin-evaluate" title="Permanent link">&para;</a></h4>
+<p><strong>Syntax:</strong> <code>/k admin evaluate &lt;expression&gt;</code><br><br />
+Evaluates an expression using the math compiler. You can read about how the math engine works <a href="https://github.com/CryptoMorin/KingdomsX/wiki/Config#math-equations">here</a>. The math compiler has a robust hint system already, but this command will give even more detailed hints for what you're trying to do. It'll also provide a temporary environment so you can test your equations before deploying them on your server's config. It also has a really advanced tab completion system that works with different math components.<br />
+<strong>Options:</strong><br />
+* <code>&lt;expression&gt;</code> The expression to evaluate.</p>
+<hr />
+<h4 id="k-admin-dynmap-fullrenderremove"><code>/k admin dynmap &lt;fullrender/remove&gt;</code><a class="headerlink" href="#k-admin-dynmap-fullrenderremove" title="Permanent link">&para;</a></h4>
+<p>Performs different async actions regarding to Dynmap.<br><br />
+<strong>Options:</strong><br />
+* <code>&lt;fullrender&gt;</code> Perform a manual render for the whole map.<br />
+* <code>&lt;remove&gt;</code> Remove the markers, icons and everything else related to Kingdoms from the map.</p>
+<hr />
+<h4 id="k-admin-masswar-startend"><code>/k admin masswar &lt;start/end&gt;</code><a class="headerlink" href="#k-admin-masswar-startend" title="Permanent link">&para;</a></h4>
+<p>Manage <a href="https://github.com/CryptoMorin/KingdomsX/wiki/Mechanics#Masswar">masswar</a> event.<br><br />
+<strong>Options:</strong><br />
+* <code>&lt;start/end&gt;</code><br />
+  * <code>start</code> Starts the masswar event if it's not running already.<br />
+  * <code>end</code> Ends the masswar event if it's running.</p>
+<hr />
+<h4 id="k-admin-shield-kingdom-addsetremove-time"><code>/k admin shield &lt;kingdom&gt; [add/set/remove] &lt;time&gt;</code><a class="headerlink" href="#k-admin-shield-kingdom-addsetremove-time" title="Permanent link">&para;</a></h4>
+<p>Changes a kingdom's shield duration.<br><br />
+<strong>Options:</strong><br />
+* <code>&lt;kingdom&gt;</code> The kingdom to modify their shield.<br />
+* <code>[add/set/remove]</code><br />
+  * <code>add</code> Add x amount of time to shield.<br />
+  * <code>set</code> Set the kingdom's shield duration to x.<br />
+  * <code>remove</code> Remove x amount of shield from the kingdom.<br />
+* <code>&lt;time&gt;</code> The shield duration time for the kingdom. This supports time suffixes and uses hours by default.</p>
+<hr />
+<h4 id="k-admin-player-player-fd"><code>/k admin player [player] [fd]</code><a class="headerlink" href="#k-admin-player-player-fd" title="Permanent link">&para;</a></h4>
+<p>Show all the possible kingdom related information about a player.<br><br />
+<strong>Options:</strong><br />
+* <code>[player]</code> The player to show information about or the command sender if not the console.<br />
+* <code>[fd]</code> Meaning <code>find duplicate</code> searches <strong>all</strong> the kingdoms (this might take a few seconds depending on how many kingdoms your server has) to look if the player data can be found in multiple kingdoms. This is used for debugging critical issues which should not happen.</p>
+<hr />
+<h4 id="k-admin-land-world-x-z"><code>/k admin land [world] &lt;x&gt; &lt;z&gt;</code><a class="headerlink" href="#k-admin-land-world-x-z" title="Permanent link">&para;</a></h4>
+<p>Teleports you to a specific land with the specified <strong>chunk</strong> coordinates (not <strong>location</strong> coordinates). Please make sure to teleport using creative game mode with your fly enabled. The land you're going to teleport to might be unloaded, and you might fall into the void if your connection is slow.<br><br />
+The x z axis of the teleportation location is the center of the chunk and the y axis of this location is always the highest block found in the center of the chunk.<br><br />
+<strong>Options:</strong><br />
+* <code>[world]</code> The world that this land belongs to.<br />
+* <code>&lt;x&gt;</code> The x axis of the <strong>chunk</strong> location.<br />
+* <code>&lt;z&gt;</code> The z axis of the <strong>chunk</strong> location.</p>
+<p>You can also find the server's chunk location in the <a href="https://minecraft.gamepedia.com/Debug_screen">Debug Screen</a> by pressing <strong>F3</strong> in-game. See this <a href="https://user-images.githubusercontent.com/25098093/99180794-42c90e80-26de-11eb-8ca6-11eb0db3781f.png">screenshot</a>.<br><br />
+Also, check <a href="https://github.com/CryptoMorin/KingdomsX/wiki/Commands#k-visualize">/k visualize</a> command for getting a land's information.</p>
+<hr />
+<h4 id="k-admin-command"><code>/k admin command</code><a class="headerlink" href="#k-admin-command" title="Permanent link">&para;</a></h4>
+<p>The <a href="https://github.com/CryptoMorin/KingdomsX/wiki/Commands#k-help">/k help</a> command has something similar, but designed for players specifically.<br />
+<strong>Syntax:</strong> <code>/k admin command &lt;command&gt;</code><br><br />
+Used to display all available information for a kingdom command. Such as it's main name, parent, aliases, permission and etc.<br><br />
+This command also allows you to copy the permission name.<br />
+<strong>Options:</strong><br />
+* <code>&lt;command&gt;</code> The command name without slash or /k. Command parents are also separated by spaces, but no <em>argument</em> should be passed to them. This parameter support the command aliases.</p>
+<p><strong>Examples:</strong><br />
+* <code>/k admin command show</code><br />
+* <code>/k admin command admin command</code><br />
+* <code>/k admin command admin nation disband</code></p>
+<hr />
+<h4 id="k-admin-item-resourcepoints"><code>/k admin item resourcepoints</code><a class="headerlink" href="#k-admin-item-resourcepoints" title="Permanent link">&para;</a></h4>
+<p><strong>Syntax:</strong> <code>/k admin item resourceponts &lt;item&gt; [amount]</code><br><br />
+Gives you a custom item that is worth a custom amount.<br />
+<strong>Options:</strong><br />
+* <code>&lt;item&gt;</code> The item name defined in <code>resource-points.yml</code><br />
+* <code>[amount]</code> The amount of the item given or 1 by default.</p>
+<p><strong>Example:</strong> <code>/k admin item rp crystal</code></p>
+<hr />
+<h4 id="k-admin-item-inject"><code>/k admin item inject</code><a class="headerlink" href="#k-admin-item-inject" title="Permanent link">&para;</a></h4>
+<p><strong>Syntax:</strong> <code>/k admin item inject &lt;amount&gt;</code><br><br />
+Injects an amount of resource points the item you're holding is worth into the item. You can convert this item back to resource points of the specified amount from the resource points converter. Note that the injected amount is for per item. This injected amount will persist even if the plugin disabled, although you can't do anything with it.<br />
+<strong>Options:</strong><br />
+* <code>&lt;amount&gt;</code> The amount of resource points to inject into this item.</p>
+<p><strong>Example:</strong> <code>/k admin item inject 3000</code></p>
+<hr />
+<h4 id="k-admin-item"><code>/k admin item</code><a class="headerlink" href="#k-admin-item" title="Permanent link">&para;</a></h4>
+<p><strong>Syntax:</strong> <code>/k admin item &lt;"turret" | "structure"&gt; &lt;style&gt; [amount]</code><br><br />
+Gives you the kingdom item with the specified name and amount.<br />
+<strong>Options:</strong><br />
+* <code>&lt;"turret" | "structure"&gt;</code> Whether the item is going to be a turret or a structure (without the quotes.)<br />
+* <code>&lt;style&gt;</code> The style name of this kingdom item which is the same name of the config file for turrets in <code>Turrets</code> folder and the structure section name of structures in <code>structures.yml</code><br />
+* <code>[amount]</code> The amount of the item given or 1 by default.</p>
+<p><strong>Examples:</strong> <br />
+* <code>/k admin item turret arrow</code><br />
+* <code>/k admin item turret heatbeam 3</code><br />
+* <code>/k admin item structure powercell</code></p>
+<hr />
+<h4 id="k-admin-item-editor"><code>/k admin item editor</code><a class="headerlink" href="#k-admin-item-editor" title="Permanent link">&para;</a></h4>
+<p>Opens an advanced GUI editor for items. This command is mostly meant to be used in addition to <a href="#k-admin-gui">/k admin gui</a> for creating GUIs, but it can also be used as a general item editor. It will edit the item in your current hand or make a template item if you're not holding anything. It can support a variety of item properties including the name, lore, custom model data, attributes, material and NBT.</p>
+<hr />
+<h4 id="k-admin-gui"><code>/k admin gui</code><a class="headerlink" href="#k-admin-gui" title="Permanent link">&para;</a></h4>
+<p>This command enables GUI mode. When the GUI mode is enabled, opening any kind container (chests, dispenser, hoppers, etc) will parse that container as a GUI config. The parsed GUI will be saved as <code>plugins/Kingdoms/parsed-gui-&lt;num&gt;.yml</code>. This command also uses smart analysis for stacked items or items that are meant to be decorative for a better human friendly configuration file, however it's only a great config as a start, you'll still have to change their name and lore yourself later on in the config. You can use this command with <a href="#k-admin-item-editor">/k admin item editor</a> for more advanced in-game editing.</p>
+<hr />
+<h4 id="k-admin-pacifism"><code>/k admin pacifism</code><a class="headerlink" href="#k-admin-pacifism" title="Permanent link">&para;</a></h4>
+<p><strong>Syntax:</strong> <code>/k admin pacifism &lt;kingdom&gt;</code><br><br />
+Toggles <a href="https://github.com/CryptoMorin/KingdomsX/wiki/Introduction#pacifism--shields">pacifism mode</a> for a certain kingdom.<br />
+<strong>Options:</strong><br />
+* <code>&lt;kingdom&gt;</code> The kingdom name to enable pacifism for.</p>
+<hr />
+<h4 id="k-admin-permanent"><code>/k admin permanent</code><a class="headerlink" href="#k-admin-permanent" title="Permanent link">&para;</a></h4>
+<p><strong>Syntax:</strong> <code>/k admin permanent &lt;kingdom&gt;</code><br><br />
+Enables permanent mode for a kingdom. Permanent mode is a mode that can only be changed using this command. Permanent kingdoms are excluded from paying taxes and inactivity disbands. They're mainly used for servers that have predefined admin kingdoms without letting players create kingdoms themselves.<br />
+<strong>Options:</strong><br />
+* <code>&lt;kingdom&gt;</code> The kingdom name to enable permanent mode for.</p>
+<hr />
+<h4 id="k-admin-track"><code>/k admin track</code><a class="headerlink" href="#k-admin-track" title="Permanent link">&para;</a></h4>
+<p>This very special command tells you the path of certain language entries when the messages are sent to you and path of GUI configs when you open one.<br><br />
+For example, to know where the extractor GUI config is, you have to enable this command and find an extractor to open its GUI or if you want to know where <strong>/k help</strong> command messages are coming from just run the <strong>/k help</strong> command while language tracking is enabled.</p>
+<hr />
+<h4 id="k-admin-purge"><code>/k admin purge</code><a class="headerlink" href="#k-admin-purge" title="Permanent link">&para;</a></h4>
+<p>This deletes all kingdoms data (without affecting configs). It'll kick all players and whitelist the server. You'll have to restart the server after the purging is done.</p>
+<hr />
+<h4 id="k-admin-languagepacks"><code>/k admin languagepacks</code><a class="headerlink" href="#k-admin-languagepacks" title="Permanent link">&para;</a></h4>
+<p>Install, uninstall or update a language pack. For more information check the <a href="https://github.com/CryptoMorin/KingdomsX/wiki/Languages">languages</a> section.<br />
+When there are updates available, the language options will display a summary, you can also middle-click them to see a complete list of updated files in a format of <a href="https://en.wikipedia.org/wiki/Tree_(command)">tree</a> command structure.</p>
+<p>If you're having internet connection issues with installing language packs, check this <a href="https://github.com/CryptoMorin/KingdomsX/wiki/FAQ#network-issues-with-language-packs--addons">FAQ</a></p>
+<hr />
+<h4 id="k-admin-addons"><code>/k admin addons</code><a class="headerlink" href="#k-admin-addons" title="Permanent link">&para;</a></h4>
+<p>Install, uninstall or update an <a href="https://github.com/CryptoMorin/KingdomsX/wiki/Addons">addon</a>.</p>
+<hr />
+<h4 id="k-admin-migrate-database"><code>/k admin migrate database</code><a class="headerlink" href="#k-admin-migrate-database" title="Permanent link">&para;</a></h4>
+<p>Will change the database type of the plugin safely. It will not touch the existing data inside <code>data</code> folder unless necessary, however it will create a backup inside Kingdoms folder if migrating from a JSON/YAML database and delete the database folders because of file extension conflicts. This command will not do anything to unrelated data such as Chunk Snapshots that have their own data formats.</p>
+<hr />
+<h4 id="k-admin-fsck"><code>/k admin FSCK</code><a class="headerlink" href="#k-admin-fsck" title="Permanent link">&para;</a></h4>
+<p><strong>Syntax:</strong> <code>/k admin FSCK ["chunkOperations" | "fix"]</code><br />
+* <code>chunkOperations</code>: When used, chunk operations are performed. What chunk operation means is anything that requires loading the chunks. This includes checking if the block for turrets/structures or signs for protected blocks are present. Since these operations load chunks, they consume a lot of CPU and RAM. However, it's completely asynchronous if you're using Paper.<br />
+* <code>fix</code>: By default this command doesn't change any data. It just reports you what needs to be changed. By using this argument the plugin will actually try and change/remove data.</p>
+<p>Please read <a href="https://github.com/CryptoMorin/KingdomsX/wiki/Troubleshooting#data-corruption">Data Corruption</a> section of troubleshooting wiki. The name of this command originated from Linux's <a href="https://en.wikipedia.org/wiki/Fsck">fsck</a> which stands for <em>file system consistency check</em>, and Windows' <a href="https://en.wikipedia.org/wiki/CHKDSK">CHKDSK</a> which stands for <em>check disk</em>. They are also magical commands that fix your hard drive issues. While it cannot fix all your issues, it certainly can fix a lot of them.</p>
+<div class="admonition danger">
+<p class="admonition-title">Danger</p>
+<p>In an ideal situation, you should never have to run this command. This command is simply a temporary fix and if you see your server<br />
+in a situation where you have to run this command every month, then it means you're doing something wrong in the first place.<br />
+Please read the <a href="https://github.com/CryptoMorin/KingdomsX/wiki/Troubleshooting#data-corruption">Data Corruption</a> for more info<br />
+as to why this might be happening in the first place and how you can prevent it.</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Note that the argument can be mixed: <code>/k admin FSCK chunkOperations fix</code></p>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>You should definitely take a <strong>backup</strong> from kingdom data files, specially if you're using a world management plugin such as <strong>Multiverse</strong> as they don't load worlds properly sometimes and it can lead to the plugin deleting lands that are not corrupted. Although you're safe if you don't use the <strong>fix</strong> argument, once that argument is used, it'll change or remove things that were not reported before in very rare cases.</p>
+</div>
+<p>This command first loads all your data. Including all nation, kingdom, land, player, mails, etc data and then performs checkup operations on them. For this reason, it's definitely recommended to restart the server after the operation is finished to prevent <a href="https://www.ldoceonline.com/dictionary/memory-hog">memory hog</a>. This is only an issue with huge servers, small servers won't be affected. However this also makes subsequent execution of the command perform faster.</p>
+<p>Some <a href="https://github.com/CryptoMorin/KingdomsX/wiki/Addons">addons</a> may add their own checks to fix possible issues with their own data. If you're a developer and want to do this, check <a href="https://github.com/CryptoMorin/KingdomsX/wiki/Addons-API#fsck-checkup-handlers">Addons API</a> page.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>If the server got stuck performing certain operations (in which you'll receive a console warning) and there has been no update messages regarding any operations finishing, you should stop the server normally with <strong>/stop</strong> these are usually harmless issues. If this ever happens, make sure to report it. You might have to upload your data as well.</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>It's recommended to do the command multiple times until all issues are fixed, since fixing some issues can cause other issues in rare cases (which is normal), but can be fixed by repeating the command. Usually if you have a lot of errors, you'd have to do the commands 2 times, however there are times you'd have to do it 3 times. 4 times is not normal and you should report the situation (with the message of all the errors you previously received with the command) to get this checked.</p>
+</div>
+<p>Based on the situation, this command may take these actions if necessary:<br />
+* Disband a kingdom or nation.<br />
+* Unclaim a land.<br />
+* Kick a player out of their kingdom.<br />
+* Remove turrets, structures and protection signs.<br />
+* Change the king/capital of a kingdom/nation as a result of the previous actions.<br />
+* Duplicated kings, unknown ranks, rank priority issues. Changing ranks.<br />
+* Remove relationships.<br />
+* Removes disabled kingdom upgrades and increases upgrade levels that are lower than the default.</p>
+<p>API wise, this command will not call any event for changing data.</p>
+<hr />
+<h4 id="k-admin-foreach"><code>/k admin forEach</code><a class="headerlink" href="#k-admin-foreach" title="Permanent link">&para;</a></h4>
+<p><strong>Syntax:</strong> <code>/k admin forEach contextType=&lt;"playersInKingdom" | "kingdomsInNation" | "allKingdoms" | "allNations"&gt; [context=&lt; kingdom name | nation name&gt;] command=&lt;command&gt; [condition=condition]</code><br />
+* <code>contextType</code>:<br />
+  * <code>playersInKingdom</code>: Executes the command against each player inside the given kingdom.<br />
+  * <code>kingdomsInNation</code>: Executes the command against each kingdom inside a nation.<br />
+  * <code>allKingdoms</code>: Executes the command against all kingdoms.<br />
+  * <code>allNations</code>: Executes the command against all nations.<br />
+* <code>context</code>: If <strong>contextType</strong> is <code>playersInKingdom</code>, this must be the kingdom name or if it's <code>kingdomsInNation</code> it must be a nation name which both can be fetched using <code>%kingdoms_kingdom_name%</code> and <code>%kingdoms_nation_name%</code> placeholders. Otherwise it doesn't need to be specified.<br />
+* <code>command</code>: The command to be executed. The command here must begin with "CONSOLE:" prefix.<br />
+* <code>condition</code>: Optional condition to check for each entry and execute the command only if the condition is met for each entry.</p>
+<p>Examples:<br />
+* Give <code>kingdoms.permission</code> permission to all players in a kingdom:<br />
+<pre class="highlight"><code class="language-haskell">/k admin forEach contextType=playersInKingdom context=%kingdoms_kingdom_name% command="CONSOLE:lp user %player% permission unset kingdoms.permission"</code></pre><br />
+* Teleport all players in a kingdom to a specific location:<br />
+<pre class="highlight"><code class="language-haskell">/k admin forEach contextType=playersInKingdom context=%kingdoms_kingdom_name% command="/minecraft:execute in minecraft:overworld run minecraft:teleport %player% 200 200 200"</code></pre></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This command is a little more complicated. Because the vanilla <code>/teleport</code> command is used and that command for some reasons only supports the current world. So in order to teleport the player to a specific world, <code>/execute</code> command is used. Note that the <code>/minecraft:execute</code> and <code>minecraft:teleport</code> are prefixed with <strong>minecraft:</strong> namespace, this is just a simple way to make sure that this is the Vanilla Minecraft command being used not another possible command from another plugin that could possibly register a custom <code>/teleport</code> command (which is quite common in plugins like similar to EssentialsX.)</p>
+</div>
+<ul>
+<li>Give 10 resource points to all kingdoms in a nation if the kingdom has more than 10 members:<br />
+<pre class="highlight"><code class="language-haskell">/k admin forEach contextType=kingdomsInNation context=%kingdoms_nation_name% command="CONSOLE:k admin rp %kingdoms_kingdom_name% add 10" condition="kingdoms_members &gt; 10"</code></pre></li>
+<li>Turn off pacifism for all kingdoms: <br />
+<pre class="highlight"><code class="language-haskell">/k admin forEach contextType=allKingdoms command="CONSOLE:k admin pacifism %kingdoms_kingdom_name% false"</code></pre></li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>In the examples above, the context used is a placeholder, which only works if a player executed the command, but wouldn't work if console did since the placeholder refers to the person who sent the command, you could just use a kingdom/nation name instead in console.</p>
+</div>
+<hr />
+<h4 id="k-admin-skull"><code>/k admin skull</code><a class="headerlink" href="#k-admin-skull" title="Permanent link">&para;</a></h4>
+<p><strong>Syntax:</strong> <code>/k admin skull [ "{BLOCK}" ] &lt;value&gt;</code><br />
+  * <code>{BLOCK}</code> used to get the value of the skull that the player is looking at if no <code>&lt;value&gt;</code> is provided, or change the skull texture if a <code>&lt;value&gt;</code> is provided.<br />
+  * <code>&lt;value&gt;</code> Any value including usernames, UUIDs, texture URL, texture hash, base64. For more information read <a href="https://github.com/CryptoMorin/KingdomsX/wiki/Config#skin-textures">Skin Textures</a>. Another special supported value is <code>GameProfile(username, UUID)</code> that's only used for debugging purposes. If you don't know how gameprofiles work, you should stay away from them as well.</p></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script src="../js/bootstrap.bundle.min.js"></script>
+        <script>
+            var base_url = "..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../js/base.js"></script>
+        <script src="../javascripts/mathjax.js"></script>
+        <script src="https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js"></script>
+        <script src="../search/main.js"></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p>From here you can search these documents. Enter your search terms below.</p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results" data-no-results-text="No results found"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>

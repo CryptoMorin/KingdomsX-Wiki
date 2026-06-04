@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="light">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        <link rel="canonical" href="https://wiki.kingdomsx.com/Addons-API/">
+        <link rel="shortcut icon" href="../img/favicon.ico">
+        <title>Addons API - KingdomsX</title>
+        <link href="../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../css/fontawesome.min.css" rel="stylesheet">
+        <link href="../css/brands.min.css" rel="stylesheet">
+        <link href="../css/solid.min.css" rel="stylesheet">
+        <link href="../css/v4-font-face.min.css" rel="stylesheet">
+        <link href="../css/base.css" rel="stylesheet">
+        <link id="hljs-light" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" >
+        <link id="hljs-dark" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github-dark.min.css" disabled>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+        <script>hljs.highlightAll();</script> 
+    </head>
+
+    <body>
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="..">KingdomsX</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar-collapse" aria-controls="navbar-collapse" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="nav-item">
+                                <a href="../Home.md.md" class="nav-link">🏠 Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../Features/" class="nav-link">🔰 Features</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../Installation/" class="nav-link">📥 Installation</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../Installation.md#setup" class="nav-link">📗 Setup</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../Installation.md#compatibility" class="nav-link">📘 Compatibility</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../FAQ/" class="nav-link">❓ FAQ</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../NFAQ/" class="nav-link">⁉️ NFAQ</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../Addons/" class="nav-link">⚜️ Addons</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../Outposts/" class="nav-link">🚩 Outposts</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../Peace-Treaties/" class="nav-link">☮️ Peace Treaties</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../Map-Viewers-Addon/" class="nav-link">🗺️ Map Viewers</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../EngineHub-Addon/" class="nav-link">🏬 EngineHub</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../Admin-Tools/" class="nav-link">🛠  Admin Tools</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../Introduction/" class="nav-link">❇️ Introduction</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../Commands/" class="nav-link">⌨️ Commands</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../Commands.md#players" class="nav-link">👨‍🦱 Players</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../Commands.md#admins" class="nav-link">👩‍⚖️ Admins</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../Permissions/" class="nav-link">🔓 Permissions</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../Placeholders/" class="nav-link">🔣 Placeholders</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../Placeholders.md#players" class="nav-link">🚹 Players</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../Placeholders.md#kingdoms" class="nav-link">🏛 Kingdoms</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../Placeholders.md#nations" class="nav-link">🏢 Nations</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../Config/" class="nav-link">📁 Config</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../YAML/" class="nav-link">📃 YAML</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../Languages/" class="nav-link">💱 Languages</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../GUIs/" class="nav-link">📱 GUI</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../Protection-Signs/" class="nav-link">🔒 Protection Signs</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../Mails/" class="nav-link">✉️ Mails</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../Mechanics/" class="nav-link">📚 Mechanics</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"  aria-expanded="false">⚔️ Invasion</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../Mechanics.md#Invasion" class="dropdown-item">None</a>
+</li>
+                                    
+<li>
+    <a href="../Mechanics.md#Preparing" class="dropdown-item">🛡️ Preparing</a>
+</li>
+                                    
+<li>
+    <a href="../Mechanics.md#Champion" class="dropdown-item">🧟 Champion</a>
+</li>
+                                    
+<li>
+    <a href="../Mechanics.md#mass-wars" class="dropdown-item">🗡  Masswar</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../Mechanics.md#Structures" class="nav-link">📡 Structures</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../Mechanics.md#Turrets" class="nav-link">🔫 Turrets</a>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ms-md-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-bs-toggle="modal" data-bs-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-bs-toggle="collapse" data-bs-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-body-tertiary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-bs-level="1"><a href="#basics" class="nav-link">Basics</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-bs-level="1"><a href="#configs" class="nav-link">Configs</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-bs-level="1"><a href="#commands" class="nav-link">Commands</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-bs-level="1"><a href="#disabling" class="nav-link">Disabling</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-bs-level="1"><a href="#placeholders" class="nav-link">Placeholders</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-bs-level="1"><a href="#kingdom-entities" class="nav-link">Kingdom Entities</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-bs-level="1"><a href="#addon-respository" class="nav-link">Addon Respository</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-bs-level="1"><a href="#fsck-checkup-handlers" class="nav-link">FSCK Checkup Handlers</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<p><a href="https://github.com/CryptoMorin/KingdomsX/wiki/Addons">Addons</a> are no different than normal plugins, however sometimes these isolated software are purely designed for kingdoms plugin. If you made a compatbility addon for kingdoms, you can ask me to add it too!</p>
+<p>This page only contains information about API that is mostly not found in a normal plugin, so a lot of other information is on the <a href="https://github.com/CryptoMorin/KingdomsX/wiki/API">main API page</a> instead.</p>
+<h1 id="basics">Basics<a class="headerlink" href="#basics" title="Permanent link">&para;</a></h1>
+<p>First, you'd need to implement the <code>Addon</code> class from kingdoms. This is usually done in the same class that <code>JavaPlugin</code> is extended.<br><br />
+Before going deeper in the features, there are already many open source addons like <a href="https://github.com/CryptoMorin/KingdomsX/blob/master/peace-treaties/src/main/java/org/kingdoms/peacetreaties/PeaceTreatiesAddon.java">Peace Treaties</a> and <a href="https://github.com/CryptoMorin/KingdomsX/blob/master/outposts/src/main/java/org/kingdoms/outposts/OutpostAddon.java">Outposts</a> that you can take a look at.</p>
+<p>First of all, you need to be registering all your Namespace'd values <a href="https://github.com/CryptoMorin/KingdomsX/blob/5953c9719f8f920369b48e791aee04d82ed66d5a/peace-treaties/src/main/java/org/kingdoms/peacetreaties/PeaceTreatiesAddon.java#L42-L61">onLoad</a> because you cannot register them later.</p>
+<p>Another important thing is to look if the plugin was <a href="https://github.com/CryptoMorin/KingdomsX/blob/5953c9719f8f920369b48e791aee04d82ed66d5a/peace-treaties/src/main/java/org/kingdoms/peacetreaties/PeaceTreatiesAddon.java#L65-L69">correctly enabled</a></p>
+<p>Here's an overview of things and where they should go:<br />
+<pre class="highlight"><code class="language-java">public final class OutpostAddon extends JavaPlugin implements Addon {
+    @Override
+    public void onDisable() {
+        if (!loaded) return;
+        signalDisable(); // Save data if you registered custom data models.
+        disableAddon();
+    }
+
+    @Override
+    public void onLoad() {
+        if (!isKingdomsLoaded()) return; // If something wen't wrong with kingdoms, skip.
+
+        // All namespaced registries must be registered here in onLoad().
+        Kingdoms.get().getPermissionRegistery().register(new Namespace("CUSTOMADDON", "BLAH"));
+        Kingdoms.get().getAuditLogRegistry().register(LogCustomLog.PROVIDER);
+        LanguageManager.registerMessenger(CustomAddonLang.class); // More info below
+    }
+
+    @Override
+    public void onEnable() {
+        if (!isKingdomsEnabled()) {
+            // If something wen't wrong with kingdoms, don't start.
+            getLogger().severe("Kingdoms plugin didn't load correctly. Disabling...");
+            Bukkit.getPluginManager().disablePlugin(this);
+            return;
+        }
+
+        reloadAddon(); // we can reuse this method since we're just registering a command in it.
+        registerAddon();
+        loaded = true;
+    }
+
+    @Override
+    public void reloadAddon() { // on /k reload
+        // re-register commands.
+        new MyAddonCustomCommand();
+    }
+
+    @Override
+    public String getAddonName() {
+        return "custom addon";
+    }
+
+    @Override
+    public File getFile() {
+        return super.getFile();
+    }
+}</code></pre></p>
+<h1 id="configs">Configs<a class="headerlink" href="#configs" title="Permanent link">&para;</a></h1>
+<p>You can register new configs like <a href="https://github.com/CryptoMorin/KingdomsX/blob/master/peace-treaties/src/main/java/org/kingdoms/peacetreaties/config/PeaceTreatyConfig.java">this</a> and optionally register them for file watchers like <a href="https://github.com/CryptoMorin/KingdomsX/blob/5953c9719f8f920369b48e791aee04d82ed66d5a/peace-treaties/src/main/java/org/kingdoms/peacetreaties/PeaceTreatiesAddon.java#L82-L89">this</a>.<br><br />
+If you want to complete your config suite, you can optionally add new config validators for config schemas if you have any new data like <a href="https://github.com/CryptoMorin/KingdomsX/blob/master/peace-treaties/src/main/java/org/kingdoms/peacetreaties/config/CustomConfigValidators.java">this</a>.</p>
+<h1 id="commands">Commands<a class="headerlink" href="#commands" title="Permanent link">&para;</a></h1>
+<p>You can register <code>/k custom</code> with the following code:<br />
+<pre class="highlight"><code class="language-java">public class MyAddonCustomCommand extends KingdomsCommand {
+    public MyAddonCustomCommand() {
+        super("custom");
+    }
+
+    @Override
+    public CommandResult execute(CommandContext context) {
+        if (context.assertPlayer()) return; // The command must be executed by a player.
+        if (context.requireArgs(1)) return; // The command requires at least 1 argument.
+        // ...
+        return CommandResult.SUCCESS;
+    }
+
+    @Override
+    public @NonNull List&lt;String&gt; tabComplete(@NonNull CommandTabContext context) {
+        return context.tabCompete("oneOption", "anotherOption");
+    }
+}</code></pre></p>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>Don't forget to register your custom command when both enabling your addon and reloading it. Just creating<br />
+an instance of the class is enough to register it.<br />
+<pre class="highlight"><code class="language-java">@Override
+public void onEnable() {
+   new MyAddonCustomCommand();
+}
+
+@Override
+public void onLoad() {
+   new MyAddonCustomCommand();
+}</code></pre></p>
+</div>
+<h4 id="registering-parent-commands">Registering parent commands:<a class="headerlink" href="#registering-parent-commands" title="Permanent link">&para;</a></h4>
+<p>Now let's see how we can register <code>/k custom create</code></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The execute and tab completion methods are hidden here to but they must be implemented.<br />
+However, for parent commands like <code>/k custom</code> you don't need to implement these methods<br />
+as the plugin will automatically generate help pages and tab completion for sub-commands automatically.<br />
+But you still need to provide implementation sub-commands that are not grouping commands such as <code>/k custom create</code></p>
+</div>
+<pre class="highlight"><code class="language-java">public class MyAddonCustomCommandCreate extends KingdomsCommand {
+    public MyAddonCustomCommandCreate(KingdomsParentCommand parent) {
+        super("create", parent);
+    }
+}
+public class MyAddonCustomParentCommand extends KingdomsParentCommand {
+    public MyAddonCustomParentCommand() {
+        super("custom");
+        if (isDisabled()) return; // Prevent registering sub-commands if the parent command is disabled in config.
+        new MyAddonCustomCommandCreate(this);
+    }
+}</code></pre>
+<p>Now all you need to do is to <code>new MyAddonCustomParentCommand()</code> and it'll automatically register sub-commands.</p>
+<h3 id="languages">Languages<a class="headerlink" href="#languages" title="Permanent link">&para;</a></h3>
+<p>Do you want to use Kingdom's language parser model for parsing placeholders and other advanced coloring and formatting features? You can use <code>Messenger</code> classes. The most basic way to send a kingdom-parsed message would be the following:</p>
+<pre class="highlight"><code class="language-java">Player player = ...;
+Messenger msg = new StaticMessenger("&amp;2Hello, my kingdom's name is &amp;9%kingdoms_kingdom_name%");
+msg.sendMessage(player);</code></pre>
+<p>This is cool and all, but if you would like to make these messages translatable and configurable through standard language files, you'd have to use <code>DefinedMessenger</code> and an easy way to use this would be an enum just like the default <code>KingdomsLang</code>, specially if you have a lot of entries. You can find a full example for Outposts addon in <a href="https://github.com/CryptoMorin/KingdomsX/blob/937728e7c35c84db81db3eb85835f691b97c249b/outposts/src/main/java/org/kingdoms/outposts/OutpostsLang.java">OutpostsLang.java</a>.</p>
+<pre class="highlight"><code class="language-java">public enum CustomAddonLang implements DefinedMessenger {
+    COMMAND_CUSTOMADDON_CREATE_BLAH("{$sCreates blah.", 1, 2, 3),
+    CUSTOMADDON_BLAH_BLAH("{$e}Blah {$es}Blah?", 1, 2)
+    ;
+
+    private final LanguageEntry languageEntry;
+    private final String defaultValue;
+
+    OutpostsLang(String defaultValue, int... group) {
+        this.defaultValue = defaultValue;
+        this.languageEntry = DefinedMessenger.getEntry("custom-addon", this, group);
+    }
+
+    @NonNull
+    @Override
+    public LanguageEntry getLanguageEntry() {
+        return languageEntry;
+    }
+
+    @Override
+    public String getDefaultValue() {
+        return defaultValue;
+    }
+}</code></pre>
+<p>Now you can use them like <code>CustomAddonLang.CUSTOMADDON_BLAH_BLAH.sendMessage(player)</code>.</p>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>Don't forget to register your custom messenger class:<br />
+<pre class="highlight"><code class="language-java">@Override
+public void onLoad() {
+   LanguageManager.registerMessenger(CustomAddonLang.class);
+}</code></pre></p>
+</div>
+<p>The first parameter represents the English default value which is used if a translation (even the en.yml English file) doesn't have a value for this language entry.<br><br />
+The numbers at the end are grouping values for defining the path of these messages inside the language files (e.g. en.yml)<br><br />
+The numbers are refer to the position of the <strong>nth</strong> underscore <code>_</code> in the enum's name. </p>
+<ul>
+<li>If the position of an underscore is specified at the end, the next word is considered as a nested YAML entry.</li>
+<li>If the position of an underscore is not specified at all, the next word is concatenated to the previous word separated by a hyphen <code>-</code>.</li>
+</ul>
+<p>Examples:</p>
+<p><pre class="highlight"><code class="language-java">COMMAND_CUSTOMADDON_CREATE_BLAH("{$s}Creates blah.", 1, 2, 3),
+//     ^ 1         ^ 2    ^ 3</code></pre><br />
+Corresponds to the following YAML path:<br />
+<pre class="highlight"><code class="language-yml">command:
+  customaddon:
+    create:
+      blah: "..."</code></pre></p>
+<p>Another example:<br />
+<pre class="highlight"><code class="language-java">COMMAND_CUSTOMADDON_CREATE_BLAH("{$s}Creates blah.", 1, 3),
+//     ^ 1         ^ -    ^ 3</code></pre><br />
+Corresponds to the following YAML path:<br />
+<pre class="highlight"><code class="language-yml">command:
+  customaddon-create:
+    blah: "..."</code></pre></p>
+<h1 id="disabling">Disabling<a class="headerlink" href="#disabling" title="Permanent link">&para;</a></h1>
+<p>A <strong>very very important</strong> thing to remember is that you need to call <strong>signalDisable()</strong> on your <a href="https://github.com/CryptoMorin/KingdomsX/blob/5953c9719f8f920369b48e791aee04d82ed66d5a/peace-treaties/src/main/java/org/kingdoms/peacetreaties/PeaceTreatiesAddon.java#L95-L99">onDisable()</a> if you've registered namespace'd values in the plugin. If you don't do this the plugin can't correctly save data.</p>
+<h1 id="placeholders">Placeholders<a class="headerlink" href="#placeholders" title="Permanent link">&para;</a></h1>
+<p>If you want to register new placeholders to the plugin, you can do so like <a href="https://github.com/CryptoMorin/KingdomsX/blob/5953c9719f8f920369b48e791aee04d82ed66d5a/peace-treaties/src/main/java/org/kingdoms/peacetreaties/data/PeaceTreaties.kt#L86-L105">this</a>, enums are a pretty easy and common way to register placeholders, even tho they'll never be used within the code itself, if you don't like that approach, all you need to do is to register placeholders using <strong>KingdomsPlaceholder.of(name, defaultValue, translator)</strong> function which ultimately implements <strong>KingdomsPlaceholder</strong> class and registers it with <code>KingdomsPlaceholder.register(instance)</code>.</p>
+<h1 id="kingdom-entities">Kingdom Entities<a class="headerlink" href="#kingdom-entities" title="Permanent link">&para;</a></h1>
+<p>A <code>KingdomEntity</code> is any entity that is spawned and managed by KingdomX plugin related mechanisms (KingdomsX plugin + addons + other plugins using Kingdoms API) which allows a set of predefined rules to be applied to a certain <code>Entity</code> that is forced by <code>KingdomEntityManager</code> class:</p>
+<ul>
+<li>All kingdom entities have a certain target that will not change by the standard Minecraft behavior. It will only change when manually instructed to.</li>
+<li>Keeps track of the amount of damage made by other entities.</li>
+<li>Prevents slimes from splitting into smaller slimes. (<code>SlimeSplitEvent</code>)</li>
+<li>Prevents them from using any portals. (<code>EntityPortalEvent</code>)</li>
+<li>Prevents them from picking up items. (<code>EntityPickupItemEvent</code>)</li>
+<li>Prevents them from dropping any EXP. (<code>EntityDeathEvent</code>)</li>
+<li>Prevents them from burning. (<code>EntityCombustEvent</code>)</li>
+<li>Prevents them from being tamed. (<code>EntityTameEvent</code>)</li>
+<li>Adds nice particle effects on spawn/death (cloud particles)</li>
+<li>Removes these entities when the server is shutdown/restarted.</li>
+<li>Other plugins that support KingdomsX plugin will recognize these entities as custom kingdoms entities.</li>
+</ul>
+<p>All champions, kingdom guards, kingdom soldiers (soldier turrets), etc are registered with this mechanism.<br><br />
+In order to register your own basic kingdom entity you can use the following code:<br />
+<pre class="highlight"><code class="language-java">Entity entity = ...;
+KingdomEntity kEntity = new KingdomEntity(entity, owningKingdom, target);
+KingdomEntityRegistry.addMob(kEntity);</code></pre></p>
+<p>The <code>owningKingdom</code> argument is the kingdom that this entity belongs to. There are other types of specialized <code>KingdomEntity</code> such as <code>KingdomChampionEntity</code> and <code>KingdomLandEntity</code> that define additional behavior but these are mostly for internal purposes. If you still wish to use them, you can read their documentation for the classes.</p>
+<h1 id="addon-respository">Addon Respository<a class="headerlink" href="#addon-respository" title="Permanent link">&para;</a></h1>
+<p>Finally if you have a main plugin and you want to make an addon for kingdoms compatibility, you can register the addon as an available downloadable content using <code>new AddonRepository(pluginInstance, name, path, metaFileURL, description).register()</code> where <code>name</code> is any displayname and <code>path</code> is the data node (it's not a file or URL path) and <code>metaFileURL</code> points to a <code>URL</code> which must point to an accessible <code>.yml</code> file containing addon information like <a href="https://github.com/CryptoMorin/KingdomsX/blob/master/addons/addon-meta.yml">this one</a>. A direct URL to that file for example would be <code>new URL("https://raw.githubusercontent.com/CryptoMorin/KingdomsX/master/addons/addon-meta.yml")</code><br><br />
+If you don't have a main plugin, you can simply ask me to add your addon information to the original addon-meta file, but that'd require me to update it every time a new version is out.</p>
+<h1 id="fsck-checkup-handlers">FSCK Checkup Handlers<a class="headerlink" href="#fsck-checkup-handlers" title="Permanent link">&para;</a></h1>
+<p>This is a completely optional component, but recommended to implement. Please read <a href="https://github.com/CryptoMorin/KingdomsX/wiki/Troubleshooting#data-corruption">Data Corruption</a> first for more info. This adds a way to process data when the command is executed so you can do your own corrections for your own addon.</p>
+<p>Additionally, you might want to implement a <code>ChunkEditingHandler</code> instead if you wish to perform operations on chunk block/entity data.</p>
+<pre class="highlight"><code class="language-java">public final class MyDataCheckup extends CheckupHandler {
+    private static final MyDataCheckup INSTANCE = new MyDataCheckup();
+    private static final Messenger MSG = new StaticMessenger("{$c}Something is corrupted! %broken%");
+
+    static {
+        CheckupHandler.addCheckupHandler(INSTANCE);        
+    }
+
+    MyDataCheckup() {
+      // Another way to handle data which only works for Kingdom, Nation, KingdomPlayer, Land and Mail.
+      // This is simply to prevent looping the data again and using the main loop used by the default FSCK.
+      addPredefinedHandlers(Kingdom.class, kingdom -&gt; {
+        if (something == null) ...
+      });
+    }
+
+    @Override
+    public void handle(@NotNull CheckupProcessor checkupProcessor) {
+        KingdomsDataCenter dataCenter = checkupProcessor.getDataCenter();
+        for (Kingdom kingdom : dataCenter.getKingdomManager().getLoadedData()) { // Everything is already loaded.
+            if (something == null) {
+                checkupProcessor.addEntry(MSG, settings -&gt; {
+                    settings.raw("broken", something);
+                });
+            }
+        }
+    }
+}</code></pre></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script src="../js/bootstrap.bundle.min.js"></script>
+        <script>
+            var base_url = "..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../js/base.js"></script>
+        <script src="../javascripts/mathjax.js"></script>
+        <script src="https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js"></script>
+        <script src="../search/main.js"></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p>From here you can search these documents. Enter your search terms below.</p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results" data-no-results-text="No results found"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>

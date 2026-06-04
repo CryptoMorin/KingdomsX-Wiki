@@ -1,0 +1,649 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="light">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        <link rel="canonical" href="https://wiki.kingdomsx.com/YAML/">
+        <link rel="shortcut icon" href="../img/favicon.ico">
+        <title>📃 YAML - KingdomsX</title>
+        <link href="../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../css/fontawesome.min.css" rel="stylesheet">
+        <link href="../css/brands.min.css" rel="stylesheet">
+        <link href="../css/solid.min.css" rel="stylesheet">
+        <link href="../css/v4-font-face.min.css" rel="stylesheet">
+        <link href="../css/base.css" rel="stylesheet">
+        <link id="hljs-light" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" >
+        <link id="hljs-dark" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github-dark.min.css" disabled>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+        <script>hljs.highlightAll();</script> 
+    </head>
+
+    <body>
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="..">KingdomsX</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar-collapse" aria-controls="navbar-collapse" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="nav-item">
+                                <a href="../Home.md.md" class="nav-link">🏠 Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../Features/" class="nav-link">🔰 Features</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../Installation/" class="nav-link">📥 Installation</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../Installation.md#setup" class="nav-link">📗 Setup</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../Installation.md#compatibility" class="nav-link">📘 Compatibility</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../FAQ/" class="nav-link">❓ FAQ</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../NFAQ/" class="nav-link">⁉️ NFAQ</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../Addons/" class="nav-link">⚜️ Addons</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../Outposts/" class="nav-link">🚩 Outposts</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../Peace-Treaties/" class="nav-link">☮️ Peace Treaties</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../Map-Viewers-Addon/" class="nav-link">🗺️ Map Viewers</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../EngineHub-Addon/" class="nav-link">🏬 EngineHub</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../Admin-Tools/" class="nav-link">🛠  Admin Tools</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../Introduction/" class="nav-link">❇️ Introduction</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../Commands/" class="nav-link">⌨️ Commands</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../Commands.md#players" class="nav-link">👨‍🦱 Players</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../Commands.md#admins" class="nav-link">👩‍⚖️ Admins</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../Permissions/" class="nav-link">🔓 Permissions</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../Placeholders/" class="nav-link">🔣 Placeholders</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../Placeholders.md#players" class="nav-link">🚹 Players</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../Placeholders.md#kingdoms" class="nav-link">🏛 Kingdoms</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../Placeholders.md#nations" class="nav-link">🏢 Nations</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../Config/" class="nav-link">📁 Config</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="./" class="nav-link active" aria-current="page">📃 YAML</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../Languages/" class="nav-link">💱 Languages</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../GUIs/" class="nav-link">📱 GUI</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../Protection-Signs/" class="nav-link">🔒 Protection Signs</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../Mails/" class="nav-link">✉️ Mails</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../Mechanics/" class="nav-link">📚 Mechanics</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"  aria-expanded="false">⚔️ Invasion</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../Mechanics.md#Invasion" class="dropdown-item">None</a>
+</li>
+                                    
+<li>
+    <a href="../Mechanics.md#Preparing" class="dropdown-item">🛡️ Preparing</a>
+</li>
+                                    
+<li>
+    <a href="../Mechanics.md#Champion" class="dropdown-item">🧟 Champion</a>
+</li>
+                                    
+<li>
+    <a href="../Mechanics.md#mass-wars" class="dropdown-item">🗡  Masswar</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../Mechanics.md#Structures" class="nav-link">📡 Structures</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../Mechanics.md#Turrets" class="nav-link">🔫 Turrets</a>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ms-md-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-bs-toggle="modal" data-bs-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                            <li class="nav-item">
+                                <a rel="prev" href="../Config/" class="nav-link">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a rel="next" href="../Languages/" class="nav-link">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-bs-toggle="collapse" data-bs-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-body-tertiary">
+        <ul class="nav flex-column">
+            
+            
+            <li class="nav-item" data-bs-level="2"><a href="#what-is-a-config-entry-and-section" class="nav-link">What is a config entry and section?</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-bs-level="1"><a href="#advanced-yaml" class="nav-link">Advanced YAML</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-bs-level="1"><a href="#yaml-functions" class="nav-link">YAML Functions</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-bs-level="1"><a href="#yaml-modules" class="nav-link">YAML Modules</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-bs-level="2"><a href="#yaml-annotations" class="nav-link">YAML Annotations</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<p>This page describes more specific details of how configs work in general. Kingdoms uses <a href="https://yaml.org/">YAML (Yet Another Markup Language)</a> for its configs. The most used config format for Minecraft configs in general and the easiest to read in all config formats that exist in general as well.<br><br />
+Kingdoms configs aren't completely compliant with YAML standard specifications.</p>
+<h3 id="removed-yaml-features">Removed YAML Features<a class="headerlink" href="#removed-yaml-features" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Manual tags aren't supported. The plugin will automatically determine the tag in the background and assign it to each option.</li>
+<li>A single file can only have one YAML document attached to it. Multiple documents <code>---</code> aren't allowed in a single file.</li>
+</ul>
+<h2 id="what-is-a-config-entry-and-section">What is a config entry and section?<a class="headerlink" href="#what-is-a-config-entry-and-section" title="Permanent link">&para;</a></h2>
+<p>Sometimes you'll see a text mentioning config entries in the wiki or the developers in general. This is the address that helps you find<br />
+an option in a YAML file. Sometimes it's written like <code>one.two.three</code> and other times <code>one -&gt; two -&gt; three</code>.</p>
+<p>In both cases, the words being separated are the option names. So for example, if an option is said to be at <code>one -&gt; two -&gt; three</code> it means<br />
+you have to look for something similar to this:</p>
+<pre class="highlight"><code class="language-yml">one:
+  two:
+    three: 'im the option!'</code></pre>
+<p>However, in most cases, it's not that easy as the option is surrounded by multiple other options, so in a more complicated example,<br />
+we can find our path in the following YAML file like this:<br />
+<pre class="highlight"><code class="language-yml">some-option: 3
+
+one: # &lt;--- first option, lets look inside here only
+  where-is-zero: idk
+
+  two: # &lt;--- Found the second path
+    three: 'IM HERE!' # &lt;--- Third path
+
+hello-world:
+  a: bye</code></pre></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Usually a good way to know how many levels a certain option has, is to look at the spaces before the option. Kingdoms uses two spaces <br />
+for each level of config options, (but not all configs are like this in general, but 2 is a pretty standard number.)\<br />
+So if we look at our previous example:<br />
+<pre class="highlight"><code class="language-yml">one:
+␣␣where-is-zero: idk
+
+␣␣two:
+␣␣␣␣three: 'IM HERE!'</code></pre><br />
+Each <code>␣</code> here represents a space. So for each two spaces (<code>␣␣</code>) that option has 1 parent section. i.e. the option <code>three</code> here has 2 parent sections.</p>
+</div>
+<p>Now let's see a real practical example that's complicated. Usually the language file is the most crowded config file to find an option's address.<br />
+So if you're told that the message for changing <code>/k help</code> header is <code>commands -&gt; help -&gt; header</code>, first look for <a href="https://github.com/CryptoMorin/KingdomsX/blob/beea0efd3c97f78fb0d16de4249c96438d02179c/resources/languages/en/en.yml#L929"><code>commands</code></a> then <a href="https://github.com/CryptoMorin/KingdomsX/blob/beea0efd3c97f78fb0d16de4249c96438d02179c/resources/languages/en/en.yml#L1039"><code>help</code></a> then <a href="https://github.com/CryptoMorin/KingdomsX/blob/beea0efd3c97f78fb0d16de4249c96438d02179c/resources/languages/en/en.yml#L1046-L1048"><code>header</code> (the entire section is marked because there are two options for it)</a></p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>The word <code>section</code> for configs refers to a config option that holds other config options:<br />
+<pre class="highlight"><code class="language-yml">hello: # &lt;-- A config section named "hello" that holds two options named "one" and "two"
+  one: 1
+  two: 2</code></pre></p>
+</div>
+<h1 id="advanced-yaml">Advanced YAML<a class="headerlink" href="#advanced-yaml" title="Permanent link">&para;</a></h1>
+<p>In this section we will take a look at the main configuration system used for the plugin.<br><br />
+This is by no means a complete tutorial for YAML, however it gives you practical examples and also features that are not present in standard YAML.</p>
+<h3 id="variables">Variables<a class="headerlink" href="#variables" title="Permanent link">&para;</a></h3>
+<p>In YAML files you can define variables using two things called <strong>anchor</strong> and <strong>alias</strong>.<br><br />
+Variables are obviously used to write something just once without writing it over and over again. Image you have this option:<br />
+<pre class="highlight"><code class="language-yml"># Lets say this option is for a turret that gives you the ability to configure which entities it targets for each level.
+# Most leveling systems in the config already inherit their values from previous levels, but just for the sake of example.
+targets:
+  1: [ZOMBIE, SKELETON, ENDERMAN, PLAYER, WITHER_SKELETON, COW, PIG]
+  2: [ZOMBIE, SKELETON, ENDERMAN, PLAYER, WITHER_SKELETON, COW, PIG]
+  3: [ZOMBIE, SKELETON, ENDERMAN, PLAYER, WITHER_SKELETON, COW, PIG]
+
+# This list might even become a lot longer and every time you want to add something, you have to do it 3 times
+# So instead we can do this:
+
+common-entites: &amp;common-entities [ZOMBIE, SKELETON, ENDERMAN, PLAYER, WITHER_SKELETON, COW, PIG]
+targets:
+  1: *common-entites
+  2: *common-entites
+  3: *common-entites</code></pre></p>
+<p><code>&amp;common-entities</code> is called an <strong>anchor</strong>, which defines a variable. The option name and the anchor name can be different, they have nothing to do with each other. That's just there because some people like to define their variables like this:<br />
+<pre class="highlight"><code class="language-yml">targets:
+  1: &amp;common-entities [ZOMBIE, SKELETON, ENDERMAN, PLAYER, WITHER_SKELETON, COW, PIG]
+  2: *common-entites
+  3: *common-entites</code></pre></p>
+<p><code>*common-entities</code> is called an <strong>alias</strong>. You use this when you want to refer to a variable defined before, not when defining a new variable. Note that before accessing a variable it must be defined before using an alias, for example, this won't work:<br />
+<pre class="highlight"><code class="language-yml">name: *zombie-name
+zombie-name: &amp;zombie-name "My name is zombie"</code></pre></p>
+<p>This of course works with config sections:<br />
+<pre class="highlight"><code class="language-yml">common-settings: &amp;common-settings
+  enabled:
+    condition: true
+    glow: true
+    name: "Enabled"
+  else:
+    name: "Disabled"
+
+first-option: *common-settings
+second-option: *common-settings</code></pre></p>
+<p>is transferred to:</p>
+<pre class="highlight"><code class="language-yml">
+first-option: 
+  enabled:
+    condition: true
+    glow: true
+    name: "Enabled"
+  else:
+    name: "Disabled"
+second-option:
+  enabled:
+    condition: true
+    glow: true
+    name: "Enabled"
+  else:
+    name: "Disabled"</code></pre>
+<p>Sometimes you want to change certain options from a section alias, you can do what's called <strong>merging</strong>:<br />
+<pre class="highlight"><code class="language-yml">common-settings: &amp;common-settings
+  condition: true
+  glow: true
+  name: "Enabled"
+
+first-option:
+  enabled:
+    &lt;&lt;: *common-settings
+    name: "&amp;2Open"
+
+# -&gt;
+
+first-option:
+  enabled:
+    condition: true
+    glow: true
+    name: "&amp;2Open"</code></pre></p>
+<p>This puts all the options from <code>common-settings</code> but uses <code>name: "&amp;2Open"</code> instead of <code>name: "Enabled"</code></p>
+<p>This also works with lists but with a slightly different format:<br />
+<pre class="highlight"><code class="language-yml">list1: &amp;list
+ - 1
+ - 2
+
+list2:
+ - 0
+ - &lt;: *list
+ - 3
+
+# Gives you
+list2:
+ - 0
+ - 1
+ - 2
+ - 3</code></pre></p>
+<h3 id="extra-exclusive-features">Extra Exclusive Features<a class="headerlink" href="#extra-exclusive-features" title="Permanent link">&para;</a></h3>
+<p>Kingdoms configs aren't 100% YAML compliant. Features such as explicit tags, directives, explicit document start and ends, and a few others. 99% of the time, people don't even bother which these features when dealing with configuration files, so there's no issue.</p>
+<p>Kingdoms adds support for <strong>sequence merging</strong>. We discussed <strong>mapping merging</strong> above, however the standard YAML doesn't allow you to do the following while Kingdoms does:<br />
+<pre class="highlight"><code class="language-yml">sequence: &amp;seq [ how, are ]
+other-sequence:
+  - hello
+  - &lt;&lt;: *seq
+  - you</code></pre></p>
+<p><code>other-sequence</code> gets converted into:<br />
+<pre class="highlight"><code class="language-yml">other-sequence:
+  - hello
+  - how
+  - are
+  - you</code></pre></p>
+<p>As for practical use cases, this would be useful for adding multiple lines to lore of items inside GUIs that share the same description, but are different in some parts. (Example in <a href="https://github.com/CryptoMorin/KingdomsX/blob/e246428c4a9c1d8b90ad1376fc1c191c3c73f095/core/src/main/resources/guis/structures/nexus/nexus.yml#L116-L120">nexus.yml</a>)</p>
+<h1 id="yaml-functions">YAML Functions<a class="headerlink" href="#yaml-functions" title="Permanent link">&para;</a></h1>
+<p>Kingdoms also adds a special syntax called <strong>alias functions</strong>. It's a more advanced form of aliases which allows you to build your own options.<br><br />
+A great practical example can be found in the default <a href="https://github.com/CryptoMorin/KingdomsX/blob/163b20244ed10bb14a509821ec6bbcebaaaa873d/core/src/main/resources/guis/en/structures/nexus/misc-upgrades.yml#L5-L39">misc-upgrades GUI</a>. Again to be clear the name <code>[fn-misc]</code> isn't important at all, but this format is chosen to avoid conflict. However the name <code>fn-misc</code> is important since all yaml functions should start with <code>fn-</code> prefix. This option takes 3 arguments of any type which can later be used inside the returned value. It's kinda similar to how <a href="https://www.haskell.org/">Haskell</a> works. The only important note here is that list parameters can be used inside of lists here without needing to do the <code>- &lt;: *argument</code> thing. They automatically expand the list (Note that this only works with list-like lores, not when using the <code>|</code> format lores).</p>
+<p>You can see how the function is <a href="https://github.com/CryptoMorin/KingdomsX/blob/163b20244ed10bb14a509821ec6bbcebaaaa873d/core/src/main/resources/guis/en/structures/nexus/misc-upgrades.yml#L44-L47">called</a> here. Just like section merging but with a normal yaml list after it.</p>
+<p>Another way of calling functions which is compliant with YAML spec, is writing them this way:</p>
+<pre class="highlight"><code class="language-yml">'[style]': &amp;fn-style
+  args: [ "{content}" ]
+  return: ...
+
+option:
+  '[fn]': *fn-style
+  '{content}': |
+    Hello how are you doing?
+    Is everything alright?</code></pre>
+<p>As you can see, this style of calling functions is cleaner when there are two many arguments as it supports named parameters and lets you use all YAML<br />
+features for each parameter in a compliant way such as using string literals.<br><br />
+The plugin is mostly distancing itself from the first format and starting to use the second format more often, because the most important thing about them is being YAML compliant which helps with external services like <a href="https://crowdin.com/project/kingdomsx">Crowdin</a>.</p>
+<h1 id="yaml-modules">YAML Modules<a class="headerlink" href="#yaml-modules" title="Permanent link">&para;</a></h1>
+<p>Kingdoms adds a new system to config files called modules. This basically allows you to link two <code>.yml</code> files together<br />
+which in turn allows you to use <a href="https://github.com/CryptoMorin/KingdomsX/wiki/YAML#variables">YAML anchors and aliases</a> from different config files. It also allows you to "extend"<br />
+other <code>.yml</code> files by copying all or some of their options.</p>
+<p>Here's a basic relationship between a parent that child module:<br />
+<pre class="highlight"><code class="language-yml"># parent.yml
+(module): # &lt;-- Special option
+  description: 'Just a description describing what this module does.'
+
+  # A list of parameters with their values set to the type that you expect.
+  # This is an advanced topic by itself, if you don't know, just use "any" instead.
+  # The name doesn't necessarily need to be surrounded by "&lt;&gt;" you could use any
+  # text you want for the parameter name.
+  parameters:
+    &lt;material&gt;: Material
+    &lt;amount&gt;: int
+
+# From this point below, we will define some normal options
+# that use the parameters that we expect to be given to this .yml file.
+
+item1: 
+  name: "First item"
+  material: '&lt;material&gt;'
+  amount: '&lt;amount&gt;'
+
+item2: 
+  name: "Second item"
+  material: '&lt;material&gt;'
+  amount: '&lt;amount&gt;'</code></pre></p>
+<pre class="highlight"><code class="language-yml"># child.yml
+(import): # &lt;-- Special option
+  parent: # &lt;-- Name of the file without ".yml" extension.
+    parameters:
+      # Same parameter names, but with actual values.
+      &lt;material&gt;: RED_WOOL
+      &lt;amount&gt;: 10
+
+some-random-option: hi
+item2: # Override and add some settings
+  material: GREEN_WOOL
+  flags: [ ALL ]
+  lore: |
+    Recommended item.
+    Get it now!</code></pre>
+<p>child.yml final results after being automatically processed by the plugin (These results are not written to any file, it's kept temporarily inside the memory):<br />
+<pre class="highlight"><code class="language-yml">item1: 
+  name: "First item"
+  material: 'RED_WOOL'
+  amount: 10
+
+item2: 
+  name: "Second item"
+  material: 'GREEN_WOOL'
+  amount: 10
+  flags: [ ALL ]
+  lore: |
+    Recommended item.
+    Get it now!</code></pre></p>
+<p>The <code>(parameters)</code> is a list of values that the parent module accepts from child modules.<br />
+The parameter name can be literally anything and it will get replaced in all of the options in the child module.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>It's recommended to surround your parameter names with special characters like <code>&lt;parameter&gt;</code> or <code>@parameter@</code><br />
+because if you simply use the word itself (e.g. <code>material</code> and <code>amount</code>) then even the English words that are<br />
+not meant to be replaced as arguments will also get replaced, however you can use any text you want for the<br />
+parameter name.</p>
+<pre class="highlight"><code class="language-yml">(module):
+  parameters:
+    "{F&lt;@!SF$}%{#%{}":
+      type: any
+      default: "Default value used when this parameter isn't specified"</code></pre>
+</div>
+<p>When is this useful? When you have many configs that you want to share the same settings. Such as <a href="#yaml-modules-in-kingdoms">turrets and structures</a>!<br />
+Of course you can also make a module a parent and a child at the same time. If a child module inherits from a parent module<br />
+that also has a parent module, the chain of copying will start from the very first parent module on the top that itself<br />
+doesn't have any parents. The options are copied one by one until it reaches the last child module.</p>
+<pre class="highlight"><code class="language-hs">    [Root Parent]         ← Copying starts here and goes down.
+          │
+          │
+          ↓
+ [Intermediate Parent]
+          │
+          │
+          ↓
+ [Intermediate Parent]
+          │
+          │
+          ↓
+         ...
+          │
+          │
+          ↓
+   [Terminal Child]</code></pre>
+<h3 id="final-nodes">Final Nodes<a class="headerlink" href="#final-nodes" title="Permanent link">&para;</a></h3>
+<p>As you can see in the previous examples, a <a href="https://github.com/CryptoMorin/KingdomsX/wiki/YAML#what-is-a-config-entry-and-section">config section</a> <br />
+in the parent module will still copy any missing options for the same<br />
+config section in the child module. Even if the child module has defined and overriden some options.</p>
+<pre class="highlight"><code class="language-yml"># parent.yml
+item2: 
+  name: "Second item"
+  material: RED_WOOL
+  amount: 10
+  flags: [ ALL ]</code></pre>
+<pre class="highlight"><code class="language-yml"># child.yml
+item2: 
+  name: "Second item"
+  material: GREEN_WOOL
+  lore: |
+    Recommended item.
+    Get it now!</code></pre>
+<p>Result:<br />
+<pre class="highlight"><code class="language-yml">item2: 
+  name: "Second item"
+  material: GREEN_WOOL
+  amount: 10
+  flags: [ ALL ]
+  lore: |
+    Recommended item.
+    Get it now!</code></pre><br />
+What if you don't want the <code>flags</code> option to be copied? One way would be to manually set <code>flags: []</code> in the child module, but what if there<br />
+are many more options and you just don't want to worry about what gets copied or not? What if you just want your parents to leave your <code>item2</code> section<br />
+completely alone without touching it?</p>
+<p>You use the <code>[Final]</code> <a href="#YAML-Annotations">YAML annotation</a>.<br />
+<pre class="highlight"><code class="language-yml"># child.yml
+
+# [Final]
+item2: 
+  name: "Second item"
+  material: GREEN_WOOL
+  lore: |
+    Recommended item.
+    Get it now!</code></pre></p>
+<p>Result:<br />
+<pre class="highlight"><code class="language-yml">item2: 
+  name: "Second item"
+  material: GREEN_WOOL
+  lore: |
+    Recommended item.
+    Get it now!</code></pre></p>
+<p>As you can see, the result exactly matches what was defined in the original child.yml, nothing more and nothing less.</p>
+<h3 id="importing-anchors">Importing anchors<a class="headerlink" href="#importing-anchors" title="Permanent link">&para;</a></h3>
+<p>To prevent options from being copied entirely, you can use the <code>extend</code> option. This is usually used when you want to import <a href="https://github.com/CryptoMorin/KingdomsX/wiki/YAML#variables">YAML anchors</a> only.<br />
+<pre class="highlight"><code class="language-yml"># parent.yml
+
+my-anchor: &amp;cool-anchor "IM COOL!!!"
+another-cool-anchor: &amp;other-cool-anchor [ hi, how, are, you ]</code></pre><br />
+<pre class="highlight"><code class="language-yml"># child.yml
+(import):
+  parent:
+    extend: false # Don't copy any values from parent.yml
+    anchors: [ &amp;cool cool-anchor, &amp;other-cool-anchor other-cool-anchor ]
+    #          └─┬─┘ └────┬────┘
+    #            │        │
+    #            │        └─ Name of the anchor in parent.yml to import
+    #            └─ New name of the anchor in the current file (you could use the same name too)</code></pre></p>
+<h3 id="yaml-modules-in-kingdoms">YAML Modules in Kingdoms<a class="headerlink" href="#yaml-modules-in-kingdoms" title="Permanent link">&para;</a></h3>
+<p>Parent modules specifically, are located in <code>declarations</code> folder. You can only define parent modules here, but all configs<br />
+will be able to import these modules, including normal configs, language files and GUI files.<br />
+For GUIs however, it's recommended to use the <code>guis/&lt;language&gt;/templates</code> folder instead. Which is yaml modules dedicated to<br />
+that specific language which can be used for all the GUIs. So <code>declarations</code> is for all configs, but <code>templates</code> is only for<br />
+GUIs of that specific language only (however you should define the same templates for all languages obviously.)</p>
+<p>In kingdoms by default, all buildings (turrets and structures) share certain values. The default hierarchy for their configs is as follows:<br />
+<pre class="highlight"><code class="language-hs">                 [building.yml]
+                ⟋              ⟍
+              ⟋                  ⟍
+            ⟋                      ⟍
+          ⟋                          ⟍
+    [turret.yml]               [structure.yml]
+         |                             |
+        ...                           ...</code></pre></p>
+<p>As you can see, for example, <code>Turrets/arrow.yml</code> <a href="https://github.com/CryptoMorin/KingdomsX/blob/72d8aa1c2af9344d7284cce77d8de990cb94188e/core/src/main/resources/Turrets/arrow.yml#L1-L9">imports <code>declarations/turret.yml</code></a> (which in turn <a href="https://github.com/CryptoMorin/KingdomsX/blob/72d8aa1c2af9344d7284cce77d8de990cb94188e/core/src/main/resources/declarations/turret.yml#L1-L20">imports <code>declarations/building.yml</code></a>)<br />
+and <code>Structures/extractor.yml</code> <a href="https://github.com/CryptoMorin/KingdomsX/blob/72d8aa1c2af9344d7284cce77d8de990cb94188e/core/src/main/resources/Structures/extractor.yml#L1-L12">imports <code>declarations/structure.yml</code></a> (which in turn <a href="https://github.com/CryptoMorin/KingdomsX/blob/72d8aa1c2af9344d7284cce77d8de990cb94188e/core/src/main/resources/declarations/structure.yml#L1-L11">imports <code>declarations/building.yml</code></a>).</p>
+<h2 id="yaml-annotations">YAML Annotations<a class="headerlink" href="#yaml-annotations" title="Permanent link">&para;</a></h2>
+<p>These are values inside a config option's comments themselves. They're like metadata that determine extra information about an option.<br />
+Different annotations can have different effects. All annotations are a single text surrounded by square brackets.</p>
+<pre class="highlight"><code class="language-yml"># Just some random comment here!
+# [Annotation]
+# [SecondAnnotation]
+option: Hello</code></pre>
+<p>Current standard annotations:<br />
+  * <strong>[Final]</strong> Used in <a href="#YAML-Modules">YAML modules</a> to prevent the parent from modifying a config section.<br />
+  * <strong>[IgnoreIfSet]</strong> Basically the same as <code>[Final]</code> annotation but inside the parent modules. It can be used in parent modules to say that "if the child config has this section, use that option instead without copying."<br />
+  * <strong>[NoSync]</strong> Used for <a href="https://github.com/CryptoMorin/KingdomsX/blob/72d8aa1c2af9344d7284cce77d8de990cb94188e/core/src/main/resources/config.yml#L99-L109">GUI synchronization</a> to prevent guis from touching an option (similar to <code>[Final]</code> annotation.)</p></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script src="../js/bootstrap.bundle.min.js"></script>
+        <script>
+            var base_url = "..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../js/base.js"></script>
+        <script src="../javascripts/mathjax.js"></script>
+        <script src="https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js"></script>
+        <script src="../search/main.js"></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p>From here you can search these documents. Enter your search terms below.</p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results" data-no-results-text="No results found"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>

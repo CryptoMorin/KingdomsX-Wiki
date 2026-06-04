@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="light">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        <link rel="canonical" href="https://wiki.kingdomsx.com/Installation/">
+        <link rel="shortcut icon" href="../img/favicon.ico">
+        <title>📥 Installation - KingdomsX</title>
+        <link href="../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../css/fontawesome.min.css" rel="stylesheet">
+        <link href="../css/brands.min.css" rel="stylesheet">
+        <link href="../css/solid.min.css" rel="stylesheet">
+        <link href="../css/v4-font-face.min.css" rel="stylesheet">
+        <link href="../css/base.css" rel="stylesheet">
+        <link id="hljs-light" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" >
+        <link id="hljs-dark" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github-dark.min.css" disabled>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+        <script>hljs.highlightAll();</script> 
+    </head>
+
+    <body>
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="..">KingdomsX</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar-collapse" aria-controls="navbar-collapse" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="nav-item">
+                                <a href="../Home.md.md" class="nav-link">🏠 Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../Features/" class="nav-link">🔰 Features</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="./" class="nav-link active" aria-current="page">📥 Installation</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../Installation.md#setup" class="nav-link">📗 Setup</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../Installation.md#compatibility" class="nav-link">📘 Compatibility</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../FAQ/" class="nav-link">❓ FAQ</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../NFAQ/" class="nav-link">⁉️ NFAQ</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../Addons/" class="nav-link">⚜️ Addons</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../Outposts/" class="nav-link">🚩 Outposts</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../Peace-Treaties/" class="nav-link">☮️ Peace Treaties</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../Map-Viewers-Addon/" class="nav-link">🗺️ Map Viewers</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../EngineHub-Addon/" class="nav-link">🏬 EngineHub</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../Admin-Tools/" class="nav-link">🛠  Admin Tools</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../Introduction/" class="nav-link">❇️ Introduction</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../Commands/" class="nav-link">⌨️ Commands</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../Commands.md#players" class="nav-link">👨‍🦱 Players</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../Commands.md#admins" class="nav-link">👩‍⚖️ Admins</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../Permissions/" class="nav-link">🔓 Permissions</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../Placeholders/" class="nav-link">🔣 Placeholders</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../Placeholders.md#players" class="nav-link">🚹 Players</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../Placeholders.md#kingdoms" class="nav-link">🏛 Kingdoms</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../Placeholders.md#nations" class="nav-link">🏢 Nations</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../Config/" class="nav-link">📁 Config</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../YAML/" class="nav-link">📃 YAML</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../Languages/" class="nav-link">💱 Languages</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../GUIs/" class="nav-link">📱 GUI</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../Protection-Signs/" class="nav-link">🔒 Protection Signs</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../Mails/" class="nav-link">✉️ Mails</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../Mechanics/" class="nav-link">📚 Mechanics</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"  aria-expanded="false">⚔️ Invasion</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../Mechanics.md#Invasion" class="dropdown-item">None</a>
+</li>
+                                    
+<li>
+    <a href="../Mechanics.md#Preparing" class="dropdown-item">🛡️ Preparing</a>
+</li>
+                                    
+<li>
+    <a href="../Mechanics.md#Champion" class="dropdown-item">🧟 Champion</a>
+</li>
+                                    
+<li>
+    <a href="../Mechanics.md#mass-wars" class="dropdown-item">🗡  Masswar</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../Mechanics.md#Structures" class="nav-link">📡 Structures</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../Mechanics.md#Turrets" class="nav-link">🔫 Turrets</a>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ms-md-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-bs-toggle="modal" data-bs-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                            <li class="nav-item">
+                                <a rel="prev" href="../Features/" class="nav-link">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a rel="next" href="../FAQ/" class="nav-link">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-bs-toggle="collapse" data-bs-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-body-tertiary">
+        <ul class="nav flex-column">
+            
+            
+            
+            
+            
+            
+            
+            
+            <li class="nav-item" data-bs-level="1"><a href="#stability" class="nav-link">Stability</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<p>Installing the plugin is quite easy. It's the same as any other plugin. Simply just put the downloaded file inside your <code>plugins</code> folder. Your plugins folder should be in the same folder where your server JAR file and other files like <code>eula.txt</code>, <code>ops.json</code>, <code>bukkit.yml</code>, <code>logs</code> and etc are. If you don't see the folder or any of those files, run the server once and it should generate the files.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>If you put the plugin's file while the server is running, you need to restart the server for it to become enabled. Force enabling the plugin with PlugMan or any other plugin loader will cause issues.</p>
+</div>
+<h3 id="system-requirements">System Requirements<a class="headerlink" href="#system-requirements" title="Permanent link">&para;</a></h3>
+<p>While the plugin doesn't have any dependencies that you need to download manually, it does need internet connection for the first time you run the plugin. It also needs internet connection for additional optional content.<br />
+- <strong>Java</strong> - 1.8 or above.<br />
+- <strong>Minecraft Edition:</strong> This plugin is only compatible with <a href="https://www.minecraft.net/en-us/store/minecraft-java-edition">Minecraft Java Edition</a> the plugin will/can't make no attempt to support other editions that are linked by other softwares.<br />
+- <strong>Server Version</strong> - The plugin is compatible with 1.9+ up to the latest version that is supported is on the Spigot page, but only for the latest server version of that minor update. For example, the plugin doesn't support <code>1.14</code>, <code>1.14.1</code>, <code>1.14.2</code> or <code>1.14.3</code>. It only supports <code>1.14.4</code>, which is the latest (patch) version of <strong>1.14</strong> minor version. You'll get <strong>all</strong> the plugin features only on the <strong>latest Minecraft version</strong> that the plugin supports.<br />
+- <strong>Software</strong> - Your server must be a <strong>Spigot or Paper</strong> server. The plugin will not work on Bukkit, however it <em>should</em> work on <a href="https://papermc.io/">Paper</a> or any other Spigot forks. If it doesn't, it's a bug with that fork, not the plugin. Note that it might not function properly (or most likely not function at all) on <strong>Forge+Bukkit</strong>, <strong>Java+Bedrock</strong> server softwares or any other kind of software that adds cross-platform support like these (specially <a href="https://github.com/magmafoundation/Magma">Magma</a>, <a href="https://mohistmc.com/">Mohist</a> and <a href="https://geysermc.org/">GeyserMC</a> which are extremely incompatible.)<br />
+- <strong>Hardware:</strong> Kingdoms tend to sacrifice memory for performance, so you need at least 1GB for a medium-sized server (around ~100 players).<br><br />
+The only resource-intense system that kingdoms has is turrets. The plugin tries its best to make turrets as fast as possible, however due to the single-threaded nature of Minecraft Java edition, it has its own limitations for old/low-budget CPUs.<br><br />
+<strong>Note:</strong> These numbers are just estimates and they're given regardless of your server version and other plugins.<br />
+- <strong>Clients:</strong> The plugin is supposed to work with all modded clients, but if for some reason, somehow, the plugin didn't work on modded clients, but it did work on the official non-modded client, you'll have to report this issue to the client devs.<br />
+- <strong>Internet Connection:</strong><br />
+  * <a href="https://github.com/CryptoMorin/KingdomsX/wiki/Installation#libraries"><strong>Libraries</strong></a><br />
+  * <a href="https://github.com/CryptoMorin/KingdomsX/wiki/Languages"><strong>Language Packs</strong></a><br />
+  * <a href="https://github.com/CryptoMorin/KingdomsX/wiki/Addons"><strong>Addons</strong></a></p>
+<h3 id="setup">Setup<a class="headerlink" href="#setup" title="Permanent link">&para;</a></h3>
+<p>Kingdoms default settings are designed in a way that most owners would prefer. All the needed permissions are given by default that you can <a href="https://github.com/CryptoMorin/KingdomsX/wiki/Permissions#removing-default-permissions">remove</a> as well.<br><br />
+The plugin is pretty much just Plug and Play for the latest Minecraft version. It might need a few tweaks for older versions as not all features are available in older versions. Not doing so can even result in errors.<br><br />
+Each config option is explained in its file, join the discord server if you have any questions.</p>
+<p>Note that Kingdoms does not have any dependencies. All core features of the plugin are included in the main JAR. It does support a few other plugins, but these are merely for compatibility and don't directly make any new features available for Kingdoms plugin itself.<br><br />
+The plugin, however, has a few official addons which add extra features to it. Refer to the <a href="https://github.com/CryptoMorin/KingdomsX/wiki/Addons">Addons page</a> for more info.</p>
+<p>It is important to disable certain features that you want to disable before publishing your server since disabling them after the plugin started to save players data can cause errors or even data corruptions.<br><br />
+One example is that you can't disable a structure/turret type (or more technically referred to as a "style") since they're already placed and removing them doesn't remove the block or hologram from the world and the plugin will start yelling at you because it doesn't know how to handle them.</p>
+<h3 id="libraries">Libraries<a class="headerlink" href="#libraries" title="Permanent link">&para;</a></h3>
+<p>The files in the plugin's <code>libs</code> folder, some of these libraries are required for the plugin to function and others are optional.<br />
+To avoid Spigot's file upload limit, they're not included with the plugin. Also, it helps by not downloading <br />
+useless content that are not required by certain configurations</p>
+<p>You can delete the files, but if you're going to do that, delete all of them. The plugin will download them all back again.</p>
+<p>You can move these files when you're moving kingdoms folder, they'll continue to work correctly.</p>
+<h3 id="reloading">Reloading<a class="headerlink" href="#reloading" title="Permanent link">&para;</a></h3>
+<div class="admonition danger">
+<p class="admonition-title">Danger</p>
+<p><ins><strong>NEVER use /reload command or PlugMan</strong></ins> with KingdomsX installed.</p>
+</div>
+<p>For 90% of the changes in the configs, you do not need to do anything. Yes, you heard that right. The plugin will automatically reload the specific file that you made changes too.<br><br />
+However some complicated changes might need a plugin reload (<a href="https://github.com/CryptoMorin/KingdomsX/wiki/Commands#k-reload">/k reload</a>) or even a server restart.<br><br />
+Almost 99% of the features can be reloaded properly using <strong>/k reload</strong> command.<br><br />
+Please note that the automatic reload performance is much better than the command as the command reloads everything. There is no reason to use the command unless the changes aren't applied.<br><br />
+These automatic reloads can take up to <strong>5 seconds</strong> until it detects the changes.<br><br />
+If an option requires a restart to change, it's commented above them.</p>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>For the reasons above, kingdoms will disable <strong>/reload</strong> and any <strong>PlugMan</strong> command that tries to interfere with kingdoms plugin permanently and you cannot disable this restriction.</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Note that automatic updates are generally unreliable on Linux machines due to how Java implemented it. I cannot fix this, but you can disable this feature in the config if you're experiencing abnormal behaviors, but it should work properly on Windows. </p>
+</div>
+<p>On Linux its behavior can range from double reloads, no reloads or even infinite reloads.<br><br />
+Also, this behavior is affected by your text editor, whether you're on Windows or Linux. For example, Vim and Sublime are known to cause duplicate, saves, but the plugin tries to ignore these duplicates.</p>
+<h3 id="updating">Updating<a class="headerlink" href="#updating" title="Permanent link">&para;</a></h3>
+<p>If you're upgrading Minecraft versions, that's totally fine, however you can't downgrade Minecraft versions, it'll corrupt your world.<br />
+Updating plugin versions should be fine as well. If anything breaks, you can still use the backups provided.<br><br />
+New language options will be added automatically to your language file, for other configs, you can also use the <a href="https://github.com/CryptoMorin/KingdomsX/wiki/Features#auto-config-updater">auto config updater</a> feature or you update your config manually by checking the <a href="https://github.com/CryptoMorin/KingdomsX/tree/master/src/main/resources">version history of configs</a> or you could also use a file difference checker tool such as <a href="https://www.diffchecker.com/">diffchecker</a> to compare your config to the latest version. There are plans to automate this process.</p>
+<p>Updating isn't always easy if you changed a lot of settings in your configs. It can be as simple as just swapping the JAR files or an annoying nightmare. One of this plugin's main principles is that it doesn't sacrifice performance and improvements (even very simple ones that can have breaking changes) for the backwards compatibility of configs. Even with the auto config update system, the format of some options might change and there's no way for the auto config updater to "update" these settings because it might override your own preferences.<br><br />
+However, the second main principle of this plugin is to never have breaking changes that requires data resets, unless you're using a <a href="https://github.com/CryptoMorin/KingdomsX/wiki/Installation#stability">BETA</a> version.<br><br />
+These breaking config changes don't happen often. They happen mostly after major updates after <a href="https://github.com/CryptoMorin/KingdomsX/wiki/Features#feature-cycles">feature cycles</a>.</p>
+<p>If you're updating to an unstable version, you should read <a href="https://github.com/CryptoMorin/KingdomsX/wiki/Installation#stability">stability</a> section for more information before updating.</p>
+<h3 id="uninstallation">Uninstallation<a class="headerlink" href="#uninstallation" title="Permanent link">&para;</a></h3>
+<p>Kingdoms plugin can't be removed from your server safely if structures or turrets are used. The turret and structure blocks and items will stay in the world and in players' inventories.<br><br />
+So if you're planning to remove Kingdoms, be prepared to reset your world and player inventories.</p>
+<p><br></p>
+<h3 id="compatibility">Compatibility<a class="headerlink" href="#compatibility" title="Permanent link">&para;</a></h3>
+<div class="admonition danger">
+<p class="admonition-title">Danger</p>
+<p>The plugin is not compatible with ANY <em>mods</em> at all.</p>
+</div>
+<p>Only compatible with the <ins>latest version</ins> of the plugins mentioned below (except WorldGuard that supports v6 and v7+):</p>
+<ul>
+<li><strong><a href="https://dev.bukkit.org/projects/worldguard">WorldGuard</a> / <a href="https://dev.bukkit.org/projects/worldedit">WorldEdit</a>:</strong> <a href="https://github.com/CryptoMorin/KingdomsX/wiki/EngineHub-Addon">EngineHub Addon</a></li>
+<li><strong><a href="https://www.spigotmc.org/resources/18494/">DiscordSRV</a>:</strong> Sends private chat channels messages (such as kingdoms and allies chat) to a specific channel and sends global chat to another channel. Also used for announcements such as invasions.</li>
+<li><strong><a href="https://www.spigotmc.org/resources/13811/">Citizens</a>:</strong> Stops turrets from shooting NPCs. No manual setup is necessary.</li>
+<li><strong><a href="https://www.spigotmc.org/resources/12725/">MyPet</a>:</strong> Stops turrets from shooting friendly pets (ones who their owner's kingdom has <code>turret ceasefire</code> relationship attribute with the kingdom that the turret belongs to.)</li>
+<li><strong><a href="https://www.spigotmc.org/resources/97628/">MCPet</a>:</strong> Same purpose as the pet plugin above.</li>
+<li><strong><a href="https://www.spigotmc.org/resources/34315/">Vault</a>:</strong> For taxes and economy like Kingdoms and Nations bank. It's also used for some prices like claiming a land. Don't forget that you need to have an economy plugin (like Essentials) for this to work.</li>
+<li><strong><a href="https://essentialsx.net/">Essentials</a> &amp; <a href="https://www.zrips.net/cmi/">CMI</a>:</strong> Prevents turrets from attacking vanished or God Mode users and uses a different tag format (without sound) for Kingdoms <code>@</code> name tagging system for ignored players. Vanished players will also be marked as <strong>offline</strong> in some places like <code>/k show</code> and excluded from command tab-completion.</li>
+<li><strong><a href="https://www.spigotmc.org/resources/6269/">AuthMe</a>:</strong> Checking for online kingdom members limit before invading. (The enemy members can join as one of the invaded kingdom members without logging in)</li>
+<li><strong><a href="https://www.spigotmc.org/resources/28140/">LuckPerms</a>:</strong> Adds custom <a href="https://luckperms.net/wiki/Context">context</a> for permissions.</li>
+<li><code>territory</code>: Permissions only apply when players are in a certain territory. It can either be <code>wilderness</code> or one of the relationship names (<code>ally</code>, <code>enemy</code>, <code>truce</code>, <code>neutral</code> and <code>self</code>)</li>
+<li><code>hasKingdom</code>: Permissions only apply if the player has a kingdom.</li>
+<li><strong>Note:</strong> Most people don't know this, but if you want to use Kingdoms placeholders or any placeholders, you could use the official <a href="https://github.com/LuckPerms/ExtraContexts">ExtraContexts</a> LuckPerms addon. A comprehensive example of how it can be used in advanced situations is found <a href="https://github.com/CryptoMorin/KingdomsX/wiki/NFAQ#making-custom-misc-upgrades">here for custom misc upgrades</a>.</li>
+<li><strong><a href="https://www.spigotmc.org/resources/83557/">BlueMap</a></strong> - <strong><a href="https://www.spigotmc.org/resources/274/">Dynmap</a> - <a href="https://github.com/jpenilla/squaremap">squaremap</a> - <a href="https://github.com/NeumimTo/Pl3xMap">Pl3xMap</a>:</strong> <a href="https://github.com/CryptoMorin/KingdomsX/wiki/Map-Viewers-Addon">Map Viewers Addon</a></li>
+<li><strong><a href="https://www.spigotmc.org/resources/5702/">MythicMobs v4 &amp; v5</a>:</strong> Used for kingdom champions, guards, and soldiers. Here's a <a href="https://github.com/CryptoMorin/KingdomsX/wiki/FAQ#mythicmobs-champions">FAQ</a> how to do it.</li>
+<li><strong><a href="https://www.spigotmc.org/resources/6245/">PlaceholderAPI</a> &amp; <a href="https://www.spigotmc.org/resources/11182/">MVdWPlaceholderAPI</a>:</strong> For plugin placeholders, they also support <strong>short</strong>, <strong>fancy</strong> and relational placeholders.</li>
+<li><strong><a href="https://github.com/Slimefun/Slimefun4">Slimefun</a>:</strong> Prevents the plugin items such as <em>Explosive Pickaxes</em> from breaking turret and structure items. Due to how their system is designed, not all kingdoms options are compatible with them.</li>
+<li><strong><a href="https://www.spigotmc.org/resources/2734/">ProjectKorra</a>:</strong> This is meant to be and was originally something that ProjectKorra devs had to add, but they couldn't maintain the plugin due to "constant changes to the API", so I accepted to make a built-in support. It prevents players from using <em>bendings</em> in unfriendly lands.</li>
+</ul>
+<h4 id="plugins-that-support-kingdoms">Plugins that support Kingdoms<a class="headerlink" href="#plugins-that-support-kingdoms" title="Permanent link">&para;</a></h4>
+<ul>
+<li><strong><a href="https://www.spigotmc.org/resources/36081/">BetterRTP</a> | <a href="https://www.spigotmc.org/resources/76021/">Random Teleport</a>:</strong> Prevents people from getting teleported in middle of another kingdom.</li>
+<li><strong><a href="https://www.spigotmc.org/resources/20661/">FactionsTop</a>:</strong> Provides different ways to represent top kingdoms.</li>
+<li><strong><a href="https://www.spigotmc.org/resources/63842/">SubSide's KoTH</a> or <a href="https://www.spigotmc.org/resources/6832/">Benzimmer's KoTH</a>:</strong> Kingdoms already has a built-in KoTH system called <a href="https://github.com/CryptoMorin/KingdomsX/wiki/Outposts">Outposts</a> and is quite advanced, but if you for some reasons want this plugin, they're also compatible.</li>
+<li><strong><a href="https://www.spigotmc.org/resources/79573/">EcoEnchants</a>:</strong> Prevents enchantments that can destroy blocks from destroying kingdom related blocks when used by an enemy player.</li>
+<li><strong><a href="https://www.spigotmc.org/resources/100918/">DeadlyDisasters</a>:</strong> A plugin that simulates realistic disasters, specially if you live in London, but kingdom lands are an exception to these disasters because the government taxes the inhabitants, including the animals.</li>
+<li><strong><a href="https://www.spigotmc.org/resources/32536/">Plan</a>:</strong> A multi-platform player analytics plugin which tracks resource point donations, power, the amount of players who have kingdoms/nations/flags, etc.</li>
+<li><strong><a href="https://www.spigotmc.org/threads/515168/">ComplexTurrets</a> | <a href="https://www.spigotmc.org/resources/105494/">LaserTurrets</a>:</strong> Kingdoms already has a quite advanced built-in turret system, but if you still prefer this plugin, it prevents players from placing/breaking turrets in other kingdoms' lands.</li>
+<li><strong><a href="https://www.spigotmc.org/resources/59972/">JetMinions</a>:</strong> A way for players to place minions that perform different tasks, such as mining ores. These resources can be automatically put into a linked chest nearby. It prevents players from placing these minions in unfriendly lands.</li>
+<li><strong><a href="https://www.spigotmc.org/resources/31689/">CombatLogX</a>:</strong> Prevents friendly-fire based on relation attributes.</li>
+<li><strong><a href="https://www.spigotmc.org/resources/63970/">DeluxeCombat</a>:</strong> Prevents friendly-fire based on relation attributes.</li>
+<li><strong><a href="https://www.spigotmc.org/resources/58795/">ApiaEnvoy</a>:</strong> Scheduled envoys, and flare envoys with cosmetics (fireworks, holograms, etc). I'm not sure what it has to do with Kingdoms tho. Probably prevents deploying envoy flares on claimed lands?</li>
+<li><strong><a href="https://www.spigotmc.org/resources/96737/">SurvivalTop</a>:</strong> A wealth calculation plugin which considers player, lands and kingdom information.</li>
+<li><strong><a href="https://github.com/Xzavier0722/SlimeGlue">SlimeGlue</a>:</strong> SlimeGlue is a <a href="https://github.com/Slimefun/Slimefun4">Slimefun</a> addon which target to improve the compatibility with other plugins. This was the old compatibility addon, newer versions of Kingdoms already have built-in Slimefun support.</li>
+<li><strong><a href="https://www.spigotmc.org/resources/104824/">BossShopPro</a>:</strong> Adds support for purchasing items with resource points.</li>
+<li><strong><a href="https://modrinth.com/plugin/dungeons">Dungeons</a>:</strong> Doesn't generate dungeons in kingdom claims.</li>
+<li><strong><a href="https://www.spigotmc.org/resources/104484/">NotBounties</a>:</strong> Prevents claiming bounties placed on kingdom/nation members or allied kingdom/nation members.</li>
+<li><strong><a href="https://www.spigotmc.org/resources/124971/">GroupTopper</a>:</strong> A <a href="https://www.spigotmc.org/resources/101325/">Topper</a> addon for creating kingdom/nation leaderboards.</li>
+</ul>
+<h4 id="incompatibility">Incompatibility<a class="headerlink" href="#incompatibility" title="Permanent link">&para;</a></h4>
+<p>I'm not responsible for any kind of bugs caused by incompatibility with other plugins. I might fix some of them.<br><br />
+Known incompatibilities:</p>
+<ul>
+<li><strong><a href="https://builtbybit.com/resources/exploitfixer-anti-crash-dupe-plugin.26463/">ExploitFixer</a>:</strong> Some GUIs such as turrets or structure GUIs will only stay open for a second before being closed automatically by this plugin. If you enable the debug message for this plugin, you may receive a message such as "\<player> tried to interact while inventory was open. (\<inventory title>)"</li>
+<li><strong><a href="https://www.spigotmc.org/resources/valhallaraces-valhallammo-add-on-fantasy-roleplay-create-your-own-races-and-classes.103321/">ValhallaRaces</a>:</strong> Causes Siege Cannon's barrel to stay above the players head after dismounting the cannon. Can cause other armorstand-related issues.</li>
+<li><strong><a href="https://www.spigotmc.org/resources/%E2%9A%A1%EF%B8%8F-entity-ai-optimizer-entity-mob-performance-booster-%E2%9A%A1%EF%B8%8F-1-21-x.122226/">Entity-Ai-Optimizer / Entity &amp; Mob Performance Booster (Last Check: v1.4.2)</a>:</strong> Kingdoms will often tag certain entities ("entity" means alive things like zombies, players, animals, etc) as owned by the plugin. These performance booster plugins will often cause certain changes to how standard mob loading works for the server which causes the plugin to "forget" about these entities while they still exist. (For technical users, these plugins will cause the underlying object instance of mobs to change which is registered as a key for kingdom's mob manager WeakHashMap.)</li>
+<li><strong><a href="https://www.spigotmc.org/resources/lagfixer-1-16-1-21-7-%E2%9A%A1%EF%B8%8Fbest-performance-solution-%EF%B8%8F-2000-servers-%E2%9C%85-lightweight-and-asynchronous.111684/">LagFixer (Last Check: v1.4.23)</a>:</strong> Causes arrows shot from turrets to not hurt mobs randomly (but works on players.) I have no idea how this plugin even causes this issue. It's likely that it originates from its <strong>MobAiReducer</strong> module.</li>
+<li><strong><a href="https://www.spigotmc.org/resources/auraskills.81069/">AuraSkills (Last Check: v2.3.5)</a>:</strong> In general some plugins that change your health might not do it in a standard way that causes other plugins to think that the current player health is not full (even though the UI shows its full.) This causes issues primarily for <strong>healing turrets</strong> because they only heal players if their health is not full. So they just keep healing you forever until they run out of ammo.</li>
+</ul>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>Certain world management plugins load worlds in an inconsistent order. If the worlds are somehow loaded <em>after</em> the plugin loads, the plugin can't do anything about that and it'll start throwing errors. I cannot do anything about this, and you'd have to contact your world management plugin authors.</p>
+</div>
+<h1 id="stability">Stability<a class="headerlink" href="#stability" title="Permanent link">&para;</a></h1>
+<p>Some parts of this section applies to all kingdom versions, but most of them apply to beta versions only.</p>
+<p>When kingdoms releases a <a href="https://en.wikipedia.org/wiki/Software_release_life_cycle#Beta">beta version</a> it means that the plugin is in an unstable state. They should not be used in production servers. They can contain small to severe bugs such as exploits, dupes or even data losses.</p>
+<p>However, there's one major drawback to using Kingdom's stable version. You might not receive support for specific errors since kingdom's internal structure usually goes through a major change during its beta stages and I won't be able to pinpoint certain issues due to their outdated errors/bugs. It's possible that some bugs that you've reported have already been fixed in the latest version. I cannot maintain two separate stable and unstable versions of the plugin because I'm simply not a company, I cannot do something that needs too much time and resources like this, therefore I prefer to focus on the latest version rather than stable versions.</p>
+<div class="admonition danger">
+<p class="admonition-title">Danger</p>
+<p>If you decided to use a beta version, you should do so in a test server, in a server where you're okay with <ins>resetting</ins> things. If not, make sure to always take backups during beta stage yourself. Although the plugin already takes backups, you should <strong>take backup</strong> of other things in the server, such as your world since Kingdoms affects that. If you're using this in a production server, you should check <a href="https://github.com/CryptoMorin/KingdomsX/wiki/Troubleshooting">bug reports</a> regularly to see if there are any exploits.</p>
+</div>
+<p>I do my best to test new changes during beta stages, but I cannot test every possible situation. This is simply not possible for a single human being to do this. Kingdoms relies on server owners who are willing to take the risk of testing beta versions. That means if no one uses the new versions = no bugs reported = the plugin will remain unstable, but this situation never happened until now.</p>
+<p>About new features, please refer to <a href="https://github.com/CryptoMorin/KingdomsX/wiki/Features#feature-cycles">feature cycles</a> section.</p>
+<p>Again anything can happen when you're using beta versions, so be careful. I'll do my best to help.</p></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script src="../js/bootstrap.bundle.min.js"></script>
+        <script>
+            var base_url = "..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../js/base.js"></script>
+        <script src="../javascripts/mathjax.js"></script>
+        <script src="https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js"></script>
+        <script src="../search/main.js"></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p>From here you can search these documents. Enter your search terms below.</p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results" data-no-results-text="No results found"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>

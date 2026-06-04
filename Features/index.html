@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="light">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        <link rel="canonical" href="https://wiki.kingdomsx.com/Features/">
+        <link rel="shortcut icon" href="../img/favicon.ico">
+        <title>🔰 Features - KingdomsX</title>
+        <link href="../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../css/fontawesome.min.css" rel="stylesheet">
+        <link href="../css/brands.min.css" rel="stylesheet">
+        <link href="../css/solid.min.css" rel="stylesheet">
+        <link href="../css/v4-font-face.min.css" rel="stylesheet">
+        <link href="../css/base.css" rel="stylesheet">
+        <link id="hljs-light" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" >
+        <link id="hljs-dark" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github-dark.min.css" disabled>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+        <script>hljs.highlightAll();</script> 
+    </head>
+
+    <body>
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="..">KingdomsX</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar-collapse" aria-controls="navbar-collapse" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="nav-item">
+                                <a href="../Home.md.md" class="nav-link">🏠 Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="./" class="nav-link active" aria-current="page">🔰 Features</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../Installation/" class="nav-link">📥 Installation</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../Installation.md#setup" class="nav-link">📗 Setup</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../Installation.md#compatibility" class="nav-link">📘 Compatibility</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../FAQ/" class="nav-link">❓ FAQ</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../NFAQ/" class="nav-link">⁉️ NFAQ</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../Addons/" class="nav-link">⚜️ Addons</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../Outposts/" class="nav-link">🚩 Outposts</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../Peace-Treaties/" class="nav-link">☮️ Peace Treaties</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../Map-Viewers-Addon/" class="nav-link">🗺️ Map Viewers</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../EngineHub-Addon/" class="nav-link">🏬 EngineHub</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../Admin-Tools/" class="nav-link">🛠  Admin Tools</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../Introduction/" class="nav-link">❇️ Introduction</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../Commands/" class="nav-link">⌨️ Commands</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../Commands.md#players" class="nav-link">👨‍🦱 Players</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../Commands.md#admins" class="nav-link">👩‍⚖️ Admins</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../Permissions/" class="nav-link">🔓 Permissions</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../Placeholders/" class="nav-link">🔣 Placeholders</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../Placeholders.md#players" class="nav-link">🚹 Players</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../Placeholders.md#kingdoms" class="nav-link">🏛 Kingdoms</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../Placeholders.md#nations" class="nav-link">🏢 Nations</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../Config/" class="nav-link">📁 Config</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../YAML/" class="nav-link">📃 YAML</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../Languages/" class="nav-link">💱 Languages</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../GUIs/" class="nav-link">📱 GUI</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../Protection-Signs/" class="nav-link">🔒 Protection Signs</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../Mails/" class="nav-link">✉️ Mails</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../Mechanics/" class="nav-link">📚 Mechanics</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"  aria-expanded="false">⚔️ Invasion</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../Mechanics.md#Invasion" class="dropdown-item">None</a>
+</li>
+                                    
+<li>
+    <a href="../Mechanics.md#Preparing" class="dropdown-item">🛡️ Preparing</a>
+</li>
+                                    
+<li>
+    <a href="../Mechanics.md#Champion" class="dropdown-item">🧟 Champion</a>
+</li>
+                                    
+<li>
+    <a href="../Mechanics.md#mass-wars" class="dropdown-item">🗡  Masswar</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../Mechanics.md#Structures" class="nav-link">📡 Structures</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../Mechanics.md#Turrets" class="nav-link">🔫 Turrets</a>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ms-md-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-bs-toggle="modal" data-bs-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                            <li class="nav-item">
+                                <a rel="prev" class="nav-link disabled">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a rel="next" href="../Installation/" class="nav-link">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-bs-toggle="collapse" data-bs-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-body-tertiary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-bs-level="1"><a href="#multiple-database-support" class="nav-link">Multiple database support</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-bs-level="1"><a href="#invasion" class="nav-link">Invasion</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-bs-level="1"><a href="#turrets-structures" class="nav-link">Turrets &amp; Structures</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-bs-level="1"><a href="#interactive-help-pages-map" class="nav-link">Interactive Help Pages &amp; Map</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-bs-level="1"><a href="#update-checkers" class="nav-link">Update Checkers</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-bs-level="1"><a href="#auto-config-updater" class="nav-link">Auto Config Updater</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-bs-level="1"><a href="#guis" class="nav-link">GUIs</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-bs-level="1"><a href="#chunk-indicators" class="nav-link">Chunk Indicators</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-bs-level="1"><a href="#land-restoration" class="nav-link">Land Restoration</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-bs-level="1"><a href="#backups" class="nav-link">Backups</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-bs-level="1"><a href="#automatic-reloads" class="nav-link">Automatic Reloads</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-bs-level="1"><a href="#nations" class="nav-link">Nations</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-bs-level="1"><a href="#kingdom-fly" class="nav-link">Kingdom Fly</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-bs-level="1"><a href="#advanced-commands-permissions" class="nav-link">Advanced Commands &amp; Permissions</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-bs-level="1"><a href="#chat-channels-join-messages" class="nav-link">Chat Channels &amp; Join Messages</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-bs-level="1"><a href="#customization" class="nav-link">Customization</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-bs-level="1"><a href="#custom-ranks-relations" class="nav-link">Custom Ranks &amp; Relations</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-bs-level="1"><a href="#nexus-settings" class="nav-link">Nexus Settings</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-bs-level="1"><a href="#taxes" class="nav-link">Taxes</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-bs-level="1"><a href="#protection-signs" class="nav-link">Protection Signs</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-bs-level="1"><a href="#outposts" class="nav-link">Outposts</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-bs-level="1"><a href="#compatibility" class="nav-link">Compatibility</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-bs-level="1"><a href="#compilers" class="nav-link">Compilers</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-bs-level="1"><a href="#others" class="nav-link">Others</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-bs-level="1"><a href="#feature-cycles" class="nav-link">Feature Cycles</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-bs-level="1"><a href="#disadvantages" class="nav-link">Disadvantages</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<p>Kingdoms aims to provide a lot of more core features than other plugins such as Factions and Towny and in a more customizable way. Kingdoms is mostly for PvP servers, but you can still enjoy the plugin core features without the PvP mechanics. Although the most fun comes from the PvP part.</p>
+<p>Below is a brief list of the plugin's main features. This is just an overview of the main features, for specific details please refer to the main section for that specific topic in the wiki.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p><strong>Not all features are available for older server versions.</strong> Kingdoms is developed to make the most use of the latest Minecraft features. If technically possible and convenient, such features are added for outdated server versions as well, but these features may be less polished and may get removed in future releases.</p>
+</div>
+<h1 id="multiple-database-support">Multiple database support<a class="headerlink" href="#multiple-database-support" title="Permanent link">&para;</a></h1>
+<p>Kingdoms supports a variety of different popular databases such as <a href="https://www.json.org/json-en.html">JSON</a>, <a href="https://yaml.org/">YAML</a> (these two are not considered proper "databases"), <a href="https://www.sqlite.org/">SQLite</a>, <a href="https://www.h2database.com/html/main.html">H2</a>, <a href="https://www.mysql.com/">MySQL</a>, <a href="https://mariadb.org/">MariaDB</a>, <a href="https://www.postgresql.org/">PostgreSQL</a> and <a href="https://www.mongodb.com/">MongoDB</a>.</p>
+<p>It defines different settings to configure the optimal connection for your server in different environments. It also supports external database backup dumping if your server allows that. It takes advantage of the most optimal data types for increased performance and efficient usage of the database space.</p>
+<h1 id="invasion"><a href="https://github.com/CryptoMorin/KingdomsX/wiki/Mechanics#Invasion">Invasion</a><a class="headerlink" href="#invasion" title="Permanent link">&para;</a></h1>
+<p>Kingdoms is mostly known for its PvP features such as the invasion and turrets system.<br />
+Invading a kingdom is a way to get another kingdom's land.<br />
+Members of the kingdom need to strategize while invading another kingdom and prepare their base properly. These strategies are made easier using champions, turrets and structures.</p>
+<h1 id="turrets-structures"><a href="https://github.com/CryptoMorin/KingdomsX/wiki/Mechanics#Structures">Turrets &amp; Structures</a><a class="headerlink" href="#turrets-structures" title="Permanent link">&para;</a></h1>
+<p>Turrets are stationary blocks that protect your kingdom against invaders. These turrets also work on mobs.<br><br />
+They have levels and ammos, their behavior can be changed via kingdoms relation settings and Regulator structures.<br />
+You can even add your own turrets with different settings and GUIs.</p>
+<p>Structures are stationary blocks that can do different functions from protecting your lands to producing resource points and shops.<br><br />
+Also, you can use the <strong><a href="https://github.com/CryptoMorin/KingdomsX/wiki/EngineHub-Addon">EngineHub Add-on</a></strong> to use schematics for these buildings.</p>
+<h1 id="interactive-help-pages-map"><a href="https://github.com/CryptoMorin/KingdomsX/wiki/Commands">Interactive Help Pages &amp; Map</a><a class="headerlink" href="#interactive-help-pages-map" title="Permanent link">&para;</a></h1>
+<p>This is one of the best core features of Kingdoms. The help pages for the <code>/k help</code> command is interactive in chat.<br />
+These pages are designed based on Googles page layout.<br><br />
+Interactive means you can hover over messages to show a lore, just like items in your inventory.</p>
+<p>The kingdoms map is also interactive, meaning you don't have to use complicated symbols to show different things on the map. Just hovering on an element will tell you the information. You can even claim a land from interacting with the map! Map sizes can also be changed per player with a limit.</p>
+<h1 id="update-checkers">Update Checkers<a class="headerlink" href="#update-checkers" title="Permanent link">&para;</a></h1>
+<p>Kingdoms has an async update checker. Updating the plugin is quite easy and new options for language files will be automatically added.<br><br />
+Other config options that are missing from the config will use the default values to prevent errors.</p>
+<h1 id="auto-config-updater">Auto Config Updater<a class="headerlink" href="#auto-config-updater" title="Permanent link">&para;</a></h1>
+<p>Kingdoms is the first Minecraft plugin that automatically updates configs while keeping comments reliably.<br><br />
+This also <em>tries</em> to keep the original format of the values given to options:<br />
+<pre class="highlight"><code class="language-yml"># It distinguishes between these and keeps their format
+option: hello
+option: 'hello'
+option: "Hello"</code></pre><br />
+But this is not always the case.</p>
+<p>The only downside of this feature is that <strong>it does not keep the comments that you added yourself</strong> because it simply doesn't know whether the comments you added yourself were removed as a result of being obsolete from the previous version or if you wanted to keep it here.</p>
+<p>This system will not change GUIs at all, because GUIs are completely customizable. The plugin can't know whether a new option that was added in a new update was removed by you manually or not. Or whether an existing option was changed by you manually or not.<br><br />
+Default and up to date GUI configs can be found <a href="https://github.com/CryptoMorin/KingdomsX/tree/master/core/src/main/resources/guis">here</a>. You should make your own changes where necessary.</p>
+<p>This also has a config migration system where various tasks are performed on different configs depending on your last updated version. For technical reasons, if you should know, not having a <code>globals.yml</code> file will make the plugin consider your Kingdoms setup as a "fresh" setup and will not perform any config migration tasks. Sometimes config migrations can be as extreme as deleting an entire config file or as simple as relocating an option or setting it back to its default value.</p>
+<p>The auto config updater will not try to update options that had their meaning/format changed in newer versions.<br />
+<pre class="highlight"><code class="language-yml"># For example if older versions supported math equations with % around them:
+option: "100 * %level%"
+
+# It'll not update that option to the new default one:
+option: "100 * level"
+# which will make the plugin panic and throw errors.</code></pre></p>
+<p>The option to enable this feature can be found in <a href="https://github.com/CryptoMorin/KingdomsX/blob/01696d442129fb40cea088847db4f1ec1de6104b/core/src/main/resources/config.yml#L75-L78"><code>config.yml</code> -&gt; <code>updates</code> -&gt; <code>configs</code></a></p>
+<h1 id="guis"><a href="https://github.com/CryptoMorin/KingdomsX/wiki/Config#guis">GUIs</a><a class="headerlink" href="#guis" title="Permanent link">&para;</a></h1>
+<p>Plugin GUIs are 100% customizable with conditional JavaScript support which almost no plugin has.<br><br />
+GUI types, slot, sounds, messages, interactable slots, advanced item properties and etc... can be changed for each GUI.</p>
+<h1 id="chunk-indicators"><a href="https://github.com/CryptoMorin/KingdomsX/wiki/Commands#k-visualize-togglepermanent">Chunk Indicators</a><a class="headerlink" href="#chunk-indicators" title="Permanent link">&para;</a></h1>
+<p>When changing lands and claiming the plugin uses fake blocks to show the chunk borders. How blocks are shown for each kingdom relation and their design can be changed via the config.<br><br />
+There is also an option to disable this or make it permanent for per player.</p>
+<h1 id="land-restoration">Land Restoration<a class="headerlink" href="#land-restoration" title="Permanent link">&para;</a></h1>
+<p>The plugin can store a chunk's information inside a very compact file in order to restore that chunk once it has been unclaimed. The chunk snapshot is taken once a chunk is claimed, and restored and deleted once it has been unclaimed. The restoration process is divided between chunks in an interval to prevent server lag.</p>
+<h1 id="backups">Backups<a class="headerlink" href="#backups" title="Permanent link">&para;</a></h1>
+<p>The plugin automatically takes a backup every day and saves them to the <strong>Backups</strong> folder inside Kingdoms folder.<br><br />
+Don't worry if your host doesn't allow automatic backups, the plugin automatically deletes old backups after a few weeks.<br><br />
+All the backup settings can be changed from the config.</p>
+<h1 id="automatic-reloads"><a href="https://github.com/CryptoMorin/KingdomsX/wiki/Installation#reloading">Automatic Reloads</a><a class="headerlink" href="#automatic-reloads" title="Permanent link">&para;</a></h1>
+<p>The plugin will automatically reload when you change something in the config. Almost every option in the plugin, including messages, GUIs and other main configs support this method. However a few complicated options cannot be reloaded this way.<br><br />
+This is the most stable and convenient way of reloading options.</p>
+<h1 id="nations"><a href="https://github.com/CryptoMorin/KingdomsX/wiki/Introduction#nations">Nations</a><a class="headerlink" href="#nations" title="Permanent link">&para;</a></h1>
+<p>Nations are another big aspect of Kingdoms that grant special powers to kingdoms that are in a nation.<br><br />
+Once you enter a nation the plugin will get a little more complicated to understand.</p>
+<h1 id="kingdom-fly"><a href="https://github.com/CryptoMorin/KingdomsX/wiki/Commands#k-fly">Kingdom Fly</a><a class="headerlink" href="#kingdom-fly" title="Permanent link">&para;</a></h1>
+<p>Players can fly in their land and in an ally's land (depending on their relation settings)<br><br />
+This also has a check for nearby enemies to be automatically disabled.</p>
+<h1 id="advanced-commands-permissions">Advanced <a href="https://github.com/CryptoMorin/KingdomsX/wiki/Commands">Commands</a> &amp; <a href="https://github.com/CryptoMorin/KingdomsX/wiki/Permissions">Permissions</a><a class="headerlink" href="#advanced-commands-permissions" title="Permanent link">&para;</a></h1>
+<p>Kingdoms uses the new advanced command auto completion features to make it easier for players to understand what they should be typing.<br><br />
+Most of the permissions (mostly commands) follow a specific pattern so you can even use them without looking at the wiki.<br />
+There are also commands to test certain things before using them in the config option.</p>
+<h1 id="chat-channels-join-messages">Chat Channels &amp; Join Messages<a class="headerlink" href="#chat-channels-join-messages" title="Permanent link">&para;</a></h1>
+<p>Chat channels for global, kingdom and ally. Chat formats support hover messages and DiscordSRV.<br><br />
+There are many conditioned formats for kingdoms such as whether the player has a kingdom/nation or not.</p>
+<p>The same for join and leave messages. These are to show different messages for kingdoms that are in the same kingdom.</p>
+<p>By default the plugin also disables <a href="https://help.minecraft.net/hc/en-us/articles/7149823936781-Player-Reporting-in-Minecraft-Java-Edition">Minecraft chat reporting</a>, however if you wanted a more advanced plugin that specializes in this exact topic, you should check out <a href="https://www.spigotmc.org/resources/103782/">AntiPopup</a> plugin.</p>
+<h1 id="customization"><a href="https://github.com/CryptoMorin/KingdomsX/wiki/Config">Customization</a><a class="headerlink" href="#customization" title="Permanent link">&para;</a></h1>
+<p>Kingdoms is extremely customizable in different aspects, allowing server owners to make unique mechanics and provide plugin developers with an easy API to implement their own features.<br><br />
+The plugin even provides different ways to make it easier for server owners to use these features.</p>
+<h1 id="custom-ranks-relations">Custom Ranks &amp; Relations<a class="headerlink" href="#custom-ranks-relations" title="Permanent link">&para;</a></h1>
+<p>You can make your own ranks in your kingdom and nations! Edit their node, name, color, symbol and etc... for every rank.<br><br />
+Custom relation attributes can be changed via your nexus settings.</p>
+<h1 id="nexus-settings"><a href="https://github.com/CryptoMorin/KingdomsX/wiki/Introduction#nexus">Nexus</a> Settings<a class="headerlink" href="#nexus-settings" title="Permanent link">&para;</a></h1>
+<p>Kingdoms nexus is the perfect center for changing your kingdom settings. A lot of things can be done from this GUI.</p>
+<ul>
+<li>Kingdoms Shields</li>
+<li>Pacifism Mode</li>
+<li>Relation Attributes</li>
+<li>Taxes</li>
+</ul>
+<h1 id="taxes"><a href="https://github.com/CryptoMorin/KingdomsX/wiki/Introduction#taxes">Taxes</a><a class="headerlink" href="#taxes" title="Permanent link">&para;</a></h1>
+<p>Kingdoms and nations support taxes from Vault. You can also make your own tax equation for your kingdom and nation.<br><br />
+There is also a rank permission for excluding people from paying taxes!</p>
+<h1 id="protection-signs"><a href="https://github.com/CryptoMorin/KingdomsX/wiki/Protection-Signs">Protection Signs</a><a class="headerlink" href="#protection-signs" title="Permanent link">&para;</a></h1>
+<p>A way to protect your containers using signs. This is basically similar to <a href="https://www.spigotmc.org/resources/74354/">LockettePro</a> plugin but specially made for kingdoms with more powerful tools.<br><br />
+You can quick lock chests and use various codes to protect a chest, just choose one that's easier for you!</p>
+<p>It also has the ability to change players and kingdoms who can access the chest, doesn't matter if they're in your kingdom or not. You can also use different <strong>[everyone]</strong> tags to give chest access to everyone in your kingdom or outside of your kingdom.</p>
+<h1 id="outposts"><a href="https://github.com/CryptoMorin/KingdomsX/wiki/Outposts">Outposts</a><a class="headerlink" href="#outposts" title="Permanent link">&para;</a></h1>
+<p>Similar to KoTH (King of The Hill) plugins, but specifically made for kingdoms with extra features.</p>
+<h1 id="compatibility"><a href="https://github.com/CryptoMorin/KingdomsX/wiki/Installation#compatibility">Compatibility</a><a class="headerlink" href="#compatibility" title="Permanent link">&para;</a></h1>
+<p>The plugin attempts to provide the best options for popular plugins such as LuckPerms and Dynmap.<br><br />
+Especially Dynmap that has a very powerful config to customize your server. Kingdoms can choose their own flag and kingdom color.</p>
+<h1 id="compilers">Compilers<a class="headerlink" href="#compilers" title="Permanent link">&para;</a></h1>
+<p>Kingdoms is the first Minecraft plugin that runs on "compilers". This means that it has built-in systems that validate and optimize configuration settings during server startup. This has two significant advantages.</p>
+<p>When settings are validated during server startup, it'll warn you in the console if settings are using an invalid value or even fail to load the plugin completely for crucial options. This helps server owners to identify most issues before players encounter them. Some of these validations are strict and server owners might not like them. This validation can sometimes even help owners and give them hints on how they can solve the problem.</p>
+<p>Validating settings during server startup allows the plugin to heavily optimize options being used. For example turrets use math equations for most of their options. If the equation is parsed by the plugin every time, it can slow down things a lot.</p>
+<h1 id="others">Others<a class="headerlink" href="#others" title="Permanent link">&para;</a></h1>
+<p>Kingdoms plugin is heavily optimized and provides different options to adjust its behavior for big servers.<br><br />
+It has a really easy and well-documented <a href="https://github.com/CryptoMorin/KingdomsX/wiki/API">API</a> to use that everyone with basic Java knowledge can use most of its features.<br><br />
+For support refer to <a href="https://github.com/CryptoMorin/KingdomsX/wiki#support">this</a> section.</p>
+<h4 id="easter-eggs">Easter Eggs<a class="headerlink" href="#easter-eggs" title="Permanent link">&para;</a></h4>
+<p>The plugin contains some very rare easter eggs. There are some that only people with access to the config files can figure out, others are accessible by all players. These easter eggs aren't documented, but they're not harmful in any way, but of course some of them can restrict the way players interact with certain features in-game, but they're extremely insignificant.</p>
+<h1 id="feature-cycles">Feature Cycles<a class="headerlink" href="#feature-cycles" title="Permanent link">&para;</a></h1>
+<p>Kingdoms suggestions are added to the plugin in a specific order. Most suggestions are discussed and accepted in the discord server, but these features will not be added gradually to the plugin.</p>
+<p>Once there are no bug reports (even minor bugs, unless they're extremely insignificant like a simple grammar issue) left for at least <strong>a week</strong>, the <strong>feature update cycle</strong> will be started. During this cycle, all suggestions will be implemented which usually takes up to <em>a month</em>.</p>
+<div class="admonition danger">
+<p class="admonition-title">Danger</p>
+<p>During feature cycles, <ins>no bugs will be fixed</ins> (<strong>even major ones</strong>) until the first alpha/beta version is out. No bugs will be fixed at all for the latest stable version. This is why there is a long delay for bug reports before feature cycles start. All users are warned in the discord server about when feature cycles start.</p>
+</div>
+<p>Bugs are mostly fixed weekly outside of feature cycles unless they're major bugs (in which case a hotfix is usually released).<br></p>
+<div class="admonition danger">
+<p class="admonition-title">Danger</p>
+<p>For the stability of alpha/beta versions refer to <a href="https://github.com/CryptoMorin/KingdomsX/wiki/Installation#Stability">stability</a> section.</p>
+</div>
+<h1 id="disadvantages">Disadvantages<a class="headerlink" href="#disadvantages" title="Permanent link">&para;</a></h1>
+<p>There are disadvantages compared to other factions plugins:</p>
+<p>Kingdoms is by no means a "simple" plugin if you decide to change things. You might think this contradicts the <a href="https://github.com/CryptoMorin/KingdomsX/wiki/Installation#setup">"Plug &amp; Play"</a> statement, but it's applicable to people who are fine with how things work by default. Running a server by itself is by no means an easy task, and Kingdom's isn't just a plugin. You can think of it as an installer with 10000 Next buttons.</p>
+<p>Since there are many many features in the plugin, and the plugin's internals are being improved constantly, things that were working before might begin to break and they have to be fixed again. Kingdoms will never be a 100% stable software, because I always intend to keep improving it, and these changes will cause other issues at some point. These changes can cause some config options to be moved, deleted or changed.</p>
+<p>Another disadvantage of Kingdoms is that it currently only has one single developer. While almost all response times are under 24hrs, updates and bug fixes may be delayed, and feature update cycles may take too long or the plugin may stay in alpha/beta phase for a long time.</p>
+<p>The plugin is also currently not open-sourced. This is planned for the future (No ETA)</p>
+<p>While you might encounter these issues when using Kingdoms, there are many command utilities to help you with that. Also, Kingdoms has the most comprehensive and complete wiki you'll ever find for a Minecraft plugin.</p></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script src="../js/bootstrap.bundle.min.js"></script>
+        <script>
+            var base_url = "..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../js/base.js"></script>
+        <script src="../javascripts/mathjax.js"></script>
+        <script src="https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js"></script>
+        <script src="../search/main.js"></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p>From here you can search these documents. Enter your search terms below.</p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results" data-no-results-text="No results found"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>

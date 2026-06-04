@@ -1,0 +1,620 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="light">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        <link rel="canonical" href="https://wiki.kingdomsx.com/Config/">
+        <link rel="shortcut icon" href="../img/favicon.ico">
+        <title>📁 Config - KingdomsX</title>
+        <link href="../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../css/fontawesome.min.css" rel="stylesheet">
+        <link href="../css/brands.min.css" rel="stylesheet">
+        <link href="../css/solid.min.css" rel="stylesheet">
+        <link href="../css/v4-font-face.min.css" rel="stylesheet">
+        <link href="../css/base.css" rel="stylesheet">
+        <link id="hljs-light" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" >
+        <link id="hljs-dark" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github-dark.min.css" disabled>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+        <script>hljs.highlightAll();</script> 
+    </head>
+
+    <body>
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="..">KingdomsX</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar-collapse" aria-controls="navbar-collapse" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="nav-item">
+                                <a href="../Home.md.md" class="nav-link">🏠 Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../Features/" class="nav-link">🔰 Features</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../Installation/" class="nav-link">📥 Installation</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../Installation.md#setup" class="nav-link">📗 Setup</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../Installation.md#compatibility" class="nav-link">📘 Compatibility</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../FAQ/" class="nav-link">❓ FAQ</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../NFAQ/" class="nav-link">⁉️ NFAQ</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../Addons/" class="nav-link">⚜️ Addons</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../Outposts/" class="nav-link">🚩 Outposts</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../Peace-Treaties/" class="nav-link">☮️ Peace Treaties</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../Map-Viewers-Addon/" class="nav-link">🗺️ Map Viewers</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../EngineHub-Addon/" class="nav-link">🏬 EngineHub</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../Admin-Tools/" class="nav-link">🛠  Admin Tools</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../Introduction/" class="nav-link">❇️ Introduction</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../Commands/" class="nav-link">⌨️ Commands</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../Commands.md#players" class="nav-link">👨‍🦱 Players</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../Commands.md#admins" class="nav-link">👩‍⚖️ Admins</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../Permissions/" class="nav-link">🔓 Permissions</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../Placeholders/" class="nav-link">🔣 Placeholders</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../Placeholders.md#players" class="nav-link">🚹 Players</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../Placeholders.md#kingdoms" class="nav-link">🏛 Kingdoms</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../Placeholders.md#nations" class="nav-link">🏢 Nations</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="./" class="nav-link active" aria-current="page">📁 Config</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../YAML/" class="nav-link">📃 YAML</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../Languages/" class="nav-link">💱 Languages</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../GUIs/" class="nav-link">📱 GUI</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../Protection-Signs/" class="nav-link">🔒 Protection Signs</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../Mails/" class="nav-link">✉️ Mails</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../Mechanics/" class="nav-link">📚 Mechanics</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"  aria-expanded="false">⚔️ Invasion</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../Mechanics.md#Invasion" class="dropdown-item">None</a>
+</li>
+                                    
+<li>
+    <a href="../Mechanics.md#Preparing" class="dropdown-item">🛡️ Preparing</a>
+</li>
+                                    
+<li>
+    <a href="../Mechanics.md#Champion" class="dropdown-item">🧟 Champion</a>
+</li>
+                                    
+<li>
+    <a href="../Mechanics.md#mass-wars" class="dropdown-item">🗡  Masswar</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../Mechanics.md#Structures" class="nav-link">📡 Structures</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../Mechanics.md#Turrets" class="nav-link">🔫 Turrets</a>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ms-md-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-bs-toggle="modal" data-bs-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                            <li class="nav-item">
+                                <a rel="prev" href="../Placeholders/" class="nav-link">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a rel="next" href="../YAML/" class="nav-link">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-bs-toggle="collapse" data-bs-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-body-tertiary">
+        <ul class="nav flex-column">
+            
+            
+            <li class="nav-item" data-bs-level="1"><a href="#math" class="nav-link">Math</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-bs-level="2"><a href="#simple-operations" class="nav-link">Simple Operations</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#placeholders" class="nav-link">Placeholders</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#functions" class="nav-link">Functions</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#practical-math" class="nav-link">Practical Math</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-bs-level="1"><a href="#conditions" class="nav-link">Conditions</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<p>Plugin configuration files are split into separate files to organize options. All the config files are <a href="https://github.com/CryptoMorin/KingdomsX/wiki/Installation#reloading">automatically reloaded</a>.<br><br />
+Config files are not translatable but the language file and all the GUIs are.<br><br />
+Kingdoms uses <a href="https://github.com/CryptoMorin/KingdomsX/wiki/YAML">YAML</a> as its main config system.<br><br />
+For information specific to language files, refer to <a href="https://github.com/CryptoMorin/KingdomsX/wiki/Languages">Languages</a> section.</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>All the configs including language files except GUIs, support <a href="https://github.com/CryptoMorin/KingdomsX/wiki/Features#auto-config-updater">auto config updates</a>. However this feature is disabled by default. When the auto updater is disabled, the plugin tries to use the default value.</p>
+</div>
+<p>Most of the config options are explained in their config, however here we'll take a look at some basic and advanced features that Kingdoms plugin allows you to use for the config options.<br />
+* Most numeric options can be disabled by setting their value to 0 (or lower) unless specified otherwise. This disables any side effects that the option might have (such as sending messages)<br />
+* You can use <code>\n</code> line break to break lines for messages.<br />
+* All the Minecraft materials can be found <a href="https://hub.spigotmc.org/javadocs/spigot/org/bukkit/Material.html">here</a>.<br />
+* Potion effects are defined using the <code>&lt;potion&gt;, &lt;duration&gt;, &lt;level&gt; [%chance]</code> where <strong><potion></strong> is one of <a href="https://hub.spigotmc.org/javadocs/bukkit/org/bukkit/potion/PotionEffectType.html">these</a> and the <strong>duration</strong> is in seconds. Also the level doesn't start from 0 unlike the standards. The <strong>chance</strong> (the percent sign is required before it, but notice there's no comma) is from 0 to 100<br />
+* Sounds are parsed using the <code>[~][category@]&lt;sound&gt;, [volume], [pitch], [seed]</code> format. All the Minecraft sounds can be found <a href="https://hub.spigotmc.org/javadocs/spigot/org/bukkit/Sound.html">here</a>. Minecraft volumes start from <code>0.0</code> to <code>1.0</code> Any number higher than that will just increase the radius the player can hear the sound from, normal is <code>1.0</code>. Pitch starts from <code>0.5</code> to <code>2.0</code> normal is <code>1.0</code> You can also test this by using the <a href="https://github.com/CryptoMorin/KingdomsX/wiki/Commands#k-admin-sound">/k admin sound</a> command. Where <code>~</code> is also an optional prefix to play the sound at the player's location rather than to the player only so other nearby players can hear it too. The <code>&lt;sound&gt;</code> can also be from a resource pack. They typically look something like <code>rpname:my.custom.sound</code>.<br />
+* Options that you can specify commands for always take one or multiple commands.<br />
+  * Singular like <code>commands: "k admin rp %kingdoms_name% add 100"</code> <strong>or</strong> <code>commands: [ "k admin rp %kingdoms_name% add 100" ]</code><br />
+  * Multiple like <code>commands: [ "give %player% diamond 10", "give %player% grass 4" ]</code><br />
+  * The slash at the beginning of the commands are optional, but if you ever had to use a plugin which uses 2 slashes (such as <code>//wand</code>) you have to use 3 slashes instead <code>commands: "///wand"</code><br />
+  * There are two command directive prefixes that change the executor of the command:<br />
+    * <code>OP:</code> By default commands are executed as if the player executed them. Using this directive will make the player execute the commands as op.<br />
+    * <code>CONSOLE:</code> This tells the server to execute the command from console. This is preferred over OP directive.<br />
+    * E.g. <code>commands: [ "CONSOLE:give %player% diamond 10", "OP:give %player% diamond 10" ]</code><br />
+* Surprisingly one thing that some people don't know, is that you can use <strong>Ctrl + F</strong> to search for something in a file. This is useful for searching for config options or language entries. If you didn't know this, Google <strong>Ctrl + Z</strong> and <strong>Ctrl + R</strong> as well.<br />
+* Most of the config options in the config that represent a time, support time suffixes. The default time suffix is seconds. Please also note that most of the cooldown options in the config are temporary, meaning that the timer will reset after server restarts. Some time suffixes:<br />
+  * You might see some config options that only support <a href="https://minecraft.gamepedia.com/Tick">ticks</a>. In Minecraft each second is <strong>20 ticks</strong>.<br />
+  * <code>ms</code>, <code>millisec</code>, <code>millisecs</code>, <code>millisecond</code>, <code>milliseconds</code> (<strong>Note:</strong> Due to the tick-based nature of Minecraft, not all options use this accurately)<br />
+  * <code>s</code>, <code>sec</code>, <code>secs</code>, <code>second</code>, <code>seconds</code><br />
+  * <code>m</code>, <code>min</code>, <code>mins</code>, <code>minutes</code>, <code>minutes</code><br />
+  * <code>h</code>, <code>hr</code>, <code>hrs</code>, <code>hour</code>, <code>hours</code><br />
+  * <code>d</code>, <code>day</code>, <code>days</code><br />
+  * <strong>Example:</strong> <code>time-limit: 10days</code></p>
+<hr />
+<h3 id="boss-bars">Boss Bars<a class="headerlink" href="#boss-bars" title="Permanent link">&para;</a></h3>
+<p>Boss bars are the progress bars that you usually see on the top of your screen when fighting <a href="https://minecraft.fandom.com/wiki/Wither">withers</a> and the <a href="https://minecraft.fandom.com/wiki/Ender_Dragon">ender dragon</a>. You can test different values using the <a href="https://minecraft.fandom.com/wiki/Commands/bossbar">/bossbar vanilla command</a>.<br><br />
+You can see both of them in this image:</p>
+<p><img alt="BossBar" src="https://static.wikia.nocookie.net/minecraft_gamepedia/images/0/0f/HealthBarComparison.png" /></p>
+<p><strong>Options:</strong><br />
+  * <code>enabled</code> Usually this option is present to determine whether the bar should be shown at all or not.<br />
+  * <code>title</code> The title of the bar which supports colors (including hex colors) and placeholders, but they do not support line breaks.<br />
+  * <code>color</code> The color of the bar. You can find all the colors <a href="https://hub.spigotmc.org/javadocs/spigot/org/bukkit/boss/BarColor.html">here</a>.<br />
+  * <code>style</code> The style of the bar. Bars can be either a solid line just like the ones shown in the image above, or segmented with indicators that divide the bar with small vertical lines. You can find all the styles <a href="https://hub.spigotmc.org/javadocs/spigot/org/bukkit/boss/BarStyle.html">here</a>.<br />
+  * <code>flags</code> A list of cool visual side-effects. You can find all the flags <a href="https://hub.spigotmc.org/javadocs/bukkit/org/bukkit/boss/BarFlag.html">here</a>.</p>
+<p>Styles:<br><br />
+<img alt="Solid" src="https://i.imgur.com/priRDh2.png" /><br />
+<img alt="Segmented" src="https://imgur.com/xO5WtnO.png" /></p>
+<hr />
+<h1 id="math">Math<a class="headerlink" href="#math" title="Permanent link">&para;</a></h1>
+<p>These rules apply to all the math equations in any configs.<br><br />
+After reading the basics, you can head to the <a href="https://github.com/CryptoMorin/KingdomsX/wiki/Config#practical-math">practical section</a> for a better understanding.</p>
+<h2 id="simple-operations">Simple Operations<a class="headerlink" href="#simple-operations" title="Permanent link">&para;</a></h2>
+<p>Supports all the mathematical operators such as <code>+</code>, <code>-</code>, <code>/</code>, <code>*</code>, <code>%</code>, <code>()</code>, <code>^</code>, etc...<br />
+* <code>/</code> You should know this one! It's the division operator. Fractional numbers!<br />
+* <code>%</code> in computers, this is called <code>modulo</code> which is basically the <code>remainder</code> of a division. For example, <code>4 / 3</code> has a remainder of <code>1</code> so <code>4 % 3</code> is <code>1</code> and <code>4 / 2</code> has a remainder of <code>0</code> so <code>4 % 2</code> is <code>0</code><br />
+* <code>*</code> in computers means <code>multiply</code><br />
+* <code>^</code> in computers usually refers to bitwise operators, but it <code>exponentiates</code> here. E.g. <code>2^3</code> = <code>2³</code> = <code>2 * 2 * 2</code> = <code>8</code></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Sometimes you might encounter an error regarding the symbols that you used in a math equation being unknown.<br />
+These issues mostly happen when you're editing the config on a phone (for some reasons...) which can sometimes make<br />
+you confuse symbols. For example, on iPhone, there is a symbol <code>−</code> technically named minus sign (<a href="https://www.compart.com/en/unicode/U+2212">U+2212</a>), but on PC or android, the symbol is <code>-</code> named hyphen-minus (<a href="https://www.compart.com/en/unicode/U+002D">U+002D</a>).<br />
+While both are correct, there may be other symbols that look similar and may cause math compiler issues.</p>
+</div>
+<p>They support <a href="https://en.wikipedia.org/wiki/Order_of_operations">Order of operations (Operator Precedence)</a>. Bitwise operator precedence are the same as Java's. E.g. <code>2 + 2 * 100</code> is <code>2 + 200</code> and <strong>not</strong> <code>4 * 100</code></p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>You can test your equations with the <a href="https://github.com/CryptoMorin/KingdomsX/wiki/Commands#k-admin-evaluate">/k admin evaluate</a> command.</p>
+</div>
+<h2 id="placeholders">Placeholders<a class="headerlink" href="#placeholders" title="Permanent link">&para;</a></h2>
+<p><a href="https://github.com/CryptoMorin/KingdomsX/wiki/Placeholders">Placeholder</a> support depending on the context. For example, in some cases only the kingdom is present with no player. That means you can use <code>%kingdoms_name%</code>, but not <code>%kingdoms_rank_name%</code> because there are no players present. Some equations provide custom placeholders that should be explained above the equation in configs. For example, <code>lvl</code> is a custom placeholder commonly used in equations. For more info, visit the linked wiki.</p>
+<ul>
+<li>The compiler also interprets boolean placeholders. Returning <code>1</code> for <code>true</code> and <code>0</code> for <code>false</code>. This can be used with conditional functions.</li>
+<li>They support integers, decimals and hexadecimals.</li>
+</ul>
+<h2 id="functions">Functions<a class="headerlink" href="#functions" title="Permanent link">&para;</a></h2>
+<p>They also support all the <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Math.html">Java Math</a> functions (other than the functions with <code>exact</code> in their name which are useless anyway). You're definitely familiar with functions <code>f(x)</code>, but here we will use meaningful names other than <code>f</code> to use functions. In order to understand this document, simply ignore the header description, just scroll down to read the method names. You'll see stuff like <code>int</code>, <code>long</code>, <code>float</code> and <code>double</code> next to the parameter names, they're all basically representing a number. <code>int</code> and <code>long</code> are numbers without decimals, and <code>float</code> and <code>double</code> are numbers with or without decimals. If a function requires an integer, it'll automatically convert into an integer if the passed parameter is a decimal by rounding it.</p>
+<p>Some options rarely support equations for time formats. In these equations you can represent the time by surrounding it with square brackets. E.g. <code>lvl * [1 day]</code></p>
+<ul>
+<li>
+<p><strong>Special Functions:</strong></p>
+<ul>
+<li><strong>time()</strong> Gets the current time in milliseconds (since <a href="https://en.wikipedia.org/wiki/Unix_time">unix epoch</a>).</li>
+<li><strong>max(a, b, c, ...)</strong> Returns the greatest number from all the given arguments.</li>
+<li><strong>min(a, b, c, ...)</strong> Returns the smallest number from all the given arguments.</li>
+<li><strong>random(min, max)</strong> Get a random decimal number between the given minimum and the maximum numbers.</li>
+<li><strong>randInt(min, max)</strong> Get a random integer number between the given minimum and the maximum numbers.</li>
+<li><strong>whatPercentOf(x, y)</strong> Finds X is What % of Y which is equivalent to <code>(x / y) * 100</code></li>
+<li><strong>percentOf(x, y)</strong> Gets X percent of Y which is equivalent to <code>(x / 100) * y</code></li>
+<li><strong>naturalSum(n)</strong> Calculates the <a href="https://en.wikipedia.org/wiki/1_%2B_2_%2B_3_%2B_4_%2B_%E2%8B%AF">natural sum</a> from 1 to the given number.</li>
+<li><strong>reverse(n)</strong> Returns the value obtained by reversing the order of the bits in the two's complement binary representation of the specified number.</li>
+<li><strong>reverseBytes(n)</strong> Returns the value obtained by reversing the order of the bytes in the two's complement representation of the specified number.</li>
+<li><strong>hash(n)</strong> Returns the hashcode of the argument.</li>
+<li><strong>identityHash(n)</strong> Returns the identity hashcode of the argument.</li>
+<li>Conditional functions:</li>
+<li><strong>eq(var1, var2, var3, var4)</strong> Gives <code>var3</code> if <code>var1</code> is <em>equal to</em> <code>var2</code>, otherwise it'll give <code>var4</code></li>
+<li><strong>ne(var1, var2, var3, var4)</strong> Gives <code>var3</code> if <code>var1</code> is <em>not equal to</em> <code>var2</code>, otherwise it'll give <code>var4</code></li>
+<li><strong>gt(var1, var2, var3, var4)</strong> Gives <code>var3</code> if <code>var1</code> is <em>greater than</em> <code>var2</code>, otherwise it'll give <code>var4</code></li>
+<li><strong>lt(var1, var2, var3, var4)</strong> Gives <code>var3</code> if <code>var1</code> is <em>less than</em> <code>var2</code>, otherwise it'll give <code>var4</code></li>
+<li><strong>ge(var1, var2, var3, var4)</strong> Gives <code>var3</code> if <code>var1</code> is <em>greater than or equal to</em> <code>var2</code>, otherwise it'll give <code>var4</code></li>
+<li><strong>le(var1, var2, var3, var4)</strong> Gives <code>var3</code> if <code>var1</code> is <em>less than or equal to</em> <code>var2</code>, otherwise it'll give <code>var4</code></li>
+</ul>
+</li>
+<li>
+<p>They support <a href="https://en.wikipedia.org/wiki/Bitwise_operation">Bitwise Operations</a> too. <a href="https://www.tutorialspoint.com/Java-Bitwise-Operators">This</a> is a more simplified version specifically for Java. However, some of them use a different operator since the operator system in the math evaluator works per a character. They might conflict if used in conditional GUIs.</p>
+<ul>
+<li><code>&amp;</code> Bitwise AND operator</li>
+<li><code>|</code> Bitwise OR operator</li>
+<li><code>!</code> Bitwise XOR operator <code>^</code></li>
+<li><code>~</code> Bitwise Compliment Operator</li>
+<li><code>&gt;</code> Bitwise Binary Right Shift Operator <code>&gt;&gt;</code></li>
+<li><code>&lt;</code> Bitwise Binary Left Shift Operator <code>&lt;&lt;</code></li>
+<li><code>$</code> Bitwise Shift Right Zero Fill Operator <code>&gt;&gt;&gt;</code></li>
+</ul>
+</li>
+</ul>
+<h2 id="practical-math">Practical Math<a class="headerlink" href="#practical-math" title="Permanent link">&para;</a></h2>
+<p>When we say a <a href="https://en.wikipedia.org/wiki/Equation">math equation</a> you'll normally expect to see something like the common <a href="https://en.wikipedia.org/wiki/Quadratic_equation">Quadratic equation</a> or a simpler <a href="https://en.wikipedia.org/wiki/Polynomial">Polynomial equation</a> such as <code>x + 3 = 10</code> (which would be <code>x = 10 - 3</code>), but in configs, the core concept is represented a little differently.</p>
+<p>Let's say there's an option for the max number of members that can join your kingdom.<br />
+<pre class="highlight"><code class="language-yml">max-members: 10</code></pre></p>
+<p>Obviously this doesn't look really fun because a kingdom can only have 10 members no matter how big it is, so for this option, we're going to spice things up a little and use a math expression. We can use the <a href="https://github.com/CryptoMorin/KingdomsX/wiki/Placeholders#kingdoms">%kingdoms_max_members%</a> placeholder as our variable that the equation is going to be solved for and <code>%kingdoms_lands%</code> as a factor for the equation. Let's say we want kingdoms to have <code>2 members</code> for every <code>one land</code> that they claimed.<br />
+<pre class="highlight"><code class="language-yml">max-members: %kingdoms_max_members% = %kingdoms_lands% * 2</code></pre></p>
+<p>While this looks logical, it's just redundant. If you look at the option name, it's already named <code>max-members</code>, so it's like you're writing<br />
+<pre class="highlight"><code class="language-hs">maxMembers = maxMembers = lands * 2</code></pre></p>
+<p>The point is that <strong>the option name itself is the variable that we're solving</strong>. We can rewrite this as:<br />
+<pre class="highlight"><code class="language-yml">max-members: %kingdoms_lands% * 2</code></pre></p>
+<p>There's one issue left, in equations the percent signs <code>%</code> are useless and even cause errors. Because instead they're interpreted as <strong>modulus operator</strong> ("operators" are things like plus + and multiply *) so you'll have to write:<br />
+<pre class="highlight"><code class="language-yml">max-members: kingdoms_lands * 2</code></pre></p>
+<h4 id="functions_1">Functions<a class="headerlink" href="#functions_1" title="Permanent link">&para;</a></h4>
+<p>Now if we wanted to get a little more advanced and say we want to cap this value at 50 members, we can use the function feature.<br />
+<pre class="highlight"><code class="language-yml">max-members: min(kingdoms_lands * 2, 50)</code></pre></p>
+<p>Now even if a kingdom claimed 100 lands (<code>100 * 2 = 200</code>) they'll only have 50 max members, because that's what the <code>min()</code> function is doing.<br><br />
+<a href="https://en.wikipedia.org/wiki/Function_(mathematics)">Functions</a> are just like normal math functions <code>f(x)</code> the only difference is that their name is a little more obvious.</p>
+<p><code>min(x, y)</code> function is really simple. It says I'll take both <code>x</code> and <code>y</code> inputs and give you the minimum of the two values as the output. So for example <code>min(3, 1)</code> gives you <code>1</code> obviously because <code>1 &lt; 3</code><br><br />
+For you math students out there, the equivalent mathematical definition would look like:</p>
+<pre class="highlight"><code class="language-math">min(x, \: y) =
+  \begin{cases}
+    x  &amp; ;\quad x &lt;= y&lt;br&gt;
+    y  &amp; ;\quad x &gt; \;\;\; y
+  \end{cases}</code></pre>
+<p>This is where things get juicier. You could also choose different numbers based on different conditions. Let's say you wanted <code>max-members</code> to be <strong>10</strong> if the kingdom has less than 10 lands, <strong>35</strong> if it has less than 20 lands, <strong>50</strong> if it has less than 30 lands and if none of those conditions match, just give them 100 lands (here we know that they definitely have more than 30 lands based on the previously failed conditions)<br><br />
+The solution to this isn't really pretty, but it is what it is:<br />
+<pre class="highlight"><code class="language-yml">max-members: lt(kingdoms_lands, 10, 10, lt(kingdoms_lands, 20, 30, lt(kingdoms_lands, 30, 50, 100))</code></pre></p>
+<p>The math definition for <code>lt</code> function:<br />
+<pre class="highlight"><code class="language-math">lt(x, \: y, \: z, \: u) =
+  \begin{cases}
+    z  &amp; ;\quad x &lt; \;\;\; y&lt;br&gt;
+    u  &amp; ;\quad x &gt;= y
+  \end{cases}</code></pre></p>
+<p><br/><br/><br />
+And just like mentioned above, placeholders that return a <code>boolean</code> value (either <code>true</code> or <code>false</code>) will be automatically turned into numbers.<br />
+<pre class="highlight"><code class="language-hs">true = 1
+false = 0</code></pre></p>
+<p>So for example, if you wanted to use different values depending on whether masswar is running or not, you could use the <code>%kingdoms_masswar_is_running%</code> boolean placeholder and <code>eq()</code> function (which is like <code>lt()</code> but checks if values are equal or not)</p>
+<p><pre class="highlight"><code class="language-hs">eq(kingdoms_masswar_is_running, 1, 10, 20)</code></pre><br />
+This gives <code>10</code> if MassWar is running, otherwise if its not running, it gives <code>20</code>. Notice that the <code>1</code> you could also revert this and use <code>0</code> (for false)</p>
+<p>These functions are conditional functions which you can read more about them above. There's nothing new about them except their functionality of course. In this example, the function just happen to take another function as its parameter. Because they still return a number as their output which can be used as an input for another function and that's all it matters. If you remember, this is an example of <a href="https://en.wikipedia.org/wiki/Function_composition">function composition</a>. (Holy shit, Math just got useful!)</p>
+<p>The plugin provides a lot more operators and functions that you can use, but most of the time you don't need to use them all.</p>
+<hr />
+<h1 id="conditions">Conditions<a class="headerlink" href="#conditions" title="Permanent link">&para;</a></h1>
+<p>Conditions are used across the plugin to perform an action when a condition is true. Conditions tend to follow the basic syntax for <a href="https://en.wikipedia.org/wiki/Conditional_(computer_programming)">conditionals</a> in most programming languages, specially Java.</p>
+<p>An example of what a condition looks like: <code>kingdoms_kingdom_is_pacifist &amp;&amp; kingdoms_members &gt; 30</code><br><br />
+Conditions use placeholders and special operators called <strong>logical operators</strong> (just like arithmetic operators such as <code>+</code>, <code>-</code>, etc.)</p>
+<table>
+<thead>
+<tr>
+<th>Logical Operator Symbol</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>!a</code></td>
+<td>Negation, meaning <strong>!a</strong> will be <code>false</code> if <strong>a</strong> itself is <code>true</code> and vice versa.</td>
+</tr>
+<tr>
+<td><code>a == b</code></td>
+<td>Checks if two numbers are equal.</td>
+</tr>
+<tr>
+<td><code>a != b</code></td>
+<td>Checks if two numbers are <em>not</em> equal.</td>
+</tr>
+<tr>
+<td><code>a &gt; b</code></td>
+<td>Checks if number <strong>a</strong> is greater than number <strong>b</strong>.</td>
+</tr>
+<tr>
+<td><code>a &lt; b</code></td>
+<td>Checks if number <strong>a</strong> is less than number <strong>b</strong>.</td>
+</tr>
+<tr>
+<td><code>a &gt;= b</code></td>
+<td>Checks if number <strong>a</strong> is greater than or equals to number <strong>b</strong>.</td>
+</tr>
+<tr>
+<td><code>a &lt;= b</code></td>
+<td>Checks if number <strong>a</strong> is less than or equal to number <strong>b</strong>.</td>
+</tr>
+<tr>
+<td><code>a &amp;&amp; b</code></td>
+<td>Checks if both conditions are true.</td>
+</tr>
+<tr>
+<td><code>a \|\| b</code></td>
+<td>Checks if either conditions are true.</td>
+</tr>
+</tbody>
+</table>
+<p>Condition options support placeholders of course, but just like math equations, you have to omit the <code>%</code>s when writing them.<br><br />
+And just like math, you can group conditions together inside parenthesis. <code>(a &amp;&amp; b) || c</code> Means that this entire condition will be<br />
+<code>true</code> only if <strong>a</strong> and <strong>b</strong> are true or if <strong>c</strong> is true.</p>
+<p>For example, if you want to check if number <strong>x</strong> is between 50 and 100, you can write: <code>x &gt;= 50 &amp;&amp; x &lt;= 100</code></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Usually the keyword <code>else</code> corresponds to the value <code>true</code> in config files. Meaning that if this condition is ever reached, it will always evaluate to their given value, so this condition should be always added as the last branch. You can usually find this in GUI files where an option's appearance changes based on several conditions.</p>
+</div>
+<h4 id="permission-conditions">Permission Conditions<a class="headerlink" href="#permission-conditions" title="Permanent link">&para;</a></h4>
+<p>All conditional options also support a special placeholder that checks whether the player has a permission. The format is <code>perm_&lt;permission&gt;</code> where <code>&lt;permission&gt;</code> is the same as the permission text that you use in permission plugins, but instead of being separated by dots, they're separated by underscores. E.g. <code>kingdoms.command.show</code> would be <code>perm_kingdoms_command_show</code> and just like all the other placeholders in condition options, this one doesn't need to be surrounded by <code>%</code>s either.</p>
+<hr />
+<h3 id="116-hex-colors">1.16 Hex Colors<a class="headerlink" href="#116-hex-colors" title="Permanent link">&para;</a></h3>
+<p>You can use the new <a href="https://minecraft.gamepedia.com/Formatting_codes">1.16 custom hex colors</a>.<br />
+There are various formats to use hex colors. We'll go through them all. Note that all the formats below are case-insensitive.<br />
+* <code>&amp;#&lt;hex&gt;</code> where <code>&lt;hex&gt;</code> is a 6-digit hexadecimal color in the form of <code>RRGGBB</code> e.g. <code>&amp;#658b9e</code> - <code>&amp;#62231A</code><br />
+* <code>{#&lt;hex&gt;}</code> where <code>&lt;hex&gt;</code> can either be a 3 or 6 digit hexadecimal color in the form of <code>RGB</code> or <code>RRGGBB</code> e.g. <code>{#68e}</code> - <code>{#62231a}</code><br />
+* <code>{#&lt;color&gt;}</code> where <code>&lt;color&gt;</code> is a predefined color name in <code>chat.yml</code> e.g. <code>{#Navy}</code> - <code>{#Maroon}</code><br />
+* <code>{#&lt;r&gt;, &lt;g&gt;, &lt;b&gt;}</code> it's the simple RGB format. E.g. <code>{#255, 0, 0}</code> - <code>{#120, 0, 120}</code><br />
+The format to do this is <code>&amp;#&lt;hex&gt;</code> the <code>&lt;hex&gt;</code> is a hex 6-character code for RGB colors. You can pick one from <a href="https://htmlcolorcodes.com/">here</a><br><br />
+<strong>Example:</strong> <code>&amp;2The &amp;#6bffa5quick {#754646}&amp;lbrown {#c82}&amp;ofox {#255, 0, 0}&amp;mjumped {#Navy}&amp;nover &amp;r&amp;#531b52the &amp;#62231alazy &amp;#404040&amp;kdog</code></p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>This plugin also offers backwards compatible hex colors with pre-1.16 version. It has a simple built-in system which tries to find the closest color to the given hex color. The result is almost always accurate. This feature works everywhere in Kingdoms plugin that colors are supported.</p>
+</div>
+<hr />
+<h3 id="item-matchers">Item Matchers<a class="headerlink" href="#item-matchers" title="Permanent link">&para;</a></h3>
+<p>Some options in configs require an item to be matched in order for the item to be used. This includes accepting certain special items for resource points, siege cannon and warp pad fuels, etc.</p>
+<p>While their syntax is very similar to the original <a href="https://github.com/CryptoMorin/XSeries/wiki/XItemStack">item</a> options, they don't support all of their options, however they have a few new special values.</p>
+<p>Once an option is defined for an item matcher, the item must have that property, otherwise the matching will fail. Other properties that are not defined here will be ignored. Which means if you only define a "name" option, even if the item has lore, enchants, etc, it will only check if the name of the item matches correctly.</p>
+<p><strong><a href="https://github.com/CryptoMorin/XSeries/wiki/YA-WORD">How to read this documentation?</a></strong></p>
+<pre class="highlight"><code class="language-rb">name: StringMatcher # The name of the item.
+lore: StringMatcher # The lore of the item.
+material: StringMatcher # https://hub.spigotmc.org/javadocs/spigot/org/bukkit/Material.html
+custom-model-data: Number or Text or Color # The 1.14 custom data models feature.
+
+enchants: [Enchant]
+class Enchant
+  EnchantmentName: EnchantmentLevelCondition # The level of the enchantment.
+end
+
+# NBTName is a dot separated name of the path to the NBT value. The names are something that most plugins will not document
+# since they're not used by server admins most of the time. Although you shouldn't be using them either when other options
+# are available, they're the most reliable options as it relies on hidden internal data.
+nbt: NBTName -&gt; StringMatchers
+
+alias StringMatchers: for Text
+  "https://github.com/CryptoMorin/KingdomsX/wiki/Config/#string-matchers"
+
+alias EnchantmentLevelCondition: for Text 
+  Condition # With the placeholder "lvl" -&gt; https://github.com/CryptoMorin/KingdomsX/wiki/GUIs#conditional
+  or *      # Meaning any level is acceptable as long as the item has the enchantment.
+  or Number # The exact number (same as "lvl == number" condition)</code></pre>
+<p>Example:<br />
+<pre class="highlight"><code class="language-yml">cool-thing:
+  name: "REGEX:Awesome Sword \(\d+\)"
+  lore: "CONTAINS:best sword"
+  material: NETHERITE_SWORD
+  custom-model-data: 40065
+  enchants:
+    SHARPNESS: '*' # You need to surround it with quotes.
+    UNBREAKING: 3
+    FIRE_ASPECT: 2 &lt;= lvl &lt; 6
+  nbt:
+    "Kingdoms.Structure": 'siege-cannon'
+    "Kingdoms.Mail.Subject": 'CONTAINS:war'</code></pre></p>
+<h3 id="string-matchers">String Matchers<a class="headerlink" href="#string-matchers" title="Permanent link">&para;</a></h3>
+<p>Used for creating conditions based on a text pattern. If the text (string) matches the pattern, it'll be chosen.</p>
+<pre class="highlight"><code class="language-ruby">"..."          -&gt; Checks if the text exactly matches the given text. E.g. "Hello" only matches with "Hello" and not "hello"
+"CI:..."       -&gt; Checks if the text exactly matches the given text, but in a case-insensitive way. So "Hello" matches "hello" as well
+"CONTAINS:..." -&gt; Checks if the text contains the given text. E.g. "CONTAINS:cel" will be matched for "Eggcelent"
+"STARTS:..."   -&gt; Checks if the text starts with the given text. E.g. "STARTS:Egg" will be matched for "Eggcelent"
+"ENDS:..."     -&gt; Checks if the text ends with the given text. E.g. "ENDS:lent" will be matched for "Eggcelent"
+"REGEX:..."    -&gt; You can learn more about RegEx patterns by Googling them.
+"REGEX@CI:..." -&gt; RegEx pattern with case-insensitive flag.</code></pre>
+<p>Technically RegEx can do anything the other options can do, however they're provided for easier configuration and also performance improvements. You should use the others unless your pattern is complex.</p>
+<h3 id="number-matchers">Number Matchers<a class="headerlink" href="#number-matchers" title="Permanent link">&para;</a></h3>
+<p>Used for creating conditions based on a number range. If the number matches the range, it'll be chosen.<br />
+(Here <code>?</code> represents any number)</p>
+<pre class="highlight"><code class="language-ruby">?         -&gt; Matches a number exactly. So 1 would only match 1.0 and not 1.1
+?, ?, ... -&gt; Matches any of the numbers in this list exactly.
+&lt;?        -&gt; Matches any number that is less than the given number. "&lt;3" matches -5, -1, 0, 2, but not 3 or 4
+=&lt;?       -&gt; Matches any number that is less than or equal to the given number. "&lt;3" matches -5, -1, 0, 2, 3
+&gt;?        -&gt; Matches any number that is greater than the given number. "&gt;3" matches 4, 5, 6, but not 3
+&gt;=?       -&gt; Matches any number that is greater than the given number. "&gt;=3" matches 3, 4, 5, 6
+? &lt; x &lt; ? -&gt; Matches any number thats between the given range. You could use any symbol instead. "x" here is just a literal text. It will be replaced with the number that the pattern will match later. "5 &lt; x &lt; 10" means any number that's between 5 (exclusive) and 10 (exclusive)</code></pre>
+<h3 id="skin-textures">Skin Textures<a class="headerlink" href="#skin-textures" title="Permanent link">&para;</a></h3>
+<p>Some config options expect a player skin texture. For example, <a href="https://github.com/CryptoMorin/KingdomsX/blob/72d8aa1c2af9344d7284cce77d8de990cb94188e/core/src/main/resources/Turrets/arrow.yml#L7-L9">turret skulls</a> or <a href="https://github.com/CryptoMorin/KingdomsX/blob/72d8aa1c2af9344d7284cce77d8de990cb94188e/core/src/main/resources/guis/structures/nexus/nexus.yml#L222-L223">GUI options that use a head</a>.<br />
+Most of these options are recognizable because they're simply named <code>skull</code>.<br />
+Kingdoms uses a highly advanced system to fetch skulls and you can take advantage of it.</p>
+<p>There are several methods that you can choose for acquiring the same skin texture:<br />
+* <strong>Username:</strong> Simply write the username of the player down. E.g. <code>Notch</code><br />
+* <strong>UUID:</strong> Either the online UUID of the player or offline UUID (if your server is cracked) E.g. <code>069a79f4-44e9-4726-a5be-fca90e38aaf5</code><br />
+* <strong>Textures URL:</strong> E.g. <code>http://textures.minecraft.net/texture/e5461a215b325fbdf892db67b7bfb60ad2bf1580dc968a15dfb304ccd5e74db</code><br />
+* <strong>Textures Hash:</strong> Same as textures URL without the URL prefix. E.g. <code>e5461a215b325fbdf892db67b7bfb60ad2bf1580dc968a15dfb304ccd5e74db</code><br />
+* <strong>Base64:</strong> E.g. <code>eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMTRkY2E5MTE5NjE5ZjEzY2MyZmM3YjZjNjI2Yjk4YWE4Nzk0ODMwN2I1ZDY3MzA1ZWNlNWY5MTA3ODljNTAyIn19fQ==</code></p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>Use textures URL, textures hash or base64 values when possible as they will improve performance a lot.\<br />
+You can find them from online websites such as <a href="minecraft-heads.com/custom-heads">minecraft-heads.com</a>.</p>
+<p>E.g. <a href="https://minecraft-heads.com/custom-heads/head/119661-missing-texture">here's a texture</a> that I found on the website:</p>
+<p><img width="805" height="238" alt="An image showing custom-heads.com page for one of the heads called 'missing texture'" src="https://github.com/user-attachments/assets/05e4126a-b93a-432c-b332-343748d6535f" /></p>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>You can use <a href="https://github.com/CryptoMorin/KingdomsX/wiki/Commands#k-admin-skull"><code>/k admin skull</code></a> command to create items and blocks with various values<br />
+and also get the texture data of specific heads placed in your world.</p>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p><strong>Reasons that can cause textures to not work:</strong><br />
+* Some clients or mods cause the plugin to not display the textures correctly. You should try running a Vanilla client.<br />
+* When using texture URL/hash or base64 values, there are times when these values expire due to various reasons, and you'd have to update their values manually or find a new texture that's similar.<br />
+* Your server might be getting rate-limited by Mojang API (only happens for usernames/uuid values). This usually happens in shared hosting and also specifically when your server is cracked (as more data needs to be requested). Kingdoms already takes advantage of Mojang's bulk API and the internal server cache and if you reach this limit, there's nothing really you can do about this.<br />
+* You or the server is running without internet connection. This is obviously required to fetch the texture data.</p>
+</div>
+<p>;</p></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script src="../js/bootstrap.bundle.min.js"></script>
+        <script>
+            var base_url = "..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../js/base.js"></script>
+        <script src="../javascripts/mathjax.js"></script>
+        <script src="https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js"></script>
+        <script src="../search/main.js"></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p>From here you can search these documents. Enter your search terms below.</p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results" data-no-results-text="No results found"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>

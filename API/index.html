@@ -1,0 +1,1400 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="light">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        <link rel="canonical" href="https://wiki.kingdomsx.com/API/">
+        <link rel="shortcut icon" href="../img/favicon.ico">
+        <title>API - KingdomsX</title>
+        <link href="../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../css/fontawesome.min.css" rel="stylesheet">
+        <link href="../css/brands.min.css" rel="stylesheet">
+        <link href="../css/solid.min.css" rel="stylesheet">
+        <link href="../css/v4-font-face.min.css" rel="stylesheet">
+        <link href="../css/base.css" rel="stylesheet">
+        <link id="hljs-light" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" >
+        <link id="hljs-dark" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github-dark.min.css" disabled>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+        <script>hljs.highlightAll();</script> 
+    </head>
+
+    <body>
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="..">KingdomsX</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar-collapse" aria-controls="navbar-collapse" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="nav-item">
+                                <a href="../Home.md.md" class="nav-link">🏠 Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../Features/" class="nav-link">🔰 Features</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../Installation/" class="nav-link">📥 Installation</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../Installation.md#setup" class="nav-link">📗 Setup</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../Installation.md#compatibility" class="nav-link">📘 Compatibility</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../FAQ/" class="nav-link">❓ FAQ</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../NFAQ/" class="nav-link">⁉️ NFAQ</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../Addons/" class="nav-link">⚜️ Addons</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../Outposts/" class="nav-link">🚩 Outposts</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../Peace-Treaties/" class="nav-link">☮️ Peace Treaties</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../Map-Viewers-Addon/" class="nav-link">🗺️ Map Viewers</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../EngineHub-Addon/" class="nav-link">🏬 EngineHub</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../Admin-Tools/" class="nav-link">🛠  Admin Tools</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../Introduction/" class="nav-link">❇️ Introduction</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../Commands/" class="nav-link">⌨️ Commands</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../Commands.md#players" class="nav-link">👨‍🦱 Players</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../Commands.md#admins" class="nav-link">👩‍⚖️ Admins</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../Permissions/" class="nav-link">🔓 Permissions</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../Placeholders/" class="nav-link">🔣 Placeholders</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../Placeholders.md#players" class="nav-link">🚹 Players</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../Placeholders.md#kingdoms" class="nav-link">🏛 Kingdoms</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../Placeholders.md#nations" class="nav-link">🏢 Nations</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../Config/" class="nav-link">📁 Config</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../YAML/" class="nav-link">📃 YAML</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../Languages/" class="nav-link">💱 Languages</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../GUIs/" class="nav-link">📱 GUI</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../Protection-Signs/" class="nav-link">🔒 Protection Signs</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../Mails/" class="nav-link">✉️ Mails</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../Mechanics/" class="nav-link">📚 Mechanics</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"  aria-expanded="false">⚔️ Invasion</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../Mechanics.md#Invasion" class="dropdown-item">None</a>
+</li>
+                                    
+<li>
+    <a href="../Mechanics.md#Preparing" class="dropdown-item">🛡️ Preparing</a>
+</li>
+                                    
+<li>
+    <a href="../Mechanics.md#Champion" class="dropdown-item">🧟 Champion</a>
+</li>
+                                    
+<li>
+    <a href="../Mechanics.md#mass-wars" class="dropdown-item">🗡  Masswar</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../Mechanics.md#Structures" class="nav-link">📡 Structures</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../Mechanics.md#Turrets" class="nav-link">🔫 Turrets</a>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ms-md-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-bs-toggle="modal" data-bs-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-bs-toggle="collapse" data-bs-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-body-tertiary">
+        <ul class="nav flex-column">
+            
+            
+            <li class="nav-item" data-bs-level="1"><a href="#basics" class="nav-link">Basics</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-bs-level="2"><a href="#processors" class="nav-link">Processors</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-bs-level="1"><a href="#optimization" class="nav-link">Optimization</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-bs-level="1"><a href="#turrets-structures" class="nav-link">Turrets &amp; Structures</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-bs-level="1"><a href="#metadata" class="nav-link">Metadata</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-bs-level="1"><a href="#events" class="nav-link">Events</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-bs-level="1"><a href="#registry" class="nav-link">Registry</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-bs-level="1"><a href="#examples" class="nav-link">Examples</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-bs-level="1"><a href="#invasions" class="nav-link">Invasions</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-bs-level="1"><a href="#reserved" class="nav-link">Reserved</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<p>Kingdoms API is one of the things that was reconsidered a lot when it was being coded. It's quite stable and easy to learn.<br><br />
+Anyone with basic Java knowledge can use the API.<br><br />
+The API will definitely change if needed without hesitation, so some plugins might break after API updates.</p>
+<h3 id="getting-started">Getting Started<a class="headerlink" href="#getting-started" title="Permanent link">&para;</a></h3>
+<p>Don't forget to add <code>Kingdoms</code> to your <code>plugin.yml</code> -&gt; <code>softdepend</code></p>
+<p>The version specified in this page is considered to be the most up to date version with the latest API version that's guaranteed to be on Maven. Other newer versions are 90% not going to be available.</p>
+<pre class="highlight"><code class="language-yml">version: 1.17.18.1-BETA</code></pre>
+<p><strong>Maven</strong><br />
+<pre class="highlight"><code class="language-xml">&lt;dependency&gt;
+    &lt;groupId&gt;com.github.cryptomorin&lt;/groupId&gt;
+    &lt;artifactId&gt;kingdoms&lt;/artifactId&gt;
+    &lt;version&gt;version&lt;/version&gt;
+    &lt;scope&gt;provided&lt;/scope&gt;
+&lt;/dependency&gt;</code></pre><br />
+<strong>Gradle</strong><br />
+<pre class="highlight"><code class="language-gradle">repositories {
+    mavenCentral()
+}
+
+dependencies {
+    compileOnly 'com.github.cryptomorin:kingdoms:version'
+}</code></pre><br />
+<strong>Manual</strong><br />
+You can download the plugin for free on the <a href="https://discord.gg/cKsSwtt">Discord</a> server.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p><a href="https://jitpack.io/#CryptoMorin/KingdomsX">JitPack</a> cannot build this project currently because it's not fully open sourced yet.<br />
+So attempting to use its builds will never succeed.</p>
+</div>
+<p>If you're seeing that a beta version is not specified in the version field above, that's because you generally shouldn't add support for any software that's in beta version, including Kingdoms since the API is subject to a lot of changes during that time. Of course this means that you might have to update the support once the version is stable, but that has its own disadvantages. If you wish to do so, then you'll have to temporarily add Kingdoms as a local dependency, which is quite easy with Gradle (it's also possible with Maven, but a little harder). For more information about beta versions, please refer to <a href="https://github.com/CryptoMorin/KingdomsX/wiki/Installation#stability">stability</a> section.</p>
+<p>You might also want to take a look at multi-plugin APIs such as <a href="https://github.com/CallumJohnson/FactionsBridge">FactionsBridge</a> which supports a variety of group and land management plugins.</p>
+<hr />
+<p>All the objects have optimized <code>equals</code> and <code>hashCode</code> methods that can be used, <strong>but</strong> it's always recommended to choose the correct data from the object you want to compare. For example, never use <code>equals</code> for Lands, they have optimized methods, but not when you're trying to compare them normally. Refer to <a href="https://github.com/CryptoMorin/KingdomsX/wiki/API#optimization">Optimization</a> section for more info.</p>
+<p>You can figure out most of the things you're looking for just by following your IDE's auto completion. Take a look at some examples at the end of the page.<br><br />
+90% of the API is thread-safe unless the method is dealing with Bukkit related operations. Most of the API is also marked with <a href="https://www.jetbrains.com/help/idea/nullable-and-notnull-annotations.html">Nullability Annotations</a> and JetBrains annotations to help programmers.</p>
+<p>Certain methods of some classes begin with the word <code>unsafe</code> which should not be used and are usually for allowing to modify collections or maps that are designed to not be directly modified or changing values while bypassing checks. These methods are for internal usage only and you should absolutely not even call them at all unless you know what you're doing.</p>
+<hr />
+<p>The plugin also has some extension functions that eases the process of obtaining kingdom objects and they can all be found in <code>KingdomsBukkitExtensions.kt</code> file. However note that this file also contains other extensions that are just for ease of working with Bukkit objects themselves as well, mostly for <code>UUID</code>s.</p>
+<h1 id="basics">Basics<a class="headerlink" href="#basics" title="Permanent link">&para;</a></h1>
+<h4 id="getting-kingdom-player">Getting Kingdom Player<a class="headerlink" href="#getting-kingdom-player" title="Permanent link">&para;</a></h4>
+<p>You can get a kingdom player by either using an <code>OfflinePlayer</code> or <code>UUID</code> object.<br />
+They're both the same, none is accurate or performs better than the other.<br />
+<pre class="highlight"><code class="language-java">Player player = ...;
+KingdomPlayer kp = KingdomPlayer.getKingdomPlayer(player);</code></pre></p>
+<h4 id="getting-kingdoms-nations">Getting Kingdoms &amp; Nations<a class="headerlink" href="#getting-kingdoms-nations" title="Permanent link">&para;</a></h4>
+<p>You can get a kingdom/nation either by its UUID or name. It's always recommended to use the UUID.<br />
+<pre class="highlight"><code class="language-java">Kingdom kingdom = Kingdom.getKingdom(name/id);
+Nation nation = Nation.getNation(name/id);</code></pre></p>
+<p>It's also useful to know that <code>Kingdom</code> and <code>Nation</code> objects both inherit from a class called <code>Group</code> which shares the most common methods for these two objects. These two objects also have some methods that are exactly the same as <code>Group</code>, but with a different name. E.g. <code>Nation#getCapitalId()</code> and <code>Kingdom#getKingId()</code> are equivalent to <code>Group#getOwner()</code></p>
+<p>90% of the time you don't even need to get a kingdom this way, most of the kingdom objects have a way to get to the kingdom object. They're all named <code>getKingdom()</code><br><br />
+Notice that some objects have <code>getKingdomId()</code> method, this method is highly recommended instead of <code>getKingdom()</code> for performance reasons.<br />
+For example instead of doing <code>KingdomPlayer#getKingdom().equals(Kingdom)</code> do <code>Kingdom#isMember(Player)</code> or <code>KingdomPlayer#getKingdomId().equals(kingdomId)</code><br><br />
+<code>Kingdom</code> objects are cached for <code>KingdomPlayer</code> and <code>Land</code>.</p>
+<pre class="highlight"><code class="language-java">KingdomPlayer kp = ...;
+if (kp.hasKingdom()) { // A better way is to use kp.getKingdom() and check if it's null. Same for nations.
+  Kingdom kingdom = kp.getKingdom();
+  if (kingdom.hasNation()) {
+     Nation nation = kingdom.getNation();
+     // ...
+  }
+}</code></pre>
+<h4 id="getting-lands-structures-turrets">Getting Lands, Structures &amp; Turrets<a class="headerlink" href="#getting-lands-structures-turrets" title="Permanent link">&para;</a></h4>
+<p>Kingdoms save locations (other than kingdom and nation home locations) in <code>SimpleLocation</code> and <code>SimpleChunkLocation</code> objects for memory performance. You can use the <code>Object#of()</code> method of these objects to get the location for your right object. Using the correct one can improve performance.<br />
+* <strong>SimpleLocation</strong> is the simplified version of <code>Location</code><br />
+* <strong>SimpleChunkLocation</strong> is the simplified version of <code>Chunk</code></p>
+<p>These two objects have most of the useful methods (even more) of <code>Location</code> and <code>Chunk</code><br><br />
+A land that's <code>null</code> is a land that has absolutely no (kingdom related) data attached to it.<br><br />
+A land that's <code>not null</code>, but is also not claimed (<code>!isClaimed()</code>) doesn't have a kingdom, but it might have protected chests, turrets, structures or other data in it.<br />
+<pre class="highlight"><code class="language-java">Player player = ...;
+SimpleChunkLocation chunk = SimpleChunkLocation.of(player.getLocation());
+Land land = chunk.getLand();
+// or simply
+Land land = Land.getLand(player.getLocation());
+if (land == null) return;
+
+Structure structure = land.getStructure();
+SimpleLocation = simpLocation = SimpleLocation.of(player.getLocation());
+Turret turret = land.getTurrets().get(simpLocation);
+if (land.isClaimed()) {
+  Kingdom kingdom = land.getKingdom();
+  // ...
+}</code></pre></p>
+<h3 id="getting-all-data">Getting All Data<a class="headerlink" href="#getting-all-data" title="Permanent link">&para;</a></h3>
+<p>Make sure to use these methods properly and use them asynchronous when possible.</p>
+<pre class="highlight"><code class="language-java">// Kingdoms
+Collection&lt;Kingdom&gt; kingdoms = Kingdoms.get().getDataCenter().getKingdomManager().getKingdoms();
+
+// Nations
+Collection&lt;Nation&gt; nations = Kingdoms.get().getDataCenter().getNationManager().getNations();
+
+// Lands
+Collection&lt;Land&gt; lands = Kingdoms.get().getDataCenter().getLandManager().getLoadedData();</code></pre>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The returned data by these methods should return all kingdoms and nations (with the exception of lands)<br />
+by default whether they're cached or not. Some server owners might've changed their <a href="https://github.com/CryptoMorin/KingdomsX/blob/179283d33a4d346f234db417500dcdb73879cf63/core/src/main/resources/config.yml#L228-L232">config.yml -&gt; <code>database</code> -&gt; <code>load-all-data-on-startup</code></a> which will still return<br />
+all the kingdoms and nations, but the uncached data are only "peeked" (loaded only for the purpose of this API call and discarded) so<br />
+your calls to this API method would be slower.</p>
+<p>However, lands will never return all possible kingdom lands because that will take a long time and is unnecessary in most cases,<br />
+so the <code>getLoadedData()</code> here only returns the cached lands that are currently in use just like mentioned.\<br />
+If for some reason you still want all the lands, you can get it by using:<br />
+<pre class="highlight"><code class="language-java">Collection&lt;Land&gt; lands = Kingdoms.get().getDataCenter().getLandManager().peekAllData();</code></pre></p>
+</div>
+<h3 id="getting-top-data">Getting Top Data<a class="headerlink" href="#getting-top-data" title="Permanent link">&para;</a></h3>
+<p>In this example we get the top 10 kingdoms/nations.<br />
+There are multiple ways to calculate the top kingdoms and nations based on their different factors which can be combined as well.<br />
+These factors are calculated by the server owners using the <a href="https://github.com/CryptoMorin/KingdomsX/blob/179283d33a4d346f234db417500dcdb73879cf63/core/src/main/resources/config.yml#L774-L812">config.yml -&gt; <code>top-kingdoms</code>/<code>top-nations</code></a> option.</p>
+<p>The top data handler class <code>ExpressionBasedTopData</code> has many useful API methods that you can choose from.</p>
+<pre class="highlight"><code class="language-java">// Kingdoms
+KingdomTopData topData = Kingdoms.get().getDataCenter().getKingdomManager().getTopData("name based on the YAML key entries of the option mentioned above");
+List&lt;Kingdom&gt; kingdoms = topData.getTop(); // Ordered list of kingdoms (descending)
+List&lt;Kingdom&gt; kingdoms = topData.getTop(skip, limit, kingdom -&gt; !kingdom.isPacifist()); // Optimized way of paginating the top kingdoms (what /k top uses)
+
+// Nations
+NationTopData topData = Kingdoms.get().getDataCenter().getNationManager().getTopData("...");
+// Same concepts as kingdoms apply for nations.</code></pre>
+<h3 id="accessing-protection-signs">Accessing Protection Signs<a class="headerlink" href="#accessing-protection-signs" title="Permanent link">&para;</a></h3>
+<pre class="highlight"><code class="language-java">Block block = ...;
+Optional&lt;ProtectionSign&gt; protectionSign = ProtectionSign.getProtection(block);
+if (!protectionSign.isPresent()) return;
+ProtectionSign protection = protectionSign.get();
+List&lt;UUID&gt; group = protection.getGroup();</code></pre>
+<hr />
+<p><br></p>
+<h2 id="processors">Processors<a class="headerlink" href="#processors" title="Permanent link">&para;</a></h2>
+<p>Since kingdoms is extremely customizable, it'll become extremely hard to maintain two methods that do the same thing, one that performs actions and interacts with the user (such as playing sounds and sending messages) and one that just returns a boolean for API purposes for actions such as PvPing, building or interacting. A solution is to introduce classes that can do all of these called processors:</p>
+<table>
+<thead>
+<tr>
+<th>Processor</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>ClaimProcessor</code></td>
+<td>Used for claiming lands.</td>
+</tr>
+<tr>
+<td><code>UnclaimProcessor</code></td>
+<td>Used for unclaiming lands.</td>
+</tr>
+<tr>
+<td><code>BuildingProcessor</code></td>
+<td>Used for placing/breaking blocks.</td>
+</tr>
+<tr>
+<td><code>InteractProcessor</code></td>
+<td>For use/interact.</td>
+</tr>
+</tbody>
+</table>
+<p>These processors implement <code>KingdomsProcessor</code>:<br />
+* <strong>process():</strong> Processes the issue and sees if there's any issue.<br />
+* <strong>isSuccessful():</strong> Whether there are no issues with performing this action.<br />
+* <strong>getIssue():</strong> If there is an issue. This is a <code>Messenger</code>, but should not be used directly. You should use <code>sendIssue()</code> instead as Messengers themselves rely on variables for inside the messages. sendIssue() will take care of those variables which was saved during <code>process()</code>.<br />
+* <strong>finalizeProcess():</strong> Should be called only if <strong>isSucessful()</strong> is true. This is when there is no issue with performing an action, but certain things have to be changed based on the plugin configuration. Such as <a href="https://github.com/CryptoMorin/KingdomsX/blob/8254cb37d5e05a231f4e931a04cd8d1d7a2d4384/core/src/main/resources/claims.yml#L174-L191">build charges</a> or <a href="https://github.com/CryptoMorin/KingdomsX/blob/8254cb37d5e05a231f4e931a04cd8d1d7a2d4384/core/src/main/resources/claims.yml#L215-L217">claiming costs</a>.</p>
+<p>E.g. Modifying the <code>ClaimProcessor</code>. There are variety of methods that you can override, in this example we used <code>initialChecks</code>. In kingdoms processor, when a messenger is returned, it indicates an issue and the message is sent to the player that performed the action if any.<br />
+<pre class="highlight"><code class="language-java">public final class CustomClaimProcessor extends ClaimProcessor {
+    public static void register() { // Call this on your onEnable()
+        ClaimProcessor.setBuilder(CustomClaimProcessor::new);
+    }
+
+    protected CustomClaimProcessor(SimpleChunkLocation chunk, KingdomPlayer kp, Kingdom kingdom) {
+        super(chunk, kp, kingdom);
+    }
+
+    @Override
+    protected Messenger initialChecks() {
+        if (kingdom.getMembers().size() &gt; 100) {
+            return new StaticMessenger("&amp;cKingdoms with more than 100 members cannot claim lands.");
+        }
+        return null; // There are no issues.
+    }
+}</code></pre></p>
+<p>There are some unstandard/undocumented processors that differ in how they work:</p>
+<table>
+<thead>
+<tr>
+<th>Processor</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>KingdomsChatProcessor</code></td>
+<td>Sending messages to specific channels from certain players.</td>
+</tr>
+<tr>
+<td><code>KingdomItemHologramProcessor</code></td>
+<td>Showing holograms to players for KingdomItems.</td>
+</tr>
+<tr>
+<td><code>LanguagePackDownloader</code></td>
+<td>Installs/Updates language packs with an advanced fast retrying system.</td>
+</tr>
+<tr>
+<td><code>CheckupProcessor</code></td>
+<td>For [/k admin fsck] processors. Check the <a href="https://github.com/CryptoMorin/KingdomsX/wiki/Addons-API#fsck-checkup-handlers">CheckupProcessor API section</a>.</td>
+</tr>
+<tr>
+<td><code>ConditionProcessor</code></td>
+<td>Simple class for processing conditional options with variable handling.</td>
+</tr>
+<tr>
+<td><code>PvPManager.canFight()</code></td>
+<td>Returns a boolean if two players can fight or not.</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<p><br></p>
+<h1 id="optimization">Optimization<a class="headerlink" href="#optimization" title="Permanent link">&para;</a></h1>
+<p>Here I'll give you some examples for when and which methods to use for your specific case.</p>
+<p>This first example applies to getLand(), getKingdom(), getNation() and etc...<br />
+<pre class="highlight"><code class="language-java">KingdomPlayer kp = ...;
+
+// DONT
+if (kp.hasKingdom()) {
+    if (kp.getKingdom().hasAttribute(...) &amp;&amp; kp.getKingdom().equals(...)) 
+}
+
+// DO
+Kingdom kingdom = kp.getKingdom();
+if (kingdom != null) {
+    if (kingdom.hasAttribute(...) &amp;&amp; kingdom.equals(...))
+}</code></pre></p>
+<p>Checking if a land belongs to a kingdom.<br><br />
+Scenario 1: You have a location (Location, SimpleChunkLocation, SimpleLocation, Block and etc...) and a Kingdom instance.<br />
+<pre class="highlight"><code class="language-java">// Or convert it to SimpleChunkLocation of other types.
+SimpleChunkLocation chunk = ...;
+Kingdom kingdom = ...;
+
+// DONT
+Land land = chunk.getLand();
+if (land != null &amp;&amp; land.isClaimed &amp;&amp; land.getKingdom().equals(kingdom))
+
+// DO
+if (kingdom.isClaimed(chunk))</code></pre></p>
+<p>Scenario 2: You have a Land instance and the Kingdom ID.<br />
+<pre class="highlight"><code class="language-java">Land land = ...;
+UUID kingdomId = ...;
+
+// DONT
+Kingdom kingdom = Kingdom.getKingdom(kingdomId);
+if (kingdom.isClaimed(land.getLocation()))
+// OR
+if (kingdom.getId().equals(land.getKingdomId()))
+
+// DO
+if (land.getKingdomId().equals(kingdomID))</code></pre></p>
+<p>Comparing Lands<br />
+<pre class="highlight"><code class="language-java">Land one = ...;
+Land two = ...;
+
+// DONT
+if (one.equals(two))
+
+// DO
+if (one.simpleEquals(two))</code></pre></p>
+<p>Saving data<br />
+<pre class="highlight"><code class="language-java">// DONT
+Map&lt;Land, ...&gt; map = new HashMap&lt;&gt;();
+Set&lt;Land&gt; set = new HashSet&lt;&gt;();
+
+// DO
+Map&lt;SimpleChunkLocation, ...&gt; map = new HashMap&lt;&gt;();
+Set&lt;SimpleChunkLocation&gt; set = new HashSet&lt;&gt;();
+
+// DONT
+Map&lt;Turret, ...&gt; map = new HashMap&lt;&gt;();
+Set&lt;Turret&gt; set = new HashSet&lt;&gt;();
+
+// DO
+Map&lt;SimpleLocation, ...&gt; map = new HashMap&lt;&gt;();
+Set&lt;SimpleLocation&gt; set = new HashSet&lt;&gt;();
+
+// This applies for structures which need to be saved with their SimpleLocation as well and
+// Kingdom and KingdomPlayer which need to saved with their UUID.</code></pre></p>
+<hr />
+<p><br></p>
+<h1 id="turrets-structures">Turrets &amp; Structures<a class="headerlink" href="#turrets-structures" title="Permanent link">&para;</a></h1>
+<p>Making custom turrets and structures are more complicated because of the abstraction level.<br><br />
+Turrets and Structures have 2 different main objects, 3 for turrets.<br><br />
+When it's mentioned that a class <code>is a another x class</code> it means that class extends <code>x class</code>.</p>
+<ul>
+<li><strong>KingdomItem:</strong> Unlike the name, each turret and structure that's <em>placed</em> is called a kingdom item. They handle data for each turret and structure such as their location, ammo, holograms and etc...</li>
+<li><strong>KingdomItemType:</strong> The main mechanics for the turrets and structures that are the same type. They handle turrets and structures GUIs, how their data is saved and how turrets activate.</li>
+<li><strong>KingdomItemStyle:</strong> The modified version of (extends) <strong>KingdomItemType</strong> for <em>turrets</em>. They modify how turrets GUI works and how they activate.</li>
+</ul>
+<p><strong>KingdomItem</strong> class for turrets is called <strong>Turret</strong> and for structures it's called <strong>Structure</strong>.<br><br />
+<strong>KingdomItemType</strong> class for turret types is called <strong>TurretType</strong> and for structures it's called <strong>StructureType</strong></p>
+<p>So, each <strong>Structure</strong> &amp; <strong>Turret</strong> is a <strong>KingdomItem</strong> and each <strong>KingdomItem</strong> has a <strong>KingdomItemType</strong>.<br><br />
+For turrets, each <strong>Turret</strong> has a <strong>KingdomItemStyle</strong> which is technically a <strong>KingdomItemType</strong> but with modified options which you can find the in turret config.<br><br />
+Structures cannot have a <strong>KingdomItemStyle</strong> because their mechanics are so unique that there is nothing special about them to be modified.</p>
+<p>Let's understand <strong>KingdomItemStyle</strong> and <strong>KingdomItemType</strong> a little more.<br><br />
+Go to <code>Plugins/Kingdoms/Turrets</code> folder in your server. You'll see all the turret files. Each of these files are a <strong>KingdomItemStyle</strong> and their <strong>KingdomItemType</strong> that they're modifying is the <code>type</code> property inside the file.<br><br />
+Now this means that servers can make their own <strong>KingdomItemStyle</strong> without needing to code anything.<br />
+That makes it more easier to understand.</p>
+<p>For example, by default there is a turret style named <code>arrow</code>.yml that uses the type <code>arrow</code> in the Turrets folder.<br><br />
+In this case, our <strong>KingdomItem</strong> is a <strong>RangedTurret</strong> which is a <strong>Turret</strong>.<br><br />
+And our <strong>KingdomItemStyle</strong> is a <strong>RangedTurretType</strong> which is a <strong>TurretType</strong> which is a <strong>KingdomItemType</strong>.<br />
+Yes, in this case both of our <strong>KingdomItemType</strong> and <strong>KingdomItemStyle</strong> are called <code>arrow</code> which is allowed, but they're not the same.</p>
+<p><img alt="Image Example" src="https://imgur.com/oVuFlek.png" /></p>
+<p>As an example for structures, take a look at <code>powercell</code> structure in <code>structures.yml</code>:<br />
+* <strong>KingdomItem</strong> is a <strong>Structure</strong>.<br />
+* <strong>KingdomItemType</strong> is a <strong>StructurePowercell</strong> which is a <strong>StructureType</strong></p>
+<p>But now for an <code>Extractor</code>:<br />
+* <strong>KingdomItem</strong> is an <strong>Extractor</strong> which is a <strong>Structure</strong><br />
+* <strong>KingdomItemType</strong> is a <strong>StructureExtractor</strong> which is a <strong>StructureType</strong></p>
+<p>Now you might ask why extractors have their own kingdom item object but not powercells? Because extractors save data such as the last collected time milliseconds, but powercells don't need to store any extra information.</p>
+<p><strong><em>IMPORTANT:</em></strong><br />
+If the turret or structure you're making has additional data (<strong>that is not temporary or transient</strong>) other than the ones provided in the superclass, you <strong>MUST</strong> override its <strong>KingdomItem</strong> <strong>hashCode()</strong> method in addition to calling its <code>super.hashCode()</code> while building the hash. If you don't, the server might not save your data to the data files.</p>
+<p>Example of overriding hashcode methods correctly for a kingdom item like extractors that has extra data:<br />
+<pre class="highlight"><code class="language-java">@Override
+public int hashCode() {
+    int prime = 31;
+    int result = 15;
+
+    result = prime * result + super.hashCode();
+    result = prime * result + lastCollector.hashCode();
+    result = prime * result + Long.hashCode(lastCollected);
+    return result;
+}</code></pre></p>
+<p><img alt="Extractor Tree" src="https://imgur.com/V8D7jus.png" /></p>
+<h3 id="example">Example<a class="headerlink" href="#example" title="Permanent link">&para;</a></h3>
+<p>Now let's make a complicated turret.<br />
+<pre class="highlight"><code class="language-java">public class TurretGhasterBlaster extends RangedTurret { // RangedTurret extend Turret and Turret extends KingdomItem&lt;Turret&gt;
+    private int blasts = 0;
+    private int durability = 1000;
+    public GhasterBlasterTurret(KingdomItemStyle type, SimpleLocation location) {
+          super(type, location);
+    }
+
+    @Override
+    public void activate(LivingEntity target, Kingdom kingdom) {
+        super.activate(target, kingdom);
+        target.setVelocity(new Vector(0, blasts, 0));
+        blasts++;
+        durability--;
+        if (durability == 0) remove(getLand());
+    }
+
+    @Override
+    public int hashCode() {
+        int prime = 31;
+        int result = 15;
+
+        result = prime * result + super.hashCode();
+        result = prime * result + blasts;
+        result = prime * result + durability;
+        return result;
+    }
+
+    public int getBlasts() { return blasts; }
+    public void setBlasts(int blasts) { this.blasts = blasts; }
+}</code></pre></p>
+<p><br></p>
+<pre class="highlight"><code class="language-java">public class TurretGhasterBlaster extends TurretTypeRanged { // TurretTypeRanged extend TurretType and TurretType extends KingdomItemType&lt;Turret&gt;
+    public TurretGhasterBlaster () {
+        super("ghasterblaster", false, true);
+    }
+
+    @Override
+    public boolean activate(TurretActivateEvent event) { ... }
+
+    @Override
+    public void serialize(JsonObject json, Turret turret, Type type, JsonSerializationContext context) {
+        GhasterBlaster rangedTurret = (GhasterBlaster) turret;
+        super.serialize(json, turret, type, context);
+        json.addProperty("ammo", rangedTurret.getAmmo());
+        json.addProperty("blasts", rangedTurret.getBlasts());        
+    }
+
+    @Override
+    public Turret deserialize(KingdomItemStyle style, JsonObject json, Type type, JsonDeserializationContext context) throws JsonParseException {
+        GhasterBlaster turret = new GhasterBlaster(style, null);
+        turret.setLevel(json.get("level").getAsInt());
+        turret.setAmmo(json.get("ammo").getAsInt());
+        turret.setBlasts(json.get("blasts").getAsInt());
+        turret.setHolograms(context.deserialize(json.get("holograms"), new TypeToken&lt;List&lt;UUID&gt;&gt;() {
+        }.getType()));
+        return turret;
+    }
+
+    @Override
+    public Turret build(KingdomItemStyle style, SimpleLocation location, KingdomPlayer kp, NBTWrappers.NBTTagCompound tag) {
+        Turret turret = new GhasterBlaster(style, location);
+        if (tag != null) turret.setData(tag);
+        return turret;
+    }</code></pre>
+<p>Now let's register our turret type.<br />
+<pre class="highlight"><code class="language-java">register(new TurretGhasterBlaster());</code></pre><br />
+Our style is automatically registered.</p>
+<p><br></p>
+<p>Now in our Turrets folder let's add <code>blaster.yml</code> file<br />
+<pre class="highlight"><code class="language-yml">name: "&amp;0Ghaster&amp;cBlaster"
+type: ghasterblaster
+cost: 300
+max-level: 3
+hologram:
+  1:
+    lines:
+      - "&amp;8-=[ &amp;0Ghaster&amp;cBlaster &amp;8]=-"
+    height: 1
+placing:
+  whitelist: true
+  blocks:
+    - CONTAINS:FENCE
+    - CONTAINS:WALL
+range: 7 + lvl
+cooldown: 8 - lvl
+max-targets: min(2, 1 + (lvl + 1))
+max-ammo: lvl * 2000
+upgrade-cost: lvl * 80
+fire: 1
+particle: ~
+effects:
+  1: []
+projectile:
+  1: FIREBALL
+speed: 1 + (lvl * 0.8)
+damage: lvl * 4
+
+block:
+  1: PLAYER_HEAD
+skull:
+  1: "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNmNlZGVjMDRkMjM4MGNkNzcwMjdmOWQ0NDQ1NWM5OGI3ZWRjNWY2NjRjYTBkZDMwYTYxMDY5MDM5MTUzOTFkYiJ9fX0="
+  2: "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYmQzNzI4NTc5MzEzMWVkNzU1ZjFiMDA5OGYyOWRkNDEzZDY3NjU2YjYyMDg3Mjg5MzU0OTJiNDliMWQwZDRiYSJ9fX0="
+item:
+  1:
+    name: "&amp;0Ghaster&amp;cBlaster Turret"
+    material: FIRE_CHARGE
+    lore:
+      - "&amp;6A similar turret as flame"
+      - "turret but really fast with multiple targets."
+      - ""
+      - "&amp;9Attributes&amp;8:"
+      - "&amp;7⚫ &amp;2Level&amp;8: &amp;6%level_roman%"
+      - "&amp;7⚫ &amp;2Ammo&amp;8: &amp;6%ammo%"
+      - "&amp;7⚫ &amp;2Range&amp;8: &amp;6%range%"
+      - "&amp;7⚫ &amp;2Max Targets&amp;8: &amp;6%max_targets%"
+      - "&amp;7⚫ &amp;2Max Ammo&amp;8: &amp;6%max_ammo%"
+      - "&amp;7⚫ &amp;2Cooldown&amp;8: &amp;6%cooldown%"
+      - "&amp;7⚫ &amp;2Speed&amp;8: &amp;6%speed%"
+      - "&amp;7⚫ &amp;2Damage&amp;8: &amp;6%damage%"</code></pre></p>
+<hr />
+<p><br></p>
+<h1 id="metadata">Metadata<a class="headerlink" href="#metadata" title="Permanent link">&para;</a></h1>
+<p>It's similar to Bukkit's metadata except it's specifically made for kingdoms and <strong>stays</strong> after restarts.<br><br />
+All the main kingdom objects support metadata (which inherit the <code>KingdomsObject</code> class):<br />
+* KingdomPlayer<br />
+* Land<br />
+* Kingdom<br />
+* Nation<br />
+* Mails<br />
+* KingdomItem</p>
+<p>Metadata is simply a map with the key as a <a href="https://github.com/CryptoMorin/KingdomsX/wiki/API#namespace">Namespace</a> and the value as an object.<br><br />
+To modify this map, use <code>getMetadata()</code> method. Some custom data objects might not be stored correctly. Please check your data once to see if the data is stored the way you expected or it might lead to some data corruptions.</p>
+<p>So as a simple example, to save an int to a kingdom, you can use the following:<br />
+<pre class="highlight"><code class="language-java">// You should preferably only use a single namespace for all your data.
+private static final META_NS = new Namespace("MyPlugin", "LEVEL");
+
+Kingdom kingdom = ...;
+KingdomMetadataHandler metaInt = new StandardKingdomMetadataHandler(META_NS);
+kingdom.getMetadata().put(metaInt, new StandardKingdomMetadata(10));
+
+// Retrieve the value:
+StandardKingdomMetadata data = (StandardKingdomMetadata) kingdom.getMetadata().get(META_NS);
+int lvl = data.asInt(); // If the data types don't match, an error will be thrown.</code></pre></p>
+<p>A full example of registering a functioning metadata and using it can be found <a href="https://github.com/CryptoMorin/KingdomsX/blob/master/peace-treaties/src/main/java/org/kingdoms/peacetreaties/data/WarPoints.kt">here</a> which uses advanced metadata handlers instead of the simple standard handler.<br />
+Don't forget to call <code>signalDisable()</code> after registering a custom metadata handler. This is not needed for the standard metadata handler.</p>
+<hr />
+<p><br></p>
+<h1 id="events">Events<a class="headerlink" href="#events" title="Permanent link">&para;</a></h1>
+<table>
+<thead>
+<tr>
+<th>Event</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>KingdomCreateEvent</code></td>
+<td>Called when a kingdom is created via test /k create (<code>Kingdom(UUID id, UUID king)</code> constructor)</td>
+</tr>
+<tr>
+<td><code>KingdomDisbandEvent</code></td>
+<td>Called when a kingdom is disbanded either from /k disband, taxes or inactivities. (<code>Kingdom#disband()</code>)</td>
+</tr>
+<tr>
+<td><code>KingdomKingChangeEvent</code></td>
+<td>When the king of the kingdom changes.</td>
+</tr>
+<tr>
+<td><code>GroupRenameEvent</code></td>
+<td>When a kingdom/nation is renamed with <a href="https://github.com/CryptoMorin/KingdomsX/wiki/Commands#k-rename">/k rename or /k nation rename</a> or by other means.</td>
+</tr>
+<tr>
+<td><code>PlayerRankChangeEvent</code></td>
+<td>When a player is demoted/promoted.</td>
+</tr>
+<tr>
+<td><code>KingdomInviteEvent</code></td>
+<td>When a player invites another player to the kingdom.</td>
+</tr>
+<tr>
+<td><code>KingdomRelationshipChangeEvent</code></td>
+<td>Called when a kingdom relationship changes from commands. (<code>Kingdom#acceptRelationShipRequest(...)</code></td>
+</tr>
+<tr>
+<td><code>KingdomSetHomeEvent</code></td>
+<td>Called when a player sets/changes their kingdom home (<code>Kingdom#setHome()</code>)</td>
+</tr>
+<tr>
+<td><code>OpenProtectedBlockEvent</code></td>
+<td>Called when a player opens a protected block using protection signs.</td>
+</tr>
+<tr>
+<td><code>ChampionAbilityEvent</code></td>
+<td>Called when a champion uses an ability.</td>
+</tr>
+<tr>
+<td><code>KingdomInvadeAttackEvent</code></td>
+<td>Called when either the champion or the player attack each other.</td>
+</tr>
+<tr>
+<td><code>KingdomInvadeEndEvent</code></td>
+<td>Called when an invasion ends with the invasion results and reason.</td>
+</tr>
+<tr>
+<td><code>KingdomPreInvadeEvent</code></td>
+<td>Called before the cooldown of /k invade starts.</td>
+</tr>
+<tr>
+<td><code>KingdomInvadeEvent</code></td>
+<td>Called after the cooldown of /k invade command.</td>
+</tr>
+<tr>
+<td><code>SiegeCannonHitEvent</code></td>
+<td>When a Siege Cannon's projectile hits a land. You can modify its shield damage.</td>
+</tr>
+<tr>
+<td><code>KingdomJoinEvent</code></td>
+<td>Called when someone join a kingdom. This is also called right before <code>KingdomCreateEvent</code> when someone creates a kingdom.</td>
+</tr>
+<tr>
+<td><code>KingdomLeaveEvent</code></td>
+<td>Called when someone leaves a kingdom.</td>
+</tr>
+<tr>
+<td><code>GroupResourcePointConvertEvent</code></td>
+<td>Called when a player donates resource points to a nation or a kingdom. Specifically called when <code>KingdomPlayer#donate</code> is used.</td>
+</tr>
+<tr>
+<td><code>LandChangeEvent</code></td>
+<td>Called when someone goes from a land to another land. This is basically a chunk change event but with kingdoms data. (for performance reason.</td>
+</tr>
+<tr>
+<td><code>LandLoadEvent</code></td>
+<td>When a kingdom land data loads. (When chunks load) Note that this will not do anything if the land is null (with no data attached to it)</td>
+</tr>
+<tr>
+<td><code>LandUnloadEvent</code></td>
+<td>When a kingdom land data unloads. (When chunks unload) Note that this will not do anything if the land is null (with no data attached</td>
+</tr>
+<tr>
+<td><code>ClaimLandEvent</code></td>
+<td>When someone claims one or more lands for a kingdom in one or different worlds.</td>
+</tr>
+<tr>
+<td><code>UnclaimLandEvent</code></td>
+<td>When someone unclaims one or more lands for a kingdom in one or different worlds. Called even for <a href="https://github.com/CryptoMorin/KingdomsX/wiki/Commands#k-unclaim-all">/k unclaim all</a></td>
+</tr>
+<tr>
+<td><code>NexusMoveEvent</code></td>
+<td>After someone used /k nexus to move their nexus.</td>
+</tr>
+<tr>
+<td><code>KingdomItemBreakEvent&lt;? extends KingdomItem&lt;?&gt;&gt;</code></td>
+<td>When someone breaks a structure or a turret block either from the GUI or manually.</td>
+</tr>
+<tr>
+<td><code>KingdomItemPlaceEvent&lt;? extends KingdomItem&lt;?&gt;&gt;</code></td>
+<td>When someone places a structure or a turret.</td>
+</tr>
+<tr>
+<td><code>KingdomItemInteractEvent&lt;? extends KingdomItem&lt;?&gt;&gt;</code></td>
+<td>A player right-clicks on a structure or a turret to open its GUI.</td>
+</tr>
+<tr>
+<td><code>TurretActivateEvent</code></td>
+<td>When a turret wants to target an entity.</td>
+</tr>
+<tr>
+<td><code>GroupRelationshipChangeEvent</code></td>
+<td>When a nation/kingdom changes their relationship with another nation/kingdom.</td>
+</tr>
+<tr>
+<td><code>GroupHomeTeleportEvent</code></td>
+<td>When a player teleports to nation/kingdom home.</td>
+</tr>
+<tr>
+<td><code>KingdomColorChangeEvent</code></td>
+<td>When <code>Group#setColor</code> is called. Which is usually when a player changes it from their nexus settings.</td>
+</tr>
+<tr>
+<td><code>KingdomFlagChangeEvent</code></td>
+<td>When <code>Group#setFlag</code> is called. Which is usually when a player changes it from their nexus settings.</td>
+</tr>
+<tr>
+<td><code>KingdomGUIOpenEvent</code></td>
+<td>When the plugin is about to open a GUI for the player (before it's opened). You can modify the GUI.</td>
+</tr>
+<tr>
+<td><code>MassWarStartEvent</code></td>
+<td>When <a href="https://github.com/CryptoMorin/KingdomsX/wiki/Mechanics#mass-wars">Mass War event</a> starts.</td>
+</tr>
+<tr>
+<td><code>MassWarEndEvent</code></td>
+<td>When <a href="https://github.com/CryptoMorin/KingdomsX/wiki/Mechanics#mass-wars">Mass War event</a> ends.</td>
+</tr>
+<tr>
+<td><code>KingdomMiscUpgradeUpgradeEvent</code></td>
+<td>When a misc-upgrade is upgraded.</td>
+</tr>
+<tr>
+<td><code>KingdomMiscUpgradeToggleEvent</code></td>
+<td>When a misc-upgrade is enabled/disabled.</td>
+</tr>
+<tr>
+<td><code>KingdomChampionUpgradeUpgradeEvent</code></td>
+<td>When a champion upgrade is upgraded.</td>
+</tr>
+<tr>
+<td><code>KingdomPowerupUpgradeEvent</code></td>
+<td>When a powerup is upgraded.</td>
+</tr>
+<tr>
+<td><code>KingdomItemUpgradeEvent</code></td>
+<td>When a structure/turret is upgraded.</td>
+</tr>
+<tr>
+<td><code>RankPermissionChangeEvent</code></td>
+<td>When a player changes the permissions of a rank through Nexus GUI.</td>
+</tr>
+<tr>
+<td><code>ExtractorCollectEvent</code></td>
+<td>When a player collects resource points of an extractor by opening its GUI or using <a href="https://github.com/CryptoMorin/KingdomsX/wiki/Commands#k-extractor">/k extractor</a> command.</td>
+</tr>
+<tr>
+<td><code>OutpostPurchaseItemEvent</code></td>
+<td>When a player purchases an item from an <a href="https://github.com/CryptoMorin/KingdomsX/wiki/Mechanics#structures">Outpost structure</a>.</td>
+</tr>
+<tr>
+<td><code>WarpPadTeleportEvent</code></td>
+<td>When a player teleports to another structure using <a href="https://github.com/CryptoMorin/KingdomsX/wiki/Mechanics#warp-pad">Warp Pad structure</a>.</td>
+</tr>
+<tr>
+<td><code>KingdomPacifismStateChangeEvent</code></td>
+<td>When a player changes the pacifism state of the kingdom through nexus.</td>
+</tr>
+<tr>
+<td><code>GroupShieldPurchaseEvent</code></td>
+<td>When a player purchases a shield for their kingdom through nexus settings.</td>
+</tr>
+<tr>
+<td><code>MailSendEvent</code></td>
+<td>When a player sends a mail to another kingdom or replies to another player.</td>
+</tr>
+<tr>
+<td><code>PlayerChangeChatChannelEvent</code></td>
+<td>When a player switches channels using <a href="https://github.com/CryptoMorin/KingdomsX/wiki/Commands#k-chat">/k c <channel></a> command.</td>
+</tr>
+<tr>
+<td><code>GroupServerTaxPayEvent</code></td>
+<td>When a group pays server taxes. Not kingdom or nation taxes.</td>
+</tr>
+<tr>
+<td><code>RankCreateEvent</code>, <code>RankDeleteEvent</code>, <code>RankNameChangeEvent</code>, <code>RankColorChangeEvent</code>, <code>RankSymbolChangeEvent</code>, <code>RankPriorityChangeEvent</code>, <code>RankMaxClaimsChangeEvent</code>, <code>RankMaterialChangeEvent</code></td>
+<td>These are called when a player changes the ranks through nexus <strong>Ranks &amp; Permissions</strong> section.</td>
+</tr>
+</tbody>
+</table>
+<p>All kingdom events support metadata which uses <strong>Namespace</strong>. This can be helpful for including arbitrary information inside events for later uses by other plugins.</p>
+<hr />
+<p><br></p>
+<h1 id="registry">Registry<a class="headerlink" href="#registry" title="Permanent link">&para;</a></h1>
+<p>Kingdoms allows you to define your own kingdom permissions, relationship attributes and audit logs. All these are done through registries which work with <code>Namespace</code> class.</p>
+<p>Available Registries<br />
+| Registry | Object | Description |<br />
+| --- | --- | --- |<br />
+| <code>Kingdoms#getPermissionRegistery()</code> | <code>KingdomPermission</code> | Permissions are for kingdom/nation ranks which the admins of the kingdom can change in their Nexus GUI. |<br />
+| <code>Kingdoms#getRelationAttributeRegistry()</code> | <code>RelationAttribute</code> | Attributes are agreements/permissions between two kingdoms/nations |<br />
+| <code>Kingdoms#getAuditLogRegistry()</code> | <code>AuditLog</code> &amp; <code>AuditLogProvider</code> | A record of changes and actions in a kingdom/nation. |</p>
+<h3 id="namespace">Namespace<a class="headerlink" href="#namespace" title="Permanent link">&para;</a></h3>
+<p>To register your own namespaced value, you have to register them in your plugin's <code>onLoad()</code> method. Doing so in <code>onEnable</code> will not work. You also cannot unregister them since it'll cause data inconsistencies due to performance reasons.</p>
+<p>In order to register your value, you have to make your own unique namespaced value to avoid conflicts. A namespace can be created like:<br />
+<pre class="highlight"><code class="language-java">Namespace ns = new Namespace("PluginName", "TEST");</code></pre></p>
+<p>The first parameter <code>PluginName</code> can only contain alphabets (no spaces, numbers, underscores, dashes and etc). And the second parameter must be an all-caps alphanumeric (including underlines) value.</p>
+<h3 id="kingdompermission">KingdomPermission<a class="headerlink" href="#kingdompermission" title="Permanent link">&para;</a></h3>
+<pre class="highlight"><code class="language-java">public static final KingdomPermission PERMISSION_INV_TAKE = new KingdomPermission(new Namespace("PluginName", "INV_TAKE"));
+
+@Override
+public void onLoad() {
+  Kingdoms.get().getPermissionRegistery().register(PERMISSION_INV_TAKE);
+}
+
+@EventHandler(ignoreCancelled = true, priority = EventPriority.HIGHEST)
+public void onInventoryTake(InventoryClickEvent event) {
+  Player player = (Player) event.getWhoClicked();
+  KingdomPlayer kp = KingdomPlayer.getKingdomPlayer(player);
+  SimpleChunkLocation chunk = SimpleChunkLocation.of(player.getLocation);
+  Kingdom kingdom = kp.getKingdom();
+
+  if (kingdom == null || land == null || !kingdom.isClaimed(chunk)) return;
+  if (!kp.hasPermission(PERMISSION_INV_TAKE)) event.setCancelled(true);
+}</code></pre>
+<h3 id="relationattribute">RelationAttribute<a class="headerlink" href="#relationattribute" title="Permanent link">&para;</a></h3>
+<pre class="highlight"><code class="language-java">public static final RelationAttribute ATTR_SHOOT_IN_LAND = new RelationAttribute(new Namespace("PluginName", "SHOOT"));
+
+@Override
+public void onLoad() {
+  Kingdoms.get().getRelationAttributeRegistry().register(ATTR_SHOOT_IN_LAND);
+}
+
+@EventHandler(ignoreCancelled = true)
+public void onPlayerShoot(ProjectileLaunchEvent event) {
+    Projectile projectile = event.getEntity();
+    if (!(projectile.getShooter() instanceof Player)) return;
+
+    Player shooter = (Player) projectile.getShooter();
+    KingdomPlayer kp = KingdomPlayer.getKingdomPlayer(shooter);
+    Kingdom kpKingdom = kp.getKingdom();
+    Land land = Land.getLand(shooter.getLocation());
+    Kingdom landKingdom = land == null || !land.isClaimed() ? null : land.getKingdom();
+
+    if (!ATTR_SHOOT_IN_LAND.hasAttribute(kpKingdom, landKingdom)) event.setCancelled(true);
+}</code></pre>
+<h3 id="auditlog">AuditLog<a class="headerlink" href="#auditlog" title="Permanent link">&para;</a></h3>
+<p>The following example show very simple cases on how to use these logs, however in some cases where it's possible to gather bulk information, it's recommended to make your own delayed log system to gather information for a certain type of action that a player does. For example in below, you could make a log collector class and wait for 10 seconds every time the player enters a new chunk that belongs to its kingdom and if there were no new logs for 10 seconds, add all the chunks that the player has visited in a single list (or set if you want to remove duplicates) this way you're improving the user experience, performance, storage and RAM.</p>
+<pre class="highlight"><code class="language-java">public final class LogLandChange extends AuditLog {
+    private SimpleChunkLocation from, to;
+
+    protected LogLandChange() {}
+
+    public LogLandChange(SimpleChunkLocation from, SimpleChunkLocation to) {
+        this.from = from;
+        this.to = to;
+    }
+
+    private static final Namespace NS = new Namespace("PluginName", "LAND_CHANGE");
+    public static final AuditLogProvider PROVIDER = new AuditLogProvider() {
+        @Override
+        public AuditLog construct() {
+            return new LogLandChange();
+        }
+        @Override
+        public Namespace getNamespace() {
+            return NS;
+        }
+    };
+    @Override
+    public AuditLogProvider getProvider() {
+        return PROVIDER;
+    }
+
+    @Override
+    public void deserialize(DeserializationContext context) {
+        super.deserialize(context);
+        JsonObject json = context.getJson();
+        this.from = SimpleChunkLocation.fromString(json.get("from").getAsString());
+        this.to = SimpleChunkLocation.fromString(json.get("to").getAsString());
+    }
+
+    @Override
+    public void serialize(SerializationContext context) {
+        super.serialize(context);
+        JsonObject json = context.getJson();
+        json.addProperty("from", from.toString());
+        json.addProperty("to", to.toString());
+    }
+
+    @Override
+    protected void addEdits(MessageBuilder builder) {
+        super.addEdits(builder);
+        builder.parse("from", "&amp;2" + + from.getWorld() + ", " + from.getX() + ", " + from.getZ());
+
+        // Or using kingdoms built-in language entries:
+        builder.parse("to", KingdomsLang.LOCATIONS_CHUNK.parse(LocationUtils.getChunkEdits(to)));
+    }
+}
+
+@Override
+public void onLoad() {
+  Kingdoms.get().getAuditLogRegistry().register(LogLandChange.PROVIDER);
+}
+
+@EventHandler(ignoreCancelled = true, priority = EventPriority.MONITOR)
+public void onLandChange(LandChangeEvent event) {
+    KingdomPlayer kp = event.getKingdomPlayer();
+    Kingdom kingdom = kp.getKingdom();
+    if (kingdom == null) return;
+    if (kingdom.isClaimed(event.getFromChunk()) || kingdom.isClaimed(event.getToChunk())) {
+        kingdom.log(new LogLandChange(event.getFromChunk(), event.getToChunk()));
+    }
+}</code></pre>
+<h3 id="configs">Configs<a class="headerlink" href="#configs" title="Permanent link">&para;</a></h3>
+<p>Now there's a high chance server owners might want to use your registered values in their configs. The way these values are used in configs are a little different. They're used in <code>namespace:value</code> format where <code>namespace</code> is untouched, however <code>value</code> is converted into an all lowercase word with underscores replaced with dashes. Also since colons have special meanings in yaml, they have to use one of the string literals.</p>
+<p>The config entry corresponds to the <code>Namespace#getConfigOptionName()</code> method.</p>
+<p>From previous examples:<br />
+| Registry | Namespace | Config Name | Relevant Configs |<br />
+| --- | --- | --- | --- |<br />
+| KingdomPermission |  <code>new Namespace("PluginName", "INV_TAKE")</code> | <code>PluginName:inv-take</code> | <a href="https://github.com/CryptoMorin/KingdomsX/blob/fae73be8c0912575e4d1374e61a7b163c226884b/core/src/main/resources/ranks.yml#L94-L96">ranks.yml</a> |<br />
+| RelationAttribute | <code>new Namespace("PluginName", "SHOOT")</code> | <code>PluginName:shoot</code> | <a href="https://github.com/CryptoMorin/KingdomsX/blob/fae73be8c0912575e4d1374e61a7b163c226884b/core/src/main/resources/relations.yml#L82-L92">relations.yml</a> |<br />
+| AuditLog | <code>new Namespace("PluginName", "LAND_CHANGE")</code> | <code>PluginName:land-change</code> | <a href="https://github.com/CryptoMorin/KingdomsX/blob/fae73be8c0912575e4d1374e61a7b163c226884b/core/src/main/resources/guis/en/structures/nexus/logs.yml#L7">logs.yml GUI</a> |</p>
+<p><strong>Note:</strong> If you registered a custom namespace'd value to the plugin, make sure that you call <code>Kingdoms.get().signalFullSave()</code> on your <code>onDisable()</code> or if you're using an addon, you can simply call <code>signalDisable()</code> from the class that implemented the Addon interface.</p>
+<hr />
+<p><br></p>
+<h1 id="examples">Examples<a class="headerlink" href="#examples" title="Permanent link">&para;</a></h1>
+<p>We're going to take a look at some examples that are only a little harder to find for developers.</p>
+<h4 id="basic">Basic<a class="headerlink" href="#basic" title="Permanent link">&para;</a></h4>
+<p>Getting all the kingdom allies.<br />
+<pre class="highlight"><code class="language-java">List&lt;Kingdom&gt; allies = damagerKingdom.getKingdomsWithRelation(KingdomRelation.ALLY);</code></pre></p>
+<p>Checking if player has permission in kingdom or nation.<br />
+<pre class="highlight"><code class="language-java">Player player = ...;
+KingdomPlayer kp = new KingdomPlayer(player);
+if (kp.hasKingdom()) {
+    kp.hasPermission(DefaultKingdomPermission.HOME);
+    if (kp.getKingdom().hasNation()) kp.hasNationPermission(DefaultKingdomPermission.HOME); // Spawn
+}</code></pre></p>
+<p>Joining a kingdom.<br />
+<pre class="highlight"><code class="language-java">Player player = ...;
+KingdomPlayer kp = KingdomPlayer.getKingdomPlayer(player);
+Kingdom kingdom = Kingdom.getKingdom(...);
+kp.joinKingdom(kingdom);</code></pre></p>
+<p>Opening <a href="https://github.com/CryptoMorin/KingdomsX/wiki/Commands#k-map">/k map</a> for players.<br />
+<pre class="highlight"><code class="language-java">Player player = ...;
+KingdomPlayer kp = KingdomPlayer.getKingdomPlayer(player);
+kp.buildMap().display(); // This considers the custom map size set by the player.
+
+// or
+new KingdomsMap().forPlayer(player).display();</code></pre></p>
+<h4 id="checking-if-two-players-can-fight">Checking if two players can fight<a class="headerlink" href="#checking-if-two-players-can-fight" title="Permanent link">&para;</a></h4>
+<p>If you're using <code>EntityDamageByEntityEvent</code> event, simply check if the event is cancelled. Kingdoms uses <code>LOW</code> event priority to make it easier for other plugins.</p>
+<p>To check if two players can PvP each other in any circumstances you can use the following code. This will consider all the kingdom features and configured options.<br><br />
+<strong>Note:</strong> It's important that which player is the damager and which is the victim (method arguments order).<br />
+<pre class="highlight"><code class="language-java">Player damager = ...;
+Player victim = ...;
+boolean canFight = PvPManager.canFight(damager, victim);</code></pre></p>
+<p>An <strong>oversimplified</strong> manual way to do this:<br />
+<pre class="highlight"><code class="language-java">Player damager = ...;
+Player victim = ...;
+
+KingdomPlayer damagerKp = KingdomPlayer.getKingdomPlayer(damager);
+if (damagerKp.isAdmin() || !damagerKp.hasKingdom()) return true;
+KingdomPlayer victimKp = KingdomPlayer.getKingdomPlayer(victim);
+if (!victimKp.hasKingdom()) return true;
+
+if (damagerKp.isPvp() &amp;&amp; victimKp.isPvp()) return true;
+Kingdom damagerKingdom = damagerKp.getKingdom();
+Kingdom victimKingdom = victimKp.getKingdom();
+
+return !victimKingdom.hasAttribute(damagerKingdom, KingdomRelation.Attribute.CEASEFIRE);</code></pre></p>
+<p>Checking if an entity is a kingdom entity. A <em>kingdom entity</em> is any entity that is spawned by Kingdoms plugin.<br><br />
+This includes champions, turret soldiers, guards and etc.<br />
+<pre class="highlight"><code class="language-java">LivingEntity entity = ...;
+boolean isKingdomMob = KingdomEntityRegistry.isKingdomEntity(entity);</code></pre></p>
+<h4 id="claiming-a-land">Claiming a Land<a class="headerlink" href="#claiming-a-land" title="Permanent link">&para;</a></h4>
+<pre class="highlight"><code class="language-java">Player player = ...;
+Location location = player.getLocation();
+KingdomPlayer kp = KingdomPlayer.getKingdomPlayer(player);
+if (!kp.hasKingdom()) return;
+
+// WorldGuard Support
+if (ServiceHandler.isLocationInRegion(loc)) return;
+SimpleChunkLocation simpLocation = new SimpleChunkLocation(loc);
+Land land = Land.getLand(location);
+if (land != null &amp;&amp; !land.isClaimed()) kp.getKingdom().claim(kp, simpLocation);</code></pre>
+<h4 id="resource-points-donation">Resource Points Donation<a class="headerlink" href="#resource-points-donation" title="Permanent link">&para;</a></h4>
+<p>You don't need to use everything from here. Take what you need.<br />
+<pre class="highlight"><code class="language-java">Collection&lt;ItemStack&gt; items = ...;
+List&lt;ItemStack&gt; stacked = XItemStack.stack(items);
+Player player = ...;
+KingdomPlayer kp = KingdomPlayer.getKingdomPlayer(player);
+
+// You can leave the second argument as null if you don't want to modify anything.
+Pair&lt;Long, List&lt;ItemStack&gt;&gt; result = ResourcePointManager.convertToResourcePoints(stacked, (item, leftOvers) -&gt; {
+    // Return null if you want the item to be handled normally according to the config.
+    // You can also add a part of the item to the leftOvers list. You don't need to clone the item.
+    // If you return a nonnull value, the item will not be added to the leftOvers list and the amount will be added to the result.
+});
+long added = result.getKey();
+List&lt;ItemStack&gt; leftOvers = result.getValue();
+KingdomResourcePointDonateEvent event = kp.donate(added, stacked, leftOvers);
+
+if (!event.isCancelled()) {
+    added = event.getAmount();
+    leftOvers = event.getLeftOvers();
+
+    kingdom.addResourcePoints(added);
+    if (leftOvers != null) XItemStack.giveOrDrop(player, true, leftOvers.toArray(new ItemStack[0]));
+}</code></pre></p>
+<h4 id="taxes">Taxes<a class="headerlink" href="#taxes" title="Permanent link">&para;</a></h4>
+<pre class="highlight"><code class="language-java">OfflinePlayer player = ...;
+KingdomPlayer kp = KingdomPlayer.getKingdomPlayer(player);
+Kingdom kingdom = kp.getKingdom();
+
+Pair&lt;Boolean, Double&gt; result = kingdom.payTaxes(player);
+result.getKey(); // Could pay?
+result.getValue(); // Tax amount the player paid.
+
+if (!kingdom.hasNation()) return;
+Nation nation = kingdom.getNation();
+nation.payTaxes(kingdom);</code></pre>
+<h4 id="placing-kingdomitems">Placing KingdomItems<a class="headerlink" href="#placing-kingdomitems" title="Permanent link">&para;</a></h4>
+<pre class="highlight"><code class="language-java">Block block = ...;
+SimpleLocation location = new SimpleLocation(block);
+
+TurretStyle turretStyle = TurretRegistry.getStyle("arrow");
+StructureStyle structureStyle = StructureRegistry.getStyle("powercell");
+
+// You can leave the kp and nbt data as null if you don't have it.
+Land land = location.toSimpleChunkLocation().getLand();
+Turret turret = turretStyle.getType().build(type, location, kp, nbt);
+Structure structure = structureStyle.getType().build(type, location, kp, nbt);
+
+land.getTurrets().put(location, turret);
+land.getStructures().put(location, structure);
+
+turret.spawnHolograms(land.getKingdom());
+structure.spawnHolograms(land.getKingdom());</code></pre>
+<h4 id="removing-kingdomitems">Removing KingdomItems<a class="headerlink" href="#removing-kingdomitems" title="Permanent link">&para;</a></h4>
+<pre class="highlight"><code class="language-java"># This can be aquired using Land#getStructures() or Land#getTurrets()
+KingdomItem&lt;?&gt; kingdomItem = ...;
+
+KingdomItemRemoveContext context = new KingdomItemRemoveContext(); # All the properties are optional.
+context.setCause(event); # If this was caused by another event
+context.setPlayer(kp); # If a player caused this item to be removed.
+context.dropsItem(false); # If the item should be dropped after being removed.
+context.modifier(Consumer&lt;KingdomItemBreakEvent&lt;?&gt;&gt;) # Usually used for modifying the metadata of the event being firing it.
+kingdomItem.remove(context);</code></pre>
+<h4 id="kingdomitems-from-itemstack">KingdomItems from ItemStack<a class="headerlink" href="#kingdomitems-from-itemstack" title="Permanent link">&para;</a></h4>
+<pre class="highlight"><code class="language-java">ItemStack item = ...;
+NBTWrappers.NBTTagCompound nbt = ItemNBT.getTag(item);
+nbt = nbt.getCompound(Kingdoms.NBT);
+
+// It's not a kingdom item!
+if (nbt == null) return;
+String tag = nbt.get(StructureType.METADATA, NBTType.STRING);
+// It's a structure.
+if (tag != null) return;
+
+tag = nbt.get(TurretType.METADATA, NBTType.STRING);
+if (tag != null) return;// It's a turret.
+// If it ever passed the above check then I don't know what the hell you did to the item.</code></pre>
+<h1 id="invasions">Invasions<a class="headerlink" href="#invasions" title="Permanent link">&para;</a></h1>
+<p>Checking if a player is invading or an entity is a champion.<br />
+<pre class="highlight"><code class="language-java">Entity entity;
+if (entity.hasMetadata(Invasion.METADATA)) {
+   if (entity instanceof Player) // invader
+   else // champion
+}
+
+// Or more easily for players
+KingdomPlayer kp;
+kp.isInvading()</code></pre></p>
+<p>Getting invasions<br />
+<pre class="highlight"><code class="language-java">// From players:
+Player player = ...;
+KingdomPlayer kp = KingdomPlayer.getKingdomPlayer(player);
+Invasion invasion = kp.getInvasion();
+
+// From entity (champions):
+Entity entity = ...;
+Invasion invasion = Invasion.getInvasion(entity);
+
+Land mainLand = invasion.getOriginLand();</code></pre></p>
+<p>Getting invasion stuff from land.<br />
+<pre class="highlight"><code class="language-java">Land land = ...;
+Invasion invasion = land.getInvasions().get(invaderKingdomId);
+if (invasion.getChampion().isValid()) invasion.end(KingdomInvadeEndEvent.InvasionResult.TIMES_UP);</code></pre></p>
+<p>As you can see an invasion session is described by an <code>Invasion</code> class. This class holds all possible information about an invasion. A standard type of invasions are plunder invasions which is handled by <code>Plunder</code> class which extends <code>Invasion</code>.</p>
+<p>In order to start an invasion manually, you can use the following code:<br />
+<pre class="highlight"><code class="language-java">KingdomPreInvadeEvent event = InvasionFactory.standardInvasion(land, acceptedLands, player, ransackMode);
+if (event.isCancelled()) return;
+Invasion invasion = event.getInvasion();
+
+// The KingdomInvadeEvent gets called when the cooldown of standardInvasion is ended.</code></pre></p>
+<p>You can use <code>InvasionFactory</code> to access a variety of different helpful tools regarding invasions since the <code>standardInvasion()</code> method and its more raw version <code>prepareInvasion()</code> method almost perform no checks such as shield, pacifism, invasion costs and etc that the <a href="https://github.com/CryptoMorin/KingdomsX/wiki/Commands#k-invade">/k invade</a> command does.</p>
+<h4 id="champion-abilities">Champion Abilities<a class="headerlink" href="#champion-abilities" title="Permanent link">&para;</a></h4>
+<p>Replacing an ability for champions (you cannot create a new one)<br />
+<pre class="highlight"><code class="language-java">public class ChampionAbilityBoom extends ChampionAbility implements Listener {
+    public ChampionAbilityResistance() {
+        super(ChampionUpgrade.THOR);
+    }
+
+    @EventHandler
+    public void onDamage(KingdomInvadeAttackEvent event) {
+        if (cantUse(event.getInvasion().getDefender().getKingdom())) return;
+        if (event.isAttackerChampion()) return;
+        if (!MathUtils.hasChance(10) return;
+        if (callEvent(event.getInvasion())) return;
+
+        Entity champion = event.getEntity();
+        Player player = event.getInvasion().getInvader().getPlayer();
+        // A much better way of getting the player is:
+        player = (Player) event.getDamager();
+        player.getWorld().createExplosion(player.getLocation(), 3f);
+    }
+}
+new ChampionAbilityBoom();</code></pre></p>
+<h4 id="checking-relation-attributes">Checking Relation Attributes<a class="headerlink" href="#checking-relation-attributes" title="Permanent link">&para;</a></h4>
+<p>Checking relation attributes between two kingdoms needs to follow an order.<br />
+<pre class="highlight"><code class="language-java">Kingdom defender = ...;
+Kingdom attacker = ...;
+boolean hasAttribute = defender.hasAttribute(attacker, ...);</code></pre></p>
+<p>This code will check the relation attributes for <code>attacker</code>, so for example if <code>defender</code> disabled <code>CEASEFIRE</code> attribute for allies and <code>attacker</code> is allies with <code>defender</code>, <code>hasAttribute</code> will return false. Since the attributes are checked from <code>attacker</code> and only <code>defender</code> changed that attribute. Now it'll return true the other way around. If defender is the attacker, and the attacker is the defender (it doesn't mean that defender and attacker instances switch, we just switch the order that we check their attribute):<br />
+<pre class="highlight"><code class="language-java">boolean hasAttribute = attacker.hasAttribute(defender, ...);</code></pre></p>
+<p>Since the order matters, sometimes you'll have to do a few extra checks before using the kingdom objects. To make it easier and safer, you can use the following method:<br />
+<pre class="highlight"><code class="language-java">KingdomRelation.Attribute attribute = ...;
+boolean hasAttribute = attribute.hasAttribute(kingdom, otherKingdom);</code></pre></p>
+<h4 id="kingdomitemevent">KingdomItemEvent<a class="headerlink" href="#kingdomitemevent" title="Permanent link">&para;</a></h4>
+<p>Listening to <code>KingdomItemEvent</code>s is a little special since they use generic types.<br><br />
+In this example, we're going to use <code>KingdomItemPlaceEvent</code><br />
+<pre class="highlight"><code class="language-java">// If you want to listen to either structures or turrets.
+@EventHandler
+public void onPlace(KingdomItemPlaceEvent&lt;?&gt; event) {
+    if (event.getKingdomItem() instanceof Structure) {
+        Structure structure = (Structure) event.getKingdomItem(); 
+    }
+    if (event.getKingdomItem() instanceof Turret) {
+        Turret structure = (Turret) event.getKingdomItem();
+    }
+}
+
+// Listening to only one type of kingdom item. In this example, structures.
+@EventHandler
+public void onPlace(KingdomItemPlaceEvent&lt;Structure&gt; event) {
+    if (!(event.getKingdomItem() instanceof Structure)) return; // Yes, this line is still necessary.
+    Structure structure = event.getKingdomItem();
+}</code></pre></p>
+<h4 id="kingdomguiopenevent">KingdomGUIOpenEvent<a class="headerlink" href="#kingdomguiopenevent" title="Permanent link">&para;</a></h4>
+<p>In this example, I modified <code>arrow</code> turret <a href="https://github.com/CryptoMorin/KingdomsX/wiki/API/#turrets--structures">style</a> to only be purchasable by opped players.<br />
+<pre class="highlight"><code class="language-java">@EventHandler(ignoreCancelled = true)
+public void onNexusOpen(KingdomGUIOpenEvent event) {
+    InteractiveGUI gui = event.getGUI();
+
+    // Make sure this is the turret's GUI that's being opened.
+    if (!gui.is(KingdomsGUI.STRUCTURES_NEXUS_TURRETS)) return;
+
+    // getOption() returns an option that has been already pushed to the GUI.
+    Optional&lt;GUIOption&gt; optionOpt = gui.getOption("arrow");
+    if (!optionOpt.isPresent()) return;
+
+    GUIOption option = optionOpt.get();
+    Runnable fn = option.getRunnables().values().iterator().next();
+
+    Runnable newFn = () -&gt; {
+        if (!event.getPlayer().isOp()) {
+            event.getPlayer().sendMessage("You need to be op to buy this turret.");
+            return;
+        }
+
+        // This preserves the original functionality of the option so you won't need to copy the entire functionality yourself.
+        fn.run();
+    };
+
+    // toArray() is necessary to prevent concurrent modification.
+    for (ClickType clickType : option.getRunnables().keySet().toArray(new ClickType[0])) {
+        // The plugin usually has a single functionality for all clicking types.
+        option.getRunnables().put(clickType, newFn);
+    }
+}</code></pre></p>
+<h1 id="reserved">Reserved<a class="headerlink" href="#reserved" title="Permanent link">&para;</a></h1>
+<p>The location API in Kingdoms is a bit complicated. There are many classes to do the same thing with different mutability and datasets. So instead of listing them all here, there's a general formula that can be followed to get the desired class that you want, or just use <code>Location</code> class (not from Bukkit, but Kingdoms) that is accepted anywhere that other location types are accepted.</p>
+<p>This is going to be like writing chemical equations, where we have a carbon element that's usually in the middle and others as prefix and suffix. Our main element here is going to <code>Vector</code> or <code>Location</code>. You have to go thru this list in order:</p>
+<ul>
+<li><strong>Immutable</strong> (<code>prefix</code>): All location types that are not intended to be changed (<code>final</code> modifier for xyz) have this prefix.</li>
+<li><strong>Block</strong>: All locations that have an integer <code>int</code> xyz. If this is not specified, the xyz will be of type <code>double</code></li>
+<li><strong>Main Element:</strong></li>
+<li><strong>Vector</strong>: This location will only contain xyz data without any world data.</li>
+<li><strong>Location</strong>: This location will contain both xyz and world data.</li>
+<li><strong>Dimension:</strong></li>
+<li><strong>3</strong>: This location has xyz coordinates.</li>
+<li><strong>2</strong>: This location only has xz coordinates. (Not all location types support this)</li>
+</ul>
+<p>E.g.</p>
+<p>After finding your desired type, they all should support a static <code>of()</code> method that you can get an instance of these locations.</p></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script src="../js/bootstrap.bundle.min.js"></script>
+        <script>
+            var base_url = "..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../js/base.js"></script>
+        <script src="../javascripts/mathjax.js"></script>
+        <script src="https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js"></script>
+        <script src="../search/main.js"></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p>From here you can search these documents. Enter your search terms below.</p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results" data-no-results-text="No results found"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>

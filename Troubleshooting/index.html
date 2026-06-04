@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="light">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        <link rel="canonical" href="https://wiki.kingdomsx.com/Troubleshooting/">
+        <link rel="shortcut icon" href="../img/favicon.ico">
+        <title>Troubleshooting - KingdomsX</title>
+        <link href="../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../css/fontawesome.min.css" rel="stylesheet">
+        <link href="../css/brands.min.css" rel="stylesheet">
+        <link href="../css/solid.min.css" rel="stylesheet">
+        <link href="../css/v4-font-face.min.css" rel="stylesheet">
+        <link href="../css/base.css" rel="stylesheet">
+        <link id="hljs-light" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" >
+        <link id="hljs-dark" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github-dark.min.css" disabled>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+        <script>hljs.highlightAll();</script> 
+    </head>
+
+    <body>
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="..">KingdomsX</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar-collapse" aria-controls="navbar-collapse" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="nav-item">
+                                <a href="../Home.md.md" class="nav-link">🏠 Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../Features/" class="nav-link">🔰 Features</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../Installation/" class="nav-link">📥 Installation</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../Installation.md#setup" class="nav-link">📗 Setup</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../Installation.md#compatibility" class="nav-link">📘 Compatibility</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../FAQ/" class="nav-link">❓ FAQ</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../NFAQ/" class="nav-link">⁉️ NFAQ</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../Addons/" class="nav-link">⚜️ Addons</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../Outposts/" class="nav-link">🚩 Outposts</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../Peace-Treaties/" class="nav-link">☮️ Peace Treaties</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../Map-Viewers-Addon/" class="nav-link">🗺️ Map Viewers</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../EngineHub-Addon/" class="nav-link">🏬 EngineHub</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../Admin-Tools/" class="nav-link">🛠  Admin Tools</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../Introduction/" class="nav-link">❇️ Introduction</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../Commands/" class="nav-link">⌨️ Commands</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../Commands.md#players" class="nav-link">👨‍🦱 Players</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../Commands.md#admins" class="nav-link">👩‍⚖️ Admins</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../Permissions/" class="nav-link">🔓 Permissions</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../Placeholders/" class="nav-link">🔣 Placeholders</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../Placeholders.md#players" class="nav-link">🚹 Players</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../Placeholders.md#kingdoms" class="nav-link">🏛 Kingdoms</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../Placeholders.md#nations" class="nav-link">🏢 Nations</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../Config/" class="nav-link">📁 Config</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../YAML/" class="nav-link">📃 YAML</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../Languages/" class="nav-link">💱 Languages</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../GUIs/" class="nav-link">📱 GUI</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../Protection-Signs/" class="nav-link">🔒 Protection Signs</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../Mails/" class="nav-link">✉️ Mails</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../Mechanics/" class="nav-link">📚 Mechanics</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"  aria-expanded="false">⚔️ Invasion</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../Mechanics.md#Invasion" class="dropdown-item">None</a>
+</li>
+                                    
+<li>
+    <a href="../Mechanics.md#Preparing" class="dropdown-item">🛡️ Preparing</a>
+</li>
+                                    
+<li>
+    <a href="../Mechanics.md#Champion" class="dropdown-item">🧟 Champion</a>
+</li>
+                                    
+<li>
+    <a href="../Mechanics.md#mass-wars" class="dropdown-item">🗡  Masswar</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../Mechanics.md#Structures" class="nav-link">📡 Structures</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../Mechanics.md#Turrets" class="nav-link">🔫 Turrets</a>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ms-md-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-bs-toggle="modal" data-bs-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-bs-toggle="collapse" data-bs-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-body-tertiary">
+        <ul class="nav flex-column">
+            
+            
+            
+            
+            
+            <li class="nav-item" data-bs-level="1"><a href="#heap-dumps" class="nav-link">Heap Dumps</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-bs-level="1"><a href="#data-corruption" class="nav-link">Data Corruption</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<p>This is a comprehensive <a href="https://en.wikipedia.org/wiki/Troubleshooting">troubleshooting</a> guide designed specifically for this plugin, although most of it involves basics of troubleshooting for any software.</p>
+<p>You don't need to read and do all the steps below, but reading it definitely adds to your "general knowledge" as a server owner and can be extremely useful.</p>
+<p>You can report bugs in the <a href="https://www.spigotmc.org/threads/435368/">Spigot's Discussions</a>, by joining the <a href="https://discord.gg/cKsSwtt">Discord</a> server, or opening an issue on <a href="https://github.com/CryptoMorin/KingdomsX/issues">GitHub</a>. Out of all these places, the Discord server is the most active of them all.</p>
+<h3 id="before-reporting">Before Reporting<a class="headerlink" href="#before-reporting" title="Permanent link">&para;</a></h3>
+<p>Before reporting bugs, let's make sure about a few things.<br />
+* You're using Java 8 or 11 (16 for Minecraft 1.17+). Any Java version above Java 8 should work, but not necessarily.<br />
+* Make sure you're not in <a href="https://github.com/CryptoMorin/KingdomsX/wiki/Permissions#admin-mode">Admin Mode</a> or have <a href="https://github.com/CryptoMorin/KingdomsX/wiki/Permissions">permissions</a> (or op) that can bypass specific limits.<br />
+* You're using the latest server version of that minor update. For example, the plugin doesn't support <code>1.14</code>, <code>1.14.1</code>, <code>1.14.2</code> and <code>1.14.3</code> It only supports <code>1.14.4</code> which is the latest (patch) version of <strong>1.14</strong> minor version.<br />
+* Make sure you're using the latest dev-build which is accessible in the discord server. The version on the Spigot is also the latest dev-build most of the times. This might cause other <a href="https://github.com/CryptoMorin/KingdomsX/wiki/Installation#stability">instability</a> issues.<br />
+* You're using Spigot or Paper. Other forks might cause issues.<br />
+* Check if other plugins are causing this issue (plugin conflicts). Read <a href="https://github.com/CryptoMorin/KingdomsX/wiki/Installation#compatibility">compatibility</a> section for info on what's supported and what isn't. Specially if you're using server mods, which are not supported.<br />
+* Check if your issue is related to a broken/outdated config file.<br />
+* Some <a href="https://github.com/CryptoMorin/KingdomsX/wiki/Troubleshooting#data-corruption">corrupted data</a> errors automatically fix themselves after occurring once. They usually come with a message before the error. These issues can only be caused by manually modifying data files, force stopping the server or server crashes.<br />
+* Due to the nature of <a href="https://github.com/CryptoMorin/KingdomsX/wiki/Features#compilers">compilers</a> design system, some plugin errors are actually made for server owners to understand them. Make sure to actually read the error message first. The useful messages are <em>typically</em> the first 2 messages in the whole error.<br />
+* Check the <a href="https://github.com/CryptoMorin/KingdomsX/wiki/FAQ">FAQ</a> to see if your issue has been answered there.</p>
+<h3 id="reporting">Reporting<a class="headerlink" href="#reporting" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Explain your issue, don't just leave the error unless you're sure that it's self-explanatory (which you cannot tell unless you're a Java developer.)</li>
+<li>Make sure to include the whole error, DO NOT cut the error. Some errors also have a message before them, make sure to include those as well when reporting. If you're not 100% sure, just paste the whole log file.</li>
+<li>When sending errors use <a href="https://pastebin.com/">Pastebin</a> (or any other pasting service). Don't send screenshots or files (unless you're sending the whole log) or other pasting websites. (It's always better to post errors as plain text inside Discord, since Discord will automatically capture huge texts as a file format, and Discord also has a file viewer which is much better in terms of accessibility than using Pastebin.)</li>
+<li>Specify your server version and build. In most cases this is already in the error. It's not really necessary. (You can get that in <a href="https://bukkit.fandom.com/wiki/CraftBukkit_Commands#Bukkit_Commands_and_Permissions">/ver</a> command)</li>
+<li>If something is not working without a console error, the reproduction steps from scratch are needed, not when it happens all of the sudden. I cannot help you if you don't provide reproduction steps.</li>
+</ul>
+<h3 id="plugin-conflict">Plugin Conflict<a class="headerlink" href="#plugin-conflict" title="Permanent link">&para;</a></h3>
+<p>A plugin conflict means that two or more plugins are defining a set of behaviors that is not compatible with each other and this incompatibility can lead to different issues. In simpler words, it's when a plugin does something that breaks something else in another plugin.</p>
+<p><strong>Software conflicts</strong> are a general issue and can happen between different types of softwares. This conflict can happen between plugin-plugin, mod-mod and even plugin-mod (which is a highly probable conflict.) Most of the time this is not a bug and simply an incompatibility between the two plugins that the developers can choose to add support for.</p>
+<p>Here are some examples regarding to kingdoms plugin specifically:<br />
+* Installing both kingdoms and another faction plugin will not work because kingdoms will not know which chunks are considered to be claimed by the other plugin and vice versa (the faction plugin doesn't know which lands are claimed by kingdoms) to prevent them from being claimed again.<br />
+* Installing a mob limiter/anti-lag plugin it's possible that it'll prevent kingdom guards/soldiers from spawning.<br />
+* Installing a chat plugin while having kingdoms global chat formatting enabled can result in duplicate chats.<br />
+* Mods and plugins inherently use different systems and they're bound to conflict at some point.</p>
+<h5 id="identifying-conflicting-plugin">Identifying conflicting plugin<a class="headerlink" href="#identifying-conflicting-plugin" title="Permanent link">&para;</a></h5>
+<ol>
+<li>Remove all plugins except kingdoms to confirm that it's a plugin conflict.</li>
+<li>Remove 50% of the plugins (except kingdoms of course)<ul>
+<li>If the issue is solved that means the problematic plugin is in that removed 50% so remove all plugins and put those 50% of the plugins that you removed then repeat <em>step 2</em>.</li>
+<li>If the issue not solved, that means the problematic plugin is in the remaining 50% so repeat <em>step 2</em> again.</li>
+</ul>
+</li>
+</ol>
+<h3 id="timings">Timings<a class="headerlink" href="#timings" title="Permanent link">&para;</a></h3>
+<p>If you're experiencing lag in your server, you need to get a timings report using <a href="https://spark.lucko.me/">spark</a> plugin which is available on all platforms.</p>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>Spigot and Paper timings are no longer accepted. Please use <strong>spark</strong> instead.</p>
+</div>
+<p>Now, to start timings, you have to turn it on by using <a href="https://spark.lucko.me/docs/Command-Usage#spark-profiler">/spark profiler start --thread *</a> command, then you'll have to wait <strong>at least 30 minutes</strong> for it to gather accurate information. Once the 30 minutes is done, get a report using <code>/spark profiler open</code> command. Now you'll get a link. Report that link to the developer.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>When getting timings report it's important to specify the <code>--thread *</code> option. This makes the profiler to monitor all of the server threads for potential issues in threads other than the main one, since KingdomsX takes advantage of <a href="https://en.wikipedia.org/wiki/Multithreading_(computer_architecture)">Multithreading</a> to improve the server's performance. While this itself will take more resources and increase the file size, it will give more information that can be used.</p>
+</div>
+<p>During the time you wait for timings to gather information, the best thing you can do and you should do is to continue doing what you might suspect to be the source of the lag. For example, if you're experiencing server lag when someone breaks a structure block, then keep placing and breaking structure blocks during that time.</p>
+<p>Note that the only part of the plugin that is known to be laggy is turrets. The rest of the plugin is completely optimized using the latest techniques (unless it's a bug) If you increased your turret limit per land or changed their settings in Turrets folder unreasonably, I cannot help.<br><br />
+Also, FPS drops or high pings are not related to most plugins (at least not this one.)</p>
+<p><img lazy align="right" alt="Chunk Whole View" src="https://github.com/CryptoMorin/KingdomsX/assets/25098093/19cf3bec-2466-4906-9d71-3421e3149845"></p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p><strong>Lag Spikes:</strong> This is a term that is used when your MSPT <a href="https://en.wikipedia.org/wiki/Percentile">95%ile</a> is around an acceptable value (under <strong>50ms</strong>), but your <strong>max MSTP</strong> is significantly higher (e.g. 100+ even as high as 3000) these are lags that occur from time to time that last for a short amount of time; hence the word spike; which is still noticeable to players, but for a very short amount of time. To track these kinds of spikes, you only need to monitor tasks that take longer than average. You can configure spark to do this by using <a href="https://spark.lucko.me/docs/Command-Usage#spark-tickmonitor">/spark tickmonitor --threshold-tick \&lt;milliseconds&gt;</a> command where <strong><milliseconds></strong> should be set to a value higher than 100.</p>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p><a href="https://flags.sh/">flags.sh</a> website has nothing to do with all this, but it's a nice Aikar's flags generator.</p>
+</div>
+<h1 id="heap-dumps">Heap Dumps<a class="headerlink" href="#heap-dumps" title="Permanent link">&para;</a></h1>
+<p><img align="right" width="621" height="564" alt="heapdump besting compression settings" src="https://github.com/user-attachments/assets/7c333ec9-8bcd-4466-bddc-6729e0d255c7" /></p>
+<p>A heap dump is a great way to analyze memory leaks that can be caused by the plugin. However, the significant downside of them is the extremely big file size that it produces. You can get a full heap dump by using <a href="https://spark.lucko.me/docs/Command-Usage#spark-heapdump"><strong>/spark heapdump</strong></a> (make sure to choose no compression)</p>
+<p>Thankfully there are ways to significantly compress heap dumps. If you want to get a general idea of what your memory is being used on, you can use <a href="https://spark.lucko.me/docs/Command-Usage#spark-heapsummary"><strong>/spark heapsummary</strong></a>, but this is not useful in most cases.<br><br />
+The best zipping program that's currently known to compress them is the free <a href="https://www.7-zip.org/">7zip</a> program. You should compress your heap dumps with the settings highlighted in red as shown in the screenshot.<br><br />
+When done correctly, this can for example compress a <code>8GB</code> -&gt; <code>800MB</code>.</p>
+<h3 id="reproduction-steps">Reproduction Steps<a class="headerlink" href="#reproduction-steps" title="Permanent link">&para;</a></h3>
+<p>Most errors are straight-forward for many developers, but sometimes there might be no errors at all or you might be asked to provide <strong>reproduction steps</strong> in order for a developer to help you. No, this doesn't mean that they want you to show them a step by step guide on how to fuck them. What this term means is that the developer of the plugin cannot make the error happen (reproduce) on their machine (usually a clean paper server installation with the latest version of the plugin and server software with no other plugin installed, unless specifically related to the error), so you have to give them <strong>reproduction steps</strong> which is short way of saying, "What do I (the developer) need to do to make this error happen?". <a href="https://softwareengineering.stackexchange.com/questions/429425">Without this it's almost impossible for me to fix certain errors</a>, because it can depend on various things such as your server software, version, conflicting plugins, configs, data and even OS.</p>
+<hr />
+<h4 id="images">Images<a class="headerlink" href="#images" title="Permanent link">&para;</a></h4>
+<p>Images are sometimes useful, but if you send an image of your entire screen and expect someone to spot the issue, that's not going to work. You need to explain what the issue is when you send images. Use <a href="https://support.microsoft.com/en-us/windows/use-snipping-tool-to-capture-screenshots-00246869-1843-655f-f220-97299b865f6b">Windows Snip &amp; Sketch tool</a> which is the best screenshot tool you can get, and only capture the important parts, or even highlight small important details with the markers in the tool.</p>
+<h4 id="videos">Videos<a class="headerlink" href="#videos" title="Permanent link">&para;</a></h4>
+<p>Videos are sometimes very helpful and sometimes it just makes things very confusing. For example, if you send a video showing issues related to small graphic details and your video's quality is too low, nobody can understand anything from it. Sending a video without explaining anything in plain text, like what the issue is and what you're doing (specially when you're pressing keyboard keys) isn't going to help.<br />
+In fact, you should never send videos, make GIFs, that way you can capture a part if your screen with the best quality and lowest size, FPS isn't an issue in almost all reports. If you're going to send videos, please, make sure they're not larger than 50MB.</p>
+<hr />
+<h4 id="explanation">Explanation<a class="headerlink" href="#explanation" title="Permanent link">&para;</a></h4>
+<p>You need to explain reproduction steps in detail. Specially when it involves other plugins. I as Minecraft plugin dev, have a basic general knowledge about most other popular plugins, but I can't remember all the details and I need to be sure.<br><br />
+For example if you tell me:</p>
+<blockquote>
+<p>This happens when I right-clicked the item and my Nexus GUI opened.</p>
+</blockquote>
+<p>Ignoring what "this" refers to, the first issue here is that a lot of context is missing. What item did you right-click exactly? How did this item have the ability to open the nexus GUI?<br><br />
+After rewording it a little, the reporter now says:</p>
+<blockquote>
+<p>I'm using <a href="https://dev.bukkit.org/projects/chest-commands">ChestCommands</a> to open the nexus GUI.</p>
+</blockquote>
+<p>But the question still remains. How can the item actually open the nexus GUI? Well, in this case, it's very obvious from the plugin's name. Any moron can guess that it opens "chests" (GUIs) with "commands" and the command that can open Nexus GUI remotely is <a href="https://github.com/CryptoMorin/KingdomsX/wiki/Commands#k-nexus">/k nexus open</a>, but developers don't like this kind of guessing game or start reading the entire plugin's description/wiki just to find this little piece of information. So, a complete useful sentence will be:</p>
+<blockquote>
+<p>I use ChestCommands plugin which allows me to bind any command, such as <strong>/k nexus open</strong> to a certain item and it executes that command when I right-click that item. When I right-click that item, it opens my Nexus GUI, and that's where this issue happens.</p>
+</blockquote>
+<hr />
+<p>Not all reproduction steps are useful. I need steps that actually <strong>contribute</strong> to the issue. For example, if you tell me:</p>
+<blockquote>
+<p>/k nexus command doesn't open any GUI after dying, re-spawning and going to the server's spawn</p>
+</blockquote>
+<p>and the actual issue being:</p>
+<blockquote>
+<p>/k nexus command doesn't open any GUI after dying and re-spawning</p>
+</blockquote>
+<p>the fact that "you went to the server's spawn" doesn't change anything. The issue still occurs if you don't go there, thus that doesn't contribute to the reproduction steps and is a waste of time for both people who reported it and people testing it.</p>
+<p>This also includes situations when the developer asks you about a specific thing and only want an answer related to that specific thing. Having additional information isn't necessarily going to annoy the developer, it's just that it might be a waste of time, specially for you. This mostly happens with yes-no questions.</p>
+<h1 id="data-corruption">Data Corruption<a class="headerlink" href="#data-corruption" title="Permanent link">&para;</a></h1>
+<p>Data corruption is a <a href="https://en.wikipedia.org/wiki/Data_corruption">common issue</a> not just with Kingdoms or Minecraft, but with a lot of other software.<br><br />
+Sometimes server owners don't properly shut down their servers by using the shut down button on their panel or using the standard <code>/stop</code> command. Or sometimes their server just crashes entirely due to some plugin, lack of resources, etc. Or sometimes they manually change data or important settings that can break things. This leads to a serious issue in which data isn't properly saved and synchronized. When someone <strong>force stops</strong> the server (by closing the terminal window or killing the process) or the server crashes, no plugin has any time to react to save itself. It's like shooting someone in the head and expecting them to do something about it. This isn't the matrix... Or is it?</p>
+<p>Some of these issues include:<br />
+* Worlds being deleted or renamed. Kingdoms will get confused because it had data in a certain world, but now it cannot find it.<br />
+* Data fails to synchronize:<br />
+  * A kingdom thinks a player is their member, but the player data contradicts it, saying that they're not.<br />
+  * A kingdom thinks a land is claimed, but the land data contradicts it, saying that it doesn't belong to that kingdom.<br />
+  * A structure/turret is placed, but the block was broken and Kingdoms data wasn't saved, but the World data was. It leads to invisible structures.<br />
+* The data file itself was corrupted due to not having enough space, not completing the file write operation, other IO failures, etc.<br />
+* Data being changed manually in an attempt to fix an error to cause even more issues.<br />
+* A kingdoms/server error occurring which can potentially save your data in a bad format and you ignoring.<br />
+* Deleting certain settings that the existing data relies on. For example deleting a <a href="https://github.com/CryptoMorin/KingdomsX/tree/master/core/src/main/resources/Turrets">turret style config file</a> while there are some turrets with that same style placed around the world.</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>Some of these issues can be avoided in case of a system failure if you use a proper <a href="https://github.com/CryptoMorin/KingdomsX/blob/b7feed6dd539a58a2be515215d2011c85bf5b0a3/core/src/main/resources/config.yml#L162-L186">database method</a> like <code>H2</code> (which is the default), but older versions of the plugin only had <code>JSON</code>, which couldn't properly deal with these issues.</p>
+</div>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>While the plugin attempts to fix <em>some</em> of these issues automatically as it encounters them, it's better to fix them manually as soon as possible as they can cause other issues later on.</p>
+</div>
+<p>In order to fix these issues, a magical command was added called <a href="https://github.com/CryptoMorin/KingdomsX/wiki/Commands#k-admin-fsck">/k admin fsck</a>.</p></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script src="../js/bootstrap.bundle.min.js"></script>
+        <script>
+            var base_url = "..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../js/base.js"></script>
+        <script src="../javascripts/mathjax.js"></script>
+        <script src="https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js"></script>
+        <script src="../search/main.js"></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p>From here you can search these documents. Enter your search terms below.</p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results" data-no-results-text="No results found"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>

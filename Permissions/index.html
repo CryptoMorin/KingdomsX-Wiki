@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="light">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        <link rel="canonical" href="https://wiki.kingdomsx.com/Permissions/">
+        <link rel="shortcut icon" href="../img/favicon.ico">
+        <title>🔓 Permissions - KingdomsX</title>
+        <link href="../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../css/fontawesome.min.css" rel="stylesheet">
+        <link href="../css/brands.min.css" rel="stylesheet">
+        <link href="../css/solid.min.css" rel="stylesheet">
+        <link href="../css/v4-font-face.min.css" rel="stylesheet">
+        <link href="../css/base.css" rel="stylesheet">
+        <link id="hljs-light" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" >
+        <link id="hljs-dark" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github-dark.min.css" disabled>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+        <script>hljs.highlightAll();</script> 
+    </head>
+
+    <body>
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="..">KingdomsX</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar-collapse" aria-controls="navbar-collapse" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="nav-item">
+                                <a href="../Home.md.md" class="nav-link">🏠 Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../Features/" class="nav-link">🔰 Features</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../Installation/" class="nav-link">📥 Installation</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../Installation.md#setup" class="nav-link">📗 Setup</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../Installation.md#compatibility" class="nav-link">📘 Compatibility</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../FAQ/" class="nav-link">❓ FAQ</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../NFAQ/" class="nav-link">⁉️ NFAQ</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../Addons/" class="nav-link">⚜️ Addons</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../Outposts/" class="nav-link">🚩 Outposts</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../Peace-Treaties/" class="nav-link">☮️ Peace Treaties</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../Map-Viewers-Addon/" class="nav-link">🗺️ Map Viewers</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../EngineHub-Addon/" class="nav-link">🏬 EngineHub</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../Admin-Tools/" class="nav-link">🛠  Admin Tools</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../Introduction/" class="nav-link">❇️ Introduction</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../Commands/" class="nav-link">⌨️ Commands</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../Commands.md#players" class="nav-link">👨‍🦱 Players</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../Commands.md#admins" class="nav-link">👩‍⚖️ Admins</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="./" class="nav-link active" aria-current="page">🔓 Permissions</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../Placeholders/" class="nav-link">🔣 Placeholders</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../Placeholders.md#players" class="nav-link">🚹 Players</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../Placeholders.md#kingdoms" class="nav-link">🏛 Kingdoms</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../Placeholders.md#nations" class="nav-link">🏢 Nations</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../Config/" class="nav-link">📁 Config</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../YAML/" class="nav-link">📃 YAML</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../Languages/" class="nav-link">💱 Languages</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../GUIs/" class="nav-link">📱 GUI</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../Protection-Signs/" class="nav-link">🔒 Protection Signs</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../Mails/" class="nav-link">✉️ Mails</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../Mechanics/" class="nav-link">📚 Mechanics</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"  aria-expanded="false">⚔️ Invasion</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../Mechanics.md#Invasion" class="dropdown-item">None</a>
+</li>
+                                    
+<li>
+    <a href="../Mechanics.md#Preparing" class="dropdown-item">🛡️ Preparing</a>
+</li>
+                                    
+<li>
+    <a href="../Mechanics.md#Champion" class="dropdown-item">🧟 Champion</a>
+</li>
+                                    
+<li>
+    <a href="../Mechanics.md#mass-wars" class="dropdown-item">🗡  Masswar</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../Mechanics.md#Structures" class="nav-link">📡 Structures</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../Mechanics.md#Turrets" class="nav-link">🔫 Turrets</a>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ms-md-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-bs-toggle="modal" data-bs-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                            <li class="nav-item">
+                                <a rel="prev" href="../Commands/" class="nav-link">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a rel="next" href="../Placeholders/" class="nav-link">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-bs-toggle="collapse" data-bs-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-body-tertiary">
+        <ul class="nav flex-column">
+            
+            
+            
+            
+            <li class="nav-item" data-bs-level="1"><a href="#other-permissions" class="nav-link">Other Permissions</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<p>Plugin basic permissions needed for players are all given by default.<br><br />
+All the command permissions use the following format: <strong>kingdoms.command.[groups...].\<name></strong><br><br />
+Where <strong>\<name></strong> is the main command name (not their aliases) and <strong>[groups...]</strong> are the group's main command names.</p>
+<h3 id="examples">Examples:<a class="headerlink" href="#examples" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Command</th>
+<th>Permission</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>/k fly</strong></td>
+<td>kingdoms.command.fly</td>
+</tr>
+<tr>
+<td><strong>/k show</strong></td>
+<td>kingdoms.command.show</td>
+</tr>
+<tr>
+<td><strong>/k info</strong></td>
+<td>kingdoms.command.show</td>
+</tr>
+<tr>
+<td><strong>/k nation spawn</strong></td>
+<td>kingdoms.command.nation.spawn</td>
+</tr>
+<tr>
+<td><strong>/k admin disband</strong></td>
+<td>kingdoms.command.admin.disband</td>
+</tr>
+<tr>
+<td><strong>/k admin unclaim</strong></td>
+<td>kingdoms.command.admin.unclaim</td>
+</tr>
+<tr>
+<td><strong>/k admin nation disband</strong></td>
+<td>kingdoms.command.admin.nation.disband</td>
+</tr>
+</tbody>
+</table>
+<p>Notice how the permission for <code>/k info</code> and <code>/k show</code> are the same, since the former is an alias of the latter command. It wouldn't accept <code>kingdoms.command.info</code> even if you changed its name in <code>commands.yml</code></p>
+<p>Note that some names are not command groups, they're command arguments.<br />
+For example in <strong>/k invade ransack</strong> command, the <code>ransack</code> is an optional command argument, however you can still use a permission for it, which is <strong>kingdoms.command.invade.ransack</strong>, but that is not the same for all the other arguments of other commands.</p>
+<p>To make this easier, the plugin has an admin command named <a href="https://github.com/CryptoMorin/KingdomsX/wiki/Commands#k-admin-command">/k admin command</a> that lets you get and copy permission of a specific command using its main name or alias.</p>
+<p>If your permission plugin supports wildcards <code>*</code> you can use that as well. For example <strong>kingdoms.command.admin.</strong>*<br><br />
+An ideal permission plugin suitable for any server is <a href="https://www.spigotmc.org/resources/28140/">LuckPerms</a>.</p>
+<h3 id="removing-default-permissions">Removing Default Permissions<a class="headerlink" href="#removing-default-permissions" title="Permanent link">&para;</a></h3>
+<p>To take away the default permissions given to players, you have to give them a negative permission. Different permission plugins have different ways of doing this. It's always recommended to use the plugin's commands to do these.<br><br />
+For example, to take <strong>kingdoms.command.home</strong> permission using <a href="https://github.com/lucko/LuckPerms/wiki/Command-Usage:-Permission#lp-usergroup-usergroup-permission-set-node-truefalse-context">LuckPerms</a>, you need to do <strong>/lp group \<group> permission set kingdoms.command.home false</strong> (which in LuckPerms context, the group is <strong>default</strong> in most cases)<br />
+Please only use this if you want to disable the command for a certain group. If you want to completely remove a command go to <code>commands.yml</code>config.</p>
+<p>If you don't have permissions by default, it's possible that:<br />
+* You negated <code>*</code> or <code>kingdoms.*</code> permission from the default group.<br />
+* You turned off <a href="https://luckperms.net/wiki/Configuration#apply-bukkit-default-permissions">Bukkit default permissions</a> for LuckPerms.<br />
+* Your permission plugin doesn't support default groups.</p>
+<h3 id="admin-mode">Admin Mode<a class="headerlink" href="#admin-mode" title="Permanent link">&para;</a></h3>
+<p>The plugin has an easy way to access everything in the plugin with just a single command. You'll be able to bypass all the limitations and requirements such as the resource points or money needed for something, or the blacklisted/whitelisted names. This mode will even bypass some limitations that <strong>even opped players can't</strong>.<br><br />
+<a href="https://github.com/CryptoMorin/KingdomsX/wiki/Commands#k-admin-toggle">/k admin toggle</a> will toggle admin mode and you'll be able to access all the kingdom permissions.<br><br />
+This mode will not stay after logins. You can change this in <code>config.yml</code> -&gt; <code>keep-admin-mode</code><br><br />
+<strong>Note:</strong> Remember to always make sure that your admin mode is turned off before reporting bugs as it removes almost 99% of the restrictions which some are extremely game breaking.</p>
+<hr />
+<p><br></p>
+<h1 id="other-permissions">Other Permissions<a class="headerlink" href="#other-permissions" title="Permanent link">&para;</a></h1>
+<table>
+<thead>
+<tr>
+<th>Permission</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>kingdoms.command.&lt;command&gt;.bypass.cooldown</code></td>
+<td>Bypass cooldown of a specific command.</td>
+</tr>
+<tr>
+<td><code>kingdoms.command.&lt;command&gt;.bypass.disabled-worlds</code></td>
+<td>Bypass disabled worlds for a certain command.</td>
+</tr>
+<tr>
+<td><code>kingdoms.land.build.place</code></td>
+<td>Place blocks in other kingdom's lands.</td>
+</tr>
+<tr>
+<td><code>kingdoms.land.build.break</code></td>
+<td>Break blocks in other kingdom's lands.</td>
+</tr>
+<tr>
+<td><code>kingdoms.land.bypass.creative</code></td>
+<td>Allow players to walk in lands that are owned by kingdoms without <strong>CEASEFIRE</strong> relationship attribute.</td>
+</tr>
+<tr>
+<td><code>kingdoms.land.interact</code></td>
+<td>Interact and use blocks in other kingdom's lands.</td>
+</tr>
+<tr>
+<td><code>kingdoms.(structures \| turrets).build.place</code></td>
+<td>Place structures/turrets in any (claimed) land.</td>
+</tr>
+<tr>
+<td><code>kingdoms.(structures \| turrets).build.break</code></td>
+<td>Break structures/turrets in any land.</td>
+</tr>
+<tr>
+<td><code>kingdoms.(structures \| turrets).interact</code></td>
+<td>Interact with structures/turrets in any land.</td>
+</tr>
+<tr>
+<td><code>kingdoms.structures.warppad.bypass.countdown</code></td>
+<td>Warp Pad teleport countdown bypass.</td>
+</tr>
+<tr>
+<td><code>kingdoms.inventory.bypass</code></td>
+<td>Prevents players from using kingdom items as vanilla items (e.g. fuel in furnace)</td>
+</tr>
+<tr>
+<td><code>kingdoms.command.claim.chunk</code></td>
+<td>Claim using <a href="https://github.com/CryptoMorin/KingdomsX/wiki/Commands#k-claim-autofillx-y">/k claim <x> <y></a> command. Note this is required for claiming from <a href="https://github.com/CryptoMorin/KingdomsX/wiki/Commands#k-map-autoresetheight-width">/k map</a></td>
+</tr>
+<tr>
+<td><code>kingdoms.command.show.others</code></td>
+<td>View another kingdom's info for <a href="https://github.com/CryptoMorin/KingdomsX/wiki/Commands#k-show-kingdomplayerkingdomplayer-kingdomplayer">/k show</a></td>
+</tr>
+<tr>
+<td><code>kingdoms.command.show.admin</code></td>
+<td>View the full info of another kingdom using <a href="https://github.com/CryptoMorin/KingdomsX/wiki/Commands#k-show-kingdomplayerkingdomplayer-kingdomplayer">/k show</a></td>
+</tr>
+<tr>
+<td><code>kingdoms.command.nation.show.others</code></td>
+<td>View another nation's info.</td>
+</tr>
+<tr>
+<td><code>kingdoms.command.nation.show.admin</code></td>
+<td>View the full info of another nation.</td>
+</tr>
+<tr>
+<td><code>kingdoms.command.teleport.bypass.timer</code></td>
+<td>Bypass the <a href="https://github.com/CryptoMorin/KingdomsX/wiki/Commands#k-teleport">/k tp</a> teleportation timer for not moving.</td>
+</tr>
+<tr>
+<td><code>kingdoms.command.home.bypass.timer</code></td>
+<td>Bypass the <a href="https://github.com/CryptoMorin/KingdomsX/wiki/Commands#k-home">/k home</a> teleportation timer for not moving.</td>
+</tr>
+<tr>
+<td><code>kingdoms.command.nation.home.bypass.timer</code></td>
+<td>Bypass the <code>/k nation spawn</code> teleportation timer for not moving.</td>
+</tr>
+<tr>
+<td><code>kingdoms.command.admin.execute.console</code></td>
+<td>Permission for executing <a href="todo">/k admin execute console ...</a> This is disabled by default even for OPs as a security measure.</td>
+</tr>
+<tr>
+<td><code>kingdoms.nexus.remove</code></td>
+<td>Permission to remove nexus structure even if</td>
+</tr>
+<tr>
+<td><code>kingdoms.protection-signs.use</code></td>
+<td>Permission to use protection signs. Enabled by default.</td>
+</tr>
+<tr>
+<td><code>kingdoms.protection-signs.use.creative</code></td>
+<td>Permission to use protection signs in creative mode. Enabled by default.</td>
+</tr>
+<tr>
+<td><code>kingdoms.protection-signs.open</code></td>
+<td>Open any protected blocks.</td>
+</tr>
+<tr>
+<td><code>kingdoms.protection-signs.break</code></td>
+<td>Break any protected blocks or signs.</td>
+</tr>
+<tr>
+<td><code>kingdoms.command.visualize.details</code></td>
+<td><a href="https://github.com/CryptoMorin/KingdomsX/wiki/Commands#k-visualize-togglepermanent">/k visualize</a> Shows almost every detail of the current land.</td>
+</tr>
+<tr>
+<td><code>kingdoms.debug</code></td>
+<td>Permission to view debug messages. Debug messages are quite rare in the plugin.</td>
+</tr>
+<tr>
+<td><code>kingdoms.updates</code></td>
+<td>Sends a message to the player if the update checker is enabled and the plugin is outdated.</td>
+</tr>
+<tr>
+<td><code>kingdoms.creative.pickup</code></td>
+<td>Pickup structures and turrets in creative mode.</td>
+</tr>
+<tr>
+<td><code>kingdoms.silent.leave</code></td>
+<td>Leave the server without the leave message.</td>
+</tr>
+<tr>
+<td><code>kingdoms.silent.join</code></td>
+<td>Join the server without the join message.</td>
+</tr>
+<tr>
+<td><code>kingdoms.flight.damage</code></td>
+<td>Player flight will not be disabled after taking damage.</td>
+</tr>
+<tr>
+<td><code>kingdoms.flight.lands</code></td>
+<td>Player flight will not be disabled while entering lands other than the player's kingdom.</td>
+</tr>
+<tr>
+<td><code>kingdoms.flight.nearby-enemies</code></td>
+<td>Player flight will not be disabled if an enemy is nearby.</td>
+</tr>
+<tr>
+<td><code>kingdoms.chat.colors</code></td>
+<td>Use color codes in the chat.</td>
+</tr>
+<tr>
+<td><code>kingdoms.chat.tag</code></td>
+<td>Permission to tag players in chat.</td>
+</tr>
+<tr>
+<td><code>kingdoms.chat.bypass.ranged</code></td>
+<td>Allow players to use the prefix defined in the config to bypass the ranged channel and send the message to everyone.</td>
+</tr>
+<tr>
+<td><code>kingdoms.inactivity.disband</code></td>
+<td>Prevents the kingdom that the player is in being disbanded due to inactivity.</td>
+</tr>
+<tr>
+<td><code>kingdoms.markers.default</code></td>
+<td>Allow players to use <a href="https://github.com/CryptoMorin/KingdomsX/wiki/Commands#k-visualize-markers-type">/k visualize markers</a> to set their markers type to default.</td>
+</tr>
+<tr>
+<td><code>kingdoms.markers.blocks</code></td>
+<td>Allow players to use <a href="https://github.com/CryptoMorin/KingdomsX/wiki/Commands#k-visualize-markers-type">/k visualize markers</a> to set their markers type to block visualizers.</td>
+</tr>
+<tr>
+<td><code>kingdoms.markers.&lt;particle&gt;</code></td>
+<td>Allow players to use <a href="https://github.com/CryptoMorin/KingdomsX/wiki/Commands#k-visualize-markers-type">/k visualize markers</a> to set their markers type to one of the particle types (by default <code>horizontal</code> and <code>vertical</code>) Note if you added or removed a particle marker type, these permission names may be outdated when auto-completing them in a permission plugin. You need to restart the server to fix this.</td>
+</tr>
+<tr>
+<td><code>kingdoms.command.vault.others</code></td>
+<td>Permission for <a href="https://github.com/CryptoMorin/KingdomsX/wiki/Commands#k-vault">/k vault <kingdom></a></td>
+</tr>
+<tr>
+<td><code>kingdoms.command.nexus.open.others</code></td>
+<td>Permission for <a href="https://github.com/CryptoMorin/KingdomsX/wiki/Commands#k-nexus">/k nexus open <kingdom></a></td>
+</tr>
+<tr>
+<td><code>kingdoms.command.pvp.others</code></td>
+<td>Permission for <a href="https://github.com/CryptoMorin/KingdomsX/wiki/Commands#k-pvp">/k pvp <player></a></td>
+</tr>
+<tr>
+<td><code>kingdoms.command.sneak.others</code></td>
+<td>Permission for <a href="https://github.com/CryptoMorin/KingdomsX/wiki/Commands#k-sneak">/k sneak <player></a></td>
+</tr>
+<tr>
+<td><code>kingdoms.see.others.holograms</code></td>
+<td>When holograms are enabled to be seen only by friendly players, this feature allows admins to bypass this.</td>
+</tr>
+</tbody>
+</table></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script src="../js/bootstrap.bundle.min.js"></script>
+        <script>
+            var base_url = "..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../js/base.js"></script>
+        <script src="../javascripts/mathjax.js"></script>
+        <script src="https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js"></script>
+        <script src="../search/main.js"></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p>From here you can search these documents. Enter your search terms below.</p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results" data-no-results-text="No results found"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>

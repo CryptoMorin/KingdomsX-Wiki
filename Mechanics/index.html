@@ -1,0 +1,905 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="light">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        <link rel="canonical" href="https://wiki.kingdomsx.com/Mechanics/">
+        <link rel="shortcut icon" href="../img/favicon.ico">
+        <title>📚 Mechanics - KingdomsX</title>
+        <link href="../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../css/fontawesome.min.css" rel="stylesheet">
+        <link href="../css/brands.min.css" rel="stylesheet">
+        <link href="../css/solid.min.css" rel="stylesheet">
+        <link href="../css/v4-font-face.min.css" rel="stylesheet">
+        <link href="../css/base.css" rel="stylesheet">
+        <link id="hljs-light" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" >
+        <link id="hljs-dark" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github-dark.min.css" disabled>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+        <script>hljs.highlightAll();</script> 
+    </head>
+
+    <body>
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="..">KingdomsX</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar-collapse" aria-controls="navbar-collapse" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="nav-item">
+                                <a href="../Home.md.md" class="nav-link">🏠 Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../Features/" class="nav-link">🔰 Features</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../Installation/" class="nav-link">📥 Installation</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../Installation.md#setup" class="nav-link">📗 Setup</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../Installation.md#compatibility" class="nav-link">📘 Compatibility</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../FAQ/" class="nav-link">❓ FAQ</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../NFAQ/" class="nav-link">⁉️ NFAQ</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../Addons/" class="nav-link">⚜️ Addons</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../Outposts/" class="nav-link">🚩 Outposts</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../Peace-Treaties/" class="nav-link">☮️ Peace Treaties</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../Map-Viewers-Addon/" class="nav-link">🗺️ Map Viewers</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../EngineHub-Addon/" class="nav-link">🏬 EngineHub</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../Admin-Tools/" class="nav-link">🛠  Admin Tools</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../Introduction/" class="nav-link">❇️ Introduction</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../Commands/" class="nav-link">⌨️ Commands</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../Commands.md#players" class="nav-link">👨‍🦱 Players</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../Commands.md#admins" class="nav-link">👩‍⚖️ Admins</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../Permissions/" class="nav-link">🔓 Permissions</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../Placeholders/" class="nav-link">🔣 Placeholders</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../Placeholders.md#players" class="nav-link">🚹 Players</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../Placeholders.md#kingdoms" class="nav-link">🏛 Kingdoms</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../Placeholders.md#nations" class="nav-link">🏢 Nations</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../Config/" class="nav-link">📁 Config</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../YAML/" class="nav-link">📃 YAML</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../Languages/" class="nav-link">💱 Languages</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../GUIs/" class="nav-link">📱 GUI</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../Protection-Signs/" class="nav-link">🔒 Protection Signs</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../Mails/" class="nav-link">✉️ Mails</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="./" class="nav-link active" aria-current="page">📚 Mechanics</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"  aria-expanded="false">⚔️ Invasion</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../Mechanics.md#Invasion" class="dropdown-item">None</a>
+</li>
+                                    
+<li>
+    <a href="../Mechanics.md#Preparing" class="dropdown-item">🛡️ Preparing</a>
+</li>
+                                    
+<li>
+    <a href="../Mechanics.md#Champion" class="dropdown-item">🧟 Champion</a>
+</li>
+                                    
+<li>
+    <a href="../Mechanics.md#mass-wars" class="dropdown-item">🗡  Masswar</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../Mechanics.md#Structures" class="nav-link">📡 Structures</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../Mechanics.md#Turrets" class="nav-link">🔫 Turrets</a>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ms-md-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-bs-toggle="modal" data-bs-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                            <li class="nav-item">
+                                <a rel="prev" href="../Mails/" class="nav-link">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a rel="next" class="nav-link disabled">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-bs-toggle="collapse" data-bs-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-body-tertiary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-bs-level="1"><a href="#invasion" class="nav-link">Invasion</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-bs-level="2"><a href="#preparing" class="nav-link">Preparing</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#champion" class="nav-link">Champion</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#during-invasion" class="nav-link">During Invasion</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#ways-to-end-invasion" class="nav-link">Ways to End Invasion</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#mass-wars" class="nav-link">Mass Wars</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-bs-level="1"><a href="#guards-soldiers" class="nav-link">Guards &amp; Soldiers</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-bs-level="1"><a href="#structures" class="nav-link">Structures</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-bs-level="1"><a href="#turrets" class="nav-link">Turrets</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-bs-level="1"><a href="#power" class="nav-link">Power</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-bs-level="1"><a href="#plunders" class="nav-link">Plunders</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-bs-level="1"><a href="#others" class="nav-link">Others</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<p>These are the special Kingdom mechanics other than the simple claiming stuff.</p>
+<h1 id="invasion">Invasion<a class="headerlink" href="#invasion" title="Permanent link">&para;</a></h1>
+<p>Invading a kingdom is the only way to capture a land that belongs to another kingdom which can be initiated by executing <a href="https://github.com/CryptoMorin/KingdomsX/wiki/Commands#k-invade">/k invade</a> while standing on the <a href="https://github.com/CryptoMorin/KingdomsX/wiki/Introduction#land">land</a> that you would like to invade.</p>
+<p>The main point of invading a kingdom is to loot chests and occupy their buildings. The main component of invasions is your <a href="https://github.com/CryptoMorin/KingdomsX/wiki/Mechanics#champion">champion</a> which is the main defender of your kingdom. Defeat this champion to occupy the land. There are also extra bonuses for invading the nexus chunk, such as extra <strong>resource points</strong> and <strong>money</strong> rewards that are stolen from the kingdom.</p>
+<p>Alternatively you can use <strong>/k ransack</strong> to invade a land to steal a certain amount of their resource points and money without occupying the land which works on all lands other than the nexus.</p>
+<p>The attacker/invader (player who used <code>/k invade</code>) is the main opposing foe of the champion. If this person dies, the attackers will lose. There are <a href="https://github.com/CryptoMorin/KingdomsX/wiki/Mechanics#ways-to-end-invasion">many other ways invasions can end</a> as well.</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>If you felt overwhelmed during an invasion you can <strong>/k surrender</strong> to stop fighting with a penalty.</p>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>All defenders of the kingdom can use <strong>/k teleport</strong> to teleport to the invader in order to fight back and help the champion prevail.</p>
+</div>
+<p>There are many many factors that can prevent you from invading a land. This includes:<br />
+* <a href="https://github.com/CryptoMorin/KingdomsX/blob/37401048e8b102e34044bb98731f7201d8ce01d5/core/src/main/resources/config.yml#L946">Newbie kingdom protection</a><br />
+* <a href="https://github.com/CryptoMorin/KingdomsX/wiki/Introduction#pacifism--shields">Shields &amp; Pacifism</a><br />
+* <strong>Strength Comparison:</strong> This mostly depend on how many members, lands, structures and turrets you have. If you're significantly stronger, you'll not be able to invade weaker kingdoms, but weaker kingdoms can invade stronger kingdoms.<br />
+* <a href="https://github.com/CryptoMorin/KingdomsX/wiki/Introduction#relationships">Relationship</a><br />
+* <a href="https://github.com/CryptoMorin/KingdomsX/wiki/Mechanics#mass-wars">Mass Wars</a> (Some servers only allow invasions during Mass Wars)<br />
+* <strong>CLAIM</strong> and <strong>INVADE</strong> <a href="https://github.com/CryptoMorin/KingdomsX/wiki/Introduction#ranks">permissions</a>.<br />
+* Creative mode, vanish, god mode, etc.<br />
+* Simultaneous Invasions<br />
+* Being invaded by another kingdom<br />
+* Being required to <a href="https://github.com/CryptoMorin/KingdomsX/wiki/Commands#k-challenge">challenge</a> the kingdom.<br />
+* Invasion cooldowns<br />
+* Insufficient resource points or money</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>If you use a plugin like <a href="https://www.spigotmc.org/resources/19286/">Minepacks</a> with unlimited storage,<br />
+it'll destroy the whole purpose of the invasion mechanics. So make sure to limit these functionalities.</p>
+</div>
+<p>There are various settings that controls different aspects of invasions in <code>invasions.yml</code> config.</p>
+<h2 id="preparing">Preparing<a class="headerlink" href="#preparing" title="Permanent link">&para;</a></h2>
+<p>Preparing yourself against invaders is easy if you're familiar with turrets and structures. They play a huge role on protecting your kingdom. A base is another factor, but actually a cliche problem as well. Most people build obsidian walls from 0 to 255th block for a single chunk. The only way to invade these lands are to build a flying machine using redstone around 250th block to invade the land.</p>
+<p>Your nexus chunk, is the most important thing in your kingdom, and it has to have the most security around it. People can mine the nexus to get resource points for every time they break the block.<br><br />
+Powercell structures are specially made for invasions. They're extremely useful when used around the nexus land.</p>
+<h2 id="champion">Champion<a class="headerlink" href="#champion" title="Permanent link">&para;</a></h2>
+<p>The champion is your kingdom main guardian. By default it's a zombie that can be upgraded in the nexus. This mob will spawn when someone tries to invade you. People getting 13 blocks close to the champion, will have the champion's health and time limit bossbars displayed for them.<br><br />
+You can successfully capture a land after you kill the champion. Note that multiple people can invade a single land, so whoever kills the champion faster will get the land. Champions cannot teleport through any portals. Champions will only target the invader and will not change their target under any circumstances.</p>
+<p>Champions are immune to some natural occurrences such as transforming to another mob (zombie to <a href="https://minecraft.gamepedia.com/Drowned#Conversion">Drowned</a>) or burning under the sun.</p>
+<p>Champions support MythicMobs and you can also change your champion type in your nexus.</p>
+<h2 id="during-invasion">During Invasion<a class="headerlink" href="#during-invasion" title="Permanent link">&para;</a></h2>
+<ul>
+<li>You're not allowed to teleport using any tools, commands, portals and etc...</li>
+<li>You're not allowed to use certain commands.</li>
+<li>You're not allowed to interact with certain blocks.</li>
+</ul>
+<h2 id="ways-to-end-invasion">Ways to End Invasion<a class="headerlink" href="#ways-to-end-invasion" title="Permanent link">&para;</a></h2>
+<ul>
+<li>One of the defender members with permission uses <a href="https://github.com/CryptoMorin/KingdomsX/wiki/Commands#k-surrender">/k surrender</a>.</li>
+<li>The attacker does /k surrender</li>
+<li>The attacker logs out.</li>
+<li>The attacker dies in any way.</li>
+<li>The land is unclaimed.</li>
+<li>The kingdom is disbanded for any sides.</li>
+<li>The attacker is kicked out of the kingdom.</li>
+<li>The champion timer ends.</li>
+<li>The champion gets killed.</li>
+</ul>
+<h2 id="mass-wars">Mass Wars<a class="headerlink" href="#mass-wars" title="Permanent link">&para;</a></h2>
+<p>Mass wars are global server events that happen every 12 hours. By default, they only allow you to invade shielded kingdoms and invade for free as many times as you want, but there are many other features to disable/enable certain kingdom features during these events.<br><br />
+Mass wars start with a title announcement and a bossbar showing the progress of the event. They also end with the bossbar progress disappearing and a title announcement. You can manually start or stop a masswar by using <a href="https://github.com/CryptoMorin/KingdomsX/wiki/Commands#k-admin-masswar-startend">/k admin masswar</a> command.<br><br />
+All the MassWar settings can be found in <code>invasions.yml</code><br />
+You can disable MassWar <a href="https://github.com/CryptoMorin/KingdomsX/blob/b4d67a8c13a77a97796be568db86a879e79e3047/core/src/main/resources/invasions.yml#L162">here</a>.</p>
+<hr />
+<p><br></p>
+<h1 id="guards-soldiers">Guards &amp; Soldiers<a class="headerlink" href="#guards-soldiers" title="Permanent link">&para;</a></h1>
+<p>Kingdom guards are the mobs spawned when a player enters a kingdom's land (without <code>CEASEFIRE</code> attribute) these mobs are stronger if the land is a nexus land.<br><br />
+Soldiers are mobs spawned from soldier turrets when the player is within their range.</p>
+<p>All these mob types will spawn right next to the player and will only target that specific player. They will not change their target under any circumstances.<br><br />
+These mobs will disappear under specific conditions:<br />
+* Successfully killed their target.<br />
+* Their target logged out.<br />
+* Their target teleported without using <a href="https://minecraft.gamepedia.com/Ender_Pearl">Ender Pearls</a> and <a href="https://minecraft.gamepedia.com/Chorus_Fruit">Chorus Fruit</a><br />
+* If they couldn't kill their target within a certain amount of time.</p>
+<p>Note that unlike soldiers, kingdom guards will not spawn if even a single guard from the same kingdom is still targeting them. Doesn't matter if their a nexus guard or a normal land mob. In order for the guards to spawn again, all the guards from that kingdom that are targeting the player must disappear.</p>
+<h1 id="structures">Structures<a class="headerlink" href="#structures" title="Permanent link">&para;</a></h1>
+<p>Structures are stationary blocks that provide different functions in kingdoms.<br><br />
+Previously each land could only have a single structure, but now you can have multiple. Note that a single land still cannot contain both kingdom and nation nexus.</p>
+<ul>
+<li><a href="https://github.com/CryptoMorin/KingdomsX/wiki/Introduction#nexus"><strong>Nexus:</strong></a> The most important thing in your kingdom that must be protected. Unlike other structures, nexus structures don't drop an item when they're broken. They'll be also removed automatically once the land is invaded. You can manage your nexus using <a href="https://github.com/CryptoMorin/KingdomsX/wiki/Commands#k-nexus">/k nexus</a> command. Related config settings for nexus can be found in <code>config.yml</code> -&gt; <code>nexus</code></li>
+<li><strong>Powercell:</strong> Protects 3x3 lands around the powercell land from invasions. This means that invaders will have to invade powercell lands first before invading the 3x3 lands around them (if they're claimed).</li>
+<li>If the land is surrounded by walls, check if the kingdom has anti-explosion misc upgrade.</li>
+<li>Check if the land has caves surrounding it so you can invade underground.</li>
+<li>If all negative, build a flying <a href="https://minecraft.gamepedia.com/Tutorials/Flying_machines">slime plane</a>.</li>
+<li><strong>Extractor:</strong> Produces resource points over time with a maximum capacity. They also need fuel to function. Once they run out of fuel, they'll stop producing resource points. For more information on how fuel works, you should open your extractor's GUI.</li>
+<li><strong>Outpost:</strong> Buy different items using resource points and access your nexus remotely.</li>
+</ul>
+<h3 id="warp-pad">Warp Pad<a class="headerlink" href="#warp-pad" title="Permanent link">&para;</a></h3>
+<p>Teleport to all the different structures in your kingdom. Each Warp Pad also has a name that appears inside the GUI for teleporting to other Warp Pads and above the hologram. They require <code>fuel</code> to teleport players around. You can refill a Warp Pad by throwing <code>coals</code> at it. Each coal gives you <code>30</code> fuel.</p>
+<p>The amount of fuel required to teleport to another structure depends on its distance from the Warp Pad (it's half of the amount of blocks between the two structure). So for example, teleporting to a structure right next to the Warp Pad doesn't cost that much, but teleporting to a structure hundreds of chunks away can be quite expensive.<br><br />
+Structures in other worlds are given a special price of <code>300</code> fuel.</p>
+<h3 id="regulator">Regulator<a class="headerlink" href="#regulator" title="Permanent link">&para;</a></h3>
+<p>Manage various things in your land. These are divided into several sections. One common misunderstanding with regulators is that they're <strong>kingdom-wide</strong>, but they only affect the current <a href="https://github.com/CryptoMorin/KingdomsX/wiki/Introduction#land">land</a> that they're placed in. This means that for example disabling mob spawning, will only disable mob spawning in the land that the regulator was placed in. Mobs can still summon from surrounding lands and come to the regulator land.</p>
+<p><strong>Rules:</strong><br />
+* Disable Mob Spawning: Disables mob spawning in certain situations (only natural spawns, lightnings and silverfishes), therefore this does not disable plugin-spawned mobs such as Kingdoms' guards, soldiers and champions.<br />
+* Disable Animal Spawning: The same situations as above apply.<br />
+* Disable Turrets: To temporary allow any players to enter the land without getting hurt.<br />
+* Allow Explosions: Normally this is disallowed because of Misc upgrades. You can disable misc upgrades entirely for the kingdom in the nexus GUI.<br />
+* Auto Fill Turrets: Automatically fills the turrets ammo fully with the cost specified for the full refill in each turret's config. Note that this only activates once the turrets hits 0 ammo and only if the kingdom has enough resource points to afford the costs.</p>
+<p><strong>Attributes:</strong><br />
+Allows certain players outside of your kingdom to manage things inside this land regardless of relationship attributes.</p>
+<p><strong>Interactions:</strong><br />
+Allows certain players outside of your kingdom to interact with certain blocks in this land regardless of relationship attributes.</p>
+<h3 id="siege-cannon">Siege Cannon<a class="headerlink" href="#siege-cannon" title="Permanent link">&para;</a></h3>
+<p>Cannons that can break kingdom shields and other blocks once a kingdom's shield has been destroyed. These cannons require ammo that are loaded by putting a special item in the structure's GUI. Players must sit on the cannon from the GUI and then they are able to shoot by adjusting the cannon's tube and left-clicking.<br />
+You can also right-click anywhere while sitting on a cannon to open the structure's GUI for convenience.<br><br />
+The cannon will tell you about the situation of the land that it hit. Hitting anywhere in a land that belongs to a kingdom will reduce that kingdom's shield. Cannons have a <code>20-10seconds</code> shooting cooldown depending on the cannon's level.<br><br />
+The shield damage, player damage and knockback depends on the type of ammo you used:<br />
+* <strong>Iron Block:</strong><br />
+  * Shield Damage: 2mins<br />
+  * Explosion Radius: 1<br />
+  * Player Damage: 1<br />
+  * Knockback: 1<br />
+  * Building Impact:<br />
+     * Durability Damage: 30<br />
+* <strong>Gold Block:</strong><br />
+  * Shield Damage: 3min<br />
+  * Explosion Radius: 1<br />
+  * Player Damage: 2<br />
+  * Knockback: 2<br />
+  * Building Impact:<br />
+    * Durability Damage: 50<br />
+    * Paralyze: 5s<br />
+* <strong>Fireball:</strong><br />
+  * Shield Damage: 5min<br />
+  * Explosion Radius: 2<br />
+  * Player Damage: 3<br />
+  * Knockback: 3<br />
+  * Building Impact:<br />
+    * Durability Damage: 70<br />
+    * Paralyze: 10s</p>
+<p>Once a kingdom's shield has been destroyed, shooting the land of that kingdom can destroy its turrets and structures even with anti-explosion misc-upgrade. However, these cannons cannot break <code>powercells</code> and <code>nexus</code> structures, and are also intentionally effective for friendly lands — meaning that you could destroy your own land. </p>
+<h3 id="adding-new-levels-to-turrets-and-structures">Adding new levels to turrets and structures<a class="headerlink" href="#adding-new-levels-to-turrets-and-structures" title="Permanent link">&para;</a></h3>
+<p>First you have to find the config file for the building you want to change. Turrets are in <a href="https://github.com/CryptoMorin/KingdomsX/tree/72d8aa1c2af9344d7284cce77d8de990cb94188e/core/src/main/resources/Turrets"><code>plugins/Kingdoms/Turrets</code></a> folder and for structures it's in <a href="https://github.com/CryptoMorin/KingdomsX/tree/72d8aa1c2af9344d7284cce77d8de990cb94188e/core/src/main/resources/Structures"><code>plugins/Kingdoms/Structures</code></a> folder.</p>
+<p>Some structures and turrets may have their own set of rules for each individual level of the building which must be configured as well. (E.g. <a href="https://github.com/CryptoMorin/KingdomsX/blob/72d8aa1c2af9344d7284cce77d8de990cb94188e/core/src/main/resources/Structures/extractor.yml#L56-L68">Extractor's generation options</a>).<br><br />
+But all buildings require these set of options mentioned below to be present so they can function properly.<br><br />
+Some of the options here might not be present in the turret/structure config file that you're editing. You can manually add it yourself.</p>
+<pre class="highlight"><code class="language-yml"># Make sure that this option is increased. All buildings except the nexus only have 3 levels by default.
+max-level: 4</code></pre>
+<pre class="highlight"><code class="language-yml"># This option is already present in the config, just make sure to not completely replace it.
+# You need to add the new "building" section.
+(import):
+  building:
+    anchors: [ &amp;fnPoints fnPoints, &amp;holograms holograms ]
+    extend: false
+
+building:
+  4:
+    # Set this only if you use EngineHub addon.
+    # This should refer to the schematic name in `plugins/Kingdoms/schematics` folder without the extension.
+    # For example, let's say you made a level 4 for extractors, it'd be "structures/extractor/4"
+    # https://github.com/CryptoMorin/KingdomsX/wiki/EngineHub-Addon#how-to-create-a-schematic-for-a-building
+    schematic: ~
+
+    # For single-blocked buildings without EngineHub addon.
+    block:
+      material: LAPIS_BLOCK
+
+      # You need this if your "material" is set to PLAYER_HEAD
+      # Usually used for turrets.
+      # https://github.com/CryptoMorin/KingdomsX/wiki/Config#skin-textures
+      # skull: ...
+
+    functional-points: *fnPoints
+    holograms: *holograms</code></pre>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>After changing any of the options for a building, you need to break and place the building again for the changes to apply.</p>
+</div>
+<p><strong>Why doesn't right-clicking work?</strong><br><br />
+This means that you're using <a href="github.com/CryptoMorin/KingdomsX/wiki/EngineHub-Addon">EngineHub add-on</a> and your <code>functional-points</code> isn't setup correctly.<br><br />
+You need to find the center of your building and configure it manually instead of using <code>*fnPoints</code>. Usually only changing the y component 1 or 2 blocks high will fix the issue.</p>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>Make sure the <code># [Final]</code> comment below (a <a href="https://github.com/CryptoMorin/KingdomsX/wiki/YAML#yaml-annotations">yaml annotation</a>) is kept as well.</p>
+</div>
+<pre class="highlight"><code class="language-yml">building:
+  4:
+    # [Final]
+    functional-points: &amp;fnPoints
+      '0, 0, 0': # &lt;--- Change these coordinates
+        - { type: activation, name: main }
+        - { type: interaction, name: main }
+        - { type: manual, name: main }</code></pre>
+<p><strong>Why are my holograms too low/high?</strong><br><br />
+Same reason as before, except you'd need to manually copy <a href="https://github.com/CryptoMorin/KingdomsX/blob/72d8aa1c2af9344d7284cce77d8de990cb94188e/core/src/main/resources/declarations/building.yml#L96-L144">the entire holograms section</a> and change the height from<br />
+the <code>&amp;height</code> anchor option.</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>If you want to add more levels to all your turrets or structures, doing it this way is not feasible.<br />
+You should learn the more advanced <a href="https://github.com/CryptoMorin/KingdomsX/wiki/YAML#yaml-modules">YAML Modules</a> system to automatic this process, otherwise<br />
+you'd have to repeat this process in every file.</p>
+</div>
+<h3 id="making-custom-turrets-and-structures">Making custom turrets and structures<a class="headerlink" href="#making-custom-turrets-and-structures" title="Permanent link">&para;</a></h3>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Before proceeding. This section of the wiki assumes that you want to make a new structure/turret<br />
+using an already existing built-in system. For example, an extractor but with different generation times.<br />
+If you want to really create a new structure/turret system, you can't just pull it out of thin air, you must<br />
+create it yourself using the <a href="https://github.com/CryptoMorin/KingdomsX/wiki/API#turrets--structures">API</a>.</p>
+</div>
+<p>This section of the wiki focuses on creating a custom structure specifically, however the process of creating a custom turret is the same.</p>
+<p>You can make custom buildings by going to your <a href="https://github.com/CryptoMorin/KingdomsX/tree/master/core/src/main/resources/Structures">Structures</a> or <a href="https://github.com/CryptoMorin/KingdomsX/tree/beea0efd3c97f78fb0d16de4249c96438d02179c/core/src/main/resources/Turrets">Turrets</a> folder and copying one of the buildings files to the same folder. Let's say we wanted to make an extractor that produces more resource points than the normal one.</p>
+<div class="admonition danger">
+<p class="admonition-title">Danger</p>
+<p>The file name is important. This is your building's ID. It's how the plugin stores data and GUIs find the correct building.<br />
+In this example, we copied <code>extractor.yml</code> and named the file <code>super-extractor.yml</code>.</p>
+<p>This means that you cannot change this name once it's placed down, or at least all buildings with this style are removed from<br />
+all worlds, otherwise it will lead to <strong>data corruption</strong>.<br />
+If you ever encountered a situation where you want to rename the style, keep the ID itself but change the displaynames.\<br />
+Do not use any characters other than basic alphanumericals (ABC, 123, -, _) in your file name or it might cause issues.</p>
+</div>
+<p>Here is our new file:</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Most of the config options are not shown here, you can change them yourself but they're all required.<br />
+Only the relevant options are shown.</p>
+</div>
+<pre class="highlight"><code class="language-yml">name: "{$p}Super Extractor"
+type: extractor
+default-name: 'Super Extractor'
+
+generator:
+  1: # Lvl 1
+    amount: 1
+    fuel: 0.5
+    every: 25sec
+  2: # Lvl 2
+    amount: 1
+    fuel: 0.5
+    every: 20sec
+  3: # Lvl 3
+    amount: 1
+    fuel: 0.5
+    every: 10sec</code></pre>
+<p>Most of the options are obvious, but the <a href="https://github.com/CryptoMorin/KingdomsX/blob/beea0efd3c97f78fb0d16de4249c96438d02179c/core/src/main/resources/Structures/extractor.yml#L15">type</a> is important. This is the type of your structure which determines the primary function of your structure and what set of config options it's going to use.</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>For technical purposes, each buliding file represents a <code>style</code> so you can make many styles out of different <code>types</code>. You can't make custom structure types yourself without using the API.</p>
+</div>
+<p>Once you're done configuring your new file, you should make it accessible through nexus structures/turrets GUI. To do that we need to add a new option to the GUI. This is where the file name is important. We need to add an option to the <a href="https://github.com/CryptoMorin/KingdomsX/blob/527d99466be3eea23d8ae588c5fc243eb8d387bb/core/src/main/resources/guis/en/structures/nexus/structures.yml#L22-L34">options</a> section with the same name as the file name (excluding the file's <code>.yml</code> extension), so for example:</p>
+<pre class="highlight"><code class="language-yml">super-extractor:
+  name: "&amp;bSuper Extractor"
+  material: OBSIDIAN
+  lore:
+    - "&amp;6A custom structure!"
+    - ""
+    - "&amp;2Cost&amp;8: &amp;6%cost%"
+  posx: 4
+  posy: 2</code></pre>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>The slot positions are important. You need to look at the turret GUI layout to see which slots are empty to put your turret.</p>
+</div>
+<hr />
+<p><br></p>
+<h1 id="turrets">Turrets<a class="headerlink" href="#turrets" title="Permanent link">&para;</a></h1>
+<p>Turrets are stationary blocks that shoot mobs or heal allies inside and outside of the land within a specific range. They're custom and you can make your own turrets with your own settings and levels in the <code>Turrets</code> folder.<br><br />
+They can only be placed on specific blocks. Namely fences and wall blocks. Although you can technically place them on these blocks and break them again and the turret will continue to function properly. They're cosmetic, it's not intended to be a restrictive measure for turrets, it'd cause lag in some situations.<br><br />
+Turrets are known to be laggy in Kingdoms, so try to keep the usage low. They need ammo to be able to shoot. You can purchase ammo by right-clicking on the turret. They can also be upgraded to increase their range, damage and etc.</p>
+<h3 id="making-custom-turrets">Making custom turrets<a class="headerlink" href="#making-custom-turrets" title="Permanent link">&para;</a></h3>
+<p>You can make custom turrets by going to your <a href="https://github.com/CryptoMorin/KingdomsX/tree/master/core/src/main/resources/Turrets">"Turrets" folder</a> and copying one of the files to the same folder to begin. I recommend starting with <code>arrow.yml</code> because it usually has all the possible options that normal arrow turrets can have and describes each one of them. The name of the file is important, we're going to use that later. For example, we're going to be using <code>singularity.yml</code> as the file name.</p>
+<p>Most of the options are obvious, but the <a href="https://github.com/CryptoMorin/KingdomsX/blob/42ad219ce355a7da6c82fca80a81d8d55924b735/core/src/main/resources/Turrets/arrow.yml#L5">type</a> is important. This is the type of your turret which determines the primary function of your turret and what set of config options it's going to use (for technical purposes, each turret file is known as a <code>turret style</code> so you can make many styles out of different turret types. You can't make custom turret types yourself without using the API.) The most common of course is the default <code>arrow</code> option so we'll leave it at that. If you decided that you want to use a different type, you have to refer to the files of another turret that uses that type to see what config options it's using.</p>
+<p>Once you're done configuring your new file, you should make it accessible through nexus turrets GUI. To do that we need to add a new option to the GUI. This is where the file name is important. We need to add an option to the <a href="https://github.com/CryptoMorin/KingdomsX/blob/527d99466be3eea23d8ae588c5fc243eb8d387bb/core/src/main/resources/guis/en/structures/nexus/turrets.yml#L5">options</a> section with the same name as the file name (excluding the file extension .yml), so for example:</p>
+<p><pre class="highlight"><code class="language-yml">singularity:
+  name: "&amp;bSingularity"
+  material: OBSIDIAN
+  sound: ENTITY_ARROW_SHOOT
+  lore:
+    - "&amp;6A custom turret!"
+    - ""
+    - "&amp;2Cost&amp;8: &amp;6%cost%"
+posx: 1
+posy: 2</code></pre><br />
+But note that the slot positions are important. You need to look at the turret GUI layout to see which slots are empty to put your turret.</p>
+<p>One last thing that you need to do is to make the GUI for the turret itself. The GUI that opens when you right-click them. To do this, go to <a href="https://github.com/CryptoMorin/KingdomsX/tree/master/core/src/main/resources/guis/en/turrets">turrets GUI folder</a> copy one of the files, rename it to the same name as your turret's file name, here <code>singularity.yml</code> again. Usually you don't need to change much with this file. Just change the turret names in the descriptions. Now restart the server and you're good to go.</p>
+<p>I also recommend checking out <a href="https://www.spigotmc.org/resources/81850/">Battle Drones</a> a really cool plugin similar to turrets, but they fly around like your pet.</p>
+<h3 id="custom-turret-example">Custom turret example<a class="headerlink" href="#custom-turret-example" title="Permanent link">&para;</a></h3>
+<p><strong>Here's an example of a custom turret we created:</strong> It's going to be called the <code>Wizard</code> turret, so in the <code>Turrets</code> folder we'll create a fille named <code>wizard.yml</code>.<br><br />
+The name of this file is symbolic, but it makes the most sense to be called the same as the turret. We're also going to be using the name of this file later.</p>
+<p>The goal of this turret will be to give buffs to nearby kingdom members and allies, and the only turret type that can do such thing is <code>healing</code>. That's why we're going to copy the contents of the <code>healing.yml</code> turret into our <code>wizard.yml</code> and use it as a template for our new turret.<br />
+<pre class="highlight"><code class="language-yaml"># The name used in chats and when the item is dropped.
+name: "&amp;5Wizard"
+
+# A list of turret types: arrow, healing, inferno, soldier, pressure_mine
+# "healing" type of turret only works on your kingdom members and allies.
+# It wouldn't make sense for the turret to give the boost effects to
+# enemies, right?
+type: healing 
+
+# Resource points cost when buying this turret from the nexus.
+cost: 200
+# Resource points gain when selling this turret using /k sell.
+sell: 100
+# Maximum level this turret can be upgraded to.
+max-level: 3
+
+# The turret can only be placed on walls and fences.
+placing:
+  whitelist: true
+  blocks:
+    - CONTAINS:FENCE
+    - CONTAINS:WALL
+
+# The hologram shown above the turret.
+# You can make a different hologram be shown depending on the turret level.
+# In this example, the turret hologram is only set for level "1".
+# Since "max-level" is set to "3", the turret will automatically use the
+# same hologram for levels 2 and 3 too.
+hologram:
+  1:
+    lines:
+      - "&amp;8-=[ &amp;5Wizard &amp;8]=-"
+    height: 1
+
+# The turret can only be placed on fences and walls.
+placing:
+  whitelist: true
+  blocks:
+    - CONTAINS:FENCE
+    - CONTAINS:WALL
+
+particles:
+  1:
+    place:
+      particle: CLOUD
+      count: 70
+      offset: 0.5, 0.5, 0.5
+    break:
+      particle: CLOUD
+      count: 70
+      offset: 0.5, 0.5, 0.5
+
+sounds:
+  1:
+    place: BLOCK_PORTAL_AMBIENT
+    break: BLOCK_PORTAL_TRIGGER
+
+# The turret will only target players. Since the turret type is set to
+# "healing", it will not target enemy players, but your kingdom members
+# and allies.
+whitelist: true
+entities: [ PLAYER ]
+
+# "lvl" is a special placeholder used for the current level upgrade of
+# the turret. It's especially useful for creating equations which allow
+# scaling of options as the turret is upgraded.
+# Note that the "lvl" starts from 1, since the turrets are already on
+# level 1 when they're put down.
+range: 5 + lvl
+max-targets: lvl # will be 1 on level 1, 2 on level 2 and 3 on level 3
+max-ammo: lvl * 600
+upgrade-cost: lvl * 100
+fire: 100
+
+# This is the turret "shooting" particle in a straight line shown when 
+# it's giving the effects to players.
+# https://hub.spigotmc.org/javadocs/spigot/org/bukkit/Particle.html
+particle:
+  1:
+    particle: TOTEM
+    count: 1
+
+# If a shooting particle is set (see above), the projectile can't be set.
+# Both particle and projectile can't be set at the same time, and it also
+# doesn't make sense for this turret to be shooting any projectile.
+projectile: ~
+# The velocity of the projectile, unused in this case
+speed: 10
+
+# The effects the turret is giving to players for each level it's upgraded to.
+# Format is: "&lt;effect&gt;, &lt;duration&gt;, &lt;modifier&gt;"
+# https://hub.spigotmc.org/javadocs/spigot/org/bukkit/potion/PotionEffectType.html
+effects:
+  1: [ "SPEED, 4, 1"]
+  2: [ "SPEED, 7, 1", "WATER_BREATHING, 4, 1" ]
+  3: [ "SPEED, 10, 1", "WATER_BREATHING, 7, 1", "FAST_DIGGING, 4, 1" ]
+
+# This is the cooldown between each turret "shot". We don't want it to be
+# set to a low number as the particle could get annoying for players.
+# Also, it doesn't make sense for it to be shooting any faster in this case,
+# as the effects the turret is giving already have some duration.
+# Note that the cooldown is in ticks. 20 ticks = 1 second.
+cooldown: 75 # 75 ticks = 75/20 = 3.75 seconds
+
+# When the turret type is set to "healing", the "damage" option actually means
+# the amount of health the turret will be healing the nearby players.
+# Since this turret isn't meant to be healing players, but rather give buffs
+# and positive effects to them, we set it to 0
+# IMPORANT NOTICE:
+# Note that due to the limitations of the "healing" turret type, this turret
+# will only work (be activated) when the player is missing some health.
+# This is because the turret is actually trying to heal the player, and will
+# continuously do so because it's set to 0.
+# It's currently not possible to have the turret always give effects unless
+# you want to do it yourself using the developer API.
+damage: 0
+
+# This is the turret "head".
+block:
+  1: PLAYER_HEAD
+
+# The skin/texture for the turret head if the block is set to "PLAYER_HEAD".
+# Here we have a different texture for each level the turret is upgraded to.
+# If you, for example, want to have the same texture on every level, you
+# would just remove the different texture for levels "2" and "3".
+skull:
+  1: "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNzViMDk2YjFlMjJlMTFmMGRhMDIwNGNjZmJiZWE1MTYyYzQ3NDI4MTM4ZjhkN2M5YTBkZmJkODVkNzc1Mzk3YSJ9fX0="
+  2: "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNGVhYjQwZjQzODUzYTc1YzUwOWY4NmU0NTFkYTM2OTljNGIzMDhkOTYzMDY4N2QxMDhhNzYzYjQyNTkzYzQ2ZCJ9fX0="
+  3: "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvN2JmYzE3ZWQ5MjhhZGZhZmZmYmY5ZjkxNTg5ZjBkNWI3YWIyMTZmNzRjMGQ3MjE0ZjI5ZTY5NDM4ZTYwOTdiMCJ9fX0="
+
+# The turret item which will be shown in GUIs and when holding it in hand.
+item:
+  1:
+    name: "&amp;5Wizard Turret"
+    material: BREWING_STAND
+    flags: [ HIDE_POTION_EFFECTS ]
+    lore:
+      - "&amp;6Gives useful buffs to nearby kingdom"
+      - "members and allies. More new buffs are"
+      - "unlocked on higher levels."
+      - ""
+      - "&amp;9Attributes&amp;8:"
+      - "&amp;7⚫ &amp;2Level&amp;8: &amp;6%level_roman%"
+      - "&amp;7⚫ &amp;2Ammo&amp;8: &amp;6%ammo%"
+      - "&amp;7⚫ &amp;2Range&amp;8: &amp;6%range%"
+      - "&amp;7⚫ &amp;2Max Targets&amp;8: &amp;6%max_targets%"
+      - "&amp;7⚫ &amp;2Max Ammo&amp;8: &amp;6%max_ammo%"
+      - "&amp;7⚫ &amp;2Cooldown&amp;8: &amp;6%cooldown%"
+      - "&amp;7⚫ &amp;2Speed&amp;8: &amp;6%speed%"</code></pre></p>
+<p>After modifying the options to how we imagined the turret to be, we'll need to add the turret to the Nexus GUI so that players can buy it.<br><br />
+To do so, we'll go to <code>guis</code> -&gt; <code>&lt;lang&gt;</code> -&gt; <code>structures</code> -&gt; <code>nexus</code> -&gt; <code>turrets.yml</code>. Here we'll find a suitable spot for our turret and copy and modify one of the buttons from existing turrets under the <code>options</code> line.<br />
+<pre class="highlight"><code class="language-yaml">  wizard: # &lt;--- This line needs to match the name of your turret file (wizard.yml), without the .yml part
+    name: "&amp;5Wizard"
+    material: BREWING_STAND
+    sound: ENTITY_PARROT_IMITATE_WITCH
+    lore:
+      - "&amp;6Gives useful buffs to nearby kingdom"
+      - "members and allies."
+      - ""
+      - "&amp;2Cost&amp;8: &amp;6%cost%"
+    posx: 5
+    posy: 1</code></pre><br />
+<img alt="The end result in-game" src="https://i.imgur.com/9T7wE1y.png" /></p>
+<p>Lastly, we need to add the GUI that will show up when we right click the turret to buy ammo for it, upgrade it, etc.<br><br />
+To do so, go to <code>guis</code> -&gt; <code>&lt;lang&gt;</code> -&gt; <code>turrets</code> and create a file that's also named <code>wizard.yml</code>. Here we'll copy the options from the <code>healing.yml</code> file into our file and change the GUI <code>title</code>. Most of the other things don't need to be changed.<br />
+<pre class="highlight"><code class="language-yaml">title: "&amp;5Wizard Turret"
+type: HOPPER
+sound: ITEM_ARMOR_EQUIP_DIAMOND
+
+options:
+  ammo:
+    name: "&amp;9Ammo&amp;8: &amp;2%ammo%"
+    material: ARROW
+    ammo: 100
+    cost: 10
+    # Set to 0 to disable.
+    fill-cost: 'neededAmmo / 8'
+    lore: |
+      &amp;2Buy &amp;6%ammo-buy-amount% &amp;2ammo for &amp;6%cost% &amp;2resource points.
+      &amp;2Fully fill ammo by &amp;6shift clicking
+      &amp;2for &amp;6%fill-cost% &amp;2resource points.
+    slot: 0
+  upgrade:
+    upgrade:
+      condition: "level &lt; max_level"
+      name: "&amp;9Upgrade&amp;8: &amp;6%level_roman% &amp;7➛ &amp;6%next_level_roman%"
+      material: NETHER_STAR
+      lore:
+        - "&amp;7⚫ &amp;2Range&amp;8: &amp;6%range% &amp;7➔ &amp;6%next_range%"
+        - "&amp;7⚫ &amp;2Max Ammo&amp;8: &amp;6%max_ammo% &amp;7➔ &amp;6%next_max_ammo%"
+        - "&amp;7⚫ &amp;2Cooldown&amp;8: &amp;6%cooldown% &amp;7➔ &amp;6%next_cooldown%"
+        - "&amp;7⚫ &amp;2Max Targets&amp;8: &amp;6%max_targets% &amp;7➔ &amp;6%next_max_targets%"
+        - "&amp;7⚫ &amp;2Speed&amp;8: &amp;6%speed% &amp;7➔ &amp;6%next_speed%"
+        - "&amp;7⚫ &amp;2Damage&amp;8: &amp;6%damage% &amp;7➔ &amp;6%next_damage%"
+        - ""
+        - "&amp;7⚫ &amp;2Max Level&amp;8: &amp;6III"
+        - "&amp;7⚫ &amp;2Cost&amp;8: &amp;6%upgrade_cost%"
+    maxxed:
+      name: "&amp;9Level&amp;8: &amp;6%level_roman%"
+      material: NETHER_STAR
+      lore:
+        - "&amp;7⚫ &amp;2Range&amp;8: &amp;6%range%"
+        - "&amp;7⚫ &amp;2Max Ammo&amp;8: &amp;6%max_ammo%"
+        - "&amp;7⚫ &amp;2Cooldown&amp;8: &amp;6%cooldown%"
+        - "&amp;7⚫ &amp;2Max Targets&amp;8: &amp;6%max_targets%"
+        - "&amp;7⚫ &amp;2Speed&amp;8: &amp;6%speed%"
+        - "&amp;7⚫ &amp;2Damage&amp;8: &amp;6%damage%"
+    slot: 1
+  break:
+    name: "&amp;cBreak"
+    material: REDSTONE_BLOCK
+    lore:
+      - "&amp;4Breaks this turret."
+    slot: 3
+  close:
+    name: "&amp;cClose"
+    material: BARRIER
+    lore:
+      - "&amp;6Close the GUI"
+    slot: 4</code></pre></p>
+<p><strong>That's it! You've successfully created your first custom turret.</strong></p>
+<hr />
+<p><br></p>
+<h1 id="power">Power<a class="headerlink" href="#power" title="Permanent link">&para;</a></h1>
+<p><strong>Note:</strong> Not to be confused with <a href="https://github.com/CryptoMorin/KingdomsX/wiki/Mechanics#structures">powercell structure</a> or <a href="https://github.com/CryptoMorin/KingdomsX/wiki/Introduction#powerups">powerups</a><br><br />
+This is the same as the old Factions power system which is not enabled by default.</p>
+<p><strong>Power</strong> is a number for each player in a faction that automatically increases over time. It's like a little mini-currency. The faction can claim lands with the <ins>total number of powers</ins> from the faction members, so factions themselves don't have any power, the power comes from the members and nothing else. Players lose power when they die and when they're inactive for more than a day. Of course there's a maximum amount of power each member can have.</p>
+<p>For example, let's say me and you are both in the same Faction. I have 2 power and you have 1 power, so the faction can claim a total of 3 lands.<br />
+If your faction loses power more than its <a href="https://github.com/CryptoMorin/KingdomsX/blob/d4f9e9279535d10ec80fb012b099c3971e935d94/core/src/main/resources/claims.yml#L144-L147">max claims equation</a> other people can <strong>overclaim</strong> your lands. Let's assume that the max claims for our faction is also 3 (the default equation is completely unrelated to powers, but this is just an example). In our previous example, the faction claimed 3 lands, but I died once and now I only have 1 power (you still have your 1) the faction will have 1 extra claim that's holding. Because it can only hold 3 claims based on the max claims equation.<br />
+What other factions can do is that they can simply <a href="https://github.com/CryptoMorin/KingdomsX/wiki/Commands#k-claim">/k claim</a> one of your faction lands (any of them, it doesn't matter which.) This is called <strong>overclaiming</strong>. </p>
+<details>
+  <summary>Fun way for chemistry students</summary>
+
+> If you're a chemistry student, just remember that our atom (our faction) is unstable due to having an extra electron and wants to lose one of its electrons (claims) to become stable. Only that this special atom that we have, doesn't lose electrons from its valence shell (from outermost claims), but it can even lose them from any of its orbitals.
+</details>
+
+<p>You can also take advantage of this system and instead of allowing overclaiming straight with /k claim, allow them to invade the faction instead <a href="https://github.com/CryptoMorin/KingdomsX/wiki/Commands#k-invade">/k invade</a></p>
+<p>You can enable the power system from <a href="https://github.com/CryptoMorin/KingdomsX/blob/d4f9e9279535d10ec80fb012b099c3971e935d94/core/src/main/resources/powers.yml#L56"><code>powers.yml</code></a> config.</p>
+<p>Since the plugin wasn't designed with power in mind by default, you have to actually add power information somewhere for players to see. Adding it to <a href="https://github.com/CryptoMorin/KingdomsX/wiki/Commands#k-show">/k show</a> command is the best choice. You can use <code>%kingdoms_power%</code> and <code>%kingdoms_kingdom_power%</code> <a href="https://github.com/CryptoMorin/KingdomsX/wiki/Placeholders">placeholders</a> for that.</p>
+<pre class="highlight"><code class="language-yml"># Note that there are two message entries, "message" and "admin", you should edit both. And make sure you're not editing "/k nation show"
+message: |
+  ...
+  &amp;7| {$p}Kingdom Power{$sep}: {$s}%kingdoms_fancy_kingdom_power%
+  ...
+
+# We show individual player's power under their hover message inside /k show
+# Do the same for offline-prefix
+online-prefix: |
+  ...
+  {$p}Power{$sep}: {$s}%kingdoms_fancy_power%
+  ...</code></pre>
+<hr />
+<p><br></p>
+<h1 id="plunders">Plunders<a class="headerlink" href="#plunders" title="Permanent link">&para;</a></h1>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>If this game style doesn't match your specific requirements,<br />
+you can check the <a href="https://github.com/CryptoMorin/KingdomsX/wiki/Outposts">Outposts add-on</a> as well which is similar to plunders.</p>
+</div>
+<p>An alternative to the champion invasion system. This method of invading doesn't involve champions <ins>at all</ins>.<br><br />
+Just like before, to invade a kingdom, a player has to do <a href="https://github.com/CryptoMorin/KingdomsX/wiki/Commands#k-invade">/k invade</a> to begin the invasion.<br><br />
+In plunder invasions, both the attacker and the defender kingdoms will have to kill each other until one side loses all its lives and lose. If attackers fail to kill enough defenders after a certain amount of time, defenders will win.<br><br />
+<strong>Note:</strong> It doesn't matter how the players die in this fight, they could die from their opponent, mobs and even natural causes, and it will still count as a score for the other side, meaning that allies can participate in these invasions.</p>
+<p>If there are more attackers <ins>in the invaded land</ins> than defenders after a certain amount of time, attackers will win. This is called <strong>capture progress</strong>, but if there are <ins>the same or more</ins> defenders in the invaded land than attackers, capture progress will <ins>not</ins> advance. A similar concept to <em>KoTH</em> and the <em>Outpost event</em>.<br><br />
+<strong>Note:</strong> Allies don't affect the capture progress.</p>
+<p><strong>Attackers will win if:</strong><br />
+  * They kill a certain amount of defenders.<br />
+  * They keep defenders out of the land to win by <em>capturing</em>.</p>
+<p><strong>Defenders will win if:</strong><br />
+  * They kill a certain amount of attackers.<br />
+  * They hold out against the attackers until the time limit is reached.</p>
+<p><strong>Configuration</strong><br><br />
+You can enable plunders in <a href="https://github.com/CryptoMorin/KingdomsX/blob/e246428c4a9c1d8b90ad1376fc1c191c3c73f095/core/src/main/resources/invasions.yml#L723-L724">invasions.yml here</a>.<br><br />
+Anything related to champions such as champion upgrades should be entirely removed from the GUIs when enabling plunder invasions as they're useless. Many options from <code>invasions.yml</code> are reused for plunder invasions. Note that you must set a player death limit to use plunders.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>If you still want to keep the champion as one of the factors for the invasions, you can do that as well in <a href="https://github.com/CryptoMorin/KingdomsX/blob/f6c24e44f5a6c38e9d165325f454dcda18a69aac/core/src/main/resources/invasions.yml#L747-L755">invasions.yml</a>.</p>
+</div>
+<hr />
+<p><br></p>
+<h1 id="others">Others<a class="headerlink" href="#others" title="Permanent link">&para;</a></h1>
+<h3 id="nether-portal-protection">Nether Portal Protection<a class="headerlink" href="#nether-portal-protection" title="Permanent link">&para;</a></h3>
+<p>When using the nether portals to teleport, if the destination location is owned by a kingdom that doesn't have <strong>casefire</strong> <em>or</em> <strong>turret ceasefire</strong> attributes, the teleportation will be canceled.</p>
+<h3 id="beacons">Beacons<a class="headerlink" href="#beacons" title="Permanent link">&para;</a></h3>
+<p>When beacons are placed in a claimed land, only players with <strong>ceasefire</strong> attribute will be affected by the beacon.</p>
+<h3 id="potion-effects">Potion Effects<a class="headerlink" href="#potion-effects" title="Permanent link">&para;</a></h3>
+<p>Players with <strong>ceasefire</strong> attribute cannot use any of the *<em>debuff</em> potions (such as poison and weakness) on another friendly player using splash or lingering potions.</p>
+<h3 id="chat">Chat<a class="headerlink" href="#chat" title="Permanent link">&para;</a></h3>
+<p>Kingdoms chat supports various features:<br />
+* <a href="https://github.com/CryptoMorin/KingdomsX/wiki/Commands#k-admin-spy">Spies</a><br />
+* <a href="https://github.com/CryptoMorin/KingdomsX/wiki/Installation#compatibility">DiscordSRV integration</a><br />
+* Supports <a href="https://github.com/CryptoMorin/KingdomsX/wiki/Placeholders#relational-placeholders">relational placeholders</a><br />
+* Different formats for different ranks.<br />
+* Supports colored messages including hex colors and predefined color names with <code>kingdoms.chat.colors</code> permission.<br />
+* Supports discord-like tags with the <code>@name</code> format using <code>kingdoms.chat.tag</code> permission. This will change <code>@name</code> differently for the tagger, tagged player and other players seeing the tag. It will also play a sound to the tagged player and show an actionbar.<br />
+* Ranged channels with a prefix to bypass <code>!</code> (not enabled by default for any channel)<br />
+* High compatibility with other chat-dependent plugins by adjusting various internal chat handler settings.</p></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script src="../js/bootstrap.bundle.min.js"></script>
+        <script>
+            var base_url = "..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../js/base.js"></script>
+        <script src="../javascripts/mathjax.js"></script>
+        <script src="https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js"></script>
+        <script src="../search/main.js"></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p>From here you can search these documents. Enter your search terms below.</p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results" data-no-results-text="No results found"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>

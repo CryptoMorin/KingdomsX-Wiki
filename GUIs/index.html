@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="light">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        <link rel="canonical" href="https://wiki.kingdomsx.com/GUIs/">
+        <link rel="shortcut icon" href="../img/favicon.ico">
+        <title>📱 GUI - KingdomsX</title>
+        <link href="../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../css/fontawesome.min.css" rel="stylesheet">
+        <link href="../css/brands.min.css" rel="stylesheet">
+        <link href="../css/solid.min.css" rel="stylesheet">
+        <link href="../css/v4-font-face.min.css" rel="stylesheet">
+        <link href="../css/base.css" rel="stylesheet">
+        <link id="hljs-light" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" >
+        <link id="hljs-dark" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github-dark.min.css" disabled>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+        <script>hljs.highlightAll();</script> 
+    </head>
+
+    <body>
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="..">KingdomsX</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar-collapse" aria-controls="navbar-collapse" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="nav-item">
+                                <a href="../Home.md.md" class="nav-link">🏠 Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../Features/" class="nav-link">🔰 Features</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../Installation/" class="nav-link">📥 Installation</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../Installation.md#setup" class="nav-link">📗 Setup</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../Installation.md#compatibility" class="nav-link">📘 Compatibility</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../FAQ/" class="nav-link">❓ FAQ</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../NFAQ/" class="nav-link">⁉️ NFAQ</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../Addons/" class="nav-link">⚜️ Addons</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../Outposts/" class="nav-link">🚩 Outposts</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../Peace-Treaties/" class="nav-link">☮️ Peace Treaties</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../Map-Viewers-Addon/" class="nav-link">🗺️ Map Viewers</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../EngineHub-Addon/" class="nav-link">🏬 EngineHub</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../Admin-Tools/" class="nav-link">🛠  Admin Tools</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../Introduction/" class="nav-link">❇️ Introduction</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../Commands/" class="nav-link">⌨️ Commands</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../Commands.md#players" class="nav-link">👨‍🦱 Players</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../Commands.md#admins" class="nav-link">👩‍⚖️ Admins</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../Permissions/" class="nav-link">🔓 Permissions</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../Placeholders/" class="nav-link">🔣 Placeholders</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../Placeholders.md#players" class="nav-link">🚹 Players</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../Placeholders.md#kingdoms" class="nav-link">🏛 Kingdoms</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../Placeholders.md#nations" class="nav-link">🏢 Nations</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../Config/" class="nav-link">📁 Config</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../YAML/" class="nav-link">📃 YAML</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../Languages/" class="nav-link">💱 Languages</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="./" class="nav-link active" aria-current="page">📱 GUI</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../Protection-Signs/" class="nav-link">🔒 Protection Signs</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../Mails/" class="nav-link">✉️ Mails</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../Mechanics/" class="nav-link">📚 Mechanics</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"  aria-expanded="false">⚔️ Invasion</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../Mechanics.md#Invasion" class="dropdown-item">None</a>
+</li>
+                                    
+<li>
+    <a href="../Mechanics.md#Preparing" class="dropdown-item">🛡️ Preparing</a>
+</li>
+                                    
+<li>
+    <a href="../Mechanics.md#Champion" class="dropdown-item">🧟 Champion</a>
+</li>
+                                    
+<li>
+    <a href="../Mechanics.md#mass-wars" class="dropdown-item">🗡  Masswar</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../Mechanics.md#Structures" class="nav-link">📡 Structures</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../Mechanics.md#Turrets" class="nav-link">🔫 Turrets</a>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ms-md-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-bs-toggle="modal" data-bs-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                            <li class="nav-item">
+                                <a rel="prev" href="../Languages/" class="nav-link">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a rel="next" href="../Protection-Signs/" class="nav-link">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-bs-toggle="collapse" data-bs-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-body-tertiary">
+        <ul class="nav flex-column">
+            
+            
+            
+            <li class="nav-item" data-bs-level="1"><a href="#bedrock-forms" class="nav-link">Bedrock Forms</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-bs-level="2"><a href="#form-types" class="nav-link">Form Types</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#form-component-types" class="nav-link">Form Component Types</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<p>Each GUI uses an entire YAML file to parse its settings from the <code>guis -&gt; &lt;lang&gt;</code> folder.<br><br />
+Unlike language files, they don't automatically add new options since they're 100% customizable.</p>
+<h3 id="synchronizing-guis">Synchronizing GUIs<a class="headerlink" href="#synchronizing-guis" title="Permanent link">&para;</a></h3>
+<p>Since GUIs are edited individually for each language, syncing them after changing an option manually might be hard, you can take a look at this <a href="https://github.com/CryptoMorin/KingdomsX/blob/8a0e375cdde0486e8a45fa56a2c0898d992269f0/core/src/main/resources/config.yml#L80-L100">experimental option</a> to sync GUIs.</p>
+<p><a href="https://github.com/CryptoMorin/XSeries/wiki/YA-WORD">How to read this documentation?</a></p>
+<h4 id="main-options">Main Options<a class="headerlink" href="#main-options" title="Permanent link">&para;</a></h4>
+<pre class="highlight"><code class="language-rb">title: Text # The title displayed above the GUI.
+rows: Number ; 1 - 6 # The amount of rows that this GUI will have. The columns will have a fixed size of 9
+type: Text # If no rows is specified, a type will be used. You can see all the types here:
+           # https://hub.spigotmc.org/javadocs/spigot/org/bukkit/event/inventory/InventoryType.html
+message: Text # Message that the player receives when this GUI opens.
+disallow-creative: Boolean # Whether this GUI can be opened in creative mode or not.
+interactable: [Number] or 'empty' # Interactable slots of this GUI. If it only contains one slot and that number is lower than zero,
+            # then the list will act as a blacklist.
+            # When set to "empty" all slots that don't have an option defined for them will be interactable. Meaning even if you did put
+            # an item in one of these slots, that slot is no longer empty, but it's still "empty" in the sense that it has no option for that slot.
+
+open-conditions:
+  "A condition": "The message that gets sent if that condition is true"
+  "Another condition": "The message that gets sent if that condition is true"</code></pre>
+<h4 id="item-options">Item Options<a class="headerlink" href="#item-options" title="Permanent link">&para;</a></h4>
+<p>These options are used under the item names which are under <code>options</code> entry of GUIs. Option names are really important for some GUIs. They define what an option does from the code. If an option name doesn't have any actions attached to it, it'll not do anything when clicked on. This is where conditional GUIs come to use.<br><br />
+All the text options in items support color codes and placeholders.<br><br />
+Some people might find the following information hard to understand. If you have a question for any options below, ask me.</p>
+<p><strong>For the general options used to create items which is even used outside of GUIs, refer to <a href="https://github.com/CryptoMorin/XSeries/wiki/XItemStack/">this</a> documentation.</strong></p>
+<p>Other options that are specific to GUIs:</p>
+<pre class="highlight"><code class="language-rb">condition: Text # Refer to the section below for more information.
+sound: Sound # The sound played when this item is clicked.
+commands: [Command] # The commands executed when this item is clicked.
+message: Text # The message sent to the player when this item is clicked.
+interaction: GUIInteractionType # How should the plugin behave when a player interacts with this item in the GUI?
+
+alias GUIInteractionType: for Text 
+  DISALLOW  # The default interaction type. Doesn't allow the player to click on the item in any way.
+  FREE      # The player can manipulate this slot freely. Take the item, and put new items in it.
+  TAKE_ONLY # The player can only take the item that was put by the GUI from this slot.
+
+# The position(s) of the item.
+slot:   Number  ; 0 - 53 # See https://i.imgur.com/gK9plGo.png
+slots: [Number] ; 0 - 53 # When this option is used, the same item will be placed in multiple slots.
+posx:   Number  ; 1 - 9
+posy:   Number  ; 1 - 6
+
+perform-action: Boolean # If the option has special meaning, then when this option is set (it's intended to be set to "false" but any value works),
+                        # then it'll act like other decorative option. Meaning when clicked on, it'll do nothing.
+
+alias Sound:   for Text # https://github.com/CryptoMorin/KingdomsX/wiki/Config
+alias Command: for Text # https://github.com/CryptoMorin/KingdomsX/wiki/Config</code></pre>
+<h4 id="conditional">Conditional<a class="headerlink" href="#conditional" title="Permanent link">&para;</a></h4>
+<p>GUI items use a simple logical-relational evaluator to change item appearance depending on a condition.<br />
+You can define certain item properties by using <code>condition</code> option and putting each under a custom condition name. These conditions follow the general <a href="https://github.com/CryptoMorin/KingdomsX/wiki/Config#conditions">config conditions</a> rules.</p>
+<p>Example:<br />
+<pre class="highlight"><code class="language-yml">options:
+  hello:
+
+    # Options defined outside of conditional options are inherited. This only works for general options such as name, lore, material etc.
+    # if a GUI defines special options for certain options, those will not be inherited.
+    # So for example if the lore doesn't change in below situations,
+    # you can write it here once instead of writing it twice or more.
+    lore: "This option disables\nsomething somewhere"
+
+    # Note that "activated" and "else" are just normal names that have no effects.
+    # The last condition which is always used if none of the conditions above it were met, is named "else" most of the times.
+    activated:
+      condition: "kingdoms_members &gt; 10 &amp;&amp; kingdoms_members &lt; 20"
+      name: "&amp;2Activated"
+      material: GREEN_WOOL
+    else: # You should use this name as well, it might be problematic in future versions.
+      # Note that there's no "condition" option here. There is no need for us to use "%kingdoms_members% &lt;= 10" here.
+      # Omitting the condition will automatically default to always match.
+      name: "&amp;4Disabled"
+      material: RED_WOOL</code></pre></p>
+<p>If you're looking for something similar, but for math equations, you should search for <code>Conditional functions</code> in the <a href="https://github.com/CryptoMorin/KingdomsX/wiki/Config">config</a> section.</p>
+<h3 id="custom-ui">Custom UI<a class="headerlink" href="#custom-ui" title="Permanent link">&para;</a></h3>
+<p>If you simply want to change a single item to another item with a custom icon of another plugin, you can use the <code>item-model</code> (introduced in v1.21) or the legacy <code>custom-model-data</code> (introduced in v1.14) It depends on what name or data your custom plugin that defines these items uses.</p>
+<pre class="highlight"><code class="language-yml">my-item:
+  material: PAPER
+  custom-model-data: 10
+other-item:
+  material: BOOK
+  item-model: 'my_custom_book'</code></pre>
+<p>You can change the overall layout of each GUI by using <a href="https://www.spigotmc.org/resources/73355/">ItemsAdder</a> plugin. You can refer to <a href="https://itemsadder.devs.beer/plugin-usage/adding-content/guis">this guide</a> that explains how this works. You can use the <a href="https://itemsadder.devs.beer/plugin-usage/placeholderapi">placeholders</a> inside the <code>title</code> option of each GUI.</p>
+<p>If your GUI's image is a bit off (not centered on the screen), first try removing the offset completely. If it didn't work, try setting a high number to offset like <code>-10</code> so you can see the title underneath. If the title has weird characters like <code>□</code> or <code>�</code> that means you have to regenerate your pack. If that didn't work, try clearing your cache with <a href="https://itemsadder.devs.beer/plugin-usage/commands">/iacleancache</a> command.</p>
+<p>For chest-based GUIs, an offset of <code>-8</code> is sufficient. Just use <code>&amp;f%img_offset_-8%</code> at the beginning of your <code>title</code> to apply it, then add a placeholder for your custom GUI image (<code>%img_&lt;name&gt;%</code>) afterwards.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Make sure you're using the latest version of ItemsAdder. The weird characters are usually caused by versions older than v3.3.0</p>
+</div>
+<h1 id="bedrock-forms">Bedrock Forms<a class="headerlink" href="#bedrock-forms" title="Permanent link">&para;</a></h1>
+<p>This section is dedicated to servers that use <a href="https://geysermc.org/">Geyser server software</a> along with <a href="https://geysermc.org/wiki/floodgate/">Floodgate</a>. Minecraft's bedrock edition, allows additional GUI features that the Java edition doesn't have. The main GUI framework in Bedrock edition is called <a href="https://geysermc.org/wiki/geyser/forms/">forms</a>, while this type of GUI is more visually appealing, it does have some restrictions that the normal inventory GUI doesn't have.</p>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>Note that <strong>Geyser</strong> server software is <strong>not officially</strong> supported. So any issues that occurs while using this server software that doesn't occur when using other officially supported server software (e.g. Spigot, Paper, etc) will most likely not be fixed. The forms GUI support is just an exception.</p>
+</div>
+<p>You can configure forms in the same GUI config file as previously explained. All form-related configurations are separate from the inventory options<br />
+defined in the same file. All form options are configured below <code>forms</code> section of the config.</p>
+<h2 id="form-types">Form Types<a class="headerlink" href="#form-types" title="Permanent link">&para;</a></h2>
+<p>Before configuring your GUI, you need to pick a form type. Each form type unfortunately has some restrictions and features that other form types do not have. This is configured in <code>forms -&gt; type</code> option.</p>
+<h3 id="simple-forms">Simple Forms<a class="headerlink" href="#simple-forms" title="Permanent link">&para;</a></h3>
+<pre class="highlight"><code class="language-yml">forms:
+  type: SIMPLE
+  title: "My Form"
+  body: "Click one of the buttons!"
+  options:
+    first-button:
+      text: "First Button"
+    second-button:
+      text: "Second Button"
+    third-button:
+      text: "Third Button"</code></pre>
+<p><strong>Supported Structures:</strong><br />
+* Title<br />
+* Body Text<br />
+* Buttons</p>
+<h3 id="modal-forms">Modal Forms<a class="headerlink" href="#modal-forms" title="Permanent link">&para;</a></h3>
+<p>This button is the same as simple forms, but for some reasons it only works if it has exactly 2 buttons. And these buttons cannot have images.</p>
+<pre class="highlight"><code class="language-yml">forms:
+  type: MODAL
+  title: "My Form"
+  body: "Click one of the buttons!"
+  options:
+    first-button:
+      text: "First Button"
+    second-button:
+      text: "Second Button"</code></pre>
+<p><strong>Supported Structures:</strong><br />
+* Title<br />
+* Body Text<br />
+* Buttons (Must be exactly 2 buttons, images not supported)</p>
+<h3 id="custom-forms">Custom Forms<a class="headerlink" href="#custom-forms" title="Permanent link">&para;</a></h3>
+<pre class="highlight"><code class="language-yml">forms:
+  type: CUSTOM
+  title: "My Form"
+  body: "Click one of the buttons!"
+  options:
+    first-button:
+      text: "First Button"
+    second-button:
+      text: "Second Button"</code></pre>
+<p><strong>Supported Structures:</strong><br />
+* Title<br />
+* Body Text<br />
+* Sliders<br />
+* Step Sliders<br />
+* Dropdowns<br />
+* Inputs<br />
+* Labels<br />
+* Toggles</p>
+<h2 id="form-component-types">Form Component Types<a class="headerlink" href="#form-component-types" title="Permanent link">&para;</a></h2>
+<p>Writing...</p>
+<h3 id="buttons">Buttons<a class="headerlink" href="#buttons" title="Permanent link">&para;</a></h3>
+<h3 id="sliders">Sliders<a class="headerlink" href="#sliders" title="Permanent link">&para;</a></h3>
+<h3 id="dropdowns">Dropdowns<a class="headerlink" href="#dropdowns" title="Permanent link">&para;</a></h3>
+<h3 id="inputs">Inputs<a class="headerlink" href="#inputs" title="Permanent link">&para;</a></h3>
+<h3 id="labels">Labels<a class="headerlink" href="#labels" title="Permanent link">&para;</a></h3>
+<h3 id="toggles">Toggles<a class="headerlink" href="#toggles" title="Permanent link">&para;</a></h3></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script src="../js/bootstrap.bundle.min.js"></script>
+        <script>
+            var base_url = "..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../js/base.js"></script>
+        <script src="../javascripts/mathjax.js"></script>
+        <script src="https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js"></script>
+        <script src="../search/main.js"></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p>From here you can search these documents. Enter your search terms below.</p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results" data-no-results-text="No results found"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>
