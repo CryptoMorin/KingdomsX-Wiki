@@ -17,15 +17,21 @@ details.alert {
     /* background-color: rgb(63, 129, 129); */
 }
 
-.percent-wrapped {
-  color: red;
+.placeholder-text {
   font-weight: bold;
+}
+
+.placeholder-text .placeholder-enclosure {
+    color: darkgray;
+}
+.placeholder-text .placeholder-content {
+    color: darkgray;
 }
 
 span.token.symbol {
     color: rgb(90, 162, 255) !important;
 }
-span.token.symbol {
+span.token.operator {
     color: gray !important;
 }
 span.token.punctuation {

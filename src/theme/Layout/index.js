@@ -7,10 +7,20 @@ export default function Layout(props) {
       document.querySelectorAll("code").forEach((el) => {
         const text = el.textContent?.trim() || "";
 
-        if (text.startsWith("%") && text.endsWith("%")) {
-          el.classList.add("percent-wrapped");
-        } else {
-          el.classList.remove("percent-wrapped");
+        if (
+        text &&
+        text.startsWith("%") &&
+        text.endsWith("%") &&
+        text.length > 2
+        ) {
+            el.classList.add("placeholder-text");
+            const inner = text.slice(1, -1);
+
+            el.innerHTML = `
+                <span class="placeholder-enclosure">%</span>
+                <span class="placeholder-content">${inner}</span>
+                <span class="placeholder-enclosure">%</span>
+            `;
         }
       });
     };
