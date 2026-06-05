@@ -9,5 +9,6 @@ export default function NotFoundContent() {
       .then(setHtml);
   }, []);
 
+  console.log("using effect 404.html")
   return <div dangerouslySetInnerHTML={{ __html: html }} />;
 }

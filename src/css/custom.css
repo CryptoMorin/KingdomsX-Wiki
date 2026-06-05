@@ -1,10 +1,18 @@
 html[data-theme='dark'] {
-  --ifm-background-color: #14131a;
-  --ifm-alert-background-color: rgb(0, 107, 156);
+    --ifm-background-color: #14131a;
 }
 
-details {
-    --ifm-link-color: rgb(0, 102, 255);
-    --ifm-link-hover-color: blue;
+html[data-theme='dark'] .alert {
+    --ifm-alert-background-color: rgb(0, 107, 156);
+    border-color: rgb(41, 73, 255);
+}
+
+details.alert {
+    --ifm-link-color: rgb(32, 121, 255);
+    --ifm-link-hover-color: rgb(182, 182, 255);
     background-color: rgb(63, 129, 129);
+}
+
+details.alert svg {
+    filter: brightness(0) saturate(100%) invert(34%) sepia(85%) saturate(2627%) hue-rotate(178deg) brightness(89%) contrast(101%);
 }
