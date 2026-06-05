@@ -24,7 +24,6 @@ const LEGACY_COLORS = {
 const NAMED_COLORS = {
   navy: "#000080",
   maroon: "#800000",
-  // extend as needed
 };
 
 /* ---------------- STATE ---------------- */
@@ -111,7 +110,7 @@ export default function remarkMinecraftAdvanced() {
         );
       };
 
-      const applyLegacy = (code) => {
+      const applyFormatting = (code) => {
         if (LEGACY_COLORS[code]) state.color = LEGACY_COLORS[code];
 
         else if (code === "l") state.bold = true;
@@ -137,18 +136,21 @@ export default function remarkMinecraftAdvanced() {
 
           // {#r,g,b}
           if (inner.includes(",")) {
+            state = reset();
             state.color = parseRgb(inner);
             return;
           }
 
           // hex or name
           if (/^[0-9a-fA-F]{3,6}$/.test(inner)) {
+            state = reset();
             state.color = normalizeHex(inner);
             return;
           }
 
           const name = inner.toLowerCase();
           if (NAMED_COLORS[name]) {
+            state = reset();
             state.color = NAMED_COLORS[name];
           }
         }
@@ -169,12 +171,9 @@ export default function remarkMinecraftAdvanced() {
         if (ch === "&" && i + 1 < text.length) {
           const code = text[i + 1].toLowerCase();
 
-          flush();
-
-          // preserve visible code itself
+          flush();          
+          applyFormatting(code);
           push(`&${code}`, { ...state }, "mc-code");
-
-          applyLegacy(code);
 
           i++;
           continue;
@@ -185,9 +184,10 @@ export default function remarkMinecraftAdvanced() {
           const match = text.slice(i).match(/^&#([0-9a-fA-F]{6})/);
           if (match) {
             flush();
-            push(match[0], { ...state }, "mc-code");
+            state = reset();
             state.color = "#" + match[1];
             i += match[0].length - 1;
+            push(match[0], { ...state }, "mc-code");
             continue;
           }
         }
@@ -199,9 +199,8 @@ export default function remarkMinecraftAdvanced() {
             const chunk = text.slice(i, end + 1);
 
             flush();
-            push(chunk, { ...state }, "mc-code");
-
             parseColor(chunk);
+            push(chunk, { ...state }, "mc-code");
 
             i = end;
             continue;

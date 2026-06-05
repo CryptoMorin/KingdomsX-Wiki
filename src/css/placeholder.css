@@ -1,0 +1,22 @@
+.placeholder-text {
+    display: inline-flex;
+    font-weight: bold;
+    padding: 0 4px;
+    border-radius: 4px;
+    background: #36363688;
+}
+
+.placeholder-text .mod       { color: purple; }
+.placeholder-text .at        { color: darkgray; }
+.placeholder-text .namespace { color: inherit; }
+.placeholder-text .sep       { color: darkgray; }
+.placeholder-text .fn        { color: blue; }
+.placeholder-text .arg       { color: green; }
+.placeholder-text .value     { color: cyan; }
+
+.placeholder-text .placeholder-enclosure {
+    color: rgb(141, 141, 141);
+}
+.placeholder-text .placeholder-content {
+    color: rgb(255, 182, 87);
+}

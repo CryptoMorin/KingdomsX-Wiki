@@ -6,6 +6,7 @@ import rehypeSlug from 'rehype-slug';
 import remarkPlaceholders from "./plugins/remark-placeholders";
 import remarkMinecraftFormat from "./plugins/remark-minecraft-codes";
 import rehypeForceH1Slug from './plugins/ultra-hyped-slug';
+import remarkGitHubLatex from "./plugins/remark-github-latex";
 
 import {themes} from 'prism-react-renderer';
 import prism from 'prismjs';
@@ -34,7 +35,7 @@ export default {
     prism: {
       theme: themes.github,
       darkTheme: themes.dracula,
-      additionalLanguages: ['ruby', 'haskell'],
+      additionalLanguages: ['ruby', 'haskell', 'java'],
     },
   },
 
@@ -76,7 +77,8 @@ export default {
             remarkGFM,
             remarkMath,
             remarkPlaceholders,
-            remarkMinecraftFormat
+            remarkMinecraftFormat,
+            remarkGitHubLatex
           ],
           rehypePlugins: [
             [rehypeKatex, { strict: false }],
@@ -86,7 +88,7 @@ export default {
         },
 
         theme: {
-          customCss: [ './src/css/base.css' ],
+          customCss: [ './src/css/base.css', './src/css/katex.css', './src/css/placeholders.css' ],
         },
 
         blog: false,
