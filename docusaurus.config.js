@@ -3,6 +3,7 @@ import remarkMath from 'remark-math';
 import rehypeKatex from 'rehype-katex';
 import remarkGFM from 'remark-gfm';
 import rehypeSlug from 'rehype-slug';
+import remarkPlaceholders from "./plugins/remark-placeholders";
 import rehypeForceH1Slug from './plugins/rehyped_slug';
 
 import {themes} from 'prism-react-renderer';
@@ -58,7 +59,8 @@ export default {
 
           remarkPlugins: [
             remarkGFM,
-            remarkMath
+            remarkMath,
+            remarkPlaceholders
           ],
           rehypePlugins: [
             [rehypeKatex, { strict: false }],
