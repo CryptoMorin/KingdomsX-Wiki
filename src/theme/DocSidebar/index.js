@@ -11,10 +11,10 @@ function Item({ emoji, label, to }) {
   );
 }
 
-function Group({ title, emoji, children, defaultOpen = true }) {
+function Group({ emoji, title, children }) {
   return (
     <li className="menu__list-item">
-      <details className="menu__list-item-collapsible" open={defaultOpen}>
+      <details className="menu__list-item-collapsible" open>
         <summary className="menu__link">
           {emoji} {title}
         </summary>
@@ -28,42 +28,25 @@ function Group({ title, emoji, children, defaultOpen = true }) {
 
 export default function CustomDocSidebar(props) {
   return (
-    <DocSidebar
-      {...props}
-      sidebar={
-        [
-          {
-            type: 'category',
-            label: 'Custom',
-            items: [] // we are NOT using Docusaurus auto sidebar here
-          }
-        ]
-      }
-    >
-      {/* We overlay custom UI inside sidebar container */}
-      <div className="customSidebarRoot">
+    <div className="theme-doc-sidebar-container">
+      {/* Keep real sidebar working (important!) */}
+      <DocSidebar {...props} />
 
+      {/* Your custom overlay menu */}
+      <div className="custom-sidebar-overlay">
         <ul className="menu__list">
 
-          {/* Home */}
           <Item emoji="🏠" label="Home" to="/" />
-
-          {/* Features */}
           <Item emoji="🔰" label="Features" to="/Features" />
 
-          {/* Installation */}
           <Group emoji="📥" title="Installation">
             <Item emoji="📗" label="Setup" to="/Installation#setup" />
             <Item emoji="📘" label="Compatibility" to="/Installation#compatibility" />
           </Group>
 
-          {/* FAQ */}
           <Item emoji="❓" label="FAQ" to="/FAQ" />
-
-          {/* NFAQ */}
           <Item emoji="⁉️" label="NFAQ" to="/NFAQ" />
 
-          {/* Addons */}
           <Group emoji="⚜️" title="Addons">
             <Item emoji="🚩" label="Outposts" to="/Outposts" />
             <Item emoji="☮️" label="Peace Treaties" to="/Peace-Treaties" />
@@ -72,9 +55,6 @@ export default function CustomDocSidebar(props) {
             <Item emoji="🛠" label="Admin Tools" to="/Admin-Tools" />
           </Group>
 
-          <hr />
-
-          {/* Basics */}
           <Item emoji="❇️" label="Introduction" to="/Introduction" />
           <Item emoji="⌨️" label="Commands" to="/Commands" />
 
@@ -100,9 +80,6 @@ export default function CustomDocSidebar(props) {
             <Item emoji="📱" label="GUI" to="/GUIs" />
           </Group>
 
-          <hr />
-
-          {/* Advanced */}
           <Item emoji="🔒" label="Protection Signs" to="/Protection-Signs" />
           <Item emoji="✉️" label="Mails" to="/Mails" />
           <Item emoji="📚" label="Mechanics" to="/Mechanics" />
@@ -116,9 +93,6 @@ export default function CustomDocSidebar(props) {
           <Item emoji="📡" label="Structures" to="/Mechanics#Structures" />
           <Item emoji="🔫" label="Turrets" to="/Mechanics#Turrets" />
 
-          <hr />
-
-          {/* Others */}
           <Item emoji="🧰" label="Troubleshooting" to="/Troubleshooting" />
           <Item emoji="💻" label="API" to="/API" />
 
@@ -133,6 +107,6 @@ export default function CustomDocSidebar(props) {
 
         </ul>
       </div>
-    </DocSidebar>
+    </div>
   );
 }

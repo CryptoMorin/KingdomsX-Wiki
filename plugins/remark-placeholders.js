@@ -2,8 +2,7 @@ import { visit } from "unist-util-visit";
 
 export default function remarkPlaceholders() {
   return (tree) => {
-    visit(tree, "inlineCode", (node, index, parent) => handle(node));
-    visit(tree, "code", (node, index, parent) => handle(node));
+    visit(tree, ["code", "inlineCode"], (node, index, parent) => handle(node));
   };
 }
 

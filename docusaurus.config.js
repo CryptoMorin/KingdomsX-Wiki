@@ -72,14 +72,14 @@ export default {
           // sidebarPath: require.resolve('./sidebars.js'),
           editUrl: (blogDirPath, blogPath, permaLink, locale) => `https://github.com/CryptoMorin/KingdomsX/wiki/${blogPath}/_edit`,
 
-          beforeDefaultRemarkPlugins: [remarkGithubAdmonitionsToDirectives, remarkGitHubLatex],
+          beforeDefaultRemarkPlugins: [remarkGithubAdmonitionsToDirectives, normalizeWikiLinks],
 
           remarkPlugins: [
             remarkGFM,
             [remarkMath, { singleDollarTextMath: false }],
+            remarkGitHubLatex,
             remarkPlaceholders,
-            remarkMinecraftFormat,
-            normalizeWikiLinks
+            remarkMinecraftFormat
           ],
           rehypePlugins: [
             [rehypeKatex, { strict: false }],
