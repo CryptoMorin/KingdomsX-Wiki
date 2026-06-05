@@ -124,7 +124,7 @@ export default function remarkMinecraftAdvanced() {
           continue;
         }
 
-        const chunk =  text.slice(i);
+        const chunk = text.slice(i);
 
         // &#RRGGBB
         let match = chunk.match(FORMAT_NAKED)
@@ -149,7 +149,7 @@ export default function remarkMinecraftAdvanced() {
         }
 
         // {#r,g,b}
-        chunk = chunk.match(FORMAT_BRACES_RGB);
+        match = chunk.match(FORMAT_BRACES_RGB);
         if (match) {
           flush();
           state = reset();
@@ -160,7 +160,7 @@ export default function remarkMinecraftAdvanced() {
         }
 
         // {#Named}
-        chunk = chunk.match(FORMAT_BRACES_NAMED);
+        match = chunk.match(FORMAT_BRACES_NAMED);
         if (match) {
           const name = match[1].toLowerCase();
           if (NAMED_COLORS[name]) {
