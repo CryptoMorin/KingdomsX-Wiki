@@ -21,16 +21,3 @@ details.alert {
     --ifm-link-hover-color: rgb(182, 182, 255);
     /* background-color: rgb(63, 129, 129); */
 }
-
-span.token.symbol, span.token.key.atrule {
-    color: rgb(90, 162, 255) !important;
-}
-span.token.operator {
-    color: gray !important;
-}
-span.token.punctuation {
-    color: lightcoral !important;
-}
-span.token.string {
-    color: greenyellow !important;
-}

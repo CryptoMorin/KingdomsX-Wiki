@@ -11,19 +11,9 @@ export default function remarkGitHubLatex() {
 function normalizeKatexMath(input) {
   return input
     // Convert <= and >= to proper LaTeX
-    .replace(/<=/g, "\\le")
-    .replace(/>=/g, "\\ge")
+    .replace('<=', "\\le")
+    .replace('>=', "\\ge")
 
     // Fix single-row separators inside cases
-    .replace(
-      /\\begin\{cases\}([\s\S]*?)\\end\{cases\}/g,
-      (_, body) => {
-        const fixedBody = body.replace(
-          /([^\n\\])\\\s*\n/g,
-          "$1\\\\\n"
-        );
-
-        return `\\begin{cases}${fixedBody}\\end{cases}`;
-      }
-    );
+    .replaceAll(/(?<!\\)\\$/g, '\\\\');
 }

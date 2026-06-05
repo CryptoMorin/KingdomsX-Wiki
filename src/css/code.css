@@ -1,0 +1,18 @@
+span.token.class-name {
+    color: rgb(1, 206, 206) !important;
+}
+span.token.function {
+    color: lightskyblue !important;
+}
+span.token.symbol, span.token.key.atrule {
+    color: rgb(90, 162, 255) !important;
+}
+span.token.operator {
+    color: gray !important;
+}
+span.token.punctuation {
+    color: lightcoral !important;
+}
+span.token.string {
+    color: greenyellow !important;
+}

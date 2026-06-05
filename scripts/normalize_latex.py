@@ -1,8 +1,11 @@
 #!/usr/bin/env python3
-
+#!/usr/bin/env python3
 import re
 import sys
 from pathlib import Path
+
+HEADING_RE = re.compile(r'^(#{1,6})(\s+.*)$')
+FENCE_RE = re.compile(r'^\s*(```|~~~)')
 
 COLOR_MAP = {
     "Gray": "#808080",
@@ -63,6 +66,10 @@ def preprocess_text(text: str) -> str:
     # 3. normalize accidental backslash explosions
     text = normalize_backslashes(text)
 
+    # 4. Downgrade headings for Docusaurus God forsaken slug plugin to work.
+    #    Because it doesn't generate IDs for <h1> elements.
+    text = downgrade_headings(text)
+
     return text
 
 
@@ -98,6 +105,26 @@ def main():
         print(f"Not found: {target}")
         sys.exit(1)
 
+def downgrade_headings(text: str) -> str:
+    lines = []
+    in_code_block = False
+
+    for line in text.splitlines():
+        if FENCE_RE.match(line):
+            in_code_block = not in_code_block
+            lines.append(line)
+            continue
+
+        if not in_code_block:
+            match = HEADING_RE.match(line)
+            if match:
+                hashes, rest = match.groups()
+                new_level = min(len(hashes) + 1, 6)
+                line = "#" * new_level + rest
+
+        lines.append(line)
+
+    return "\n".join(lines)
 
 if __name__ == "__main__":
     main()

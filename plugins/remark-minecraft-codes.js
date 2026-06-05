@@ -58,35 +58,15 @@ function style(state) {
   return s.join(";");
 }
 
-/* ---------------- PARSING HELPERS ---------------- */
 
-function parseRgb(str) {
-  const m = str.match(/(\d+)\s*,\s*(\d+)\s*,\s*(\d+)/);
-  if (!m) return null;
-  const [r, g, b] = m.slice(1).map(Number);
-  return (
-    "#" +
-    [r, g, b]
-      .map((x) => x.toString(16).padStart(2, "0"))
-      .join("")
-  );
-}
-
-function normalizeHex(hex) {
-  hex = hex.replace("#", "");
-
-  if (hex.length === 3) {
-    return (
-      "#" +
-      hex
-        .split("")
-        .map((c) => c + c)
-        .join("")
-    );
-  }
-
-  return "#" + hex;
-}
+// &#RGB &#RRGGBB
+const FORMAT_NAKED = /^&#([0-9A-Fa-f]{3,6})/;
+// {#RGB} {#RRGGBB}
+const FORMAT_BRACES_HEX = /^{#([0-9A-Fa-f]{3,6})}/;
+// {#Orange}
+const FORMAT_BRACES_NAMED = /^{#([A-z]{3,10})}/;
+// {#r,g,b}
+const FORMAT_BRACES_RGB = /^{#(\d{1,3}\s*,\s*\d{1,3}\s*,\s*\d{1,3})}/;
 
 /* ---------------- MAIN PLUGIN ---------------- */
 
@@ -121,41 +101,6 @@ export default function remarkMinecraftAdvanced() {
         else if (code === "r") state = reset();
       };
 
-      const parseColor = (chunk) => {
-        chunk = chunk.trim();
-
-        // &#RRGGBB
-        if (chunk.startsWith("&#")) {
-          state.color = normalizeHex(chunk.slice(1));
-          return;
-        }
-
-        // {#...}
-        if (chunk.startsWith("{#") && chunk.endsWith("}")) {
-          const inner = chunk.slice(2, -1);
-
-          // {#r,g,b}
-          if (inner.includes(",")) {
-            state = reset();
-            state.color = parseRgb(inner);
-            return;
-          }
-
-          // hex or name
-          if (/^[0-9a-fA-F]{3,6}$/.test(inner)) {
-            state = reset();
-            state.color = normalizeHex(inner);
-            return;
-          }
-
-          const name = inner.toLowerCase();
-          if (NAMED_COLORS[name]) {
-            state = reset();
-            state.color = NAMED_COLORS[name];
-          }
-        }
-      };
-
       let buffer = "";
 
       const flush = () => {
@@ -179,30 +124,51 @@ export default function remarkMinecraftAdvanced() {
           continue;
         }
 
-        /* -------- HEX &#RRGGBB -------- */
-        if (text.startsWith("&#", i)) {
-          const match = text.slice(i).match(/^&#([0-9a-fA-F]{6})/);
-          if (match) {
-            flush();
-            state = reset();
-            state.color = "#" + match[1];
-            i += match[0].length - 1;
-            push(match[0], { ...state }, "mc-code");
-            continue;
-          }
+        const chunk =  text.slice(i);
+
+        // &#RRGGBB
+        let match = chunk.match(FORMAT_NAKED)
+        if (match) {
+          flush();
+          state = reset();
+          state.color = '#' + match[1];
+          buffer += match[1];
+          i += state.color.length;
+          continue;
         }
 
-        /* -------- {#...} formats -------- */
-        if (text.startsWith("{#", i)) {
-          const end = text.indexOf("}", i);
-          if (end !== -1) {
-            const chunk = text.slice(i, end + 1);
+        // {#RRGGBB}
+        match = chunk.match(FORMAT_BRACES_HEX)
+        if (match) {
+          flush();
+          state = reset();
+          state.color = '#' + match[1];
+          buffer += match[1];
+          i += state.color.length;
+          continue;
+        }
 
+        // {#r,g,b}
+        chunk = chunk.match(FORMAT_BRACES_RGB);
+        if (match) {
+          flush();
+          state = reset();
+          state.color = `rgb(${match[1]})`;
+          buffer += match[1];
+          i += state.color.length;
+          continue;
+        }
+
+        // {#Named}
+        chunk = chunk.match(FORMAT_BRACES_NAMED);
+        if (match) {
+          const name = match[1].toLowerCase();
+          if (NAMED_COLORS[name]) {
             flush();
-            parseColor(chunk);
-            push(chunk, { ...state }, "mc-code");
-
-            i = end;
+            state = reset();
+            state.color = NAMED_COLORS[name];
+            buffer += match[1];
+            i += state.color.length;
             continue;
           }
         }
