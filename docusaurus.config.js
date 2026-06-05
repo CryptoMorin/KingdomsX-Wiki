@@ -12,7 +12,7 @@ export default {
   title: 'KingdomsX Wiki',
   url: 'https://cryptomorin.github.io',
   baseUrl: '/KingdomsX-Wiki/',
-  favicon: '/assets/favicon.ico',
+  favicon: 'docs/assets/favicon.ico',
   tagline: 'The official KingdomsX comprehensive wiki.',
 
   organizationName: 'CryptoMorin',
@@ -64,6 +64,10 @@ export default {
             [rehypeKatex, { strict: false }],
             rehypeForceH1Slug
           ],
+        },
+
+        theme: {
+          customCss: './src/css/custom.css',
         },
 
         blog: false,

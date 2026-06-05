@@ -1,6 +1,7 @@
 import { visit } from 'unist-util-visit';
 
 export default function rehypeForceH1Slug() {
+  console.log("REHYPE SLUG")
   return (tree) => {
     visit(tree, 'element', (node) => {
       if (node.tagName === 'h1' && !node.properties?.id) {
