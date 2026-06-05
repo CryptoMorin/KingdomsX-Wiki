@@ -1,9 +1,17 @@
+span.token.annotation {
+    color: rgb(255, 115, 0) !important;
+}
 span.token.class-name {
-    color: rgb(1, 206, 206) !important;
+    color: rgb(0, 143, 143) !important;
 }
 span.token.function {
     color: lightskyblue !important;
 }
+
+span.token.tag {
+    color: #ff6fcd !important;
+}
+
 span.token.symbol, span.token.key.atrule {
     color: rgb(90, 162, 255) !important;
 }

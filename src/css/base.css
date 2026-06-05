@@ -16,6 +16,19 @@ html[data-theme='dark'] .theme-admonition-note svg {
     filter: brightness(0) saturate(100%) invert(71%) sepia(9%) saturate(3061%) hue-rotate(168deg) brightness(98%) contrast(106%);
 }
 
+html[data-theme='dark'] .theme-admonition-info svg {
+    filter: brightness(0) saturate(100%) invert(92%) sepia(31%) saturate(1920%) hue-rotate(104deg) brightness(109%) contrast(102%);
+}
+
+html[data-theme='dark'] .theme-admonition-warning svg {
+    filter: brightness(0) saturate(100%) invert(53%) sepia(46%) saturate(2736%) hue-rotate(359deg) brightness(102%) contrast(101%);
+}
+
+html[data-theme='dark'] .theme-admonition-danger svg {
+    filter: brightness(0) saturate(100%) invert(26%) sepia(97%) saturate(7320%) hue-rotate(357deg) brightness(105%) contrast(116%);
+}
+
+
 details.alert {
     --ifm-link-color: rgb(32, 121, 255);
     --ifm-link-hover-color: rgb(182, 182, 255);

@@ -132,8 +132,8 @@ export default function remarkMinecraftAdvanced() {
           flush();
           state = reset();
           state.color = '#' + match[1];
-          buffer += match[1];
-          i += state.color.length;
+          buffer += match[0];
+          i += match[0].length;
           continue;
         }
 
@@ -143,8 +143,8 @@ export default function remarkMinecraftAdvanced() {
           flush();
           state = reset();
           state.color = '#' + match[1];
-          buffer += match[1];
-          i += state.color.length;
+          buffer += match[0];
+          i += match[0].length;
           continue;
         }
 
@@ -154,8 +154,8 @@ export default function remarkMinecraftAdvanced() {
           flush();
           state = reset();
           state.color = `rgb(${match[1]})`;
-          buffer += match[1];
-          i += state.color.length;
+          buffer += match[0];
+          i += match[0].length;
           continue;
         }
 
@@ -167,8 +167,8 @@ export default function remarkMinecraftAdvanced() {
             flush();
             state = reset();
             state.color = NAMED_COLORS[name];
-            buffer += match[1];
-            i += state.color.length;
+            buffer += match[0];
+            i += match[0].length;
             continue;
           }
         }
