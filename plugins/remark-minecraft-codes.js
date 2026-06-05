@@ -59,9 +59,9 @@ function style(state) {
 }
 
 // &#RGB &#RRGGBB
-const FORMAT_NAKED = /^&#(?:([0-9A-Fa-f]{3}){1,2})/;
+const FORMAT_NAKED = /^&#((?:[0-9A-Fa-f]{3}){1,2})/;
 // {#RGB} {#RRGGBB}
-const FORMAT_BRACES_HEX = /^{#(?:([0-9A-Fa-f]{3}){1,2})}/;
+const FORMAT_BRACES_HEX = /^{#((?:[0-9A-Fa-f]{3}){1,2})}/;
 // {#Orange}
 const FORMAT_BRACES_NAMED = /^{#([A-z]{3,10})}/;
 // {#r,g,b}
@@ -81,11 +81,11 @@ export default function remarkMinecraftAdvanced() {
       let out = [];
       let found = false;
 
-      const push = (content, st, extraClass = "") => {
+      const push = (content, st) => {
         const styleAttr = style(st);
 
         out.push(
-          `<span class="mc-token ${extraClass}"${
+          `<span class="mc-token"${
             styleAttr ? ` style="${styleAttr}"` : ""
           }>${content}</span>`
         );
@@ -125,7 +125,7 @@ export default function remarkMinecraftAdvanced() {
           const code = text[i + 1].toLowerCase();
 
           if (applyFormatting({}, code)) {
-            flush();          
+            if (!['l', 'o', 'n', 'm', 'k', 'r'].includes(code)) flush();
             applyFormatting(state, code);
             buffer += '&' + code;
 
