@@ -35,7 +35,7 @@ export default {
     prism: {
       theme: themes.github,
       darkTheme: themes.dracula,
-      additionalLanguages: ['ruby', 'haskell', 'java', 'gradle', 'xml', 'yml'],
+      additionalLanguages: ['ruby', 'haskell', 'java', 'gradle', 'markup', 'yaml'],
     },
   },
 
