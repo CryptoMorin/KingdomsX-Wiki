@@ -1,32 +1,32 @@
-export default {
+module.exports = {
   kingdomSidebar: [
-    'index',
+    'Index',
 
-    'features',
+    'Features',
 
     {
       type: 'category',
       label: '📥 Installation',
       items: [
-        'installation',
-        'installation#setup',
-        'installation#compatibility',
+        'Installation',
+        'Installation#Setup',
+        'Installation#Compatibility',
       ],
     },
 
-    'faq',
-    'nfaq',
+    'FAQ',
+    'NFAQ',
 
     {
       type: 'category',
       label: '⚜️ Addons',
       items: [
-        'addons',
-        'outposts',
-        'peace-treaties',
-        'map-viewers-addon',
-        'enginehub-addon',
-        'admin-tools',
+        'Addons',
+        'Outposts',
+        'Peace-Treaties',
+        'Map-Viewers-Addon',
+        'EngineHub-Addon',
+        'Admin-Tools',
       ],
     },
 
@@ -34,28 +34,28 @@ export default {
       type: 'category',
       label: '# Basics',
       items: [
-        'introduction',
+        'Introduction',
 
         {
           type: 'category',
           label: '⌨️ Commands',
           items: [
-            'commands',
-            'commands#players',
-            'commands#admins',
+            'Commands',
+            'Commands#Players',
+            'Commands#Admins',
           ],
         },
 
-        'permissions',
+        'Permissions',
 
         {
           type: 'category',
           label: '🔣 Placeholders',
           items: [
-            'placeholders',
-            'placeholders#players',
-            'placeholders#kingdoms',
-            'placeholders#nations',
+            'Placeholders',
+            'Placeholders#Players',
+            'Placeholders#Kingdoms',
+            'Placeholders#Nations',
           ],
         },
 
@@ -63,10 +63,10 @@ export default {
           type: 'category',
           label: '📁 Config',
           items: [
-            'config',
-            'yaml',
-            'languages',
-            'gui',
+            'Config',
+            'YAML',
+            'Languages',
+            'GUI',
           ],
         },
       ],
@@ -76,28 +76,28 @@ export default {
       type: 'category',
       label: '# Advanced',
       items: [
-        'protection-signs',
-        'mails',
+        'Protection-Signs',
+        'Mails',
 
         {
           type: 'category',
           label: '📚 Mechanics',
           items: [
-            'mechanics',
+            'Mechanics',
 
             {
               type: 'category',
               label: '⚔️ Invasion',
               items: [
-                'mechanics#invasion',
-                'mechanics#preparing',
-                'mechanics#champion',
-                'mechanics#mass-wars',
+                'Mechanics#Invasion',
+                'Mechanics#Preparing',
+                'Mechanics#Champion',
+                'Mechanics#Mass-Wars',
               ],
             },
 
-            'mechanics#structures',
-            'mechanics#turrets',
+            'Mechanics#Structures',
+            'Mechanics#Turrets',
           ],
         },
       ],
@@ -107,19 +107,19 @@ export default {
       type: 'category',
       label: '# Others',
       items: [
-        'troubleshooting',
+        'Troubleshooting',
 
         {
           type: 'category',
           label: '💻 API',
           items: [
-            'api',
-            'api#basics',
-            'api#turrets--structures',
-            'api#metadata',
-            'api#events',
-            'api#examples',
-            'api#addons',
+            'API',
+            'API#Basics',
+            'API#Turrets--Structures',
+            'API#Metadata',
+            'API#Events',
+            'API#Examples',
+            'API#Addons',
           ],
         },
       ],
