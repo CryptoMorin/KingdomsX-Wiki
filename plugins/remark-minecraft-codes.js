@@ -1,4 +1,3 @@
-// remarkMinecraftFormat.js
 import { visit } from "unist-util-visit";
 
 const COLORS = {
@@ -30,29 +29,29 @@ function resetState() {
   };
 }
 
-function buildStyle(state) {
-  const style = [];
+function styleFrom(state) {
+  const s = [];
 
-  if (state.color) style.push(`color:${state.color}`);
-  if (state.bold) style.push(`font-weight:bold`);
-  if (state.italic) style.push(`font-style:italic`);
+  if (state.color) s.push(`color:${state.color}`);
+  if (state.bold) s.push(`font-weight:bold`);
+  if (state.italic) s.push(`font-style:italic`);
 
-  const decorations = [];
-  if (state.underline) decorations.push("underline");
-  if (state.strike) decorations.push("line-through");
+  const deco = [];
+  if (state.underline) deco.push("underline");
+  if (state.strike) deco.push("line-through");
+  if (deco.length) s.push(`text-decoration:${deco.join(" ")}`);
 
-  if (decorations.length) {
-    style.push(`text-decoration:${decorations.join(" ")}`);
-  }
-
-  return style.join(";");
+  return s.join(";");
 }
 
 export default function remarkMinecraftFormat() {
   return (tree) => {
-    visit(tree, "inlineCode", (node) => {
+    visit(tree, "inlineCode", (node, _, parent) => {
       const text = node.value;
       if (!text || !text.includes("&")) return;
+
+      // safety: NEVER touch code blocks accidentally
+      if (parent?.type === "code") return;
 
       let state = resetState();
       let buffer = "";
@@ -61,7 +60,7 @@ export default function remarkMinecraftFormat() {
       const flush = () => {
         if (!buffer) return;
 
-        const style = buildStyle(state);
+        const style = styleFrom(state);
         const styleAttr = style ? ` style="${style}"` : "";
 
         out.push(`<span${styleAttr}>${buffer}</span>`);
@@ -69,54 +68,42 @@ export default function remarkMinecraftFormat() {
       };
 
       for (let i = 0; i < text.length; i++) {
-        const char = text[i];
+        const ch = text[i];
 
-        if (char === "&" && i + 1 < text.length) {
+        if (ch === "&" && i + 1 < text.length) {
           const code = text[i + 1].toLowerCase();
+
+          // IMPORTANT:
+          // We KEEP &x in output → so add it BEFORE applying logic
+          buffer += `&${code}`;
 
           flush();
 
-          // reset
           if (code === "r") {
             state = resetState();
-          }
-
-          // bold
-          else if (code === "l") {
+          } else if (code === "l") {
             state.bold = true;
-          }
-
-          // italic
-          else if (code === "o") {
+          } else if (code === "o") {
             state.italic = true;
-          }
-
-          // underline
-          else if (code === "n") {
+          } else if (code === "n") {
             state.underline = true;
-          }
-
-          // strikethrough
-          else if (code === "m") {
+          } else if (code === "m") {
             state.strike = true;
-          }
-
-          // colors
-          else if (COLORS[code]) {
+          } else if (COLORS[code]) {
             state.color = COLORS[code];
           }
 
-          i++; // skip format char
+          i++; // skip code char
           continue;
         }
 
-        buffer += char;
+        buffer += ch;
       }
 
       flush();
 
       node.type = "html";
-      node.value = out.join("");
+      node.value = `<span class="mc-root">${out.join("")}</span>`;
     });
   };
 }
