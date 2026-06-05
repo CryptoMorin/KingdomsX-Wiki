@@ -8,11 +8,29 @@ html[data-theme='dark'] .theme-admonition-note {
 }
 
 html[data-theme='dark'] .theme-admonition-note svg {
-    filter: brightness(0) saturate(100%) invert(34%) sepia(85%) saturate(2627%) hue-rotate(178deg) brightness(89%) contrast(101%);
+    filter: brightness(0) saturate(100%) invert(71%) sepia(9%) saturate(3061%) hue-rotate(168deg) brightness(98%) contrast(106%);
 }
 
 details.alert {
     --ifm-link-color: rgb(32, 121, 255);
     --ifm-link-hover-color: rgb(182, 182, 255);
     /* background-color: rgb(63, 129, 129); */
+}
+
+.percent-wrapped {
+  color: red;
+  font-weight: bold;
+}
+
+span.token.symbol {
+    color: rgb(90, 162, 255) !important;
+}
+span.token.symbol {
+    color: gray !important;
+}
+span.token.punctuation {
+    color: lightcoral !important;
+}
+span.token.string {
+    color: greenyellow !important;
 }
