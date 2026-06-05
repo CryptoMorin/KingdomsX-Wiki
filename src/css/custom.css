@@ -25,6 +25,9 @@ details.alert {
 .placeholder-text {
     display: inline-flex;
     font-weight: bold;
+    padding: 0 4px;
+    border-radius: 4px;
+    background: #363636;
 }
 
 .placeholder-text .placeholder-enclosure {
