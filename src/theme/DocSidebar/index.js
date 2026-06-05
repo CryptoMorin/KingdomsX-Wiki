@@ -1,7 +1,7 @@
 import React from 'react';
-// import DocSidebar from '@theme-original/DocSidebar';
+import DocSidebar from '@theme-original/DocSidebar';
 
-function CustomSidebarItem({ label, to, emoji }) {
+function Item({ emoji, label, to }) {
   return (
     <li className="menu__list-item">
       <a className="menu__link" href={to}>
@@ -11,12 +11,12 @@ function CustomSidebarItem({ label, to, emoji }) {
   );
 }
 
-function CollapsibleSection({ title, children, defaultOpen = true }) {
+function Group({ title, emoji, children, defaultOpen = true }) {
   return (
     <li className="menu__list-item">
-      <details open={defaultOpen} className="custom-sidebar-group">
+      <details className="menu__list-item-collapsible" open={defaultOpen}>
         <summary className="menu__link">
-          {title}
+          {emoji} {title}
         </summary>
         <ul className="menu__list">
           {children}
@@ -28,103 +28,111 @@ function CollapsibleSection({ title, children, defaultOpen = true }) {
 
 export default function CustomDocSidebar(props) {
   return (
-    <aside className="theme-doc-sidebar-container custom-sidebar">
+    <DocSidebar
+      {...props}
+      sidebar={
+        [
+          {
+            type: 'category',
+            label: 'Custom',
+            items: [] // we are NOT using Docusaurus auto sidebar here
+          }
+        ]
+      }
+    >
+      {/* We overlay custom UI inside sidebar container */}
+      <div className="customSidebarRoot">
 
-      {/* Custom overlay / replacement (optional: you can remove DocSidebar above if you fully replace it) */}
-      <nav className="menu">
         <ul className="menu__list">
 
           {/* Home */}
-          <CustomSidebarItem emoji="🏠" label="Home" to="/KingdomsX/wiki" />
+          <Item emoji="🏠" label="Home" to="/" />
 
           {/* Features */}
-          <CustomSidebarItem emoji="🔰" label="Features" to="/KingdomsX/wiki/Features" />
+          <Item emoji="🔰" label="Features" to="/Features" />
 
           {/* Installation */}
-          <CollapsibleSection title="📥 Installation">
-            <CustomSidebarItem emoji="📗" label="Setup" to="/KingdomsX/wiki/Installation#setup" />
-            <CustomSidebarItem emoji="📘" label="Compatibility" to="/KingdomsX/wiki/Installation#compatibility" />
-          </CollapsibleSection>
+          <Group emoji="📥" title="Installation">
+            <Item emoji="📗" label="Setup" to="/Installation#setup" />
+            <Item emoji="📘" label="Compatibility" to="/Installation#compatibility" />
+          </Group>
 
           {/* FAQ */}
-          <CustomSidebarItem emoji="❓" label="FAQ" to="/KingdomsX/wiki/FAQ" />
+          <Item emoji="❓" label="FAQ" to="/FAQ" />
 
           {/* NFAQ */}
-          <CustomSidebarItem emoji="⁉️" label="NFAQ" to="/KingdomsX/wiki/NFAQ" />
+          <Item emoji="⁉️" label="NFAQ" to="/NFAQ" />
 
           {/* Addons */}
-          <CollapsibleSection title="⚜️ Addons">
-            <CustomSidebarItem emoji="🚩" label="Outposts" to="/KingdomsX/wiki/Outposts" />
-            <CustomSidebarItem emoji="☮️" label="Peace Treaties" to="/KingdomsX/wiki/Peace-Treaties" />
-            <CustomSidebarItem emoji="🗺️" label="Map Viewers" to="/KingdomsX/wiki/Map-Viewers-Addon" />
-            <CustomSidebarItem emoji="🏬" label="EngineHub" to="/KingdomsX/wiki/EngineHub-Addon" />
-            <CustomSidebarItem emoji="🛠" label="Admin Tools" to="/KingdomsX/wiki/Admin-Tools" />
-          </CollapsibleSection>
+          <Group emoji="⚜️" title="Addons">
+            <Item emoji="🚩" label="Outposts" to="/Outposts" />
+            <Item emoji="☮️" label="Peace Treaties" to="/Peace-Treaties" />
+            <Item emoji="🗺️" label="Map Viewers" to="/Map-Viewers-Addon" />
+            <Item emoji="🏬" label="EngineHub" to="/EngineHub-Addon" />
+            <Item emoji="🛠" label="Admin Tools" to="/Admin-Tools" />
+          </Group>
+
+          <hr />
 
           {/* Basics */}
-          <li className="menu__list-item"><strong>Basics</strong></li>
+          <Item emoji="❇️" label="Introduction" to="/Introduction" />
+          <Item emoji="⌨️" label="Commands" to="/Commands" />
 
-          <CustomSidebarItem emoji="❇️" label="Introduction" to="/KingdomsX/wiki/Introduction" />
-          <CustomSidebarItem emoji="⌨️" label="Commands" to="/KingdomsX/wiki/Commands" />
+          <Group emoji="⌨️" title="Commands">
+            <Item emoji="👨‍🦱" label="Players" to="/Commands#players" />
+            <Item emoji="👩‍⚖️" label="Admins" to="/Commands#admins" />
+          </Group>
 
-          <CollapsibleSection title="👨‍🦱 Players">
-            <CustomSidebarItem emoji="👨‍🦱" label="Players Commands" to="/KingdomsX/wiki/Commands#players" />
-          </CollapsibleSection>
+          <Item emoji="🔓" label="Permissions" to="/Permissions" />
+          <Item emoji="🔣" label="Placeholders" to="/Placeholders" />
 
-          <CollapsibleSection title="👩‍⚖️ Admins">
-            <CustomSidebarItem emoji="👩‍⚖️" label="Admin Commands" to="/KingdomsX/wiki/Commands#admins" />
-          </CollapsibleSection>
+          <Group emoji="🔣" title="Placeholders">
+            <Item emoji="🚹" label="Players" to="/Placeholders#players" />
+            <Item emoji="🏛" label="Kingdoms" to="/Placeholders#kingdoms" />
+            <Item emoji="🏢" label="Nations" to="/Placeholders#nations" />
+          </Group>
 
-          <CustomSidebarItem emoji="🔓" label="Permissions" to="/KingdomsX/wiki/Permissions" />
-          <CustomSidebarItem emoji="🔣" label="Placeholders" to="/KingdomsX/wiki/Placeholders" />
+          <Item emoji="📁" label="Config" to="/Config" />
 
-          <CollapsibleSection title="🚹 Placeholders">
-            <CustomSidebarItem emoji="🚹" label="Players" to="/KingdomsX/wiki/Placeholders#players" />
-            <CustomSidebarItem emoji="🏛" label="Kingdoms" to="/KingdomsX/wiki/Placeholders#kingdoms" />
-            <CustomSidebarItem emoji="🏢" label="Nations" to="/KingdomsX/wiki/Placeholders#nations" />
-          </CollapsibleSection>
+          <Group emoji="📁" title="Config Files">
+            <Item emoji="📃" label="YAML" to="/YAML" />
+            <Item emoji="💱" label="Languages" to="/Languages" />
+            <Item emoji="📱" label="GUI" to="/GUIs" />
+          </Group>
 
-          <CustomSidebarItem emoji="📁" label="Config" to="/KingdomsX/wiki/Config" />
-
-          <CollapsibleSection title="📁 Config Details">
-            <CustomSidebarItem emoji="📃" label="YAML" to="/KingdomsX/wiki/YAML" />
-            <CustomSidebarItem emoji="💱" label="Languages" to="/KingdomsX/wiki/Languages" />
-            <CustomSidebarItem emoji="📱" label="GUI" to="/KingdomsX/wiki/GUIs" />
-          </CollapsibleSection>
+          <hr />
 
           {/* Advanced */}
-          <li className="menu__list-item"><strong>Advanced</strong></li>
+          <Item emoji="🔒" label="Protection Signs" to="/Protection-Signs" />
+          <Item emoji="✉️" label="Mails" to="/Mails" />
+          <Item emoji="📚" label="Mechanics" to="/Mechanics" />
 
-          <CustomSidebarItem emoji="🔒" label="Protection Signs" to="/KingdomsX/wiki/Protection-Signs" />
-          <CustomSidebarItem emoji="✉️" label="Mails" to="/KingdomsX/wiki/Mails" />
-          <CustomSidebarItem emoji="📚" label="Mechanics" to="/KingdomsX/wiki/Mechanics" />
+          <Group emoji="⚔️" title="Invasion">
+            <Item emoji="🛡️" label="Preparing" to="/Mechanics#Preparing" />
+            <Item emoji="🧟" label="Champion" to="/Mechanics#Champion" />
+            <Item emoji="🗡" label="Masswar" to="/Mechanics#mass-wars" />
+          </Group>
 
-          <CollapsibleSection title="⚔️ Invasion">
-            <CustomSidebarItem emoji="🛡️" label="Preparing" to="/KingdomsX/wiki/Mechanics#Preparing" />
-            <CustomSidebarItem emoji="🧟" label="Champion" to="/KingdomsX/wiki/Mechanics#Champion" />
-            <CustomSidebarItem emoji="🗡" label="Masswar" to="/KingdomsX/wiki/Mechanics#mass-wars" />
-          </CollapsibleSection>
+          <Item emoji="📡" label="Structures" to="/Mechanics#Structures" />
+          <Item emoji="🔫" label="Turrets" to="/Mechanics#Turrets" />
 
-          <CustomSidebarItem emoji="📡" label="Structures" to="/KingdomsX/wiki/Mechanics#Structures" />
-          <CustomSidebarItem emoji="🔫" label="Turrets" to="/KingdomsX/wiki/Mechanics#Turrets" />
+          <hr />
 
           {/* Others */}
-          <li className="menu__list-item"><strong>Others</strong></li>
+          <Item emoji="🧰" label="Troubleshooting" to="/Troubleshooting" />
+          <Item emoji="💻" label="API" to="/API" />
 
-          <CustomSidebarItem emoji="🧰" label="Troubleshooting" to="/KingdomsX/wiki/Troubleshooting" />
-          <CustomSidebarItem emoji="💻" label="API" to="/KingdomsX/wiki/API" />
-
-          <CollapsibleSection title="💻 API Sections">
-            <CustomSidebarItem emoji="🔹" label="Basics" to="/KingdomsX/wiki/API#basics" />
-            <CustomSidebarItem emoji="🔹" label="Turrets & Structures" to="/KingdomsX/wiki/API#turrets--structures" />
-            <CustomSidebarItem emoji="🔹" label="Metadata" to="/KingdomsX/wiki/API#metadata" />
-            <CustomSidebarItem emoji="🔹" label="Events" to="/KingdomsX/wiki/API#events" />
-            <CustomSidebarItem emoji="🔹" label="Examples" to="/KingdomsX/wiki/API#examples" />
-            <CustomSidebarItem emoji="🔹" label="Addons" to="/KingdomsX/wiki/Addons-API" />
-          </CollapsibleSection>
+          <Group emoji="💻" title="API">
+            <Item emoji="🔹" label="Basics" to="/API#basics" />
+            <Item emoji="🔹" label="Turrets & Structures" to="/API#turrets--structures" />
+            <Item emoji="🔹" label="Metadata" to="/API#metadata" />
+            <Item emoji="🔹" label="Events" to="/API#events" />
+            <Item emoji="🔹" label="Examples" to="/API#examples" />
+            <Item emoji="🔹" label="Addons" to="/API#addons-api" />
+          </Group>
 
         </ul>
-      </nav>
-    </aside>
+      </div>
+    </DocSidebar>
   );
 }

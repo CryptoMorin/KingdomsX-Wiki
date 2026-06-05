@@ -69,17 +69,16 @@ export default {
         docs: {
           path: './docs',                  // Points to the cloned folder
           routeBasePath: '/',              // Wiki at root URL
-          sidebarPath: require.resolve('./sidebars.js'),
+          // sidebarPath: require.resolve('./sidebars.js'),
           editUrl: (blogDirPath, blogPath, permaLink, locale) => `https://github.com/CryptoMorin/KingdomsX/wiki/${blogPath}/_edit`,
 
-          beforeDefaultRemarkPlugins: [remarkGithubAdmonitionsToDirectives],
+          beforeDefaultRemarkPlugins: [remarkGithubAdmonitionsToDirectives, remarkGitHubLatex],
 
           remarkPlugins: [
             remarkGFM,
             [remarkMath, { singleDollarTextMath: false }],
             remarkPlaceholders,
             remarkMinecraftFormat,
-            remarkGitHubLatex,
             normalizeWikiLinks
           ],
           rehypePlugins: [

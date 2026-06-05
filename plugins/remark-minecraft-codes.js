@@ -2,7 +2,7 @@ import { visit } from "unist-util-visit";
 
 /* ---------------- COLORS ---------------- */
 
-const LEGACY_COLORS = {
+const MINECRAFT_COLORS = {
   "0": "#000000",
   "1": "#0000AA",
   "2": "#00AA00",
@@ -13,6 +13,7 @@ const LEGACY_COLORS = {
   "7": "#AAAAAA",
   "8": "#555555",
   "9": "#5555FF",
+
   a: "#55FF55",
   b: "#55FFFF",
   c: "#FF5555",
@@ -77,120 +78,130 @@ export default function remarkMinecraftAdvanced() {
       if (parent?.type === "code") return;
       if (!text.includes('&') && !text.includes('{#')) return;
 
-      let state = newState();
-      let out = [];
-      let found = false;
-
-      const push = (content, st) => {
-        const styleAttr = style(st);
-
-        out.push(
-          `<span class="mc-token"${
-            styleAttr ? ` style="${styleAttr}"` : ""
-          }>${content}</span>`
-        );
-      };
-
-      const applyFormatting = (state, code) => {
-        if (LEGACY_COLORS[code]) {
-          state.color = LEGACY_COLORS[code];
-          return true;
-        }
-
-        else if (code === "l") { state.bold = true; return true; }
-        else if (code === "o") { state.italic = true; return true; }
-        else if (code === "n") { state.underline = true; return true; }
-        else if (code === "m") { state.strike = true; return true; }
-        else if (code === "k") { state.obfuscated = true; return true; }
-        else if (code === "r") { state = newState(); return true; }
-        return false;
-      };
-
-      let buffer = "";
-
-      const flush = () => {
-        found = true;
-        if (!buffer) return;
-        push(buffer, { ...state });
-        buffer = "";
-      };
-
-      for (let i = 0; i < text.length; i++) {
-        const ch = text[i];
-
-        if (ch !== '{' && ch !== '&') continue;
-
-        /* -------- LEGACY & CODES -------- */
-        if (ch === "&" && i + 1 < text.length) {
-          const code = text[i + 1].toLowerCase();
-
-          if (applyFormatting({}, code)) {
-            if (!['l', 'o', 'n', 'm', 'k', 'r'].includes(code)) flush();
-            applyFormatting(state, code);
-            buffer += '&' + code;
-
-            i++;
-            continue;
-          }
-        }
-
-        const chunk = text.slice(i);
-
-        // &#RRGGBB
-        let match = chunk.match(FORMAT_NAKED);
-        if (match) {
-          flush();
-          state = newState();
-          state.color = '#' + match[1];
-          buffer += match[0];
-          i += match[0].length;
-          continue;
-        }
-
-        // {#RRGGBB}
-        match = chunk.match(FORMAT_BRACES_HEX);
-        if (match) {
-          flush();
-          state = newState();
-          state.color = '#' + match[1];
-          buffer += match[0];
-          i += match[0].length;
-          continue;
-        }
-
-        // {#r,g,b}
-        match = chunk.match(FORMAT_BRACES_RGB);
-        if (match) {
-          flush();
-          state = newState();
-          state.color = `rgb(${match[1]})`;
-          buffer += match[0];
-          i += match[0].length;
-          continue;
-        }
-
-        // {#Named}
-        match = chunk.match(FORMAT_BRACES_NAMED);
-        if (match) {
-          const name = match[1].toLowerCase();
-          if (NAMED_COLORS[name]) {
-            flush();
-            state = newState();
-            state.color = NAMED_COLORS[name];
-            buffer += match[0];
-            i += match[0].length;
-            continue;
-          }
-        }
-
-        buffer += ch;
-      }
-      if (!found) return;
-
-      flush();
+      const out = parseMinecraft(text);
+      if (!out) return;
 
       node.type = "html";
       node.value = `<span class="mc-root">${out.join("")}</span>`;
     });
   };
+}
+
+function parseMinecraft(text) {
+  let state = newState();
+  const out = [];
+  let found = false;
+  let buffer = "";
+
+
+
+  const push = (content, st) => {
+    const styleAttr = style(st);
+
+    out.push(
+      `<span class="mc-token"${
+        styleAttr ? ` style="${styleAttr}"` : ""
+      }>${content}</span>`
+    );
+  };
+
+  const applyFormatting = (state, code) => {
+    if (MINECRAFT_COLORS[code]) {
+      state.color = MINECRAFT_COLORS[code];
+      return true;
+    }
+
+    else if (code === "l") { state.bold = true; return true; }
+    else if (code === "o") { state.italic = true; return true; }
+    else if (code === "n") { state.underline = true; return true; }
+    else if (code === "m") { state.strike = true; return true; }
+    else if (code === "k") { state.obfuscated = true; return true; }
+    else if (code === "r") { state = newState(); return true; }
+    return false;
+  };
+
+  const flush = () => {
+    found = true;
+    if (!buffer) return;
+    push(buffer, { ...state });
+    buffer = "";
+  };
+
+
+
+  for (let i = 0; i < text.length; i++) {
+    const ch = text[i];
+
+    if (ch !== '{' && ch !== '&') continue;
+
+    /* -------- Simple Color Formatting -------- */
+    if (ch === "&" && i + 1 < text.length) {
+      const code = text[i + 1].toLowerCase();
+
+      if (applyFormatting({}, code)) {
+        flush();
+        if (!['l', 'o', 'n', 'm', 'k', 'r'].includes(code)) state = newState();
+        applyFormatting(state, code);
+        buffer += '&' + code;
+
+        i++;
+        continue;
+      }
+    }
+
+    const chunk = text.slice(i);
+
+    // &#RRGGBB
+    let match = chunk.match(FORMAT_NAKED);
+    if (match) {
+      flush();
+      state = newState();
+      state.color = '#' + match[1];
+      buffer += match[0];
+      i += match[0].length;
+      continue;
+    }
+
+    // {#RRGGBB}
+    match = chunk.match(FORMAT_BRACES_HEX);
+    if (match) {
+      flush();
+      state = newState();
+      state.color = '#' + match[1];
+      buffer += match[0];
+      i += match[0].length;
+      continue;
+    }
+
+    // {#r,g,b}
+    match = chunk.match(FORMAT_BRACES_RGB);
+    if (match) {
+      flush();
+      state = newState();
+      state.color = `rgb(${match[1]})`;
+      buffer += match[0];
+      i += match[0].length;
+      continue;
+    }
+
+    // {#Named}
+    match = chunk.match(FORMAT_BRACES_NAMED);
+    if (match) {
+      const name = match[1].toLowerCase();
+      if (NAMED_COLORS[name]) {
+        flush();
+        state = newState();
+        state.color = NAMED_COLORS[name];
+        buffer += match[0];
+        i += match[0].length;
+        continue;
+      }
+    }
+
+    buffer += ch;
+  }
+  
+  if (!found) return null;
+  flush();
+  return out;
 }
