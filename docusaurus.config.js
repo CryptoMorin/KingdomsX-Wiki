@@ -62,6 +62,7 @@ export default {
           ],
           rehypePlugins: [
             [rehypeKatex, { strict: false }],
+            rehypeSlug,
             rehypeForceH1Slug
           ],
         },
