@@ -59,9 +59,9 @@ function style(state) {
 }
 
 // &#RGB &#RRGGBB
-const FORMAT_NAKED = /^&#([0-9A-Fa-f]{3,6})/;
+const FORMAT_NAKED = /^&#(?:([0-9A-Fa-f]{3}){1,2})/;
 // {#RGB} {#RRGGBB}
-const FORMAT_BRACES_HEX = /^{#([0-9A-Fa-f]{3,6})}/;
+const FORMAT_BRACES_HEX = /^{#(?:([0-9A-Fa-f]{3}){1,2})}/;
 // {#Orange}
 const FORMAT_BRACES_NAMED = /^{#([A-z]{3,10})}/;
 // {#r,g,b}
@@ -118,6 +118,8 @@ export default function remarkMinecraftAdvanced() {
       for (let i = 0; i < text.length; i++) {
         const ch = text[i];
 
+        if (ch !== '{' && ch !== '&') continue;
+
         /* -------- LEGACY & CODES -------- */
         if (ch === "&" && i + 1 < text.length) {
           const code = text[i + 1].toLowerCase();
@@ -125,7 +127,7 @@ export default function remarkMinecraftAdvanced() {
           if (applyFormatting({}, code)) {
             flush();          
             applyFormatting(state, code);
-            push(`&${code}`, { ...state }, "mc-code");
+            buffer += '&' + code;
 
             i++;
             continue;
@@ -135,7 +137,7 @@ export default function remarkMinecraftAdvanced() {
         const chunk = text.slice(i);
 
         // &#RRGGBB
-        let match = chunk.match(FORMAT_NAKED)
+        let match = chunk.match(FORMAT_NAKED);
         if (match) {
           flush();
           state = newState();
@@ -146,7 +148,7 @@ export default function remarkMinecraftAdvanced() {
         }
 
         // {#RRGGBB}
-        match = chunk.match(FORMAT_BRACES_HEX)
+        match = chunk.match(FORMAT_BRACES_HEX);
         if (match) {
           flush();
           state = newState();

@@ -76,7 +76,7 @@ export default {
 
           remarkPlugins: [
             remarkGFM,
-            remarkMath,
+            [remarkMath, { singleDollarTextMath: false }],
             remarkPlaceholders,
             remarkMinecraftFormat,
             remarkGitHubLatex,

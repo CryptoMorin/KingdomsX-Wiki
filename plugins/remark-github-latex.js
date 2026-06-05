@@ -15,5 +15,5 @@ function normalizeKatexMath(input) {
     .replace('>=', "\\ge")
 
     // Fix single-row separators inside cases
-    .replaceAll(/(?<!\\)\\$/g, '\\\\');
+    .replaceAll(/\\$/gm, '\\\\');
 }
