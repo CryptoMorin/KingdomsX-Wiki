@@ -5,7 +5,7 @@ import remarkGFM from 'remark-gfm';
 import rehypeSlug from 'rehype-slug';
 import remarkPlaceholders from "./plugins/remark-placeholders";
 import remarkMinecraftFormat from "./plugins/remark-minecraft-codes";
-import rehypeForceH1Slug from './plugins/rehyped_slug';
+import rehypeForceH1Slug from './plugins/ultra-hyped-slug';
 
 import {themes} from 'prism-react-renderer';
 import prism from 'prismjs';
