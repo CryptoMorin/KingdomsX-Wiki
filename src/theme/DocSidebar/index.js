@@ -1,4 +1,4 @@
-import DocSidebar from '@theme-original/DocSidebar';
+import OriginalDocSidebar from '@theme-original/DocSidebar';
 
 export default function DocSidebar(props) {
   return (
@@ -6,7 +6,7 @@ export default function DocSidebar(props) {
       <div className="my-header">My Custom Docs</div>
 
       {/* original sidebar content */}
-      <DocSidebar {...props} />
+      <OriginalDocSidebar {...props} />
 
       <div className="my-footer">Version 2.0</div>
     </aside>
