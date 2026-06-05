@@ -7,6 +7,11 @@ html[data-theme='dark'] .theme-admonition-note {
     border-color: #00b0ff;
 }
 
+html[data-theme='dark'] table thead {
+    background-color: #663e00;
+    border-bottom: 4px solid darkgray;
+}
+
 html[data-theme='dark'] .theme-admonition-note svg {
     filter: brightness(0) saturate(100%) invert(71%) sepia(9%) saturate(3061%) hue-rotate(168deg) brightness(98%) contrast(106%);
 }
@@ -18,14 +23,15 @@ details.alert {
 }
 
 .placeholder-text {
-  font-weight: bold;
+    display: inline-flex;
+    font-weight: bold;
 }
 
 .placeholder-text .placeholder-enclosure {
-    color: darkgray;
+    color: rgb(141, 141, 141);
 }
 .placeholder-text .placeholder-content {
-    color: darkgray;
+    color: rgb(255, 104, 104);
 }
 
 span.token.symbol {

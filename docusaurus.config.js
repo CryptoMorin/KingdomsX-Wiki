@@ -45,6 +45,20 @@ export default {
     },
   },
 
+  plugins: [
+    [
+      '@docusaurus/plugin-client-redirects',
+      {
+        redirects: [
+          {
+            from: ['/', '/KingdomsX-Wiki'],
+            to: '/Home',
+          },
+        ],
+      },
+    ],
+  ],
+
   presets: [
     [
       '@docusaurus/preset-classic',

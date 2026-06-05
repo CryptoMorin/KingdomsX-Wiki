@@ -14,11 +14,11 @@ export default function remarkPlaceholders() {
 
         node.type = "html";
         node.value = `
-<span class="placeholder-text">
+<code class="placeholder-text">
   <span class="placeholder-enclosure">%</span>
   <span class="placeholder-content">${inner}</span>
   <span class="placeholder-enclosure">%</span>
-</span>
+</code>
 `;
       }
     });
