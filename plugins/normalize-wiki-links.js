@@ -1,3 +1,5 @@
+import { visit } from "unist-util-visit";
+
 const GITHUB_WIKI_PREFIX = "https://github.com/CryptoMorin/KingdomsX/wiki/";
 const CUSTOM_WIKI_PREFIX = "https://wiki.kingdomsx.com/";
 
