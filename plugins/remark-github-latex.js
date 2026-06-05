@@ -1,5 +1,4 @@
 import { visit } from "unist-util-visit";
-import { InlineMath, BlockMath } from "react-katex";
 
 export default function remarkGitHubLatex() {
   return (tree) => {
