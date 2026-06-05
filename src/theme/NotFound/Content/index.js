@@ -4,6 +4,6 @@ import { Redirect } from '@docusaurus/router';
 
 export default function NotFound() {
   useEffect(() => {
-    window.location.replace('pages/404');
+    window.location.replace('/pages/404');
   }, []);
 }

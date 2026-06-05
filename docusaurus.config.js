@@ -86,7 +86,7 @@ export default {
         },
 
         theme: {
-          customCss: [ './src/css/base.css', './src/css/katex.css' ],
+          customCss: [ './src/css/base.css' ],
         },
 
         blog: false,
