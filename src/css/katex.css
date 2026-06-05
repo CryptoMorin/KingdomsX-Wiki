@@ -1,0 +1,50 @@
+/* Base KaTeX container */
+.katex {
+  color: #1f2937; /* default text color */
+  font-size: 1.05em;
+}
+
+/* Variables (x, y, z, u, l, t, etc.) */
+.katex .mathnormal {
+  color: #2563eb; /* blue */
+}
+
+/* Numbers (if present) */
+.katex .mord.mnum {
+  color: #16a34a; /* green */
+}
+
+/* Operators (=, <, >, +, -, etc.) */
+.katex .mrel,
+.katex .mbin {
+  color: #7c3aed; /* purple */
+  font-weight: 500;
+}
+
+/* Punctuation (commas, semicolons, colons) */
+.katex .mpunct {
+  color: #6b7280; /* gray */
+}
+
+/* Brackets and delimiters { } ( ) [ ] */
+.katex .mopen,
+.katex .mclose,
+.katex .delimsizing {
+  color: #111827; /* near-black */
+}
+
+/* Function names or roman text inside math */
+.katex .mord.mtext {
+  color: #374151;
+}
+
+/* Spacing elements (don’t visually change them) */
+.katex .mspace {
+  color: inherit;
+}
+
+/* Optional: make case blocks stand out (like your \begin{cases}) */
+.katex .mtable {
+  border-left: 2px solid #e5e7eb;
+  padding-left: 0.5em;
+}

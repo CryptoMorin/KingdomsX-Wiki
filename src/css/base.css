@@ -27,17 +27,17 @@ details.alert {
     font-weight: bold;
     padding: 0 4px;
     border-radius: 4px;
-    background: #363636;
+    background: #36363688;
 }
 
 .placeholder-text .placeholder-enclosure {
     color: rgb(141, 141, 141);
 }
 .placeholder-text .placeholder-content {
-    color: rgb(255, 104, 104);
+    color: rgb(255, 182, 87);
 }
 
-span.token.symbol {
+span.token.symbol, span.token.key.atrule {
     color: rgb(90, 162, 255) !important;
 }
 span.token.operator {

@@ -4,6 +4,7 @@ import rehypeKatex from 'rehype-katex';
 import remarkGFM from 'remark-gfm';
 import rehypeSlug from 'rehype-slug';
 import remarkPlaceholders from "./plugins/remark-placeholders";
+import remarkMinecraftFormat from "./plugins/remark-minecraft-codes";
 import rehypeForceH1Slug from './plugins/rehyped_slug';
 
 import {themes} from 'prism-react-renderer';
@@ -74,7 +75,8 @@ export default {
           remarkPlugins: [
             remarkGFM,
             remarkMath,
-            remarkPlaceholders
+            remarkPlaceholders,
+            remarkMinecraftFormat
           ],
           rehypePlugins: [
             [rehypeKatex, { strict: false }],
@@ -84,7 +86,7 @@ export default {
         },
 
         theme: {
-          customCss: './src/css/custom.css',
+          customCss: [ './src/css/base.css', './src/css/katex.css' ],
         },
 
         blog: false,
