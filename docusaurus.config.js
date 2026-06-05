@@ -7,6 +7,7 @@ import remarkPlaceholders from "./plugins/remark-placeholders";
 import remarkMinecraftFormat from "./plugins/remark-minecraft-codes";
 import rehypeForceH1Slug from './plugins/ultra-hyped-slug';
 import remarkGitHubLatex from "./plugins/remark-github-latex";
+import normalizeWikiLinks from "./plugins/normalize-wiki-links";
 
 import {themes} from 'prism-react-renderer';
 import prism from 'prismjs';
@@ -78,7 +79,8 @@ export default {
             remarkMath,
             remarkPlaceholders,
             remarkMinecraftFormat,
-            remarkGitHubLatex
+            remarkGitHubLatex,
+            normalizeWikiLinks
           ],
           rehypePlugins: [
             [rehypeKatex, { strict: false }],

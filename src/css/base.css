@@ -17,11 +17,15 @@ html[data-theme='dark'] .theme-admonition-note svg {
 }
 
 html[data-theme='dark'] .theme-admonition-info svg {
-    filter: brightness(0) saturate(100%) invert(92%) sepia(31%) saturate(1920%) hue-rotate(104deg) brightness(109%) contrast(102%);
+    filter: brightness(0) saturate(100%) invert(85%) sepia(24%) saturate(875%) hue-rotate(145deg) brightness(105%) contrast(108%);
 }
 
 html[data-theme='dark'] .theme-admonition-warning svg {
-    filter: brightness(0) saturate(100%) invert(53%) sepia(46%) saturate(2736%) hue-rotate(359deg) brightness(102%) contrast(101%);
+    filter: brightness(0) saturate(100%) invert(68%) sepia(58%) saturate(1857%) hue-rotate(332deg) brightness(108%) contrast(101%);
+}
+
+html[data-theme='dark'] .theme-admonition-tip svg {
+    filter: brightness(0) saturate(100%) invert(78%) sepia(64%) saturate(3065%) hue-rotate(43deg) brightness(115%) contrast(104%);
 }
 
 html[data-theme='dark'] .theme-admonition-danger svg {
@@ -33,4 +37,10 @@ details.alert {
     --ifm-link-color: rgb(32, 121, 255);
     --ifm-link-hover-color: rgb(182, 182, 255);
     /* background-color: rgb(63, 129, 129); */
+}
+
+.mc-root {
+    padding: 0 4px;
+    border-radius: 4px;
+    background: #36363688;
 }

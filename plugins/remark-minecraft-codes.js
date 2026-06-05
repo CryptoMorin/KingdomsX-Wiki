@@ -28,7 +28,7 @@ const NAMED_COLORS = {
 
 /* ---------------- STATE ---------------- */
 
-function reset() {
+function newState() {
   return {
     color: null,
     bold: false,
@@ -58,7 +58,6 @@ function style(state) {
   return s.join(";");
 }
 
-
 // &#RGB &#RRGGBB
 const FORMAT_NAKED = /^&#([0-9A-Fa-f]{3,6})/;
 // {#RGB} {#RRGGBB}
@@ -76,9 +75,11 @@ export default function remarkMinecraftAdvanced() {
       const text = node.value;
       if (!text) return;
       if (parent?.type === "code") return;
+      if (!text.includes('&') && !text.includes('{#')) return;
 
-      let state = reset();
+      let state = newState();
       let out = [];
+      let found = false;
 
       const push = (content, st, extraClass = "") => {
         const styleAttr = style(st);
@@ -90,20 +91,25 @@ export default function remarkMinecraftAdvanced() {
         );
       };
 
-      const applyFormatting = (code) => {
-        if (LEGACY_COLORS[code]) state.color = LEGACY_COLORS[code];
+      const applyFormatting = (state, code) => {
+        if (LEGACY_COLORS[code]) {
+          state.color = LEGACY_COLORS[code];
+          return true;
+        }
 
-        else if (code === "l") state.bold = true;
-        else if (code === "o") state.italic = true;
-        else if (code === "n") state.underline = true;
-        else if (code === "m") state.strike = true;
-        else if (code === "k") state.obfuscated = true;
-        else if (code === "r") state = reset();
+        else if (code === "l") { state.bold = true; return true; }
+        else if (code === "o") { state.italic = true; return true; }
+        else if (code === "n") { state.underline = true; return true; }
+        else if (code === "m") { state.strike = true; return true; }
+        else if (code === "k") { state.obfuscated = true; return true; }
+        else if (code === "r") { state = newState(); return true; }
+        return false;
       };
 
       let buffer = "";
 
       const flush = () => {
+        found = true;
         if (!buffer) return;
         push(buffer, { ...state });
         buffer = "";
@@ -116,12 +122,14 @@ export default function remarkMinecraftAdvanced() {
         if (ch === "&" && i + 1 < text.length) {
           const code = text[i + 1].toLowerCase();
 
-          flush();          
-          applyFormatting(code);
-          push(`&${code}`, { ...state }, "mc-code");
+          if (applyFormatting({}, code)) {
+            flush();          
+            applyFormatting(state, code);
+            push(`&${code}`, { ...state }, "mc-code");
 
-          i++;
-          continue;
+            i++;
+            continue;
+          }
         }
 
         const chunk = text.slice(i);
@@ -130,7 +138,7 @@ export default function remarkMinecraftAdvanced() {
         let match = chunk.match(FORMAT_NAKED)
         if (match) {
           flush();
-          state = reset();
+          state = newState();
           state.color = '#' + match[1];
           buffer += match[0];
           i += match[0].length;
@@ -141,7 +149,7 @@ export default function remarkMinecraftAdvanced() {
         match = chunk.match(FORMAT_BRACES_HEX)
         if (match) {
           flush();
-          state = reset();
+          state = newState();
           state.color = '#' + match[1];
           buffer += match[0];
           i += match[0].length;
@@ -152,7 +160,7 @@ export default function remarkMinecraftAdvanced() {
         match = chunk.match(FORMAT_BRACES_RGB);
         if (match) {
           flush();
-          state = reset();
+          state = newState();
           state.color = `rgb(${match[1]})`;
           buffer += match[0];
           i += match[0].length;
@@ -165,7 +173,7 @@ export default function remarkMinecraftAdvanced() {
           const name = match[1].toLowerCase();
           if (NAMED_COLORS[name]) {
             flush();
-            state = reset();
+            state = newState();
             state.color = NAMED_COLORS[name];
             buffer += match[0];
             i += match[0].length;
@@ -175,6 +183,7 @@ export default function remarkMinecraftAdvanced() {
 
         buffer += ch;
       }
+      if (!found) return;
 
       flush();
 

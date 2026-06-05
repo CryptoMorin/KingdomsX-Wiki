@@ -1,8 +1,5 @@
-span.token.annotation {
-    color: rgb(255, 115, 0) !important;
-}
 span.token.class-name {
-    color: rgb(0, 143, 143) !important;
+    color: rgb(0, 151, 151) !important;
 }
 span.token.function {
     color: lightskyblue !important;
@@ -23,4 +20,8 @@ span.token.punctuation {
 }
 span.token.string {
     color: greenyellow !important;
+}
+
+span.token.annotation {
+    color: rgb(255, 115, 0) !important;
 }
