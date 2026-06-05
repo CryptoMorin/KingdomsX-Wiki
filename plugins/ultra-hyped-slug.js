@@ -10,7 +10,7 @@ function slugify(text) {
 
 export default function rehypeForceH1Slug() {
   return (tree) => {
-    const slugger = rehypeSlug(options);
+    const slugger = rehypeSlug();
     slugger(tree);
 
     visit(tree, 'element', (node) => {
