@@ -11,8 +11,8 @@ import prism from 'prismjs';
 
 export default {
   title: 'KingdomsX Wiki',
-  url: 'https://cryptomorin.github.io',
-  baseUrl: '/KingdomsX-Wiki/',
+  url: 'https://wiki.kingdomsx.com',
+  baseUrl: '/',
   favicon: 'img/favicon.ico',
   tagline: 'The official KingdomsX comprehensive wiki.',
 
