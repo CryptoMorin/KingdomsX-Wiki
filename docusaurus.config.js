@@ -88,7 +88,7 @@ export default {
         },
 
         theme: {
-          customCss: [ './src/css/base.css', './src/css/katex.css', './src/css/placeholders.css' ],
+          customCss: [ './src/css/base.css', './src/css/katex.css', './src/css/placeholder.css' ],
         },
 
         blog: false,
