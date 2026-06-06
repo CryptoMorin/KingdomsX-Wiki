@@ -51,10 +51,10 @@ export default {
 
     navbar: {
       title: "KingdomsX",
-      href: "https://kingdomsx.com",
       logo: {
         alt: "KingdomsX Icon",
         src: "img/favicon.ico",
+        href: "https://kingdomsx.com",
       },
 
       items: [
