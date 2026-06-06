@@ -48,6 +48,33 @@ export default {
       minHeadingLevel: 2,
       maxHeadingLevel: 4,
     },
+
+    navbar: {
+      title: "KingdomsX",
+      logo: {
+        alt: "KingdomsX Icon",
+        src: "img/favicon.ico",
+      },
+      items: [
+        {
+          to: "/",
+          label: "Home",
+          position: "left",
+        },
+
+        {
+          href: "https://discord.kingdomsx.com",
+          label: "Discord",
+          position: "right",
+        },
+
+        {
+          href: "https://github.com/CryptoMorin/KingdomsX",
+          label: "GitHub",
+          position: "right",
+        },
+      ],
+    },
   },
 
   markdown: {
@@ -80,7 +107,13 @@ export default {
           path: './docs',                  // Points to the cloned folder
           routeBasePath: '/',              // Wiki at root URL
           // sidebarPath: require.resolve('./sidebars.js'),
-          editUrl: (blogDirPath, blogPath, permaLink, locale) => `https://github.com/CryptoMorin/KingdomsX/wiki/${blogPath}/_edit`,
+          editUrl: ({ permalink }) => {
+            if (!permalink) return undefined;
+
+            const page = permalink.replace(/\/$/, '').split('/').pop();
+
+            return `https://github.com/CryptoMorin/KingdomsX/wiki/${page}/_edit`;
+          },
 
           beforeDefaultRemarkPlugins: [remarkGithubAdmonitionsToDirectives, normalizeWikiLinks],
 

@@ -83,7 +83,6 @@ export default function remarkMinecraftAdvanced() {
 
       node.type = "html";
       node.value = `<span class="mc-root">${out.join("")}</span>`;
-      console.log("Finalized mc-root: " + node.value)
     });
   };
 }
@@ -177,7 +176,6 @@ function parseMinecraft(text) {
       state = newState();
       state.color = '#' + match[1];
       buffer += match[0];
-      console.log(`match color '${match[0]}' with '${match[1]}' inside '${text}' -> BUFFER ${buffer}`)
       i += match[0].length - 1;
       continue;
     }
