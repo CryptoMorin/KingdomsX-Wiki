@@ -7,7 +7,7 @@ export default function remarkGitHubLatex() {
       if (node.lang === "math") {
         const before = node.value;
         node.value = normalizeKatexMath(node.value);
-        console.log("KATEX :: " + before + "\n\n" + after)
+        console.log("KATEX :: " + before + "\n\n" + node.value);
       }
     });
   };
