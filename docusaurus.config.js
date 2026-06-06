@@ -28,13 +28,13 @@ export default {
   onBrokenLinks: 'warn',
 
   headTags: [
-    {
-      tagName: 'meta',
-      attributes: {
-        name: 'algolia-site-verification',
-        content: '2A3D23472CE71508',
-      }
-    },
+    // {
+    //   tagName: 'meta',
+    //   attributes: {
+    //     name: 'algolia-site-verification',
+    //     content: '2A3D23472CE71508',
+    //   }
+    // },
     {
       tagName: 'link',
       attributes: {
@@ -116,7 +116,7 @@ export default {
       // Public API key: it is safe to commit it
       apiKey: '8cb81bcf4ec3a084e26cfd536d479a03',
 
-      indexName: 'wiki_kingdomsx_com_aovzy9bus7_pages',
+      indexName: 'Docusaurus DocSearch Crawler',
 
       contextualSearch: false,
 
