@@ -54,6 +54,13 @@ details.alert {
 }
 
 
+:root {
+  --ifm-hr-background-color: orange;
+}
+/* html[data-theme="dark"] {
+  --ifm-toc-border-color: orange; 
+} */
+
 
 
 /* Global Scroll Bar */

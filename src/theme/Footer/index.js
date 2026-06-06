@@ -19,7 +19,8 @@ export default function FooterWrapper(props) {
           />
 
           <span className="footer-copyright">
-            Copyright © {new Date().getFullYear()} KingdomsX. A plugin by Crypto Morin.
+            Copyright © {new Date().getFullYear()} KingdomsX.
+            <span className="footer-copyright-madeby">A plugin by Crypto Morin.</span>
           </span>
         </div>
 
