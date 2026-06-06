@@ -23,9 +23,16 @@ export default function normalizeWikiLinks() {
 
 // Example rewrite strategy
 function rewrite(url) {
-  const path = url
+  let path = url
     .replace(GITHUB_WIKI_PREFIX, "")
     .replace(CUSTOM_WIKI_PREFIX, "");
+
+  // The slug plugin uses lowercase unlike GitHub's case-sensitive anchors.
+  const split = path.split('#');
+  if (split.length > 1)  {
+    const [ base, anchor ] = split;
+    path = base + '#' + anchor.toLowerCase()
+  }
 
   return `/${path}`;
 }
