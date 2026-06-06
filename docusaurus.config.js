@@ -72,6 +72,9 @@ export default {
           // sidebarPath: require.resolve('./sidebars.js'),
           editUrl: (blogDirPath, blogPath, permaLink, locale) => `https://github.com/CryptoMorin/KingdomsX/wiki/${blogPath}/_edit`,
 
+          minHeadingLevel: 2,
+          maxHeadingLevel: 4,
+
           beforeDefaultRemarkPlugins: [remarkGithubAdmonitionsToDirectives, normalizeWikiLinks],
 
           remarkPlugins: [
@@ -96,11 +99,6 @@ export default {
             './src/css/sidebar.css',
             './src/css/placeholder.css'
            ],
-        },
-
-        toc: {
-          minHeadingLevel: 2,
-          maxHeadingLevel: 4,
         },
 
         blog: false,
