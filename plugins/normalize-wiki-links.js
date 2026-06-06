@@ -17,6 +17,11 @@ export default function normalizeWikiLinks() {
       if (node.url.startsWith(CUSTOM_WIKI_PREFIX)) {
         node.url = rewrite(node.url);
       }
+
+      // Normalize GitHub anchors.
+      if (node.url.startsWith('/') && node.url.includes('#')) {
+        node.url = rewrite(node.url);
+      }
     });
   };
 };
