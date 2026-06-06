@@ -41,11 +41,12 @@ export default {
     docs: {
       sidebar: {
         hideable: true,
-      },
-      toc: {
-        minHeadingLevel: 2, // h2
-        maxHeadingLevel: 4, // h4
-      },
+      }
+    },
+
+    tableOfContents: {
+      minHeadingLevel: 2,
+      maxHeadingLevel: 4,
     },
   },
 
