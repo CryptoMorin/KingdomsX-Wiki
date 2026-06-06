@@ -1,10 +1,12 @@
 import { visit } from "unist-util-visit";
 
+
 export default function remarkGitHubLatex() {
   return (tree) => {
-    visit(tree, ["inlineMath", "math"], (node) => {
-      console.log("VISIT KATEX normlization -> " + node.type + " - " + node.value)
-      node.value = normalizeKatexMath(node.value);
+    visit(tree, "code", (node) => {
+      if (node.lang === "math") {
+        node.value = normalizeKatexMath(node.value);
+      }
     });
   };
 }

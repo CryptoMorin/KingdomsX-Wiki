@@ -14,6 +14,7 @@ export default function CustomSidebar() {
             <details open>
               <summary>📥 Installation</summary>
               <ul>
+                <li><a href="/Installation">📥 Installation</a></li>
                 <li><a href="/Installation#setup">📗 Setup</a></li>
                 <li><a href="/Installation#compatibility">📘 Compatibility</a></li>
               </ul>
@@ -27,6 +28,7 @@ export default function CustomSidebar() {
             <details open>
               <summary>⚜️ Addons</summary>
               <ul>
+                <li><a href="/Addons">⚜️ Addons</a></li>
                 <li><a href="/Outposts">🚩 Outposts</a></li>
                 <li><a href="/Peace-Treaties">☮️ Peace Treaties</a></li>
                 <li><a href="/Map-Viewers-Addon">🗺️ Map Viewers</a></li>
@@ -37,7 +39,7 @@ export default function CustomSidebar() {
           </li>
 
           {/* Basics Section */}
-          <li className="menu__list__category"><span># Basics</span></li>
+          <li className="menu__list__category"><span>Basics</span></li>
 
           <li><a href="/Introduction">❇️ Introduction</a></li>
 
@@ -45,6 +47,7 @@ export default function CustomSidebar() {
             <details>
               <summary>⌨️ Commands</summary>
               <ul>
+                <li><a href="/Commands">⌨️ Commands</a></li>
                 <li><a href="/Commands#players">👨‍🦱 Players</a></li>
                 <li><a href="/Commands#admins">👩‍⚖️ Admins</a></li>
               </ul>
@@ -57,6 +60,7 @@ export default function CustomSidebar() {
             <details>
               <summary>🔣 Placeholders</summary>
               <ul>
+                <li><a href="/Placeholders">🔣 Placeholders</a></li>
                 <li><a href="/Placeholders#players">🚹 Players</a></li>
                 <li><a href="/Placeholders#kingdoms">🏛 Kingdoms</a></li>
                 <li><a href="/Placeholders#nations">🏢 Nations</a></li>
@@ -68,6 +72,7 @@ export default function CustomSidebar() {
             <details>
               <summary>📁 Config</summary>
               <ul>
+                <li><a href="/Config">📁 Config</a></li>
                 <li><a href="/YAML">📃 YAML</a></li>
                 <li><a href="/Languages">💱 Languages</a></li>
                 <li><a href="/GUIs">📱 GUI</a></li>
@@ -76,7 +81,7 @@ export default function CustomSidebar() {
           </li>
 
           {/* Advanced Section */}
-          <li className="menu__list__category"><span># Advanced</span></li>
+          <li className="menu__list__category"><span>Advanced</span></li>
 
           <li><a href="/Protection-Signs">🔒 Protection Signs</a></li>
           <li><a href="/Mails">✉️ Mails</a></li>
@@ -89,6 +94,7 @@ export default function CustomSidebar() {
                   <details>
                     <summary>⚔️ Invasion</summary>
                     <ul>
+                      <li><a href="/Mechanics">⚔️ Invasion</a></li>
                       <li><a href="/Mechanics#Preparing">🛡️ Preparing</a></li>
                       <li><a href="/Mechanics#Champion">🧟 Champion</a></li>
                       <li><a href="/Mechanics#mass-wars">🗡 Masswar</a></li>
@@ -102,7 +108,7 @@ export default function CustomSidebar() {
           </li>
 
           {/* Others Section */}
-          <li className="menu__list__category"><span># Others</span></li>
+          <li className="menu__list__category"><span>Others</span></li>
 
           <li><a href="/Troubleshooting">🧰 Troubleshooting</a></li>
 

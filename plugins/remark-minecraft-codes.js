@@ -83,6 +83,7 @@ export default function remarkMinecraftAdvanced() {
 
       node.type = "html";
       node.value = `<span class="mc-root">${out.join("")}</span>`;
+      console.log("Finalized mc-root: " + node.value)
     });
   };
 }
