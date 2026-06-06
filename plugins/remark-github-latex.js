@@ -7,7 +7,6 @@ export default function remarkGitHubLatex() {
       if (node.lang === "math") {
         const before = node.value;
         node.value = normalizeKatexMath(node.value);
-        console.log("KATEX :: \nBefore:\n" + before + "\n\nAfter:\n" + node.value + "\n\nEvaluation:\nContains: " + node.value.includes('y\\'));
       }
     });
   };
@@ -20,5 +19,6 @@ function normalizeKatexMath(input) {
     .replaceAll('>=', "\\ge")
 
     // Fix single-row separators inside cases
+    // Note: Doesn't support negative look-behind.
     .replaceAll(/[^\\]\\$/gm, '\\\\');
 }

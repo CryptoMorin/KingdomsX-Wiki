@@ -1,12 +1,12 @@
 /* Base KaTeX container */
 .katex {
-  color: #8ebdff;
+  color: #1f7dff;
   font-size: 1.05em;
 }
 
 /* Variables (x, y, z, u, l, t, etc.) */
 .katex .mathnormal {
-  color: #2563eb;
+  color: #76a1ff;
 }
 
 /* Numbers (if present) */
@@ -43,8 +43,7 @@
   color: inherit;
 }
 
-/* Optional: make case blocks stand out (like your \begin{cases}) */
+/* Space between braces and the cases */
 .katex .mtable {
-  border-left: 2px solid #e5e7eb;
   padding-left: 0.5em;
 }

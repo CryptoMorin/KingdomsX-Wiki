@@ -59,7 +59,7 @@ export default {
 
       items: [
         {
-          to: "/",
+          to: "/Home",
           label: "Home",
           position: "left",
         },
@@ -82,6 +82,7 @@ export default {
         {
           href: "https://discord.kingdomsx.com",
           position: "right",
+          label: "Discord",
           logo: {
             alt: "Discord Icon",
             src: "img/Discord-Symbol-Blurple.svg",
@@ -89,39 +90,7 @@ export default {
         },
 
       ],
-    },
-
-  footer: {
-    style: 'dark', // or 'light'
-    logo: {
-      alt: 'KingdomsX Icon',
-      src: 'img/favicon.ico', // put this in /static/img
-      href: 'https://kingdomsx.com',
-      width: 120,
-      height: 30,
-    },
-    links: [
-      {
-        title: 'Docs',
-        items: [
-          {
-            label: 'Getting Started',
-            to: '/Home',
-          },
-        ],
-      },
-      {
-        title: 'Community',
-        items: [
-          {
-            label: 'GitHub',
-            href: 'https://github.com/CryptoMorin/KingdomsX',
-          },
-        ],
-      },
-    ],
-    copyright: `Copyright © ${new Date().getFullYear()} KingdomsX.`,
-  },
+    }
   },
 
   markdown: {
