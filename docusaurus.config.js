@@ -89,7 +89,13 @@ export default {
         },
 
         theme: {
-          customCss: [ './src/css/base.css', './src/css/katex.css', './src/css/code.css', './src/css/placeholder.css' ],
+          customCss: [ 
+            './src/css/base.css', 
+            './src/css/katex.css', 
+            './src/css/code.css', 
+            './src/css/sidebar.css',
+            './src/css/placeholder.css'
+           ],
         },
 
         blog: false,

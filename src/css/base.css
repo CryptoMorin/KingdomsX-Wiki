@@ -44,15 +44,3 @@ details.alert {
     border-radius: 4px;
     background: #36363688;
 }
-
-
-.theme-doc-sidebar-container {
-  height: 100vh;
-  overflow: hidden;
-}
-
-.customScroll {
-  height: 100%;
-  overflow-y: auto;
-  padding: 12px;
-}

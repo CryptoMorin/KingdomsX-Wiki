@@ -1,11 +1,9 @@
 import { visit } from "unist-util-visit";
 
 export default function remarkGitHubLatex() {
-  console.log("Accepted KATEX normlization")
   return (tree) => {
-    console.log("Running KATEX normlization")
     visit(tree, ["inlineMath", "math"], (node) => {
-      console.log("VISIT KATEX normlization -> " + node)
+      console.log("VISIT KATEX normlization -> " + node.type + " - " + node.value)
       node.value = normalizeKatexMath(node.value);
     });
   };

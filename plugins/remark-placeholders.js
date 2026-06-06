@@ -23,6 +23,7 @@ function handle(node) {
 
     // Don't use <code> because Docusaurus will Prism-ify it.
     // Causing "placeholder-text" to be replaced and a <pre> tag added.
+    // We have to be aggressive with whitespaces in the source code, otherwise it'll look weird in production.
     node.type = "html";
     node.value = `
 <span class="placeholder-text">

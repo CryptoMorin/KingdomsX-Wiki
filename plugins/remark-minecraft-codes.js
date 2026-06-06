@@ -139,8 +139,8 @@ function parseMinecraft(text) {
 
     /* -------- Simple Color Formatting -------- */
     if (ch === "&" && i + 1 < text.length) {
+      
       const code = text[i + 1].toLowerCase();
-
       if (applyFormatting({}, code)) {
         flush();
         if (!['l', 'o', 'n', 'm', 'k', 'r'].includes(code)) state = newState();
@@ -161,7 +161,8 @@ function parseMinecraft(text) {
       state = newState();
       state.color = '#' + match[1];
       buffer += match[0];
-      i += match[0].length;
+      console.log(`match color '${match[0]}' with '${match[1]}' inside '${text}' -> BUFFER ${buffer}`)
+      i += match[0].length - 1;
       continue;
     }
 
@@ -172,7 +173,7 @@ function parseMinecraft(text) {
       state = newState();
       state.color = '#' + match[1];
       buffer += match[0];
-      i += match[0].length;
+      i += match[0].length - 1;
       continue;
     }
 
@@ -183,7 +184,7 @@ function parseMinecraft(text) {
       state = newState();
       state.color = `rgb(${match[1]})`;
       buffer += match[0];
-      i += match[0].length;
+      i += match[0].length - 1;
       continue;
     }
 
@@ -196,7 +197,7 @@ function parseMinecraft(text) {
         state = newState();
         state.color = NAMED_COLORS[name];
         buffer += match[0];
-        i += match[0].length;
+        i += match[0].length - 1;
         continue;
       }
     }

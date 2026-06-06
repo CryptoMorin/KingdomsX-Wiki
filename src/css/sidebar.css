@@ -1,0 +1,138 @@
+/* ==================== CUSTOM SIDEBAR ==================== */
+.customSidebar {
+  background: #1a1a2e;
+  border-right: 1px solid #16213e;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ==================== SCROLLBAR & OVERFLOW ==================== */
+.theme-doc-sidebar-menu.customScroll {
+  padding: 1rem 0.5rem;
+  height: 100%;
+  overflow-y: auto;
+  overflow-x: hidden;
+  scrollbar-width: thin;
+  scrollbar-color: #4a5568 #1a1a2e;
+}
+
+/* Webkit scrollbar (Chrome, Edge, Safari) */
+.theme-doc-sidebar-menu.customScroll::-webkit-scrollbar {
+  width: 6px;
+}
+
+.theme-doc-sidebar-menu.customScroll::-webkit-scrollbar-track {
+  background: #1a1a2e;
+  border-radius: 10px;
+}
+
+.theme-doc-sidebar-menu.customScroll::-webkit-scrollbar-thumb {
+  background: #4a5568;
+  border-radius: 10px;
+}
+
+.theme-doc-sidebar-menu.customScroll::-webkit-scrollbar-thumb:hover {
+  background: #60a5fa;
+}
+
+/* Main menu list */
+.menu__list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* Category Headers */
+.menu__list__category {
+  margin: 1.5rem 0.5rem 0.5rem;
+  padding: 0 16px;
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: #94a3b8;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  pointer-events: none;
+}
+
+/* Base button style */
+.menu__list li {
+  margin: 0.35rem 0.5rem;
+}
+
+.menu__list a,
+.menu__list summary {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 16px;
+  color: #e2e8f0;
+  text-decoration: none;
+  border-radius: 12px;
+  font-weight: 500;
+  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  cursor: pointer;
+  border: 1px solid transparent;
+  background: rgba(255, 255, 255, 0.05);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Hover animation */
+.menu__list a:hover,
+.menu__list summary:hover {
+  background: rgba(255, 255, 255, 0.12);
+  transform: translateY(-2px) scale(1.02);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+  border-color: #60a5fa;
+  color: #fff;
+}
+
+.menu__list a:active,
+.menu__list summary:active {
+  transform: translateY(0) scale(0.98);
+}
+
+/* Dropdown summary styling */
+.menu__list summary {
+  position: relative;
+  background: linear-gradient(145deg, #2a2a4a, #1e1e38);
+  border: 1px solid #4a5568;
+  font-weight: 600;
+}
+
+/* Dropdown arrow */
+.menu__list summary::after {
+  content: "▼";
+  margin-left: auto;
+  font-size: 0.8em;
+  transition: transform 0.3s ease;
+  opacity: 0.7;
+}
+
+.menu__list details[open] summary::after {
+  transform: rotate(180deg);
+}
+
+/* Submenu styling */
+.menu__list details ul {
+  list-style: none;
+  padding: 0.25rem 0 0.5rem 0;
+  margin: 0;
+}
+
+.menu__list details li {
+  margin-left: 1.25rem; /* Indent submenus */
+}
+
+.menu__list details a {
+  background: rgba(255, 255, 255, 0.03);
+  font-size: 0.95rem;
+  padding-left: 20px;
+  margin: 0.2rem 0.5rem;
+}
+
+.menu__list details a:hover {
+  background: rgba(96, 165, 250, 0.15);
+  border-color: #60a5fa;
+}
