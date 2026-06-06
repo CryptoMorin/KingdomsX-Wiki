@@ -1,10 +1,27 @@
+nav {
+  border-bottom: 1px solid #5d3e31;
+  height: 70px;
+}
+
 .navbar__brand {
   border-right: 2px solid orange;
   margin-right: 10px;
+  margin-left: 30px;
   padding-right: 20px;
 }
 
-.navbar__item, .toggle_vylO, .navbar__title {
+/* Golden glow effect */
+.navbar__logo img {
+  height: 35px;
+  filter: drop-shadow(0 0 0.875rem rgba(255, 116, 23, 0.35));
+}
+
+.navbar__title {
+  font-family: 'Lora', serif;
+  color: orange;
+}
+
+.navbar__item, .toggle_vylO, .navbar__title, .navbar__logo img {
   transition: transform 0.3s ease-in-out;
 }
 
@@ -27,7 +44,7 @@
     margin-right: 20px;
 }
 
-.navbar__item:hover, .toggle_vylO:hover, .navbar__title:hover {
+.navbar__item:hover, .toggle_vylO:hover, .navbar__title:hover, .navbar__logo img:hover {
   transform: scale(1.1);
 }
 .navbar-discord-link:hover, .navbar-github-link:hover {

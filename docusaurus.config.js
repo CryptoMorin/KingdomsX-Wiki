@@ -27,6 +27,23 @@ export default {
   trailingSlash: false,
   onBrokenLinks: 'warn',
 
+  headTags: [
+    {
+      tagName: 'meta',
+      attributes: {
+        name: 'algolia-site-verification',
+        content: '2A3D23472CE71508',
+      }
+    },
+    {
+      tagName: 'link',
+      attributes: {
+        rel: 'stylesheet',
+        href: 'https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap',
+      },
+    },
+  ],  
+
   themeConfig: {
     colorMode: {
       defaultMode: 'dark',
