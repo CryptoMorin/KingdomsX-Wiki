@@ -11,7 +11,7 @@ export default function CustomSidebar() {
           <li><a href="/Features">🔰 Features</a></li>
 
           <li>
-            <details open>
+            <details>
               <summary>📥 Installation</summary>
               <ul>
                 <li><a href="/Installation">📥 Installation</a></li>
@@ -25,7 +25,7 @@ export default function CustomSidebar() {
           <li><a href="/NFAQ">⁉️ NFAQ</a></li>
 
           <li>
-            <details open>
+            <details>
               <summary>⚜️ Addons</summary>
               <ul>
                 <li><a href="/Addons">⚜️ Addons</a></li>

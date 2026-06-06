@@ -88,6 +88,21 @@ export default function remarkMinecraftAdvanced() {
   };
 }
 
+function escapeHTML(str) {
+  const map = {
+    '&': '&amp;',
+    '<': '&lt;',
+    '>': '&gt;',
+    '"': '&quot;',
+    "'": '&#39;',
+    '`': '&#96;'
+  };
+  
+  return str.replace(/[&<>"'`]/g, function(m) {
+    return map[m];
+  });
+}
+
 function parseMinecraft(text) {
   let state = newState();
   const out = [];
@@ -102,7 +117,7 @@ function parseMinecraft(text) {
     out.push(
       `<span class="mc-token"${
         styleAttr ? ` style="${styleAttr}"` : ""
-      }>${content}</span>`
+      }>${escapeHTML(content)}</span>`
     );
   };
 

@@ -98,6 +98,11 @@ export default {
            ],
         },
 
+        toc: {
+          minHeadingLevel: 2,
+          maxHeadingLevel: 4,
+        },
+
         blog: false,
         pages: false,
       },
