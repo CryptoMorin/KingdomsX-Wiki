@@ -10,17 +10,29 @@ export default function FooterWrapper(props) {
       <Footer
         {...props}
         />
-      <div className="custom-footer-bar">
-        <div className="custom-footer-left">
+      <div className="footer">
+        <div className="footer-left">
           <img
             src="/img/favicon.ico"
             alt="Logo"
             className="footer-logo"
           />
 
-          <span className="footer-text">
+          <span className="footer-copyright">
             © {new Date().getFullYear()} {siteConfig.title}
           </span>
+        </div>
+
+        <div className="footer-right">
+          <span className="footer-credit">
+            Made with <a href="Docusaurus">Docusaurus</a>
+          </span>
+
+          <img
+            src="/img/docusaurus_keytar.svg"
+            alt="Docusaurus Logo"
+            className="footer-logo"
+          />
         </div>
       </div>
     </>

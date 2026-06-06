@@ -1,11 +1,9 @@
 import { visit } from "unist-util-visit";
 
-
 export default function remarkGitHubLatex() {
   return (tree) => {
     visit(tree, "code", (node) => {
       if (node.lang === "math") {
-        const before = node.value;
         node.value = normalizeKatexMath(node.value);
       }
     });

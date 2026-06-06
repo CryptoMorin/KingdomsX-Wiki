@@ -83,10 +83,7 @@ export default {
           href: "https://discord.kingdomsx.com",
           position: "right",
           label: "Discord",
-          logo: {
-            alt: "Discord Icon",
-            src: "img/Discord-Symbol-Blurple.svg",
-          },
+          className: "navbar-discord-link"
         },
 
       ],

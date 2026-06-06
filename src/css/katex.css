@@ -1,7 +1,7 @@
 /* Base KaTeX container */
 .katex {
   color: #1f7dff;
-  font-size: 1.05em;
+  font-size: 1.5em;
 }
 
 /* Variables (x, y, z, u, l, t, etc.) */
@@ -30,7 +30,7 @@
 .katex .mopen,
 .katex .mclose,
 .katex .delimsizing {
-  color: #6495ff;
+  color: orange;
 }
 
 /* Function names or roman text inside math */

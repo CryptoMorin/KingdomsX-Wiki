@@ -32,6 +32,14 @@ html[data-theme='dark'] .theme-admonition-danger svg {
     filter: brightness(0) saturate(100%) invert(26%) sepia(97%) saturate(7320%) hue-rotate(357deg) brightness(105%) contrast(116%);
 }
 
+.iconExternalLink_nPIU {
+    max-width: 10px;
+}
+
+html[data-theme='dark'] .navbar {
+  background: #191d24;
+}
+
 
 details.alert {
     --ifm-link-color: rgb(32, 121, 255);
@@ -43,4 +51,43 @@ details.alert {
     padding: 0 4px;
     border-radius: 4px;
     background: #36363688;
+}
+
+
+
+.navbar-discord-link::before {
+  content: "";
+  display: inline-block;
+  max-width: 30px;
+  max-height: 30px;
+  background: url("/img/Discord-Symbol-Blurple.svg") no-repeat center;
+  background-size: contain;
+}
+
+
+
+.footer {
+    background: #0d1118;
+    height: 70px;
+}
+.footer .footer-left, .footer .footer-right {
+    height: inherit;
+    display: flex;
+    align-items: center;
+}
+.footer img {
+    max-height: "40px";
+    max-width: "40px";
+}
+
+.footer-left *, .footer-right {
+    margin: 5px;
+}
+
+.footer-left img {
+    margin-left: 50px;
+}
+
+.footer-right img {
+    margin-right: 50px;
 }
