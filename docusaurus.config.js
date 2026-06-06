@@ -85,6 +85,11 @@ export default {
           className: "navbar-discord-link"
         },
 
+        {
+          href: "https://github.com/CryptoMorin/KingdomsX",
+          position: "right",
+          className: "navbar-github-link"
+        },
       ],
     }
   },

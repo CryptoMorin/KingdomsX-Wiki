@@ -19,18 +19,19 @@ export default function FooterWrapper(props) {
           />
 
           <span className="footer-copyright">
-            © {new Date().getFullYear()} {siteConfig.title}
+            Copyright © {new Date().getFullYear()} KingdomsX. A plugin by Crypto Morin.
           </span>
         </div>
 
         <div className="footer-right">
           <span className="footer-credit">
-            Made with <a href="Docusaurus">Docusaurus</a>
+            Made with<a href="https://docusaurus.io/">Docusaurus</a>
           </span>
 
           <img
             src="/img/docusaurus_keytar.svg"
             alt="Docusaurus Logo"
+            target="_blank"
             className="footer-logo"
           />
         </div>

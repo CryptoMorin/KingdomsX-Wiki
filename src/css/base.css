@@ -52,3 +52,39 @@ details.alert {
     border-radius: 4px;
     background: #36363688;
 }
+
+
+
+
+/* Global Scroll Bar */
+
+/* Firefox */
+html {
+  scrollbar-width: thin; /* "auto", "thin", or "none" */
+  scrollbar-color: orange #191d24; /* thumb then track */
+}
+
+/* Chrome, Edge, Safari */
+::-webkit-scrollbar {
+  width: 12px;
+  height: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background: #191d24; /* track background */
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: orange; /* scrollbar thumb */
+  border-radius: 10px;
+  border: 2px solid #191d24; /* space around thumb */
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: darkorange; /* darker shade on hover */
+}
+
+::-webkit-scrollbar-corner {
+  background: #191d24; /* for the corner where vertical & horizontal meet */
+}

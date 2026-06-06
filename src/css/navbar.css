@@ -9,18 +9,27 @@
 }
 
 .navbar-discord-link {
-  content: "";
-  display: inline-block;
-  max-width: 30px;
-  max-height: 30px;
-  background: url("/img/Discord-Symbol-Blurple.svg") no-repeat center;
-  background-size: contain;
-  margin-right: 10px;
+    content: "";
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+    background: url("/img/Discord-Symbol-Blurple.svg") no-repeat center;
+    background-size: contain;
+    margin-right: 20px;
+}
+.navbar-github-link {
+    content: "";
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+    background: url("/img/GitHub_Invertocat_Black.svg") no-repeat center;
+    background-size: contain;
+    margin-right: 20px;
 }
 
 .navbar__item:hover, .toggle_vylO:hover, .navbar__title:hover {
   transform: scale(1.1);
 }
-.navbar-discord-link:hover {
+.navbar-discord-link:hover, .navbar-github-link:hover {
   transform: scale(1.2);
 }
