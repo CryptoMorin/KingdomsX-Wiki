@@ -82,7 +82,6 @@ export default {
         {
           href: "https://discord.kingdomsx.com",
           position: "right",
-          label: "Discord",
           className: "navbar-discord-link"
         },
 
@@ -150,6 +149,8 @@ export default {
             './src/css/katex.css', 
             './src/css/code.css', 
             './src/css/sidebar.css',
+            './src/css/navbar.css',
+            './src/css/footer.css',
             './src/css/placeholder.css'
            ],
         },

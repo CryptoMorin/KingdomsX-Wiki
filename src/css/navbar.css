@@ -1,0 +1,26 @@
+.navbar__brand {
+  border-right: 2px solid orange;
+  margin-right: 10px;
+  padding-right: 20px;
+}
+
+.navbar__item, .toggle_vylO, .navbar__title {
+  transition: transform 0.3s ease-in-out;
+}
+
+.navbar-discord-link {
+  content: "";
+  display: inline-block;
+  max-width: 30px;
+  max-height: 30px;
+  background: url("/img/Discord-Symbol-Blurple.svg") no-repeat center;
+  background-size: contain;
+  margin-right: 10px;
+}
+
+.navbar__item:hover, .toggle_vylO:hover, .navbar__title:hover {
+  transform: scale(1.1);
+}
+.navbar-discord-link:hover {
+  transform: scale(1.2);
+}

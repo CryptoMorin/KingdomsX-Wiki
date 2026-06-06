@@ -1,0 +1,46 @@
+/* Global Flex */
+
+.footer {
+    background: #0d1118;
+    max-height: 70px;
+    display: flex;
+}
+
+.footer-left, .footer-right {
+    height: inherit;
+    display: flex;
+    align-items: center;
+    flex: 1
+}
+
+.footer-left *, .footer-right * {
+    margin: 5px;
+}
+
+
+
+/* Specific Flex */
+
+.footer-left {
+    justify-content: flex-start;
+    margin-left: 50px;
+}
+.footer-right {
+    justify-content: flex-end;
+    margin-right: 40px;
+}
+
+
+
+/* Images */
+
+.footer img {
+    max-height: 40px;
+    max-width: 40px;
+}
+.footer-right img {
+    margin-left: 20px;
+}
+.footer-right img {
+    margin-right: 50px;
+}
