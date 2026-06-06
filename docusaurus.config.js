@@ -80,10 +80,12 @@ export default {
         },
 
         {
-
-          type: 'custom',
-          position: 'right',
-          value: '<img src="img/Discord-Symbol-Blurple.svg" alt="Icon" />',
+          href: "https://discord.kingdomsx.com",
+          position: "right",
+          logo: {
+            alt: "Discord Icon",
+            src: "img/Discord-Symbol-Blurple.svg",
+          },
         },
 
       ],
