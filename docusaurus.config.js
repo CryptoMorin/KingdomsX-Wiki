@@ -51,30 +51,87 @@ export default {
 
     navbar: {
       title: "KingdomsX",
+      href: "https://kingdomsx.com",
       logo: {
         alt: "KingdomsX Icon",
         src: "img/favicon.ico",
       },
+
       items: [
         {
           to: "/",
           label: "Home",
           position: "left",
         },
+        {
+          to: "/API",
+          label: "API",
+          position: "left",
+        },
+        {
+          href: "https://github.com/CryptoMorin/KingdomsX/wiki",
+          label: "GitHub Version",
+          position: "left",
+        },
+        {
+          href: "https://download.kingdomsx.com/",
+          label: "Download",
+          position: "left",
+        },
 
         {
           href: "https://discord.kingdomsx.com",
-          label: "Discord",
+          label: "",
           position: "right",
+          logo: {
+            alt: "Discord Icon",
+            src: "img/Discord-Symbol-Blurple.svg",
+          },
         },
 
         {
           href: "https://github.com/CryptoMorin/KingdomsX",
-          label: "GitHub",
+          label: "",
           position: "right",
+          logo: {
+            alt: "Discord Icon",
+            src: "img/GitHub_Invertocat_Black.svg",
+          },
         },
       ],
     },
+
+  footer: {
+    style: 'dark', // or 'light'
+    logo: {
+      alt: 'KingdomsX Icon',
+      src: 'img/favicon.ico', // put this in /static/img
+      href: 'https://kingdomsx.com',
+      width: 120,
+      height: 30,
+    },
+    links: [
+      {
+        title: 'Docs',
+        items: [
+          {
+            label: 'Getting Started',
+            to: '/Home',
+          },
+        ],
+      },
+      {
+        title: 'Community',
+        items: [
+          {
+            label: 'GitHub',
+            href: 'https://github.com/CryptoMorin/KingdomsX',
+          },
+        ],
+      },
+    ],
+    copyright: `Copyright © ${new Date().getFullYear()} KingdomsX.`,
+  },
   },
 
   markdown: {
