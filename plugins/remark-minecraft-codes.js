@@ -132,7 +132,10 @@ function parseMinecraft(text) {
   for (let i = 0; i < text.length; i++) {
     const ch = text[i];
 
-    if (ch !== '{' && ch !== '&') continue;
+    if (ch !== '{' && ch !== '&') {
+      buffer += ch;
+      continue;
+    }
 
     /* -------- Simple Color Formatting -------- */
     if (ch === "&" && i + 1 < text.length) {
@@ -200,7 +203,7 @@ function parseMinecraft(text) {
 
     buffer += ch;
   }
-  
+
   if (!found) return null;
   flush();
   return out;

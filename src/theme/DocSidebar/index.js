@@ -1,112 +1,43 @@
 import React from 'react';
-import DocSidebar from '@theme-original/DocSidebar';
 
-function Item({ emoji, label, to }) {
+export default function CustomSidebar() {
   return (
-    <li className="menu__list-item">
-      <a className="menu__link" href={to}>
-        {emoji} {label}
-      </a>
-    </li>
-  );
-}
+    <aside className="theme-doc-sidebar-container customSidebar">
+      <div className="theme-doc-sidebar-menu customScroll">
 
-function Group({ emoji, title, children }) {
-  return (
-    <li className="menu__list-item">
-      <details className="menu__list-item-collapsible" open>
-        <summary className="menu__link">
-          {emoji} {title}
-        </summary>
-        <ul className="menu__list">
-          {children}
-        </ul>
-      </details>
-    </li>
-  );
-}
-
-export default function CustomDocSidebar(props) {
-  return (
-    <div className="theme-doc-sidebar-container">
-      {/* Keep real sidebar working (important!) */}
-      <DocSidebar {...props} />
-
-      {/* Your custom overlay menu */}
-      <div className="custom-sidebar-overlay">
         <ul className="menu__list">
 
-          <Item emoji="🏠" label="Home" to="/" />
-          <Item emoji="🔰" label="Features" to="/Features" />
+          <li><a href="/">🏠 Home</a></li>
+          <li><a href="/Features">🔰 Features</a></li>
 
-          <Group emoji="📥" title="Installation">
-            <Item emoji="📗" label="Setup" to="/Installation#setup" />
-            <Item emoji="📘" label="Compatibility" to="/Installation#compatibility" />
-          </Group>
+          <li>
+            <details open>
+              <summary>📥 Installation</summary>
+              <ul>
+                <li><a href="/Installation#setup">📗 Setup</a></li>
+                <li><a href="/Installation#compatibility">📘 Compatibility</a></li>
+              </ul>
+            </details>
+          </li>
 
-          <Item emoji="❓" label="FAQ" to="/FAQ" />
-          <Item emoji="⁉️" label="NFAQ" to="/NFAQ" />
+          <li><a href="/FAQ">❓ FAQ</a></li>
 
-          <Group emoji="⚜️" title="Addons">
-            <Item emoji="🚩" label="Outposts" to="/Outposts" />
-            <Item emoji="☮️" label="Peace Treaties" to="/Peace-Treaties" />
-            <Item emoji="🗺️" label="Map Viewers" to="/Map-Viewers-Addon" />
-            <Item emoji="🏬" label="EngineHub" to="/EngineHub-Addon" />
-            <Item emoji="🛠" label="Admin Tools" to="/Admin-Tools" />
-          </Group>
-
-          <Item emoji="❇️" label="Introduction" to="/Introduction" />
-          <Item emoji="⌨️" label="Commands" to="/Commands" />
-
-          <Group emoji="⌨️" title="Commands">
-            <Item emoji="👨‍🦱" label="Players" to="/Commands#players" />
-            <Item emoji="👩‍⚖️" label="Admins" to="/Commands#admins" />
-          </Group>
-
-          <Item emoji="🔓" label="Permissions" to="/Permissions" />
-          <Item emoji="🔣" label="Placeholders" to="/Placeholders" />
-
-          <Group emoji="🔣" title="Placeholders">
-            <Item emoji="🚹" label="Players" to="/Placeholders#players" />
-            <Item emoji="🏛" label="Kingdoms" to="/Placeholders#kingdoms" />
-            <Item emoji="🏢" label="Nations" to="/Placeholders#nations" />
-          </Group>
-
-          <Item emoji="📁" label="Config" to="/Config" />
-
-          <Group emoji="📁" title="Config Files">
-            <Item emoji="📃" label="YAML" to="/YAML" />
-            <Item emoji="💱" label="Languages" to="/Languages" />
-            <Item emoji="📱" label="GUI" to="/GUIs" />
-          </Group>
-
-          <Item emoji="🔒" label="Protection Signs" to="/Protection-Signs" />
-          <Item emoji="✉️" label="Mails" to="/Mails" />
-          <Item emoji="📚" label="Mechanics" to="/Mechanics" />
-
-          <Group emoji="⚔️" title="Invasion">
-            <Item emoji="🛡️" label="Preparing" to="/Mechanics#Preparing" />
-            <Item emoji="🧟" label="Champion" to="/Mechanics#Champion" />
-            <Item emoji="🗡" label="Masswar" to="/Mechanics#mass-wars" />
-          </Group>
-
-          <Item emoji="📡" label="Structures" to="/Mechanics#Structures" />
-          <Item emoji="🔫" label="Turrets" to="/Mechanics#Turrets" />
-
-          <Item emoji="🧰" label="Troubleshooting" to="/Troubleshooting" />
-          <Item emoji="💻" label="API" to="/API" />
-
-          <Group emoji="💻" title="API">
-            <Item emoji="🔹" label="Basics" to="/API#basics" />
-            <Item emoji="🔹" label="Turrets & Structures" to="/API#turrets--structures" />
-            <Item emoji="🔹" label="Metadata" to="/API#metadata" />
-            <Item emoji="🔹" label="Events" to="/API#events" />
-            <Item emoji="🔹" label="Examples" to="/API#examples" />
-            <Item emoji="🔹" label="Addons" to="/API#addons-api" />
-          </Group>
+          <li>
+            <details open>
+              <summary>⚜️ Addons</summary>
+              <ul>
+                <li><a href="/Outposts">🚩 Outposts</a></li>
+                <li><a href="/Peace-Treaties">☮️ Peace Treaties</a></li>
+                <li><a href="/Map-Viewers-Addon">🗺️ Map Viewers</a></li>
+                <li><a href="/EngineHub-Addon">🏬 EngineHub</a></li>
+                <li><a href="/Admin-Tools">🛠 Admin Tools</a></li>
+              </ul>
+            </details>
+          </li>
 
         </ul>
+
       </div>
-    </div>
+    </aside>
   );
 }
