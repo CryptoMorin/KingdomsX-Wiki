@@ -80,24 +80,12 @@ export default {
         },
 
         {
-          href: "https://discord.kingdomsx.com",
-          label: "",
-          position: "right",
-          logo: {
-            alt: "Discord Icon",
-            src: "img/Discord-Symbol-Blurple.svg",
-          },
+
+          type: 'custom',
+          position: 'right',
+          value: '<img src="img/Discord-Symbol-Blurple.svg" alt="Icon" />',
         },
 
-        {
-          href: "https://github.com/CryptoMorin/KingdomsX",
-          label: "",
-          position: "right",
-          logo: {
-            alt: "Discord Icon",
-            src: "img/GitHub_Invertocat_Black.svg",
-          },
-        },
       ],
     },
 
