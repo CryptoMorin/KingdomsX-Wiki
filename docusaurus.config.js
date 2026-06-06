@@ -38,6 +38,15 @@ export default {
       darkTheme: themes.dracula,
       additionalLanguages: ['ruby', 'haskell', 'java', 'gradle', 'markup', 'yaml'],
     },
+    docs: {
+      sidebar: {
+        hideable: true,
+      },
+      toc: {
+        minHeadingLevel: 2, // h2
+        maxHeadingLevel: 4, // h4
+      },
+    },
   },
 
   markdown: {
