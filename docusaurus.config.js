@@ -45,7 +45,7 @@ export default {
   ],  
 
   themeConfig: {
-    image: 'img/social-card.png',
+    image: 'img/social-card.webp',
     metadata: [
       {
         name: 'description',
