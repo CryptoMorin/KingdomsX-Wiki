@@ -1,9 +1,11 @@
 :root {
-  --sidebar-background: #9dc1f9;
-  --sidebar-color: white;
+  --sidebar-background: #c6efff;
+  --sidebar-color: black;
   --sidebar-border-color: #0064ff;
+  --sidebar-category-header-color: #002e66;
 
-  --sidebar-menu-background: yellow;
+  --sidebar-menu-background: #64d7fb;
+  --sidebar-submenu-background: #7cffe7;
   --sidebar-menu-hover-background: red;
   --sidebar-menu-hover-border-color: cyan;
   --sidebar-dropdown-open-background: green;
@@ -13,6 +15,7 @@
   --sidebar-background: #131323;
   --sidebar-color: black;
   --sidebar-border-color: #16213e;
+  --sidebar-category-header-color: #60a5fa;
 
   --sidebar-menu-background: rgba(255, 255, 255, 0.03);
   --sidebar-menu-hover-background: rgba(255, 255, 255, 0.12);
@@ -73,7 +76,7 @@
   padding: 0 16px;
   font-size: 0.8rem;
   font-weight: 700;
-  color: #60a5fa;
+  color: var(--sidebar-category-header-color);
   text-transform: uppercase;
   letter-spacing: 1px;
   pointer-events: none;
@@ -81,7 +84,7 @@
 
 .menu__list__category span {
     display: block;
-    border-bottom: 1px solid rgba(96, 165, 250, 0.2);
+    border-bottom: 1px solid var(--sidebar-category-header-color);
     padding-top: 40px;
     padding-bottom: 10px;
     margin-bottom: 10px;
@@ -98,14 +101,14 @@
   align-items: center;
   gap: 12px;
   padding: 12px 16px;
-  color: #e2e8f0;
+  color: var(--sidebar-color);
   text-decoration: none;
   border-radius: 12px;
   font-weight: 500;
   transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
   cursor: pointer;
   border: 1px solid transparent;
-  background: rgba(255, 255, 255, 0.05);
+  background: var(--sidebar-menu-background);
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
@@ -154,6 +157,11 @@
   margin: 0;
 }
 
+details::details-content {
+  overflow: hidden;
+  transition: all 0.5s linear;
+}
+
 .menu__list details[open] > ul {
   max-height: 500px;   /* increase if you have very long menus */
   padding: 0.25rem 0 0.5rem 0;
@@ -164,7 +172,7 @@
 }
 
 .menu__list details a {
-  background: var(--sidebar-menu-background);
+  background: var(--sidebar-submenu-background);
   font-size: 0.95rem;
   padding-left: 20px;
   margin: 0.2rem 0.5rem;

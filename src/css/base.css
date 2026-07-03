@@ -1,11 +1,15 @@
 :root {
+  --link-color-hover: blue;
   --bg-back-to-top-button: rgb(224, 111, 18);
   --bg-hover-back-to-top-button: #6565a8;
+  --bg-scrollbar: #e5e5e5;
 }
 
 html[data-theme='dark'] {
     --ifm-background-color: #14131a;
     --bg-hover-back-to-top-button: #2d2d73;
+    --link-color-hover: lightblue;
+    --bg-scrollbar: #191d24;
 }
 
 html[data-theme='dark'] .theme-admonition-note {
@@ -53,12 +57,6 @@ details.alert {
     /* background-color: rgb(63, 129, 129); */
 }
 
-.mc-root {
-    padding: 0 4px;
-    border-radius: 4px;
-    background: #36363688;
-}
-
 
 :root {
   --ifm-hr-background-color: orange;
@@ -74,7 +72,7 @@ details.alert {
 /* Firefox */
 html {
   scrollbar-width: thin; /* "auto", "thin", or "none" */
-  scrollbar-color: orange #191d24; /* thumb then track */
+  scrollbar-color: orange var(--bg-scrollbar); /* thumb then track */
 }
 
 /* Chrome, Edge, Safari */
@@ -84,14 +82,14 @@ html {
 }
 
 ::-webkit-scrollbar-track {
-  background: #191d24; /* track background */
+  background: var(--bg-scrollbar); /* track background */
   border-radius: 10px;
 }
 
 ::-webkit-scrollbar-thumb {
   background-color: orange; /* scrollbar thumb */
   border-radius: 10px;
-  border: 2px solid #191d24; /* space around thumb */
+  border: 2px solid var(--bg-scrollbar); /* space around thumb */
 }
 
 ::-webkit-scrollbar-thumb:hover {
@@ -99,8 +97,10 @@ html {
 }
 
 ::-webkit-scrollbar-corner {
-  background: #191d24; /* for the corner where vertical & horizontal meet */
+  background: var(--bg-scrollbar); /* for the corner where vertical & horizontal meet */
 }
+
+
 
 .alert {
   box-shadow: black 5px 5px 20px;
@@ -130,16 +130,16 @@ p img {
 
 /* The bottom-right go to top button */
 .theme-back-to-top-button  {
-  background-color: var(--bg-back-to-top-button);
+  background-color: var(--bg-back-to-top-button) !important;
 }
 
 .theme-back-to-top-button:hover {
-  background-color: var(--bg-hover-back-to-top-button);
+  background-color: var(--bg-hover-back-to-top-button) !important;
 }
 
 
 a:hover {
-  color: lightblue;
+  color: var(--link-color-hover);
 }
 
 .hash-link {

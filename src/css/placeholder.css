@@ -1,9 +1,17 @@
+:root {
+    --placeholder-bg: rgb(208, 208, 208);
+}
+
+html[data-theme='dark'] {
+    --placeholder-bg: #36363688;
+}
+
 .placeholder-text {
     /* display: inline-flex; */
     font-weight: bold;
     padding: 0 4px;
     border-radius: 4px;
-    background: #36363688;
+    background: var(--placeholder-bg);
 }
 
 .placeholder-text .mod       { color: purple; }
@@ -19,4 +27,12 @@
 }
 .placeholder-text .placeholder-content {
     color: rgb(255, 182, 87);
+}
+
+
+
+.mc-root {
+    padding: 0 4px;
+    border-radius: 4px;
+    background: var(--placeholder-bg);
 }
