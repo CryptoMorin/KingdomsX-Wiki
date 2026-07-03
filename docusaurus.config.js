@@ -45,6 +45,14 @@ export default {
   ],  
 
   themeConfig: {
+    image: 'img/social-card.png',
+    metadata: [
+      {
+        name: 'description',
+        content: 'Comprehensive documentation for KingdomsX Minecraft plugin.',
+      },
+    ],
+
     colorMode: {
       defaultMode: 'dark',
       disableSwitch: false,
@@ -138,8 +146,8 @@ export default {
       // Optional: whether the insights feature is enabled or not on Docsearch (`false` by default)
       insights: false,
 
-      // Optional: whether you want to use the new Ask AI feature (undefined by default)
-      // askAi: 'YOUR_ALGOLIA_ASK_AI_ASSISTANT_ID',
+      // Algolia's Gemini implementation is screwed up right now.
+      // askAi: 'd8112ff1-a3d4-491d-be88-c4160badf655',
     },
   },
 

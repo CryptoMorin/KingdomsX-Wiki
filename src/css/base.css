@@ -1,5 +1,11 @@
+:root {
+  --bg-back-to-top-button: rgb(224, 111, 18);
+  --bg-hover-back-to-top-button: #6565a8;
+}
+
 html[data-theme='dark'] {
     --ifm-background-color: #14131a;
+    --bg-hover-back-to-top-button: #2d2d73;
 }
 
 html[data-theme='dark'] .theme-admonition-note {
@@ -94,4 +100,54 @@ html {
 
 ::-webkit-scrollbar-corner {
   background: #191d24; /* for the corner where vertical & horizontal meet */
+}
+
+.alert {
+  box-shadow: black 5px 5px 20px;
+}
+
+
+
+p:has(> img) {
+  text-align: center;
+}
+p img {
+  border: 3px solid orange;
+  border-radius: 20px;
+}
+
+
+
+/* Makde "edit this page" small */
+.theme-edit-this-page * {
+  height: 15px;
+}
+
+.theme-edit-this-page {
+  font-size: 0.7em;
+}
+
+
+/* The bottom-right go to top button */
+.theme-back-to-top-button  {
+  background-color: var(--bg-back-to-top-button);
+}
+
+.theme-back-to-top-button:hover {
+  background-color: var(--bg-hover-back-to-top-button);
+}
+
+
+a:hover {
+  color: lightblue;
+}
+
+.hash-link {
+  display: inline-block;
+  transition: 0.2s linear;
+}
+.hash-link:hover {
+  color: orangered;
+  transform: scale(1.2);
+  text-decoration: none;
 }

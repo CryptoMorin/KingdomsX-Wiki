@@ -1,3 +1,7 @@
+.prism-code {
+  box-shadow: black 0px 0px 10px;
+}
+
 span.token.class-name {
     color: rgb(0, 168, 168) !important;
 }
@@ -24,4 +28,10 @@ span.token.string {
 
 span.token.annotation {
     color: rgb(255, 115, 0) !important;
+}
+
+
+
+.prism-code.language-yml span.token.punctuation {
+    color: darkgray !important;
 }

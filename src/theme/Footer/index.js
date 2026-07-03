@@ -26,7 +26,7 @@ export default function FooterWrapper(props) {
 
         <div className="footer-right">
           <span className="footer-credit">
-            Powered by<a href="https://docusaurus.io/">Docusaurus</a>
+            Powered by<a href="https://docusaurus.io/" target="_blank">Docusaurus</a>
           </span>
 
           <img

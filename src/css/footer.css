@@ -1,7 +1,18 @@
+:root {
+    --footer-background: lightskyblue;
+    --footer-color: black;
+}
+
+[data-theme="dark"] {
+    --footer-background: #0d1118;
+    --footer-color: white;
+}
+
 /* Global Flex */
 
 .footer {
-    background: #0d1118;
+    background: var(--footer-background);
+    color: var(--footer-color);
     max-height: 70px;
     display: flex;
 }
@@ -45,8 +56,12 @@
     max-width: 40px;
 }
 .footer-right img {
-    margin-left: 20px;
-}
-.footer-right img {
+    margin-left: 5px;
     margin-right: 50px;
+}
+
+
+
+.pagination-nav__link {
+  border: 1px solid darkorange;
 }

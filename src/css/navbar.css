@@ -50,3 +50,14 @@ nav {
 .navbar-discord-link:hover, .navbar-github-link:hover {
   transform: scale(1.2);
 }
+
+
+.navbarSearchContainer_Bca1 {
+  transition: 0.1s linear;
+}
+.DocSearch:hover {
+  border: 1px solid black;
+}
+.navbarSearchContainer_Bca1:hover {
+  transform: scale(1.05);
+}
