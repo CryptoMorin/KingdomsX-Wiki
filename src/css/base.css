@@ -1,15 +1,15 @@
 :root {
   --link-color-hover: blue;
-  --bg-back-to-top-button: rgb(224, 111, 18);
-  --bg-hover-back-to-top-button: #6565a8;
+  --bg-back-to-top-button: #6565a8;
+  --bg-hover-back-to-top-button: rgb(224, 111, 18);
   --bg-scrollbar: #e5e5e5;
 }
 
 html[data-theme='dark'] {
-    --ifm-background-color: #14131a;
-    --bg-hover-back-to-top-button: #2d2d73;
-    --link-color-hover: lightblue;
-    --bg-scrollbar: #191d24;
+  --ifm-background-color: #14131a;
+  --bg-back-to-top-button: #2d2d73;
+  --link-color-hover: lightblue;
+  --bg-scrollbar: #191d24;
 }
 
 html[data-theme='dark'] .theme-admonition-note {
@@ -17,28 +17,28 @@ html[data-theme='dark'] .theme-admonition-note {
     border-color: #00b0ff;
 }
 
-html[data-theme='dark'] table thead {
+table thead {
     background-color: #663e00;
     border-bottom: 4px solid darkgray;
 }
 
-html[data-theme='dark'] .theme-admonition-note svg {
+.theme-admonition-note svg {
     filter: brightness(0) saturate(100%) invert(71%) sepia(9%) saturate(3061%) hue-rotate(168deg) brightness(98%) contrast(106%);
 }
 
-html[data-theme='dark'] .theme-admonition-info svg {
+.theme-admonition-info svg {
     filter: brightness(0) saturate(100%) invert(85%) sepia(24%) saturate(875%) hue-rotate(145deg) brightness(105%) contrast(108%);
 }
 
-html[data-theme='dark'] .theme-admonition-warning svg {
+.theme-admonition-warning svg {
     filter: brightness(0) saturate(100%) invert(68%) sepia(58%) saturate(1857%) hue-rotate(332deg) brightness(108%) contrast(101%);
 }
 
-html[data-theme='dark'] .theme-admonition-tip svg {
+.theme-admonition-tip svg {
     filter: brightness(0) saturate(100%) invert(78%) sepia(64%) saturate(3065%) hue-rotate(43deg) brightness(115%) contrast(104%);
 }
 
-html[data-theme='dark'] .theme-admonition-danger svg {
+.theme-admonition-danger svg {
     filter: brightness(0) saturate(100%) invert(26%) sepia(97%) saturate(7320%) hue-rotate(357deg) brightness(105%) contrast(116%);
 }
 
@@ -71,7 +71,7 @@ details.alert {
 
 /* Firefox */
 html {
-  scrollbar-width: thin; /* "auto", "thin", or "none" */
+  scrollbar-width: thin;
   scrollbar-color: orange var(--bg-scrollbar); /* thumb then track */
 }
 
