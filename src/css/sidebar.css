@@ -1,6 +1,6 @@
 :root {
   --sidebar-background: #c6efff;
-  --sidebar-color: white;
+  --sidebar-color: black;
   --sidebar-border-color: #0064ff;
   --sidebar-category-header-color: #002e66;
 
@@ -12,7 +12,7 @@
 
 [data-theme="dark"] {
   --sidebar-background: #131323;
-  --sidebar-color: black;
+  --sidebar-color: white;
   --sidebar-border-color: #16213e;
   --sidebar-category-header-color: #60a5fa;
 
@@ -109,7 +109,6 @@
 .menu__list summary {
   position: relative;
   background: var(--sidebar-menu-background);
-  border: 1px solid #4a5568;
   font-weight: 600;
 }
 

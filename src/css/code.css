@@ -1,3 +1,19 @@
+:root {
+    --code-symbol: #00446c;
+    --code-string: green;
+    --code-comment: rgb(71, 71, 48);
+    --code-function: #005d97;
+    --yml-punc: #454545;
+}
+html[data-theme='dark'] {
+    --code-symbol: rgb(90, 162, 255);
+    --code-string: greenyellow;
+    --code-comment: rgb(153, 153, 136);
+    --code-function: lightskyblue;
+    --yml-punc: darkgray;
+}
+
+
 .prism-code {
   box-shadow: black 0px 0px 10px;
 }
@@ -6,7 +22,7 @@ span.token.class-name {
     color: rgb(0, 168, 168) !important;
 }
 span.token.function {
-    color: lightskyblue !important;
+    color: var(--code-function) !important;
 }
 
 span.token.tag {
@@ -14,7 +30,7 @@ span.token.tag {
 }
 
 span.token.symbol, span.token.key.atrule {
-    color: rgb(90, 162, 255) !important;
+    color: var(--code-symbol) !important;
 }
 span.token.operator {
     color: gray !important;
@@ -23,7 +39,7 @@ span.token.punctuation {
     color: lightcoral !important;
 }
 span.token.string {
-    color: greenyellow !important;
+    color: var(--code-string) !important;
 }
 
 span.token.annotation {
@@ -33,5 +49,5 @@ span.token.annotation {
 
 
 .prism-code.language-yml span.token.punctuation {
-    color: darkgray !important;
+    color: var(--yml-punc) !important;
 }

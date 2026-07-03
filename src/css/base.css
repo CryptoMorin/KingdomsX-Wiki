@@ -1,14 +1,16 @@
 :root {
-  --link-color-hover: blue;
+  --thead-bg-color: #ffbe59;
+  --link-color-hover: #005b79;
   --bg-back-to-top-button: #6565a8;
   --bg-hover-back-to-top-button: rgb(224, 111, 18);
   --bg-scrollbar: #e5e5e5;
 }
 
 html[data-theme='dark'] {
+  --thead-bg-color: #663e00;
   --ifm-background-color: #14131a;
   --bg-back-to-top-button: #2d2d73;
-  --link-color-hover: lightblue;
+  --link-color-hover: #005b79;
   --bg-scrollbar: #191d24;
 }
 
@@ -18,7 +20,7 @@ html[data-theme='dark'] .theme-admonition-note {
 }
 
 table thead {
-    background-color: #663e00;
+    background-color: var(--thead-bg-color);
     border-bottom: 4px solid darkgray;
 }
 
@@ -143,8 +145,8 @@ a:hover {
 }
 
 .hash-link {
-  display: inline-block;
-  transition: 0.2s linear;
+  display: inline-block !important;
+  transition: 0.2s linear !important;
 }
 .hash-link:hover {
   color: orangered;

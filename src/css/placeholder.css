@@ -1,8 +1,10 @@
 :root {
+    --placeholder-namespace: orangered;
     --placeholder-bg: rgb(208, 208, 208);
 }
 
 html[data-theme='dark'] {
+    --placeholder-namespace: inherit;
     --placeholder-bg: #36363688;
 }
 
@@ -16,7 +18,7 @@ html[data-theme='dark'] {
 
 .placeholder-text .mod       { color: purple; }
 .placeholder-text .at        { color: darkgray; }
-.placeholder-text .namespace { color: inherit; }
+.placeholder-text .namespace { color: var(--placeholder-namespace); }
 .placeholder-text .sep       { color: darkgray; }
 .placeholder-text .fn        { color: rgb(55, 124, 250); }
 .placeholder-text .arg       { color: rgb(25, 138, 25); }
