@@ -1,10 +1,12 @@
 :root {
     --placeholder-namespace: orangered;
+    --placeholder-unimportant: #13082b;
     --placeholder-bg: rgb(208, 208, 208);
 }
 
 html[data-theme='dark'] {
     --placeholder-namespace: inherit;
+    --placeholder-unimportant: darkgray;
     --placeholder-bg: #36363688;
 }
 
@@ -17,9 +19,9 @@ html[data-theme='dark'] {
 }
 
 .placeholder-text .mod       { color: purple; }
-.placeholder-text .at        { color: darkgray; }
+.placeholder-text .at        { color: var(--placeholder-unimportant); }
+.placeholder-text .sep       { color: var(--placeholder-unimportant); }
 .placeholder-text .namespace { color: var(--placeholder-namespace); }
-.placeholder-text .sep       { color: darkgray; }
 .placeholder-text .fn        { color: rgb(55, 124, 250); }
 .placeholder-text .arg       { color: rgb(25, 138, 25); }
 .placeholder-text .value     { color: rgb(0, 176, 189); }
