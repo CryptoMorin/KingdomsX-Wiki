@@ -71,7 +71,7 @@ nav {
   }
 }
 
-@media (min-width: 401px) and (max-width: 1000px) {
+@media (min-width: 416px) and (max-width: 1000px) {
   .navbar__brand {
     margin-left: 10px;
     margin-right: 0px;
@@ -92,7 +92,7 @@ nav {
 
 /* Spacing them evenly after this just doesn't look good. */
 /* We will only have the light/dark mode here. */
-@media (min-width: 370px) and (max-width: 400px) {
+@media (min-width: 330px) and (max-width: 415px) {
   .theme-layout-navbar-right {
       gap: 3vw;
       flex: 1 1 auto;
@@ -105,6 +105,14 @@ nav {
     max-width: 15px !important;
     max-height: auto !important;
     overflow: hidden;
+  }
+}
+
+/* Only show the icon. */
+@media (max-width: 329px) {
+  .navbar__brand {
+    border: none;
+    margin-left: 10vw;
   }
 }
 

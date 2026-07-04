@@ -115,7 +115,7 @@ function cleanUpPotraitSupport() {
     log("cleaned up a total of", cleanupCount, "portrait support elements.");
 }
 
-function observeAdditionAndRemoval() {
+function observeNavbarSidebar() {
     const observer = new MutationObserver((mutations) => {
         for (const mutation of mutations) {
 
@@ -176,7 +176,7 @@ if (!ExecutionEnvironment.canUseDOM) {
         document.addEventListener('DOMContentLoaded', () => {
             if (!onBackdropChange()) {
                 loadPhase = 3;
-                observeAddition();
+                observeNavbarSidebar();
             }
         });
     }
