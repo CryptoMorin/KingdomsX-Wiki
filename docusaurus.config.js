@@ -27,7 +27,7 @@ export default {
   trailingSlash: false,
   onBrokenLinks: 'warn',
 
-  clientModules: ['./src/mobile-sidebar.js'],
+  clientModules: ['./src/js/mobile-sidebar.js'],
 
   headTags: [
     // {
