@@ -71,7 +71,7 @@ nav {
   }
 }
 
-@media (min-width: 400px) and (max-width: 1000px) {
+@media (min-width: 401px) and (max-width: 1000px) {
   .navbar__brand {
     margin-left: 10px;
     margin-right: 0px;
@@ -91,10 +91,10 @@ nav {
 }
 
 /* Spacing them evenly after this just doesn't look good. */
+/* We will only have the light/dark mode here. */
 @media (min-width: 370px) and (max-width: 400px) {
   .theme-layout-navbar-right {
-      gap: 0;
-      justify-content: space-between;
+      gap: 3vw;
       flex: 1 1 auto;
   }
   .theme-layout-navbar-left  {

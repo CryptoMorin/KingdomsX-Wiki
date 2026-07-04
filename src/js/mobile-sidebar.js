@@ -1,5 +1,6 @@
 import ExecutionEnvironment from '@docusaurus/ExecutionEnvironment';
 
+const PORTRAIT_SUPPORT_ELEMENT_CLASS = 'portrait-support';
 const SIDEBAR_NAVBAR = '.theme-layout-navbar-sidebar.navbar-sidebar';
 let loadPhase = 1;
 const loadPhaseStr = () => `[Load Phase ${loadPhase}] `;
@@ -27,7 +28,7 @@ function applySidebar(opened) {
 }
 
 function replaceNavbar() {
-    const actualSidebar = document.querySelector('aside.theme-doc-sidebar-container');
+    let actualSidebar = document.querySelector('aside.theme-doc-sidebar-container');
     if (!actualSidebar) throw "Actual side bar is missing!";
 
     const navbarSidebar = document.querySelector(SIDEBAR_NAVBAR);
@@ -36,6 +37,7 @@ function replaceNavbar() {
         return false;
     }
     
+    actualSidebar = actualSidebar.cloneNode(true);
     actualSidebar.style.transform = 'translateX(-100%)';
     actualSidebar.style.display = 'block';
     actualSidebar.style.height = '100%';
@@ -44,15 +46,18 @@ function replaceNavbar() {
     actualSidebar.style.left = '0';
     actualSidebar.style.position = 'fixed';
     actualSidebar.style.transition = '0.3s linear';
+    actualSidebar.classList.add(PORTRAIT_SUPPORT_ELEMENT_CLASS);
 
     // Add the logo on top
     const customSidebar = document.querySelector('.customSidebar');
 	let navbarBrand = document.querySelector('.navbar__brand');
     if (navbarBrand && customSidebar) {
         navbarBrand = navbarBrand.cloneNode(true);
+        navbarBrand.classList.add(PORTRAIT_SUPPORT_ELEMENT_CLASS);
 
         const brandSeparator = document.createElement('div');
         brandSeparator.classList.add('brand_separator');
+        brandSeparator.classList.add(PORTRAIT_SUPPORT_ELEMENT_CLASS);
 
         customSidebar.prepend(brandSeparator);
         customSidebar.prepend(navbarBrand);
@@ -62,6 +67,7 @@ function replaceNavbar() {
 
     // Prevent page crash due to:
     //    Node.removeChild: The node to be removed is not a child of this node
+    // Set the element to invisible instead of completely removing it.
     navbarSidebar.style.display = 'none';
     navbarSidebar.after(actualSidebar);
     log("Replaced navbar sidebar.");
@@ -97,24 +103,54 @@ function onBackdropChange() {
     }
 }
 
-function observeAddition() {
+function cleanUpPotraitSupport() {
+    const portraitSupportElements = document.getElementsByClassName(PORTRAIT_SUPPORT_ELEMENT_CLASS);
+    let cleanupCount = 0;
+
+    for (const el of portraitSupportElements) {
+        el.remove();
+        cleanupCount++;
+    }
+
+    log("cleaned up a total of", cleanupCount, "portrait support elements.");
+}
+
+function observeAdditionAndRemoval() {
     const observer = new MutationObserver((mutations) => {
         for (const mutation of mutations) {
+
+            // Navbar added.
             for (const node of mutation.addedNodes) {
                 if (!(node instanceof HTMLElement)) continue;
 
-                if (node.matches(SIDEBAR_NAVBAR)) {
+                if (node.matches?.(SIDEBAR_NAVBAR)) {
                     log('Sidebar added!', node);
                     onBackdropChange();
-                    // observer.disconnect();
                     return;
                 }
 
-                const sidebar = node.querySelector(SIDEBAR_NAVBAR);
+                const sidebar = node.querySelector?.(SIDEBAR_NAVBAR);
                 if (sidebar) {
                     log('Sidebar added!', sidebar);
                     onBackdropChange();
-                    // observer.disconnect();
+                    return;
+                }
+            }
+
+            // Navbar removed.
+            for (const node of mutation.removedNodes) {
+                if (!(node instanceof HTMLElement)) continue;
+
+                if (node.matches?.(SIDEBAR_NAVBAR)) {
+                    log('Sidebar removed!', node);
+                    cleanUpPotraitSupport()
+                    return;
+                }
+
+                const sidebar = node.querySelector?.(SIDEBAR_NAVBAR);
+                if (sidebar) {
+                    log('Sidebar removed!', sidebar);
+                    cleanUpPotraitSupport()
                     return;
                 }
             }
@@ -125,6 +161,8 @@ function observeAddition() {
         childList: true,
         subtree: true,
     });
+
+    return observer;
 }
 
 
