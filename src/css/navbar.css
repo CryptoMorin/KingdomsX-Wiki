@@ -63,7 +63,23 @@ nav {
 }
 
 
+
+
+
+
+
 /* Phone */
+
+aside.theme-doc-sidebar-container.portrait-support {
+  transform: translateX(-100%);
+  display: block;
+  height: 100%;
+  width: var(--ifm-navbar-sidebar-width);
+  top: 0;
+  left: 0;
+  position: fixed;
+  transition: 0.3s linear;
+}
 
 @media (max-width: 997px) {
   .navbar__brand {

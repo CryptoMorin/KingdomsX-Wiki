@@ -12,23 +12,16 @@ function warn(...msg) {
     console.warn(loadPhaseStr(), ...msg);
 }
 
-function applySidebar(opened) {
+function toggleSidebar(opened) {
     const actualSidebar = document.querySelector('aside.theme-doc-sidebar-container');
     if (!actualSidebar) throw "Actual side bar is missing!";
 
-    if (opened) {
-        actualSidebar.style.transform = 'translateX(0)';
-        // actualSidebar.style.removeProperty('visibility');
-        // actualSidebar.style.removeProperty('opacity');
-    } else {
-        actualSidebar.style.transform = 'translateX(-100%)';
-        // actualSidebar.style.visibility = 'hidden';
-        // actualSidebar.style.opacity = '0';
-    }
+    let appliedTranslation = (opened ? '0' : '-100%');
+    actualSidebar.style.transform = `translateX(${appliedTranslation})`;
 }
 
 function replaceNavbar() {
-    let actualSidebar = document.querySelector('aside.theme-doc-sidebar-container');
+    let actualSidebar = document.querySelector('aside.customSidebar');
     if (!actualSidebar) throw "Actual side bar is missing!";
 
     const navbarSidebar = document.querySelector(SIDEBAR_NAVBAR);
@@ -38,20 +31,11 @@ function replaceNavbar() {
     }
     
     actualSidebar = actualSidebar.cloneNode(true);
-    actualSidebar.style.transform = 'translateX(-100%)';
-    actualSidebar.style.display = 'block';
-    actualSidebar.style.height = '100%';
-    actualSidebar.style.width = 'var(--ifm-navbar-sidebar-width)';
-    actualSidebar.style.top = '0';
-    actualSidebar.style.left = '0';
-    actualSidebar.style.position = 'fixed';
-    actualSidebar.style.transition = '0.3s linear';
     actualSidebar.classList.add(PORTRAIT_SUPPORT_ELEMENT_CLASS);
 
     // Add the logo on top
-    const customSidebar = document.querySelector('.customSidebar');
 	let navbarBrand = document.querySelector('.navbar__brand');
-    if (navbarBrand && customSidebar) {
+    if (navbarBrand) {
         navbarBrand = navbarBrand.cloneNode(true);
         navbarBrand.classList.add(PORTRAIT_SUPPORT_ELEMENT_CLASS);
 
@@ -59,10 +43,10 @@ function replaceNavbar() {
         brandSeparator.classList.add('brand_separator');
         brandSeparator.classList.add(PORTRAIT_SUPPORT_ELEMENT_CLASS);
 
-        customSidebar.prepend(brandSeparator);
-        customSidebar.prepend(navbarBrand);
+        actualSidebar.prepend(brandSeparator);
+        actualSidebar.prepend(navbarBrand);
     } else {
-        warn("navBar brand or customSidebar not found:", navbarBrand, customSidebar);
+        warn("navBar brand not found:", navbarBrand);
     }
 
     // Prevent page crash due to:
@@ -85,10 +69,10 @@ function onBackdropChange() {
 
             if (isOpen) {
                 log('Sidebar opened');
-                applySidebar(true);
+                toggleSidebar(true);
             } else {
                 log('Sidebar closed');
-                applySidebar(false);
+                toggleSidebar(false);
             }
         });
 
@@ -171,13 +155,11 @@ if (!ExecutionEnvironment.canUseDOM) {
     log('mobile-sidebar.js module cannot use DOM at this moment.');
 } else {
     // Wait until the DOM is ready
-    if (!onBackdropChange()) {
-        loadPhase = 2;
-        document.addEventListener('DOMContentLoaded', () => {
-            if (!onBackdropChange()) {
-                loadPhase = 3;
-                observeNavbarSidebar();
-            }
-        });
-    }
+    loadPhase = 2;
+    document.addEventListener('DOMContentLoaded', () => {
+        if (!onBackdropChange()) {
+            loadPhase = 3;
+            observeNavbarSidebar();
+        }
+    });
 }
