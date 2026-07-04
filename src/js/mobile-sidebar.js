@@ -1,5 +1,14 @@
 import ExecutionEnvironment from '@docusaurus/ExecutionEnvironment';
+const SIDEBAR_NAVBAR = '.theme-layout-navbar-sidebar.navbar-sidebar';
+let loadPhase = 1;
+const loadPhaseStr = () => `[Load Phase ${loadPhase}] `;
 
+function log(...msg) {
+    console.log(loadPhaseStr(), ...msg);
+}
+function warn(...msg) {
+    console.warn(loadPhaseStr(), ...msg);
+}
 
 function applySidebar(opened) {
     const actualSidebar = document.querySelector('aside.theme-doc-sidebar-container');
@@ -20,10 +29,10 @@ function replaceNavbar() {
     const actualSidebar = document.querySelector('aside.theme-doc-sidebar-container');
     if (!actualSidebar) throw "Actual side bar is missing!";
 
-    const navbarSidebar = document.querySelector('.theme-layout-navbar-sidebar.navbar-sidebar');
+    const navbarSidebar = document.querySelector(SIDEBAR_NAVBAR);
     if (!navbarSidebar) {
-        console.warn('No sidebar navbar found.');
-        return;
+        warn('No sidebar navbar found.');
+        return false;
     }
     
     actualSidebar.style.transform = 'translateX(-100%)';
@@ -47,46 +56,86 @@ function replaceNavbar() {
         customSidebar.prepend(brandSeparator);
         customSidebar.prepend(navbarBrand);
     } else {
-        console.warn("navBar brand or customSidebar not found:", navbarBrand, customSidebar);
+        warn("navBar brand or customSidebar not found:", navbarBrand, customSidebar);
     }
 
     navbarSidebar.replaceWith(actualSidebar);
-    console.log("Replaced navbar sidebar.");
+    log("Replaced navbar sidebar.");
+    return true;
 }
 
 function onBackdropChange() {
-    replaceNavbar();
+    if (!replaceNavbar()) return false;
+
     const navbar = document.querySelector('.theme-layout-navbar.navbar.navbar--fixed-top');
 
     if (navbar) {
-    const observer = new MutationObserver(() => {
-        const isOpen = navbar.classList.contains('navbar-sidebar--show');
+        const observer = new MutationObserver(() => {
+            const isOpen = navbar.classList.contains('navbar-sidebar--show');
 
-        if (isOpen) {
-            console.log('Sidebar opened');
-            applySidebar(true);
-        } else {
-            console.log('Sidebar closed');
-            applySidebar(false);
-        }
-    });
+            if (isOpen) {
+                log('Sidebar opened');
+                applySidebar(true);
+            } else {
+                log('Sidebar closed');
+                applySidebar(false);
+            }
+        });
 
-    observer.observe(navbar, {
-        attributes: true,
-        attributeFilter: ['class'],
-    });
+        observer.observe(navbar, {
+            attributes: true,
+            attributeFilter: ['class'],
+        });
+        return true;
+    } else {
+        warn('navbar not found.');
+        return false;
     }
 }
 
+function observeAddition() {
+    const observer = new MutationObserver((mutations) => {
+        for (const mutation of mutations) {
+            for (const node of mutation.addedNodes) {
+                if (!(node instanceof HTMLElement)) continue;
 
+                if (node.matches(SIDEBAR_NAVBAR)) {
+                    log('Sidebar added!', node);
+                    onBackdropChange();
+                    observer.disconnect();
+                    return;
+                }
+
+                const sidebar = node.querySelector(SIDEBAR_NAVBAR);
+                if (sidebar) {
+                    log('Sidebar added!', sidebar);
+                    onBackdropChange();
+                    observer.disconnect();
+                    return;
+                }
+            }
+        }
+    });
+
+    observer.observe(document.body, {
+        childList: true,
+        subtree: true,
+    });
+}
 
 
 if (!ExecutionEnvironment.canUseDOM) {
-    console.log('mobile-sidebar.js module cannot use DOM at this moment.');
+    loadPhase = 0;
+    log('mobile-sidebar.js module cannot use DOM at this moment.');
 } else {
     // Wait until the DOM is ready
-    onBackdropChange();
+    if (!onBackdropChange()) {
+        loadPhase = 2;
         document.addEventListener('DOMContentLoaded', () => {
-        onBackdropChange();
-    });
+            if (!onBackdropChange()) {
+                loadPhase = 3;
+                observeAddition();
+            }
+        });
+    }
 }
