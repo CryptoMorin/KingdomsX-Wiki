@@ -83,14 +83,10 @@ nav {
   .theme-layout-navbar-right  {
     gap: 4vw;
   }
-  .navbar-discord-link, .navbar-github-link, .colorModeToggle_DEke, .navbarSearchContainer_Bca1 {
+  .navbar-discord-link, .navbar-github-link {
     display: inline !important;
     margin-left: 0 !important;
     margin-right: 0 !important;
-  }
-
-  .navbarSearchContainer_Bca1 {
-    position: initial;
   }
 }
 
@@ -111,7 +107,8 @@ nav {
   }
 }
 
-@media (min-width: 330px) and (max-width: 370px) {
+/* Global responsive settings */
+@media (min-width: 330px) and (max-width: 1000px) {
   .colorModeToggle_DEke, .navbarSearchContainer_Bca1 {
     display: inline !important;
     margin-left: 0 !important;
