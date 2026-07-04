@@ -61,3 +61,56 @@ nav {
 .navbarSearchContainer_Bca1:hover {
   transform: scale(1.05);
 }
+
+
+/* Phone */
+@media (min-width: 370px) and (max-width: 1000px) {
+  .navbar__brand {
+    margin-left: 10px;
+    margin-right: 0px;
+    flex-shrink: 0;
+  }
+  .navbar__title {
+    overflow: visible;
+  }
+  .theme-layout-navbar-right  {
+    gap: 4vw;
+  }
+  .navbar-discord-link, .navbar-github-link, .colorModeToggle_DEke, .navbarSearchContainer_Bca1 {
+    display: inline !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+  }
+
+  .navbarSearchContainer_Bca1 {
+    position: initial;
+  }
+}
+
+@media (min-width: 370px) and (max-width: 400px) {
+  .theme-layout-navbar-right {
+      gap: 0;
+      justify-content: space-between;
+      flex: 1 1 auto;
+  }
+  .theme-layout-navbar-left  {
+    flex: 0 0 auto;
+    margin-right: 5px;
+  }
+  .theme-layout-navbar-right a {
+    max-width: 30px !important;
+    max-height: auto !important;
+    overflow: hidden;
+  }
+}
+
+@media (min-width: 330px) and (max-width: 370px) {
+  .colorModeToggle_DEke, .navbarSearchContainer_Bca1 {
+    display: inline !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+  }
+   .navbarSearchContainer_Bca1 {
+    position: initial;
+  }
+}
