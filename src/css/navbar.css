@@ -72,13 +72,16 @@ nav {
 
 aside.theme-doc-sidebar-container.portrait-support {
   transform: translateX(-100%);
-  display: block;
+  display: flex; /* We flex for the logo */
   height: 100%;
-  width: var(--ifm-navbar-sidebar-width);
+  width: clamp(230px, 100vw, 325px);
   top: 0;
   left: 0;
   position: fixed;
   transition: 0.3s linear;
+}
+.navbar__brand.portrait-support {
+  align-self: center;
 }
 
 @media (max-width: 997px) {

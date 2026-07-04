@@ -13,7 +13,7 @@ function warn(...msg) {
 }
 
 function toggleSidebar(opened) {
-    const actualSidebar = document.querySelector('aside.theme-doc-sidebar-container');
+    const actualSidebar = document.querySelector(`aside.theme-doc-sidebar-container.${PORTRAIT_SUPPORT_ELEMENT_CLASS}`);
     if (!actualSidebar) throw "Actual side bar is missing!";
 
     let appliedTranslation = (opened ? '0' : '-100%');
