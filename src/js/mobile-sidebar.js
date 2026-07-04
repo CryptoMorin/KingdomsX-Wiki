@@ -1,4 +1,5 @@
 import ExecutionEnvironment from '@docusaurus/ExecutionEnvironment';
+
 const SIDEBAR_NAVBAR = '.theme-layout-navbar-sidebar.navbar-sidebar';
 let loadPhase = 1;
 const loadPhaseStr = () => `[Load Phase ${loadPhase}] `;
