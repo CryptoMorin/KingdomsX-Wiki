@@ -33,13 +33,12 @@
   flex-direction: column;
 }
 
-/* ==================== SCROLLBAR & OVERFLOW ==================== */
+/* ==================== OVERFLOW ==================== */
 .theme-doc-sidebar-menu.customScroll {
   padding: 5rem 0.5rem;
   height: 100%;
   overflow-y: auto;
   overflow-x: hidden;
-  scrollbar-width: auto; /* Other scrollbar settings are inherited from base.css */
 }
 
 /* Main menu list */
@@ -176,6 +175,6 @@ details::details-content {
   align-self: center;
   height: 10vh;
 }
-.customSidebar, .brand_separator {
+.customSidebar .brand_separator {
   border-bottom: solid 1px orangered;
 }

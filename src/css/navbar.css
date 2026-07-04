@@ -71,7 +71,7 @@ nav {
   }
 }
 
-@media (min-width: 370px) and (max-width: 1000px) {
+@media (min-width: 400px) and (max-width: 1000px) {
   .navbar__brand {
     margin-left: 10px;
     margin-right: 0px;
@@ -90,6 +90,7 @@ nav {
   }
 }
 
+/* Spacing them evenly after this just doesn't look good. */
 @media (min-width: 370px) and (max-width: 400px) {
   .theme-layout-navbar-right {
       gap: 0;
@@ -101,7 +102,7 @@ nav {
     margin-right: 5px;
   }
   .theme-layout-navbar-right a {
-    max-width: 30px !important;
+    max-width: 15px !important;
     max-height: auto !important;
     overflow: hidden;
   }

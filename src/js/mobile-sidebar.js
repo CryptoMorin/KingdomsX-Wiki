@@ -60,7 +60,10 @@ function replaceNavbar() {
         warn("navBar brand or customSidebar not found:", navbarBrand, customSidebar);
     }
 
-    navbarSidebar.replaceWith(actualSidebar);
+    // Prevent page crash due to:
+    //    Node.removeChild: The node to be removed is not a child of this node
+    navbarSidebar.style.display = 'none';
+    navbarSidebar.after(actualSidebar);
     log("Replaced navbar sidebar.");
     return true;
 }
@@ -103,7 +106,7 @@ function observeAddition() {
                 if (node.matches(SIDEBAR_NAVBAR)) {
                     log('Sidebar added!', node);
                     onBackdropChange();
-                    observer.disconnect();
+                    // observer.disconnect();
                     return;
                 }
 
@@ -111,7 +114,7 @@ function observeAddition() {
                 if (sidebar) {
                     log('Sidebar added!', sidebar);
                     onBackdropChange();
-                    observer.disconnect();
+                    // observer.disconnect();
                     return;
                 }
             }
