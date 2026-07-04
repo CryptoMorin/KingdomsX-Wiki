@@ -1,8 +1,5 @@
 import ExecutionEnvironment from '@docusaurus/ExecutionEnvironment';
-if (!ExecutionEnvironment.canUseDOM) {
-    console.log('mobile-sidebar.js module cannot use DOM at this moment.');
-    return;
-}
+
 
 function applySidebar(opened) {
     const actualSidebar = document.querySelector('aside.theme-doc-sidebar-container');
@@ -81,8 +78,15 @@ function onBackdropChange() {
     }
 }
 
-// Wait until the DOM is ready
-onBackdropChange();
-document.addEventListener('DOMContentLoaded', () => {
-  onBackdropChange();
-});
+
+
+
+if (!ExecutionEnvironment.canUseDOM) {
+    console.log('mobile-sidebar.js module cannot use DOM at this moment.');
+} else {
+    // Wait until the DOM is ready
+    onBackdropChange();
+        document.addEventListener('DOMContentLoaded', () => {
+        onBackdropChange();
+    });
+}
