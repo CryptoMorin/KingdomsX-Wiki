@@ -4,6 +4,10 @@
   font-size: 1.5em;
 }
 
+p .katex, blockquote .katex {
+  font-size: 1.1em;
+}
+
 /* Specifically because of the "%player_name% from kingdom ..." example in the Placeholders page. */
 blockquote .katex {
   overflow: scroll;

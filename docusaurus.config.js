@@ -27,6 +27,8 @@ export default {
   trailingSlash: false,
   onBrokenLinks: 'warn',
 
+  clientModules: ['./src/mobile-sidebar.js'],
+
   headTags: [
     // {
     //   tagName: 'meta',

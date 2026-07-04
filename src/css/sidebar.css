@@ -167,3 +167,15 @@ details::details-content {
 .customSidebar ul {
   list-style: none;
 }
+
+
+
+/* Phone */
+.customSidebar .navbar__brand {
+  border: none;
+  align-self: center;
+  height: 10vh;
+}
+.customSidebar, .brand_separator {
+  border-bottom: solid 1px orangered;
+}

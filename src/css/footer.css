@@ -17,6 +17,15 @@
     display: flex;
 }
 
+@media (max-width: 600px) {
+  .footer-left * {
+    font-size: 2vw !important;
+  }
+  .footer-right * {
+    font-size: 2vw !important;
+  }
+}
+
 .footer-left, .footer-right {
     height: inherit;
     display: flex;
@@ -30,7 +39,7 @@
 
 .footer-copyright-madeby {
     display: block;
-    font-size: 10px;
+    font-size: 90%;
     text-align: left;
 }
 
@@ -40,13 +49,12 @@
 
 .footer-left {
     justify-content: flex-start;
-    margin-left: 50px;
+    margin-left: clamp(1vw, 2vw, 3vw);
 }
 .footer-right {
     justify-content: flex-end;
-    margin-right: 40px;
+    margin-right: clamp(1vw, 2vw, 3vw);
 }
-
 
 
 /* Images */
@@ -55,11 +63,6 @@
     max-height: 40px;
     max-width: 40px;
 }
-.footer-right img {
-    margin-left: 5px;
-    margin-right: 50px;
-}
-
 
 
 .pagination-nav__link {

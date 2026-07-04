@@ -140,9 +140,17 @@ p img {
 }
 
 
+a {
+  transition: transform 0.1s linear;
+}
+a:active {
+  display: inline-block;
+  transform: scale(0.9);
+}
 a:hover {
   color: var(--link-color-hover);
 }
+
 
 .hash-link {
   display: inline-block !important;

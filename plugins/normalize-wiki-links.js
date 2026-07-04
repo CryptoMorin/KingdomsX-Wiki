@@ -32,10 +32,14 @@ function rewrite(url) {
     .replace(GITHUB_WIKI_PREFIX, "")
     .replace(CUSTOM_WIKI_PREFIX, "");
 
+  if (path.startsWith('/'))
+    path = path.substring(1);
+
   // The slug plugin uses lowercase unlike GitHub's case-sensitive anchors.
-  const split = path.split('#');
+  const split = path.split('#').map(x => x.trim());
   if (split.length > 1)  {
-    const [ base, anchor ] = split;
+    let [ base, anchor ] = split;
+    if (base.endsWith('/')) base = base.substring(1);
     path = base + '#' + anchor.toLowerCase()
   }
 
