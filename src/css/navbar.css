@@ -64,6 +64,13 @@ nav {
 
 
 /* Phone */
+
+@media (max-width: 997px) {
+  .navbar__brand {
+    margin-left: 10px;
+  }
+}
+
 @media (min-width: 370px) and (max-width: 1000px) {
   .navbar__brand {
     margin-left: 10px;
@@ -111,6 +118,6 @@ nav {
     margin-right: 0 !important;
   }
    .navbarSearchContainer_Bca1 {
-    position: initial;
+    position: initial !important;
   }
 }

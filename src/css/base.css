@@ -161,15 +161,3 @@ a:hover {
   transform: scale(1.2);
   text-decoration: none;
 }
-
-
-
-/* Phone */
-@media (max-width: 997px) {
-  .navbar__brand {
-    margin-left: 10px;
-  }
-  .navbar-discord-link, .navbar-github-link, .colorModeToggle_DEke {
-    display: block !important;
-  }
-}
