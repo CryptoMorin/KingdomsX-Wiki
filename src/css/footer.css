@@ -18,22 +18,25 @@
 }
 
 @media (max-width: 600px) {
-  .footer-left * {
-    font-size: 2vw !important;
-  }
-  .footer-right * {
-    font-size: 2vw !important;
-  }
+    .footer-left * {
+        font-size: 2vw !important;
+    }
+
+    .footer-right * {
+        font-size: 2vw !important;
+    }
 }
 
-.footer-left, .footer-right {
+.footer-left,
+.footer-right {
     height: inherit;
     display: flex;
     align-items: center;
     flex: 1
 }
 
-.footer-left *, .footer-right * {
+.footer-left *,
+.footer-right * {
     margin: 5px;
 }
 
@@ -51,6 +54,7 @@
     justify-content: flex-start;
     margin-left: clamp(1vw, 2vw, 3vw);
 }
+
 .footer-right {
     justify-content: flex-end;
     margin-right: clamp(1vw, 2vw, 3vw);
@@ -66,5 +70,5 @@
 
 
 .pagination-nav__link {
-  border: 1px solid darkorange;
+    border: 1px solid darkorange;
 }

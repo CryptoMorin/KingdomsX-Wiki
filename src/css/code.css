@@ -5,6 +5,7 @@
     --code-function: #005d97;
     --yml-punc: #454545;
 }
+
 html[data-theme='dark'] {
     --code-symbol: rgb(90, 162, 255);
     --code-string: greenyellow;
@@ -15,12 +16,13 @@ html[data-theme='dark'] {
 
 
 .prism-code {
-  box-shadow: black 0px 0px 10px;
+    box-shadow: black 0px 0px 10px;
 }
 
 span.token.class-name {
     color: rgb(0, 168, 168) !important;
 }
+
 span.token.function {
     color: var(--code-function) !important;
 }
@@ -29,15 +31,19 @@ span.token.tag {
     color: #ff6fcd !important;
 }
 
-span.token.symbol, span.token.key.atrule {
+span.token.symbol,
+span.token.key.atrule {
     color: var(--code-symbol) !important;
 }
+
 span.token.operator {
     color: gray !important;
 }
+
 span.token.punctuation {
     color: lightcoral !important;
 }
+
 span.token.string {
     color: var(--code-string) !important;
 }

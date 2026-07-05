@@ -29,12 +29,12 @@ function replaceNavbar() {
         warn('No sidebar navbar found.');
         return false;
     }
-    
+
     actualSidebar = actualSidebar.cloneNode(true);
     actualSidebar.classList.add(PORTRAIT_SUPPORT_ELEMENT_CLASS);
 
     // Add the logo on top
-	let navbarBrand = document.querySelector('.navbar__brand');
+    let navbarBrand = document.querySelector('.navbar__brand');
     if (navbarBrand) {
         navbarBrand = navbarBrand.cloneNode(true);
         navbarBrand.classList.add(PORTRAIT_SUPPORT_ELEMENT_CLASS);

@@ -15,37 +15,37 @@ html[data-theme='dark'] {
 }
 
 html[data-theme='dark'] .theme-admonition-note {
-    --ifm-alert-background-color: #006a9a;
-    border-color: #00b0ff;
+  --ifm-alert-background-color: #006a9a;
+  border-color: #00b0ff;
 }
 
 table thead {
-    background-color: var(--thead-bg-color);
-    border-bottom: 4px solid darkgray;
+  background-color: var(--thead-bg-color);
+  border-bottom: 4px solid darkgray;
 }
 
 .theme-admonition-note svg {
-    filter: brightness(0) saturate(100%) invert(71%) sepia(9%) saturate(3061%) hue-rotate(168deg) brightness(98%) contrast(106%);
+  filter: brightness(0) saturate(100%) invert(71%) sepia(9%) saturate(3061%) hue-rotate(168deg) brightness(98%) contrast(106%);
 }
 
 .theme-admonition-info svg {
-    filter: brightness(0) saturate(100%) invert(85%) sepia(24%) saturate(875%) hue-rotate(145deg) brightness(105%) contrast(108%);
+  filter: brightness(0) saturate(100%) invert(85%) sepia(24%) saturate(875%) hue-rotate(145deg) brightness(105%) contrast(108%);
 }
 
 .theme-admonition-warning svg {
-    filter: brightness(0) saturate(100%) invert(68%) sepia(58%) saturate(1857%) hue-rotate(332deg) brightness(108%) contrast(101%);
+  filter: brightness(0) saturate(100%) invert(68%) sepia(58%) saturate(1857%) hue-rotate(332deg) brightness(108%) contrast(101%);
 }
 
 .theme-admonition-tip svg {
-    filter: brightness(0) saturate(100%) invert(78%) sepia(64%) saturate(3065%) hue-rotate(43deg) brightness(115%) contrast(104%);
+  filter: brightness(0) saturate(100%) invert(78%) sepia(64%) saturate(3065%) hue-rotate(43deg) brightness(115%) contrast(104%);
 }
 
 .theme-admonition-danger svg {
-    filter: brightness(0) saturate(100%) invert(26%) sepia(97%) saturate(7320%) hue-rotate(357deg) brightness(105%) contrast(116%);
+  filter: brightness(0) saturate(100%) invert(26%) sepia(97%) saturate(7320%) hue-rotate(357deg) brightness(105%) contrast(116%);
 }
 
 .iconExternalLink_nPIU {
-    max-width: 10px;
+  max-width: 10px;
 }
 
 html[data-theme='dark'] .navbar {
@@ -54,15 +54,16 @@ html[data-theme='dark'] .navbar {
 
 
 details.alert {
-    --ifm-link-color: rgb(32, 121, 255);
-    --ifm-link-hover-color: rgb(182, 182, 255);
-    /* background-color: rgb(63, 129, 129); */
+  --ifm-link-color: rgb(32, 121, 255);
+  --ifm-link-hover-color: rgb(182, 182, 255);
+  /* background-color: rgb(63, 129, 129); */
 }
 
 
 :root {
   --ifm-hr-background-color: orange;
 }
+
 /* html[data-theme="dark"] {
   --ifm-toc-border-color: orange; 
 } */
@@ -74,7 +75,8 @@ details.alert {
 /* Firefox */
 html {
   scrollbar-width: thin;
-  scrollbar-color: orange var(--bg-scrollbar); /* thumb then track */
+  scrollbar-color: orange var(--bg-scrollbar);
+  /* thumb then track */
 }
 
 /* Chrome, Edge, Safari */
@@ -84,22 +86,27 @@ html {
 }
 
 ::-webkit-scrollbar-track {
-  background: var(--bg-scrollbar); /* track background */
+  background: var(--bg-scrollbar);
+  /* track background */
   border-radius: 10px;
 }
 
 ::-webkit-scrollbar-thumb {
-  background-color: orange; /* scrollbar thumb */
+  background-color: orange;
+  /* scrollbar thumb */
   border-radius: 10px;
-  border: 2px solid var(--bg-scrollbar); /* space around thumb */
+  border: 2px solid var(--bg-scrollbar);
+  /* space around thumb */
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background-color: darkorange; /* darker shade on hover */
+  background-color: darkorange;
+  /* darker shade on hover */
 }
 
 ::-webkit-scrollbar-corner {
-  background: var(--bg-scrollbar); /* for the corner where vertical & horizontal meet */
+  background: var(--bg-scrollbar);
+  /* for the corner where vertical & horizontal meet */
 }
 
 
@@ -113,6 +120,7 @@ html {
 p:has(> img) {
   text-align: center;
 }
+
 p img {
   border: 3px solid orange;
   border-radius: 20px;
@@ -131,7 +139,7 @@ p img {
 
 
 /* The bottom-right go to top button */
-.theme-back-to-top-button  {
+.theme-back-to-top-button {
   background-color: var(--bg-back-to-top-button) !important;
 }
 
@@ -143,10 +151,12 @@ p img {
 a {
   transition: transform 0.1s linear;
 }
+
 a:active {
   display: inline-block;
   transform: scale(0.9);
 }
+
 a:hover {
   color: var(--link-color-hover);
 }
@@ -156,6 +166,7 @@ a:hover {
   display: inline-block !important;
   transition: 0.2s linear !important;
 }
+
 .hash-link:hover {
   color: orangered;
   transform: scale(1.2);

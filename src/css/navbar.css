@@ -162,6 +162,9 @@ aside.theme-doc-sidebar-container.portrait-support {
     max-height: 20px !important;
   }
 
+  .navbar__items {
+    flex: 0;
+  }
   .navbar__brand {
     font-size: 0.7em;
     border-right: 1px solid orange;
@@ -198,6 +201,16 @@ aside.theme-doc-sidebar-container.portrait-support {
     max-height: auto !important;
     overflow: hidden;
   }
+
+  .colorModeToggle_DEke,
+  .navbarSearchContainer_Bca1 {
+    display: inline !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+  }
+  .navbarSearchContainer_Bca1 {
+    position: initial !important;
+  }
 }
 
 /* Only show the icon. */
@@ -211,6 +224,8 @@ aside.theme-doc-sidebar-container.portrait-support {
 /* Global responsive settings */
 @media (min-width: 330px) and (max-width: 1000px) {
 
+  .navbar-discord-link,
+  .navbar-github-link,
   .colorModeToggle_DEke,
   .navbarSearchContainer_Bca1 {
     display: inline !important;
