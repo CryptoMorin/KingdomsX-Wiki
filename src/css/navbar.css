@@ -96,7 +96,7 @@ aside.theme-doc-sidebar-container.portrait-support {
   top: 0;
   left: 0;
   position: fixed;
-  transition: 0.3s linear;
+  transition: 0.3s cubic-bezier(.79,.14,.15,.86);
 }
 
 .navbar__brand.portrait-support {
@@ -221,7 +221,7 @@ aside.theme-doc-sidebar-container.portrait-support {
 @media (max-width: 319px) {
   .navbar__brand {
     border: none;
-    margin-left: 10vw;
+    margin-left: 11vw;
   }
 }
 
