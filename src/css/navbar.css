@@ -21,33 +21,42 @@ nav {
   color: orange;
 }
 
-.navbar__item, .toggle_vylO, .navbar__title, .navbar__logo img {
+.navbar__item,
+.toggle_vylO,
+.navbar__title,
+.navbar__logo img {
   transition: transform 0.3s ease-in-out;
 }
 
 .navbar-discord-link {
-    content: "";
-    display: inline-block;
-    height: 100%;
-    width: 100%;
-    background: url("/img/Discord-Symbol-Blurple.svg") no-repeat center;
-    background-size: contain;
-    margin-right: 20px;
-}
-.navbar-github-link {
-    content: "";
-    display: inline-block;
-    height: 100%;
-    width: 100%;
-    background: url("/img/GitHub_Invertocat_Black.svg") no-repeat center;
-    background-size: contain;
-    margin-right: 20px;
+  content: "";
+  display: inline-block;
+  height: 100%;
+  width: 100%;
+  background: url("/img/Discord-Symbol-Blurple.svg") no-repeat center;
+  background-size: contain;
+  margin-right: 20px;
 }
 
-.navbar__item:hover, .toggle_vylO:hover, .navbar__title:hover, .navbar__logo img:hover {
+.navbar-github-link {
+  content: "";
+  display: inline-block;
+  height: 100%;
+  width: 100%;
+  background: url("/img/GitHub_Invertocat_Black.svg") no-repeat center;
+  background-size: contain;
+  margin-right: 20px;
+}
+
+.navbar__item:hover,
+.toggle_vylO:hover,
+.navbar__title:hover,
+.navbar__logo img:hover {
   transform: scale(1.1);
 }
-.navbar-discord-link:hover, .navbar-github-link:hover {
+
+.navbar-discord-link:hover,
+.navbar-github-link:hover {
   transform: scale(1.2);
 }
 
@@ -55,9 +64,11 @@ nav {
 .navbarSearchContainer_Bca1 {
   transition: 0.1s linear;
 }
+
 .DocSearch:hover {
   border: 1px solid black;
 }
+
 .navbarSearchContainer_Bca1:hover {
   transform: scale(1.05);
 }
@@ -69,10 +80,17 @@ nav {
 
 
 /* Phone */
+/* Portrait mode support consists of several phases */
+/* 1. Docusaurus phase: Removal of text buttons and collapsing the sidebar. */
+/* 2. Docusaurus phase search shrinking phase to a rounded button. */
+/* 3. Shrink right navbar icons */
+/* 4. Show only search and light switch buttons */
+/* 5. Show only centered logo and search button on the right side. */
 
 aside.theme-doc-sidebar-container.portrait-support {
   transform: translateX(-100%);
-  display: flex; /* We flex for the logo */
+  display: flex;
+  /* We flex for the logo */
   height: 100%;
   width: clamp(230px, 100vw, 325px);
   top: 0;
@@ -80,6 +98,7 @@ aside.theme-doc-sidebar-container.portrait-support {
   position: fixed;
   transition: 0.3s linear;
 }
+
 .navbar__brand.portrait-support {
   align-self: center;
 }
@@ -96,30 +115,84 @@ aside.theme-doc-sidebar-container.portrait-support {
     margin-right: 0px;
     flex-shrink: 0;
   }
+
   .navbar__title {
     overflow: visible;
   }
-  .theme-layout-navbar-right  {
-    gap: 4vw;
+
+  .theme-layout-navbar-right {
+    gap: 20px;
   }
-  .navbar-discord-link, .navbar-github-link {
+
+  .navbar-discord-link,
+  .navbar-github-link {
     display: inline !important;
     margin-left: 0 !important;
     margin-right: 0 !important;
   }
 }
 
+/* Make all icons smaller */
+@media (max-width: 415px) {
+  .theme-layout-navbar-right {
+    gap: 10px;
+    flex: 1 1 auto;
+  }
+
+  .DocSearch-Button {
+    display: flex;
+    justify-content: center;
+
+    max-height: 25px;
+    max-width: 25px;
+    padding: 3px;
+  }
+
+  .DocSearch-Button-Container {
+    max-width: 70%;
+    max-height: 70%;
+  }
+
+  .navbar-discord-link,
+  .navbar-github-link,
+  .colorModeToggle_DEke {
+    /* Padding was used for GitHub and Discord to make them appear bigger. */
+    padding: 0px !important;
+    max-width: 20px !important;
+    max-height: 20px !important;
+  }
+
+  .navbar__brand {
+    font-size: 0.7em;
+    border-right: 1px solid orange;
+    padding-right: 10px;
+  }
+
+  .navbar__logo {
+    display: flex;
+    align-items: center;
+  }
+
+  .navbar__logo img {
+    max-height: 25px;
+    max-width: 25px;
+  }
+}
+
+
 /* Spacing them evenly after this just doesn't look good. */
 /* We will only have the light/dark mode here. */
-@media (min-width: 330px) and (max-width: 415px) {
+@media (min-width: 320px) and (max-width: 329px) {
   .theme-layout-navbar-right {
-      gap: 3vw;
-      flex: 1 1 auto;
+    gap: 3vw;
+    flex: 1 1 auto;
   }
-  .theme-layout-navbar-left  {
+
+  .theme-layout-navbar-left {
     flex: 0 0 auto;
     margin-right: 5px;
   }
+
   .theme-layout-navbar-right a {
     max-width: 15px !important;
     max-height: auto !important;
@@ -128,7 +201,7 @@ aside.theme-doc-sidebar-container.portrait-support {
 }
 
 /* Only show the icon. */
-@media (max-width: 329px) {
+@media (max-width: 319px) {
   .navbar__brand {
     border: none;
     margin-left: 10vw;
@@ -137,12 +210,15 @@ aside.theme-doc-sidebar-container.portrait-support {
 
 /* Global responsive settings */
 @media (min-width: 330px) and (max-width: 1000px) {
-  .colorModeToggle_DEke, .navbarSearchContainer_Bca1 {
+
+  .colorModeToggle_DEke,
+  .navbarSearchContainer_Bca1 {
     display: inline !important;
     margin-left: 0 !important;
     margin-right: 0 !important;
   }
-   .navbarSearchContainer_Bca1 {
+
+  .navbarSearchContainer_Bca1 {
     position: initial !important;
   }
 }
