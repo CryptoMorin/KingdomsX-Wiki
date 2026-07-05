@@ -109,7 +109,7 @@ aside.theme-doc-sidebar-container.portrait-support {
   }
 }
 
-@media (min-width: 416px) and (max-width: 1000px) {
+@media (min-width: 415px) and (max-width: 1000px) {
   .navbar__brand {
     margin-left: 10px;
     margin-right: 0px;
@@ -133,7 +133,7 @@ aside.theme-doc-sidebar-container.portrait-support {
 }
 
 /* Make all icons smaller */
-@media (max-width: 415px) {
+@media (max-width: 420px) {
   .theme-layout-navbar-right {
     gap: 10px;
     flex: 1 1 auto;
@@ -156,14 +156,18 @@ aside.theme-doc-sidebar-container.portrait-support {
   .navbar-discord-link,
   .navbar-github-link,
   .colorModeToggle_DEke {
-    /* Padding was used for GitHub and Discord to make them appear bigger. */
-    padding: 0px !important;
     max-width: 20px !important;
     max-height: 20px !important;
   }
 
+  .navbar-discord-link,
+  .navbar-github-link {
+    /* Padding used because we use a background image. 10px wide all directions = 20px * 20px */
+    padding: 10px !important;
+  }
+
   .navbar__items {
-    flex: 0;
+    flex: 1 1 auto;
   }
   .navbar__brand {
     font-size: 0.7em;
@@ -185,7 +189,7 @@ aside.theme-doc-sidebar-container.portrait-support {
 
 /* Spacing them evenly after this just doesn't look good. */
 /* We will only have the light/dark mode here. */
-@media (min-width: 320px) and (max-width: 329px) {
+@media (min-width: 300px) and (max-width: 319px) {
   .theme-layout-navbar-right {
     gap: 3vw;
     flex: 1 1 auto;
