@@ -3,36 +3,43 @@ import { visit } from "unist-util-visit";
 // Removes Table of Content (ToC) we added manually in GitHub's wiki.
 export default function removeToC(pageName) {
   return (tree, file) => {
-    console.log("File", file);
-    console.log("Path", file.path);
-    console.log("History", file.history);
-    console.log("data", file.data);
+    // /home/runner/work/KingdomsX-Wiki/KingdomsX-Wiki/docs/FAQ.md
+    // /home/runner/work/KingdomsX-Wiki/KingdomsX-Wiki/docs/NFAQ.md
+    const faq = file.path.endsWith("/FAQ.md");
+    const nfaq = file.path.endsWith("/NFAQ.md");
+    if (!faq && !nfaq) return;
+    console.log("Processing ", (faq ? "FAQ" : "NFAQ"), file.path);
 
-    visit(tree, "element", (node, index, parent) => {
-      // We target the <h4> element and start splicing down from there.
+    let handle = 0;
+    visit(tree, "heading", (node, index, parent) => {
+      console.log(handle, "Found node", node);
+      console.log(handle, "Found index", index);
+      console.log(handle, "First child", (node.children.length > 0 ? node.children[0] : "NO CHILD"));
+      handle++;
       if (
-        node.tagName === "h4" &&
-        node.properties?.id === "table-of-content" &&
-        parent &&
-        typeof index === "number"
+        !parent ||
+        typeof index !== "number" ||
+        node.depth !== 4 ||
+        node.children.length !== 1 ||
+        node.children[0].type !== "text" ||
+        node.children[0].value !== "Table of Contents"
       ) {
-        // Remove:
-        // <h4 id="table-of-content">
-        // <ul>...</ul>
-        // <hr>
-
-        let count = 1;
-
-        if (parent.children[index + 1]?.tagName === "ul") {
-          count++;
-        }
-
-        if (parent.children[index + count]?.tagName === "hr") {
-          count++;
-        }
-
-        parent.children.splice(index, count);
+        return;
       }
+
+      let removeCount = 1;
+
+      // Remove the following unordered list.
+      if (parent.children[index + 1]?.type === "list") {
+        removeCount++;
+      }
+
+      // Remove the following thematic break (___, ---, or ***).
+      if (parent.children[index + removeCount]?.type === "thematicBreak") {
+        removeCount++;
+      }
+
+      parent.children.splice(index, removeCount);
     });
   };
 }
