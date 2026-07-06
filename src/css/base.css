@@ -73,7 +73,7 @@ details.alert {
 /* Global Scroll Bar */
 
 /* Firefox */
-html {
+* {
   scrollbar-width: thin;
   scrollbar-color: orange var(--bg-scrollbar);
   /* thumb then track */

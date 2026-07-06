@@ -8,6 +8,7 @@ import remarkMinecraftFormat from "./plugins/remark-minecraft-codes";
 import rehypeForceH1Slug from './plugins/ultra-hyped-slug';
 import remarkGitHubLatex from "./plugins/remark-github-latex";
 import normalizeWikiLinks from "./plugins/normalize-wiki-links";
+import removeToC from "./plugins/remove-manual-toc";
 
 import {themes} from 'prism-react-renderer';
 import prism from 'prismjs';
@@ -191,7 +192,7 @@ export default {
             return `https://github.com/CryptoMorin/KingdomsX/wiki/${page}/_edit`;
           },
 
-          beforeDefaultRemarkPlugins: [remarkGithubAdmonitionsToDirectives, normalizeWikiLinks],
+          beforeDefaultRemarkPlugins: [remarkGithubAdmonitionsToDirectives, normalizeWikiLinks, removeToC],
 
           remarkPlugins: [
             remarkGFM,
