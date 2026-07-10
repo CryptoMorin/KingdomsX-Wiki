@@ -4,6 +4,7 @@
   --bg-back-to-top-button: #6565a8;
   --bg-hover-back-to-top-button: rgb(224, 111, 18);
   --bg-scrollbar: #e5e5e5;
+  --content-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
 }
 
 html[data-theme='dark'] {
@@ -12,6 +13,7 @@ html[data-theme='dark'] {
   --bg-back-to-top-button: #2d2d73;
   --link-color-hover: #005b79;
   --bg-scrollbar: #191d24;
+  --content-shadow: 0 5px 14px rgba(0, 0, 0, 0.35);
 }
 
 html[data-theme='dark'] .theme-admonition-note {
@@ -112,7 +114,7 @@ details.alert {
 
 
 .alert {
-  box-shadow: black 5px 5px 20px;
+  box-shadow: var(--content-shadow);
 }
 
 

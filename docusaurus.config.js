@@ -168,7 +168,10 @@ export default {
       {
         redirects: [
           {
-            from: ['/', '/KingdomsX-Wiki'],
+            from: [
+              // '/' is handled by src/pages/index.js so the dev server has a real root route
+              '/KingdomsX-Wiki',
+            ],
             to: '/Home',
           },
         ],
@@ -221,7 +224,9 @@ export default {
         },
 
         blog: false,
-        pages: false,
+        pages: {
+          path: './src/pages',
+        },
       },
     ],
   ],

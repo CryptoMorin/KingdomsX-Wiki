@@ -1,5 +1,5 @@
-// import React from 'react';
-// import { Redirect } from '@docusaurus/router';
+import React from 'react';
+import { Redirect } from '@docusaurus/router';
 
 // export default function Home() {
 //   console.log("redirect home")
@@ -20,3 +20,6 @@
 //     </BrowserRouter>
 //   );
 // }
+export default function HomeRedirect() {
+  return <Redirect to="/Home" />;
+}

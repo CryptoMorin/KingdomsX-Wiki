@@ -1,8 +1,63 @@
-import React from 'react';
+import React, { useEffect, useRef } from 'react';
+import { useLocation } from '@docusaurus/router';
 
 export default function CustomSidebar() {
+  const sidebarRef = useRef(null);
+  const location = useLocation();
+
+  useEffect(() => {
+    const sidebar = sidebarRef.current;
+    if (!sidebar) return;
+
+    const links = Array.from(sidebar.querySelectorAll('a[href]'));
+
+    const setActiveLink = (activeLink) => {
+      links.forEach((link) => {
+        const isActive = link === activeLink;
+        link.classList.toggle('menu__link--active', isActive);
+
+        if (!isActive) return;
+
+        let details = link.closest('details');
+        while (details) {
+          details.open = true;
+          details = details.parentElement.closest('details');
+        }
+      });
+    };
+
+    const updateActiveLink = () => {
+      const currentPath = `${location.pathname}${location.hash}`;
+      const pageLinks = links.filter((link) => {
+        const href = link.getAttribute('href');
+        const path = href.split('#')[0];
+        return path === location.pathname || (path === '/' && location.pathname === '/Home');
+      });
+
+      const currentLink = pageLinks.find((link) => link.getAttribute('href') === currentPath);
+      const pageLink = pageLinks.find((link) => !link.hash);
+      const activeAnchor = pageLinks.reduce((activeLink, link) => {
+        if (!link.hash) return activeLink;
+
+        const heading = document.getElementById(decodeURIComponent(link.hash.slice(1)));
+        return heading && heading.getBoundingClientRect().top <= 100 ? link : activeLink;
+      }, null);
+
+      setActiveLink(activeAnchor || currentLink || pageLink);
+    };
+
+    updateActiveLink();
+    window.addEventListener('scroll', updateActiveLink, { passive: true });
+    window.addEventListener('hashchange', updateActiveLink);
+
+    return () => {
+      window.removeEventListener('scroll', updateActiveLink);
+      window.removeEventListener('hashchange', updateActiveLink);
+    };
+  }, [location.hash, location.pathname]);
+
   return (
-    <aside className="theme-doc-sidebar-container customSidebar">
+    <aside ref={sidebarRef} className="theme-doc-sidebar-container customSidebar">
       <div className="theme-doc-sidebar-menu customScroll">
         <ul className="menu__list">
 

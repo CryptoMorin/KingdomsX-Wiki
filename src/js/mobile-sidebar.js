@@ -14,15 +14,22 @@ function warn(...msg) {
 
 function toggleSidebar(opened) {
     const actualSidebar = document.querySelector(`aside.theme-doc-sidebar-container.${PORTRAIT_SUPPORT_ELEMENT_CLASS}`);
-    if (!actualSidebar) throw "Actual side bar is missing!";
+    if (!actualSidebar) {
+        warn('Actual sidebar is missing.');
+        return false;
+    }
 
     let appliedTranslation = (opened ? '0' : '-100%');
     actualSidebar.style.transform = `translateX(${appliedTranslation})`;
+    return true;
 }
 
 function replaceNavbar() {
     let actualSidebar = document.querySelector('aside.customSidebar');
-    if (!actualSidebar) throw "Actual side bar is missing!";
+    if (!actualSidebar) {
+        warn('Actual sidebar is missing.');
+        return false;
+    }
 
     const navbarSidebar = document.querySelector(SIDEBAR_NAVBAR);
     if (!navbarSidebar) {

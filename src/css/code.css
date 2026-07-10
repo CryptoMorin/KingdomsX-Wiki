@@ -16,7 +16,7 @@ html[data-theme='dark'] {
 
 
 .prism-code {
-    box-shadow: black 0px 0px 10px;
+    box-shadow: var(--content-shadow);
 }
 
 span.token.class-name {
