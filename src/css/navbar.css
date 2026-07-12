@@ -602,6 +602,7 @@
 
   .theme-layout-navbar-right .navbar-discord-link,
   .theme-layout-navbar-right .navbar-github-link {
+    display: inline-flex;
     width: 1.5rem;
     height: 1.5rem;
     margin: 0 0.25rem;
@@ -625,14 +626,6 @@
     align-self: center;
   }
 
-  .DocSearch-Button {
-    width: 2.5rem;
-    height: 2.5rem;
-    min-height: 2.5rem;
-    padding: 0;
-    justify-content: center;
-  }
-
   .navbar__toggle {
     display: grid;
     order: 5;
@@ -648,6 +641,32 @@
 
   .theme-layout-navbar-left .navbar-brand-group::after {
     display: none;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 996px) {
+  .theme-layout-navbar-right .DocSearch-Button {
+    width: auto;
+    padding-inline: 0.5rem;
+    justify-content: space-between;
+  }
+
+  .theme-layout-navbar-right .DocSearch-Button-Placeholder {
+    display: inline-block;
+  }
+
+  .theme-layout-navbar-right .DocSearch-Button-Keys {
+    display: flex;
+  }
+}
+
+@media (max-width: 767px) {
+  .theme-layout-navbar-right .DocSearch-Button {
+    width: 2.5rem;
+    height: 2.5rem;
+    min-height: 2.5rem;
+    padding: 0;
+    justify-content: center;
   }
 }
 
