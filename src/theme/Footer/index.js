@@ -1,12 +1,12 @@
 import React from 'react';
 
-export function FooterContent() {
+export default function Footer() {
   return (
     <div className="footer">
       <div className="container footer-container">
         <div className="footer-left">
           <img
-            src="/img/favicon.ico"
+            src="/img/logo.webp"
             alt="Logo"
             className="footer-logo"
           />
@@ -16,15 +16,10 @@ export function FooterContent() {
               &copy; 2026 KingdomsX. A plugin by <a href="https://github.com/CryptoMorin" target="_blank" rel="noopener noreferrer">Crypto Morin</a>.
             </span>
 
-            <span className="footer-credit">
+            <span className="footer-source">
               <a href="https://github.com/CryptoMorin/KingdomsX-Wiki" target="_blank" rel="noopener noreferrer">KingdomsX-Wiki</a>
               &bull; Powered by <a href="https://docusaurus.io/" target="_blank" rel="noopener noreferrer">Docusaurus</a>
-              <img
-                src="/img/docusaurus_keytar.svg"
-                alt="Docusaurus Logo"
-                target="_blank"
-                className="footer-logo"
-              />
+              <img src="/img/docusaurus_keytar.svg" alt="" />
             </span>
           </div>
         </div>
@@ -38,8 +33,4 @@ export function FooterContent() {
       </div>
     </div>
   );
-}
-
-export default function FooterWrapper() {
-  return <FooterContent />;
 }

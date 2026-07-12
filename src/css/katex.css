@@ -1,6 +1,6 @@
 /* Base KaTeX container */
 .katex {
-  color: #1f7dff;
+  color: var(--wiki-info);
   font-size: 1.5em;
 }
 
@@ -11,42 +11,45 @@ blockquote .katex {
 
 /* Specifically because of the "%player_name% from kingdom ..." example in the Placeholders page. */
 blockquote .katex {
-  overflow: scroll;
-  padding: 20px;
+  overflow-x: auto;
+  padding: 1rem;
+  border: 0.0625rem solid var(--wiki-line);
+  border-radius: var(--wiki-radius-control);
+  background: var(--wiki-surface);
 }
 
 /* Variables (x, y, z, u, l, t, etc.) */
 .katex .mathnormal {
-  color: #76a1ff;
+  color: color-mix(in srgb, var(--wiki-info) 72%, var(--wiki-text));
 }
 
 /* Numbers (if present) */
 .katex .mord.mnum {
-  color: #16a34a;
+  color: var(--wiki-green);
 }
 
 /* Operators (=, <, >, +, -, etc.) */
 .katex .mrel,
 .katex .mbin {
-  color: #3aedc6;
-  font-weight: 500;
+  color: var(--wiki-orange);
+  font-weight: 600;
 }
 
 /* Punctuation (commas, semicolons, colons) */
 .katex .mpunct {
-  color: #6b7280;
+  color: var(--wiki-muted);
 }
 
 /* Brackets and delimiters { } ( ) [ ] */
 .katex .mopen,
 .katex .mclose,
 .katex .delimsizing {
-  color: orange;
+  color: var(--wiki-amber);
 }
 
 /* Function names or roman text inside math */
 .katex .mord.mtext {
-  color: #929292;
+  color: var(--wiki-muted);
 }
 
 /* Spacing elements (don’t visually change them) */

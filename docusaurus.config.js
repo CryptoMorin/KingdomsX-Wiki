@@ -3,12 +3,13 @@ import remarkMath from 'remark-math';
 import rehypeKatex from 'rehype-katex';
 import remarkGFM from 'remark-gfm';
 import rehypeSlug from 'rehype-slug';
-import remarkPlaceholders from "./plugins/remark-placeholders";
-import remarkMinecraftFormat from "./plugins/remark-minecraft-codes";
-import rehypeForceH1Slug from './plugins/ultra-hyped-slug';
-import remarkGitHubLatex from "./plugins/remark-github-latex";
-import normalizeWikiLinks from "./plugins/normalize-wiki-links";
-import removeToC from "./plugins/remove-manual-toc";
+import remarkPlaceholders from "./plugins/remark-placeholders.js";
+import remarkMinecraftFormat from "./plugins/remark-minecraft-codes.js";
+import rehypeForceH1Slug from './plugins/ultra-hyped-slug.js';
+import remarkGitHubLatex from "./plugins/remark-github-latex.js";
+import normalizeWikiLinks from "./plugins/normalize-wiki-links.js";
+import removeToC from "./plugins/remove-manual-toc.js";
+import normalizeWikiWhitespace from "./plugins/normalize-wiki-whitespace.js";
 
 import {themes} from 'prism-react-renderer';
 import prism from 'prismjs';
@@ -28,7 +29,7 @@ export default {
   trailingSlash: false,
   onBrokenLinks: 'warn',
 
-  clientModules: ['./src/js/mobile-sidebar.js'],
+  clientModules: ['./src/js/hash-scroll.js', './src/js/sidebar-active-links.js'],
 
   headTags: [
     // {
@@ -45,7 +46,37 @@ export default {
         href: 'https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap',
       },
     },
-  ],  
+    {
+      tagName: 'meta',
+      attributes: {
+        name: 'theme-color',
+        content: '#071019',
+      },
+    },
+    {
+      tagName: 'link',
+      attributes: {
+        rel: 'icon',
+        type: 'image/svg+xml',
+        href: '/favicon.svg',
+      },
+    },
+    {
+      tagName: 'link',
+      attributes: {
+        rel: 'apple-touch-icon',
+        sizes: '180x180',
+        href: '/apple-touch-icon.png',
+      },
+    },
+    {
+      tagName: 'link',
+      attributes: {
+        rel: 'manifest',
+        href: '/site.webmanifest',
+      },
+    },
+  ],
 
   themeConfig: {
     image: 'img/social-card.webp',
@@ -68,8 +99,8 @@ export default {
     },
     docs: {
       sidebar: {
-        hideable: true,
-      }
+        hideable: false,
+      },
     },
 
     tableOfContents: {
@@ -81,8 +112,8 @@ export default {
       title: "KingdomsX",
       logo: {
         alt: "KingdomsX Icon",
-        src: "img/favicon.ico",
-        href: "https://kingdomsx.com",
+        src: "img/logo.webp",
+        href: "/Home",
       },
 
       items: [
@@ -97,7 +128,7 @@ export default {
           position: "left",
         },
         {
-          href: "https://github.com/CryptoMorin/KingdomsX/wiki",
+          type: "custom-githubWikiPage",
           label: "GitHub Version",
           position: "left",
         },
@@ -106,17 +137,27 @@ export default {
           label: "Download",
           position: "left",
         },
-
+        {
+          href: "https://servers.kingdomsx.com",
+          label: "Servers",
+          position: "left",
+        },
+        {
+          href: "https://kingdomsx.com",
+          label: "Website",
+          position: "left",
+        },
         {
           href: "https://discord.kingdomsx.com",
+          "aria-label": "Discord",
           position: "right",
-          className: "navbar-discord-link"
+          className: "navbar-discord-link",
         },
-
         {
           href: "https://github.com/CryptoMorin/KingdomsX",
+          "aria-label": "GitHub",
           position: "right",
-          className: "navbar-github-link"
+          className: "navbar-github-link",
         },
       ],
     },
@@ -186,7 +227,7 @@ export default {
         docs: {
           path: './docs',                  // Points to the cloned folder
           routeBasePath: '/',              // Wiki at root URL
-          // sidebarPath: require.resolve('./sidebars.js'),
+          sidebarPath: './sidebars.js',
           editUrl: ({ permalink }) => {
             if (!permalink) return undefined;
 
@@ -202,7 +243,8 @@ export default {
             [remarkMath, { singleDollarTextMath: false }],
             remarkGitHubLatex,
             remarkPlaceholders,
-            remarkMinecraftFormat
+            remarkMinecraftFormat,
+            normalizeWikiWhitespace,
           ],
           rehypePlugins: [
             [rehypeKatex, { strict: false }],
@@ -212,15 +254,15 @@ export default {
         },
 
         theme: {
-          customCss: [ 
-            './src/css/base.css', 
-            './src/css/katex.css', 
-            './src/css/code.css', 
+          customCss: [
+            './src/css/base.css',
+            './src/css/katex.css',
+            './src/css/code.css',
             './src/css/sidebar.css',
             './src/css/navbar.css',
             './src/css/footer.css',
             './src/css/placeholder.css'
-           ],
+          ],
         },
 
         blog: false,

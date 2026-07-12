@@ -1,42 +1,36 @@
-:root {
-    --placeholder-namespace: orangered;
-    --placeholder-unimportant: #13082b;
-    --placeholder-bg: rgb(208, 208, 208);
-}
-
-html[data-theme='dark'] {
-    --placeholder-namespace: inherit;
-    --placeholder-unimportant: darkgray;
-    --placeholder-bg: #36363688;
-}
-
-.placeholder-text {
-    /* display: inline-flex; */
-    font-weight: bold;
-    padding: 0 4px;
-    border-radius: 4px;
-    background: var(--placeholder-bg);
-}
-
-.placeholder-text .mod       { color: purple; }
-.placeholder-text .at        { color: var(--placeholder-unimportant); }
-.placeholder-text .sep       { color: var(--placeholder-unimportant); }
-.placeholder-text .namespace { color: var(--placeholder-namespace); }
-.placeholder-text .fn        { color: rgb(55, 124, 250); }
-.placeholder-text .arg       { color: rgb(25, 138, 25); }
-.placeholder-text .value     { color: rgb(0, 176, 189); }
-
-.placeholder-text .placeholder-enclosure {
-    color: rgb(141, 141, 141);
-}
-.placeholder-text .placeholder-content {
-    color: rgb(255, 182, 87);
-}
-
-
-
+.placeholder-text,
 .mc-root {
-    padding: 0 4px;
-    border-radius: 4px;
-    background: var(--placeholder-bg);
+  padding: 0.1rem 0.3rem;
+  border: 0.0625rem solid var(--wiki-line);
+  border-radius: 0.3rem;
+  background: var(--ifm-code-background);
+  font-family: var(--wiki-code-font);
+  font-weight: 700;
+}
+
+.placeholder-text .mod {
+  color: var(--wiki-code-purple);
+}
+
+.placeholder-text .at,
+.placeholder-text .sep,
+.placeholder-text .placeholder-enclosure {
+  color: var(--wiki-dim);
+}
+
+.placeholder-text .namespace,
+.placeholder-text .placeholder-content {
+  color: var(--wiki-orange);
+}
+
+.placeholder-text .fn {
+  color: var(--wiki-info);
+}
+
+.placeholder-text .arg {
+  color: var(--wiki-green);
+}
+
+.placeholder-text .value {
+  color: var(--wiki-code-teal);
 }

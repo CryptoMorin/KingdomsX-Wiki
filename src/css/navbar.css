@@ -1,243 +1,461 @@
-.navbar {
-  border-bottom: 1px solid #5d3e31;
-  height: 70px;
+.theme-layout-navbar.navbar {
+  --ifm-navbar-height: 4.375rem;
+  background: var(--ifm-navbar-background-color);
+  border-bottom: 0.0625rem solid rgba(251, 176, 59, 0.2);
+  box-shadow: none;
+  -webkit-backdrop-filter: blur(1.5rem);
+  backdrop-filter: blur(1.5rem);
+}
+
+.navbar__inner {
+  width: 100%;
+}
+
+.navbar-brand-group {
+  position: relative;
+  display: inline-grid;
+  min-width: 0;
+  grid-template-columns: auto minmax(0, auto);
+  align-items: center;
+  column-gap: 0.75rem;
+  flex-shrink: 0;
+}
+
+.theme-layout-navbar-left .navbar-brand-group {
+  margin-right: 0.75rem;
+  padding-right: 1rem;
+}
+
+.theme-layout-navbar-left .navbar-brand-group::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: 0;
+  width: 0.125rem;
+  height: 2rem;
+  background: var(--wiki-orange);
+  transform: translateY(-50%);
 }
 
 .navbar__brand {
-  border-right: 2px solid orange;
-  margin-right: 10px;
-  margin-left: 30px;
-  padding-right: 20px;
+  display: block;
+  min-width: 0;
+  margin-right: 0;
+  color: var(--wiki-amber);
+  font-family: var(--wiki-display-font);
+  font-size: 1.25rem;
+  font-weight: 700;
+  transition: color var(--wiki-transition), filter var(--wiki-transition);
 }
 
-/* Golden glow effect */
+.navbar__brand-mark {
+  display: flex;
+  align-items: center;
+}
+
+.navbar__brand-copy {
+  --navbar-brand-optical-offset: 0.125rem;
+  display: flex;
+  min-width: 0;
+  align-self: center;
+  flex-direction: column;
+  justify-content: center;
+  line-height: 1;
+  translate: 0 var(--navbar-brand-optical-offset);
+}
+
+.navbar__brand:hover,
+.navbar__brand:focus-visible {
+  color: var(--wiki-amber);
+  filter: brightness(1.08);
+}
+
+.navbar__logo {
+  display: flex;
+  height: auto;
+}
+
 .navbar__logo img {
-  height: 35px;
+  width: 2.375rem;
+  height: 2.375rem;
+  object-fit: contain;
   filter: drop-shadow(0 0 0.875rem rgba(255, 116, 23, 0.35));
 }
 
-.navbar__title {
-  font-family: 'Lora', serif;
-  color: orange;
+.navbar__context {
+  align-self: flex-end;
+  margin-top: 0.12rem;
+  color: var(--wiki-muted);
+  font-size: 0.58rem;
+  font-weight: 800;
+  letter-spacing: 0.09em;
+  line-height: 1;
+  text-transform: uppercase;
 }
 
-.navbar__item,
-.toggle_vylO,
-.navbar__title,
-.navbar__logo img {
-  transition: transform 0.3s ease-in-out;
+.navbar__link {
+  color: var(--ifm-navbar-link-color);
+  font-size: 0.93rem;
+  font-weight: 700;
+  opacity: 0.85;
+  transition: color var(--wiki-transition), opacity var(--wiki-transition), border-color var(--wiki-transition), background var(--wiki-transition);
+}
+
+.navbar__link:hover,
+.navbar__link--active {
+  color: var(--wiki-amber);
+  opacity: 1;
+}
+
+.navbar-discord-link,
+.navbar-github-link {
+  display: inline-block;
+  width: 1.625rem;
+  height: 1.625rem;
+  margin-inline: 0.65rem;
+  padding: 0 !important;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  font-size: 0;
+  opacity: 0.8;
 }
 
 .navbar-discord-link {
-  content: "";
-  display: inline-block;
-  height: 100%;
-  width: 100%;
-  background: url("/img/Discord-Symbol-Blurple.svg") no-repeat center;
-  background-size: contain;
-  margin-right: 20px;
+  background-image: url('/img/Discord-Symbol-Blurple.svg');
 }
 
 .navbar-github-link {
-  content: "";
-  display: inline-block;
-  height: 100%;
-  width: 100%;
-  background: url("/img/GitHub_Invertocat_Black.svg") no-repeat center;
-  background-size: contain;
-  margin-right: 20px;
+  background-image: url('/img/GitHub_Invertocat_Black.svg');
 }
 
-.navbar__item:hover,
-.toggle_vylO:hover,
-.navbar__title:hover,
-.navbar__logo img:hover {
-  transform: scale(1.1);
+html[data-theme='dark'] .navbar-github-link {
+  filter: invert(1);
+}
+
+html[data-theme='dark'] .navbar-discord-link {
+  background-color: rgba(242, 246, 250, 0.9);
+  background-image: none;
+  -webkit-mask: url('/img/Discord-Symbol-Blurple.svg') center / contain no-repeat;
+  mask: url('/img/Discord-Symbol-Blurple.svg') center / contain no-repeat;
 }
 
 .navbar-discord-link:hover,
-.navbar-github-link:hover {
-  transform: scale(1.2);
+.navbar-discord-link:focus-visible,
+.navbar-github-link:hover,
+.navbar-github-link:focus-visible {
+  opacity: 1;
 }
 
-
-.navbarSearchContainer_Bca1 {
-  transition: 0.1s linear;
+.color-mode-toggle {
+  --wiki-toggle-index: 1;
+  position: relative;
+  display: grid;
+  width: 6.125rem;
+  height: 2.125rem;
+  padding: 0.1875rem;
+  grid-template-columns: repeat(3, 1fr);
+  border: 0.0625rem solid var(--wiki-line);
+  border-radius: var(--wiki-radius-control);
+  background: var(--wiki-control-background);
+  box-shadow: var(--wiki-control-shadow);
+  transition: border-color var(--wiki-transition), box-shadow var(--wiki-transition);
 }
 
-.DocSearch:hover {
-  border: 1px solid black;
+.color-mode-toggle:hover,
+.color-mode-toggle:focus-within {
+  border-color: var(--wiki-amber);
+  box-shadow: var(--wiki-control-hover-shadow);
 }
 
-.navbarSearchContainer_Bca1:hover {
-  transform: scale(1.05);
+.color-mode-toggle[data-theme-choice='light'] {
+  --wiki-toggle-index: 0;
 }
 
+.color-mode-toggle[data-theme-choice='dark'] {
+  --wiki-toggle-index: 2;
+}
 
+.color-mode-toggle__thumb {
+  position: absolute;
+  top: 0.1875rem;
+  left: 0.1875rem;
+  width: calc((100% - 0.375rem) / 3);
+  height: calc(100% - 0.375rem);
+  border: 0.0625rem solid color-mix(in srgb, var(--wiki-amber) 55%, transparent);
+  border-radius: 0.375rem;
+  background: color-mix(in srgb, var(--wiki-amber) 16%, var(--wiki-surface-raised));
+  box-shadow: 0 0.125rem 0.5rem rgba(0, 0, 0, 0.2);
+  transform: translateX(calc(var(--wiki-toggle-index) * 100%));
+  transition: transform var(--wiki-transition), background var(--wiki-transition);
+}
 
+.color-mode-toggle__option {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  padding: 0;
+  place-items: center;
+  border-radius: 0.375rem;
+  color: var(--wiki-muted);
+  transition: color var(--wiki-transition);
+}
 
+.color-mode-toggle__option[aria-checked='true'] {
+  color: var(--wiki-amber);
+}
 
+.color-mode-toggle__option:focus-visible {
+  outline: 0.125rem solid var(--wiki-amber);
+  outline-offset: 0.125rem;
+}
 
+.color-mode-toggle__option:disabled {
+  cursor: not-allowed;
+  opacity: 0.55;
+}
 
-/* Phone */
-/* Portrait mode support consists of several phases */
-/* 1. Docusaurus phase: Removal of text buttons and collapsing the sidebar. */
-/* 2. Docusaurus phase search shrinking phase to a rounded button. */
-/* 3. Shrink right navbar icons */
-/* 4. Show only search and light switch buttons */
-/* 5. Show only centered logo and search button on the right side. */
+.color-mode-toggle__option svg {
+  width: 1rem;
+  height: 1rem;
+}
 
-aside.theme-doc-sidebar-container.portrait-support {
-  transform: translateX(-100%);
+.DocSearch {
+  --docsearch-primary-color: var(--wiki-amber);
+  --docsearch-text-color: var(--wiki-text);
+  --docsearch-muted-color: var(--wiki-muted);
+  --docsearch-container-background: rgba(3, 7, 12, 0.8);
+  --docsearch-modal-background: var(--wiki-bg);
+  --docsearch-searchbox-background: var(--wiki-surface);
+  --docsearch-searchbox-focus-background: var(--wiki-surface-raised);
+  --docsearch-hit-color: var(--wiki-text);
+  --docsearch-hit-active-color: var(--wiki-bg-deep);
+  --docsearch-hit-background: var(--wiki-surface);
+  --docsearch-footer-background: var(--wiki-surface);
+  --docsearch-key-gradient: linear-gradient(-225deg, var(--wiki-surface-raised), var(--wiki-surface));
+  --docsearch-key-shadow: inset 0 -0.125rem 0 0 var(--wiki-line), inset 0 0 0 0.0625rem var(--wiki-line), 0 0.0625rem 0.125rem 0 rgba(0, 0, 0, 0.15);
+}
+
+.DocSearch-Modal,
+.DocSearch-Hit a,
+.DocSearch-Footer {
+  border: 0.0625rem solid var(--wiki-line);
+}
+
+.DocSearch-Modal {
+  border-radius: var(--wiki-radius-panel);
+  background: var(--wiki-panel-background);
+  box-shadow: var(--wiki-panel-shadow);
+}
+
+.DocSearch-Form {
+  border: 0.0625rem solid var(--wiki-control-border);
+  border-radius: var(--wiki-radius-control);
+  background: var(--wiki-control-background);
+  box-shadow: var(--wiki-control-shadow);
+}
+
+.DocSearch-Form:focus-within {
+  border-color: var(--wiki-amber);
+  box-shadow: 0 0 0 0.25rem color-mix(in srgb, var(--wiki-amber) 12%, transparent);
+}
+
+.DocSearch-Hit a {
+  border-radius: var(--wiki-radius-control);
+  background: var(--wiki-surface);
+  box-shadow: none;
+}
+
+.DocSearch-Hit[aria-selected='true'] a {
+  border-color: var(--wiki-line-warm);
+  background: color-mix(in srgb, var(--wiki-amber) 13%, var(--wiki-surface-raised));
+}
+
+.DocSearch-Footer {
+  border-radius: 0 0 var(--wiki-radius-panel) var(--wiki-radius-panel);
+  background: var(--wiki-surface);
+}
+
+.DocSearch-Button {
+  min-height: 2.5625rem;
+  border: 0.0625rem solid var(--wiki-control-border);
+  border-radius: var(--wiki-radius-control);
+  background: var(--wiki-control-background);
+  color: var(--wiki-muted);
+  box-shadow: var(--wiki-control-shadow);
+  transition: color var(--wiki-transition), background var(--wiki-transition), border-color var(--wiki-transition), box-shadow var(--wiki-transition);
+}
+
+.DocSearch-Button:hover,
+.DocSearch-Button:focus-visible {
+  border-color: var(--wiki-amber);
+  background: var(--wiki-control-hover-background);
+  color: var(--wiki-amber);
+  box-shadow: var(--wiki-control-hover-shadow);
+}
+
+.DocSearch-Button-Key {
+  border: 0;
+  background: var(--wiki-surface-raised);
+  color: var(--wiki-muted);
+  box-shadow: inset 0 -0.0625rem 0 var(--wiki-line), inset 0 0 0 0.0625rem var(--wiki-line);
+}
+
+.navbar__toggle {
+  width: 2.75rem;
+  height: 2.75rem;
+  padding: 0;
+  place-items: center;
+  border: 0.0625rem solid color-mix(in srgb, var(--wiki-amber) 45%, transparent);
+  border-radius: var(--wiki-radius-control);
+  transition: border-color var(--wiki-transition), box-shadow var(--wiki-transition), filter var(--wiki-transition);
+}
+
+.navbar__toggle:hover,
+.navbar__toggle:focus-visible {
+  border-color: var(--wiki-amber);
+  box-shadow: 0 0 0 0.25rem color-mix(in srgb, var(--wiki-amber) 12%, transparent);
+  filter: brightness(1.05);
+}
+
+.navbar-sidebar {
+  --ifm-navbar-sidebar-width: min(100vw, 20.3125rem);
+  z-index: calc(var(--ifm-z-index-fixed) + 2);
+  height: 100dvh;
+  max-height: 100dvh;
+  border-right: 0.0625rem solid var(--sidebar-shell-border);
+  background: var(--sidebar-shell-background);
+  box-shadow: 1.25rem 0 4rem rgba(0, 0, 0, 0.5), inset -0.0625rem 0 0 rgba(255, 255, 255, 0.04);
+}
+
+.navbar-sidebar__backdrop {
+  z-index: calc(var(--ifm-z-index-fixed) + 1);
+  background: rgba(0, 0, 0, 0.7);
+  pointer-events: none;
+}
+
+.navbar-sidebar--show .navbar-sidebar__backdrop {
+  pointer-events: auto;
+}
+
+.navbar-sidebar__brand {
+  min-height: var(--ifm-navbar-height);
+  height: var(--ifm-navbar-height);
+  gap: 0.5rem;
+  border-bottom: 0.0625rem solid rgba(251, 176, 59, 0.2);
+  box-shadow: none;
+}
+
+.navbar-sidebar__brand .navbar-brand-group {
+  width: max-content;
+  margin-right: auto;
+  flex: 0 1 auto;
+}
+
+.navbar-sidebar__close {
+  display: grid;
+  width: 2.5rem;
+  height: 2.5rem;
+  padding: 0;
+  place-items: center;
+  flex: 0 0 auto;
+  border: 0.0625rem solid var(--wiki-control-border);
+  border-radius: var(--wiki-radius-control);
+  background: var(--wiki-control-background);
+  box-shadow: var(--wiki-control-shadow);
+}
+
+.navbar-sidebar__close:hover,
+.navbar-sidebar__close:focus-visible {
+  border-color: var(--wiki-amber);
+  background: var(--wiki-control-hover-background);
+}
+
+.navbar-sidebar__item {
   display: flex;
-  /* We flex for the logo */
-  height: 100%;
-  width: clamp(230px, 100vw, 325px);
-  top: 0;
-  left: 0;
-  position: fixed;
-  transition: 0.3s cubic-bezier(.79,.14,.15,.86);
+  padding: 0;
+  flex-direction: column;
+  overflow: hidden auto;
 }
 
-.navbar__brand.portrait-support {
-  align-self: center;
+.navbar-sidebar__item .theme-doc-sidebar-menu {
+  padding: 1rem 0.5rem;
 }
 
-@media (max-width: 997px) {
+.navbar-sidebar__theme-control {
+  position: sticky;
+  z-index: 3;
+  bottom: 0;
+  display: flex;
+  min-height: 3.75rem;
+  margin-top: auto;
+  padding: 0.75rem 1rem;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  border-top: 0.0625rem solid var(--wiki-line);
+  background: color-mix(in srgb, var(--wiki-bg-deep) 92%, transparent);
+  box-shadow: 0 -0.75rem 1.75rem rgba(0, 0, 0, 0.2);
+  -webkit-backdrop-filter: blur(1rem);
+  backdrop-filter: blur(1rem);
+}
+
+.navbar-sidebar__theme-label {
+  color: var(--wiki-muted);
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+@media (max-width: 996px) {
+  .theme-layout-navbar.navbar {
+    -webkit-backdrop-filter: none;
+    backdrop-filter: none;
+  }
+
+  .navbar-brand-group {
+    column-gap: 0.5rem;
+  }
+
+  .navbar__toggle {
+    display: grid;
+  }
+
+  .theme-layout-navbar-left .navbar-brand-group {
+    margin-right: 0;
+    padding-right: 0;
+  }
+
+  .theme-layout-navbar-left .navbar-brand-group::after {
+    display: none;
+  }
+}
+
+@media (max-width: 575px) {
+  .theme-layout-navbar.navbar {
+    padding-inline: 0.5rem;
+  }
+
   .navbar__brand {
-    margin-left: 10px;
-  }
-}
-
-@media (min-width: 415px) and (max-width: 1000px) {
-  .navbar__brand {
-    margin-left: 10px;
-    margin-right: 0px;
-    flex-shrink: 0;
-  }
-
-  .navbar__title {
-    overflow: visible;
-  }
-
-  .theme-layout-navbar-right {
-    gap: 20px;
-  }
-
-  .navbar-discord-link,
-  .navbar-github-link {
-    display: inline !important;
-    margin-left: 0 !important;
-    margin-right: 0 !important;
-  }
-}
-
-/* Make all icons smaller */
-@media (max-width: 420px) {
-  .theme-layout-navbar-right {
-    gap: 10px;
-    flex: 1 1 auto;
-  }
-
-  .DocSearch-Button {
-    display: flex;
-    justify-content: center;
-
-    max-height: 25px;
-    max-width: 25px;
-    padding: 3px;
-  }
-
-  .DocSearch-Button-Container {
-    max-width: 70%;
-    max-height: 70%;
-  }
-
-  .navbar-discord-link,
-  .navbar-github-link,
-  .colorModeToggle_DEke {
-    max-width: 20px !important;
-    max-height: 20px !important;
-  }
-
-  .navbar-discord-link,
-  .navbar-github-link {
-    /* Padding used because we use a background image. 10px wide all directions = 20px * 20px */
-    padding: 10px !important;
-  }
-
-  .navbar__items {
-    flex: 1 1 auto;
-  }
-  .navbar__brand {
-    font-size: 0.7em;
-    border-right: 1px solid orange;
-    padding-right: 10px;
-  }
-
-  .navbar__logo {
-    display: flex;
-    align-items: center;
+    font-size: 1.05rem;
   }
 
   .navbar__logo img {
-    max-height: 25px;
-    max-width: 25px;
-  }
-}
-
-
-/* Spacing them evenly after this just doesn't look good. */
-/* We will only have the light/dark mode here. */
-@media (min-width: 300px) and (max-width: 319px) {
-  .theme-layout-navbar-right {
-    gap: 3vw;
-    flex: 1 1 auto;
+    width: 2rem;
+    height: 2rem;
   }
 
-  .theme-layout-navbar-left {
-    flex: 0 0 auto;
-    margin-right: 5px;
+  .navbar__context {
+    font-size: 0.54rem;
   }
 
-  .theme-layout-navbar-right a {
-    max-width: 15px !important;
-    max-height: auto !important;
-    overflow: hidden;
+  .navbar-brand-group {
+    column-gap: 0.375rem;
   }
 
-  .colorModeToggle_DEke,
-  .navbarSearchContainer_Bca1 {
-    display: inline !important;
-    margin-left: 0 !important;
-    margin-right: 0 !important;
-  }
-  .navbarSearchContainer_Bca1 {
-    position: initial !important;
-  }
-}
-
-/* Only show the icon. */
-@media (max-width: 319px) {
-  .navbar__brand {
-    border: none;
-    margin-left: 11vw;
-  }
-}
-
-/* Global responsive settings */
-@media (min-width: 330px) and (max-width: 1000px) {
-
-  .navbar-discord-link,
-  .navbar-github-link,
-  .colorModeToggle_DEke,
-  .navbarSearchContainer_Bca1 {
-    display: inline !important;
-    margin-left: 0 !important;
-    margin-right: 0 !important;
-  }
-
-  .navbarSearchContainer_Bca1 {
-    position: initial !important;
+  .theme-layout-navbar-right .navbar-discord-link,
+  .theme-layout-navbar-right .navbar-github-link {
+    display: none;
   }
 }
