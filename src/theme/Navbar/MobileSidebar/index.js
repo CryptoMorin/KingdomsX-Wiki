@@ -1,9 +1,13 @@
-import React, {useEffect, useRef} from 'react';
-import {useLockBodyScroll, useNavbarMobileSidebar} from '@docusaurus/theme-common/internal';
-import NavbarMobileSidebarLayout from '@theme/Navbar/MobileSidebar/Layout';
+import React, {useEffect, useRef, useState} from 'react';
+import clsx from 'clsx';
+import {ThemeClassNames} from '@docusaurus/theme-common';
+import {
+  useLockBodyScroll,
+  useNavbarMobileSidebar,
+  useNavbarSecondaryMenu,
+} from '@docusaurus/theme-common/internal';
 import NavbarMobileSidebarHeader from '@theme/Navbar/MobileSidebar/Header';
 import NavbarMobileSidebarPrimaryMenu from '@theme/Navbar/MobileSidebar/PrimaryMenu';
-import NavbarMobileSidebarSecondaryMenu from '@theme/Navbar/MobileSidebar/SecondaryMenu';
 import NavbarColorModeToggle from '@theme/Navbar/ColorModeToggle';
 
 const focusableSelector = [
@@ -22,10 +26,52 @@ function MobileThemeControl() {
   );
 }
 
+function MenuSwitch({buttonRef, direction, label, onClick}) {
+  return (
+    <button
+      ref={buttonRef}
+      type="button"
+      className={clsx('clean-btn navbar-sidebar__menu-switch', {
+        'navbar-sidebar__menu-switch--forward': direction === 'forward',
+      })}
+      onClick={onClick}>
+      {direction === 'back' && <span aria-hidden="true">←</span>}
+      <span>{label}</span>
+      {direction === 'forward' && <span aria-hidden="true">→</span>}
+    </button>
+  );
+}
+
+function MobileSidebarPanel({children, hidden}) {
+  return (
+    <div
+      className={clsx(
+        ThemeClassNames.layout.navbar.mobileSidebar.panel,
+        'navbar-sidebar__item menu',
+        hidden && 'navbar-sidebar__item--hidden',
+      )}
+      aria-hidden={hidden}
+      inert={hidden ? '' : undefined}>
+      {children}
+    </div>
+  );
+}
+
 export default function NavbarMobileSidebar() {
   const mobileSidebar = useNavbarMobileSidebar();
+  const secondaryMenu = useNavbarSecondaryMenu();
   const openerRef = useRef(null);
+  const mainMenuSwitchRef = useRef(null);
+  const wikiMenuSwitchRef = useRef(null);
+  const [showWikiMenu, setShowWikiMenu] = useState(true);
   useLockBodyScroll(mobileSidebar.shown);
+
+  const hasWikiMenu = Boolean(secondaryMenu.content);
+  const wikiMenuShown = hasWikiMenu && showWikiMenu;
+
+  useEffect(() => {
+    if (!mobileSidebar.shown) setShowWikiMenu(true);
+  }, [mobileSidebar.shown]);
 
   useEffect(() => {
     const sidebar = document.querySelector('.navbar-sidebar');
@@ -78,20 +124,50 @@ export default function NavbarMobileSidebar() {
   if (!mobileSidebar.shouldRender) return null;
 
   return (
-    <NavbarMobileSidebarLayout
-      header={<NavbarMobileSidebarHeader />}
-      primaryMenu={(
-        <>
-          <NavbarMobileSidebarPrimaryMenu />
-          <MobileThemeControl />
-        </>
-      )}
-      secondaryMenu={(
-        <>
-          <NavbarMobileSidebarSecondaryMenu />
-          <MobileThemeControl />
-        </>
-      )}
-    />
+    <div
+      className={clsx(
+        ThemeClassNames.layout.navbar.mobileSidebar.container,
+        'navbar-sidebar',
+      )}>
+      <div className="navbar-sidebar__drawer">
+        <NavbarMobileSidebarHeader />
+        <div className="navbar-sidebar__items">
+          <MobileSidebarPanel hidden={wikiMenuShown}>
+            <div className="navbar-sidebar__main-menu">
+              {hasWikiMenu && (
+                <MenuSwitch
+                  buttonRef={mainMenuSwitchRef}
+                  direction="forward"
+                  label="Back to content menu"
+                  onClick={() => {
+                    setShowWikiMenu(true);
+                    requestAnimationFrame(() =>
+                      wikiMenuSwitchRef.current?.focus({preventScroll: true}),
+                    );
+                  }}
+                />
+              )}
+              <NavbarMobileSidebarPrimaryMenu />
+            </div>
+            <MobileThemeControl />
+          </MobileSidebarPanel>
+          <MobileSidebarPanel hidden={!wikiMenuShown}>
+            <MenuSwitch
+              buttonRef={wikiMenuSwitchRef}
+              direction="back"
+              label="Back to main menu"
+              onClick={() => {
+                setShowWikiMenu(false);
+                requestAnimationFrame(() =>
+                  mainMenuSwitchRef.current?.focus({preventScroll: true}),
+                );
+              }}
+            />
+            {secondaryMenu.content}
+            <MobileThemeControl />
+          </MobileSidebarPanel>
+        </div>
+      </div>
+    </div>
   );
 }

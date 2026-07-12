@@ -149,13 +149,13 @@ export default {
         },
         {
           href: "https://discord.kingdomsx.com",
-          "aria-label": "Discord",
+          label: "Discord",
           position: "right",
           className: "navbar-discord-link",
         },
         {
           href: "https://github.com/CryptoMorin/KingdomsX",
-          "aria-label": "GitHub",
+          label: "GitHub",
           position: "right",
           className: "navbar-github-link",
         },

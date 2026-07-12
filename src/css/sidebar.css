@@ -15,8 +15,6 @@
   --sidebar-menu-hover-border-color: var(--wiki-amber);
   --sidebar-menu-active-border-color: var(--wiki-amber);
   --sidebar-menu-active-background: color-mix(in srgb, var(--wiki-amber) 15%, var(--wiki-surface));
-  --sidebar-menu-shadow: var(--wiki-control-shadow);
-  --sidebar-menu-hover-shadow: var(--wiki-control-hover-shadow);
 }
 
 [data-theme='dark'] {
@@ -82,7 +80,7 @@
   border: 0.0625rem solid var(--sidebar-menu-border-color);
   border-radius: var(--wiki-radius-control);
   background: var(--sidebar-menu-background);
-  box-shadow: var(--sidebar-menu-shadow);
+  box-shadow: none;
 }
 
 .theme-doc-sidebar-menu .menu__list-item > .menu__link {
@@ -142,7 +140,7 @@
   border-color: var(--sidebar-menu-hover-border-color);
   background: var(--sidebar-menu-hover-background);
   color: var(--sidebar-color);
-  box-shadow: var(--sidebar-menu-hover-shadow);
+  box-shadow: none;
   filter: brightness(1.04);
 }
 
