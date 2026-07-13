@@ -181,6 +181,10 @@ body::after {
   background: transparent;
 }
 
+html.docs-doc-page.wiki-page-enter-pending main {
+  opacity: 0;
+}
+
 body:not(:has(.kingdomsx-not-found)) a {
   transition: color var(--wiki-transition), text-decoration-color var(--wiki-transition), border-color var(--wiki-transition), background var(--wiki-transition), box-shadow var(--wiki-transition), transform var(--wiki-transition);
 }

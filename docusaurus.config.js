@@ -30,7 +30,11 @@ export default {
   trailingSlash: false,
   onBrokenLinks: 'warn',
 
-  clientModules: ['./src/js/hash-scroll.js', './src/js/sidebar-active-links.js'],
+  clientModules: [
+    './src/js/hash-scroll.js',
+    './src/js/sidebar-active-links.js',
+    './src/js/page-transition.js',
+  ],
 
   headTags: [
     // {
