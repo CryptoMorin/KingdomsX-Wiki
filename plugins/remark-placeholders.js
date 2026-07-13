@@ -39,7 +39,8 @@ function colorize(text) {
   const esc = s =>
     s.replace(/&/g, "&amp;")
      .replace(/</g, "&lt;")
-     .replace(/>/g, "&gt;");
+     .replace(/>/g, "&gt;")
+     .replace(/_/g, "_<wbr>");
 
   let html = "";
 
@@ -52,7 +53,7 @@ function colorize(text) {
   if (modsPart) {
     for (const mod of modsPart.split("@").filter(Boolean)) {
       html += `<span class="mod">${esc(mod)}</span>`;
-      html += `<span class="at">@</span>`;
+      html += `<span class="at">@</span><wbr>`;
     }
   }
 
@@ -68,7 +69,7 @@ function colorize(text) {
   const afterColon = remainder.slice(colonIdx + 1);
 
   html += `<span class="namespace">${esc(namespace)}</span>`;
-  html += `<span class="sep">:</span>`;
+  html += `<span class="sep">:</span><wbr>`;
 
   const firstSpace = afterColon.indexOf(" ");
 
@@ -98,7 +99,7 @@ function colorize(text) {
     }
 
     if (i < arr.length - 1) {
-      html += `<span class="sep">,</span>`;
+      html += `<span class="sep">,</span><wbr>`;
     }
   });
 

@@ -24,6 +24,56 @@ function textContent(node) {
     .toLowerCase();
 }
 
+function breakAtDots(node) {
+  return React.Children.map(node, (child) => {
+    if (typeof child === 'string') {
+      const parts = child.split('.');
+      if (parts.length === 1) return child;
+
+      return parts.map((part, index) => (
+        <React.Fragment key={index}>
+          {part}
+          {index < parts.length - 1 && <>.<wbr /></>}
+        </React.Fragment>
+      ));
+    }
+
+    if (!React.isValidElement(child) || child.props.children == null) return child;
+
+    if (child.type === 'code' || child.type === MDXComponents.code) {
+      return React.createElement(
+        'code',
+        {...child.props, key: child.key},
+        breakAtDots(child.props.children),
+      );
+    }
+
+    return React.cloneElement(child, {}, breakAtDots(child.props.children));
+  });
+}
+
+function breakTableColumns(node, columns) {
+  return React.Children.map(node, (child) => {
+    if (!React.isValidElement(child)) return child;
+
+    if (child.type === 'tr') {
+      let column = -1;
+      const children = React.Children.map(child.props.children, (cell) => {
+        if (!React.isValidElement(cell) || (cell.type !== 'th' && cell.type !== 'td')) return cell;
+        column += 1;
+
+        if (cell.type !== 'td' || !columns.includes(column)) return cell;
+        return React.cloneElement(cell, {}, breakAtDots(cell.props.children));
+      });
+
+      return React.cloneElement(child, {}, children);
+    }
+
+    if (child.props.children == null) return child;
+    return React.cloneElement(child, {}, breakTableColumns(child.props.children, columns));
+  });
+}
+
 function tableLayout(children) {
   const row = findFirstRow(children);
   if (!row) return {name: 'automatic', widths: []};
@@ -33,9 +83,18 @@ function tableLayout(children) {
     .map((cell) => textContent(cell.props.children));
 
   if (headers.length === 2) {
+    if (headers[0] === 'command' && headers[1] === 'permission') {
+      return {name: 'command-permission', widths: ['35%', '65%'], breakColumns: [1]};
+    }
+
     const hasDescription = headers.some((header) => header.includes('description'));
     return hasDescription
-      ? {name: 'key-description', widths: ['36%', '64%']}
+      ? {
+          name: 'key-description',
+          variant: headers[0] === 'permission' ? 'permission-description' : null,
+          widths: ['36%', '64%'],
+          breakColumns: headers[0] === 'permission' ? [0] : [],
+        }
       : {name: 'balanced', widths: ['50%', '50%']};
   }
 
@@ -56,16 +115,23 @@ function tableLayout(children) {
 
 function Table(props) {
   const layout = tableLayout(props.children);
+  const children = layout.breakColumns?.length > 0
+    ? breakTableColumns(props.children, layout.breakColumns)
+    : props.children;
 
   return (
-    <div className={`table-frame table-frame--${layout.name}`}>
+    <div className={[
+      'table-frame',
+      `table-frame--${layout.name}`,
+      layout.variant && `table-frame--${layout.variant}`,
+    ].filter(Boolean).join(' ')}>
       <table {...props}>
         {layout.widths.length > 0 && (
           <colgroup>
             {layout.widths.map((width, index) => <col key={index} style={{width}} />)}
           </colgroup>
         )}
-        {props.children}
+        {children}
       </table>
     </div>
   );

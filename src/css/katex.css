@@ -9,6 +9,20 @@ blockquote .katex {
   font-size: 1.1em;
 }
 
+@media (max-width: 30rem) {
+  .theme-doc-markdown p > .katex:has(.base > .mord + .mord):has(.text) :is(.katex-html, .base) {
+    white-space: normal;
+  }
+
+  .theme-doc-markdown p > .katex:has(.base > .mord + .mord):has(.text) .base {
+    display: inline;
+  }
+
+  .theme-doc-markdown p > .katex:has(.base > .mord + .mord):has(.text) .base > .mord:not(:last-child)::after {
+    content: "\200b";
+  }
+}
+
 /* Specifically because of the "%player_name% from kingdom ..." example in the Placeholders page. */
 blockquote .katex {
   overflow-x: auto;

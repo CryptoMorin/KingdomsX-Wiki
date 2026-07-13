@@ -70,7 +70,6 @@
   --ifm-table-stripe-background: rgba(24, 35, 45, 0.05);
   --ifm-hover-overlay: rgba(138, 88, 0, 0.1);
   --wiki-table-header-background: rgba(138, 88, 0, 0.15);
-  --wiki-table-row-hover: rgba(138, 88, 0, 0.1);
   --ifm-global-radius: var(--wiki-radius-control);
   --content-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
   --bg-scrollbar: #e5e5e5;
@@ -132,7 +131,6 @@ html[data-theme='dark'] {
   --ifm-table-stripe-background: rgba(255, 255, 255, 0.05);
   --ifm-hover-overlay: rgba(251, 176, 59, 0.1);
   --wiki-table-header-background: rgba(13, 24, 37, 0.95);
-  --wiki-table-row-hover: rgba(251, 176, 59, 0.05);
   color-scheme: dark;
 }
 
@@ -311,7 +309,8 @@ body:not(:has(.kingdomsx-not-found)) .theme-doc-markdown {
 }
 
 .table-frame {
-  width: min(100%, 54rem);
+  container-type: inline-size;
+  width: 100%;
   max-width: 100%;
   margin-block: 1rem;
   overflow: hidden;
@@ -380,15 +379,10 @@ body:not(:has(.kingdomsx-not-found)) .theme-doc-markdown {
 
 .theme-doc-markdown .table-frame table tbody tr {
   background: transparent;
-  transition: background var(--wiki-transition);
 }
 
 .theme-doc-markdown .table-frame table tbody tr:nth-child(even) {
   background: var(--ifm-table-stripe-background);
-}
-
-.theme-doc-markdown .table-frame table tbody tr:hover {
-  background: var(--wiki-table-row-hover);
 }
 
 .theme-doc-markdown .table-frame :is(code, .placeholder-text, .mc-root) {
@@ -396,13 +390,63 @@ body:not(:has(.kingdomsx-not-found)) .theme-doc-markdown {
   word-break: normal;
 }
 
-@media (max-width: 600px) {
-  .theme-doc-markdown .table-frame--key-description col:first-child {
-    width: 42% !important;
+.theme-doc-markdown .table-frame--key-description td:first-child .placeholder-text {
+  display: block;
+  box-sizing: border-box;
+  width: fit-content;
+  max-width: 100%;
+  font-size: 0.875rem;
+  font-size: clamp(0.8rem, 2cqi, 0.875rem);
+  overflow-wrap: normal;
+  white-space: normal;
+}
+
+.theme-doc-markdown .table-frame--permission-description td:first-child code {
+  display: block;
+  box-sizing: border-box;
+  width: fit-content;
+  max-width: 100%;
+}
+
+@container (max-width: 36rem) {
+  .theme-doc-markdown :is(.table-frame--key-description, .table-frame--command-permission) table,
+  .theme-doc-markdown :is(.table-frame--key-description, .table-frame--command-permission) tbody,
+  .theme-doc-markdown :is(.table-frame--key-description, .table-frame--command-permission) tbody tr,
+  .theme-doc-markdown :is(.table-frame--key-description, .table-frame--command-permission) td {
+    display: block;
+    width: 100%;
   }
 
-  .theme-doc-markdown .table-frame--key-description col:last-child {
-    width: 58% !important;
+  .theme-doc-markdown :is(.table-frame--key-description, .table-frame--command-permission) colgroup {
+    display: none;
+  }
+
+  .theme-doc-markdown :is(.table-frame--key-description, .table-frame--command-permission) thead {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    white-space: nowrap;
+  }
+
+  .theme-doc-markdown :is(.table-frame--key-description, .table-frame--command-permission) table tbody tr {
+    padding: 0.8rem 1rem 0.9rem;
+  }
+
+  .theme-doc-markdown :is(.table-frame--key-description, .table-frame--command-permission) table tbody tr + tr {
+    border-top: 0.0625rem solid var(--wiki-line);
+  }
+
+  .theme-doc-markdown :is(.table-frame--key-description, .table-frame--command-permission) table td {
+    padding: 0;
+    border: 0 !important;
+  }
+
+  .theme-doc-markdown :is(.table-frame--key-description, .table-frame--command-permission) table td:first-child {
+    margin-bottom: 0.45rem;
   }
 }
 
