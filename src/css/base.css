@@ -181,6 +181,10 @@ body::after {
   background: transparent;
 }
 
+html.wiki-anchor-scroll-smooth {
+  scroll-behavior: smooth;
+}
+
 html.docs-doc-page.wiki-page-enter-pending main {
   opacity: 0;
 }
@@ -716,6 +720,10 @@ html[data-theme='light'] .theme-admonition-danger {
 }
 
 @media (prefers-reduced-motion: reduce) {
+  html.wiki-anchor-scroll-smooth {
+    scroll-behavior: auto;
+  }
+
   body:not(:has(.kingdomsx-not-found)) *,
   body:not(:has(.kingdomsx-not-found)) *::before,
   body:not(:has(.kingdomsx-not-found)) *::after {
