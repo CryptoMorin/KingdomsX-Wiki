@@ -84,7 +84,6 @@ export default function Root({children}) {
       if (!page?.animate) return;
 
       event.preventDefault();
-      event.stopPropagation();
       transitioning.current = true;
 
       const animation = page.animate(
