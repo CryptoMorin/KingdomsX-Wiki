@@ -4,6 +4,7 @@ import rehypeKatex from 'rehype-katex';
 import remarkGFM from 'remark-gfm';
 import rehypeSlug from 'rehype-slug';
 import remarkPlaceholders from "./plugins/remark-placeholders.js";
+import remarkArrows from "./plugins/remark-arrows.js";
 import remarkMinecraftFormat from "./plugins/remark-minecraft-codes.js";
 import rehypeForceH1Slug from './plugins/ultra-hyped-slug.js';
 import remarkGitHubLatex from "./plugins/remark-github-latex.js";
@@ -242,6 +243,7 @@ export default {
             remarkGFM,
             [remarkMath, { singleDollarTextMath: false }],
             remarkGitHubLatex,
+            remarkArrows,
             remarkPlaceholders,
             remarkMinecraftFormat,
             normalizeWikiWhitespace,
