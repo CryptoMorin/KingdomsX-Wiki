@@ -21,11 +21,11 @@ jobs:
 
     steps:
       - name: Checkout Docusaurus repo
-        uses: actions/checkout@v4
+        uses: actions/checkout@v7
 
       # === AUTOMATIC PULL FROM SOURCE WIKI REPO ===
       - name: Clone Source Wiki Repository
-        uses: actions/checkout@v4
+        uses: actions/checkout@v7
         with:
           repository: CryptoMorin/KingdomsX.wiki
           path: docs # Clone directly into docs/
@@ -35,9 +35,9 @@ jobs:
         run: python scripts/normalize_latex.py docs/
 
       - name: Setup Node.js
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@v6
         with:
-          node-version: 20
+          node-version: 24
 
       - name: Install Dependencies
         run: npm install
