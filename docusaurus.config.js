@@ -11,6 +11,7 @@ import remarkGitHubLatex from "./plugins/remark-github-latex.js";
 import normalizeWikiLinks from "./plugins/normalize-wiki-links.js";
 import removeToC from "./plugins/remove-manual-toc.js";
 import normalizeWikiWhitespace from "./plugins/normalize-wiki-whitespace.js";
+import applyWikiPageTitles from "./plugins/wiki-page-titles.js";
 
 import {themes} from 'prism-react-renderer';
 import prism from 'prismjs';
@@ -202,6 +203,7 @@ export default {
 
   markdown: {
     format: 'detect',
+    parseFrontMatter: applyWikiPageTitles,
     hooks: {
       onBrokenMarkdownLinks: 'warn',
       onBrokenMarkdownImages: 'warn',
