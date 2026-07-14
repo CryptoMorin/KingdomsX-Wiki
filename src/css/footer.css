@@ -31,6 +31,7 @@
 .footer-copy {
   display: flex;
   flex-direction: column;
+  min-width: min-content;
 }
 
 .footer-copyright,
@@ -42,8 +43,10 @@
 .footer-source {
   display: flex;
   align-items: center;
+  flex-shrink: 0;
   gap: 0.25rem;
   color: var(--wiki-dim);
+  white-space: nowrap;
 }
 
 .footer .footer-source img {
@@ -74,7 +77,7 @@
   height: 2.625rem;
 }
 
-@media (max-width: 700px) {
+@media (max-width: 767px) {
   .footer-container,
   .footer-left {
     flex-direction: column;

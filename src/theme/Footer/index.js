@@ -1,4 +1,6 @@
 import React from 'react';
+import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
+import {faCodeBranch} from '@fortawesome/free-solid-svg-icons';
 
 export default function Footer() {
   return (
@@ -17,6 +19,7 @@ export default function Footer() {
             </span>
 
             <span className="footer-source">
+              <FontAwesomeIcon icon={faCodeBranch} aria-hidden="true" />{' '}
               <a href="https://github.com/CryptoMorin/KingdomsX-Wiki" target="_blank" rel="noopener noreferrer">KingdomsX-Wiki</a>
               &bull; Powered by <a href="https://docusaurus.io/" target="_blank" rel="noopener noreferrer">Docusaurus</a>
               <img src="/img/docusaurus_keytar.svg" alt="" />
