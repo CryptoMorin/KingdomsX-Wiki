@@ -572,6 +572,29 @@ html[data-theme='light'] .theme-admonition-danger {
   border-color: var(--wiki-line-warm);
 }
 
+/* GitHub Wiki still uses legacy aligned images for side illustrations. */
+.theme-doc-markdown > img[align='right'] {
+  float: right;
+  max-width: min(40%, 18rem);
+  height: auto;
+  margin: 0 0 1rem 1.5rem;
+}
+
+.theme-doc-markdown > img[align='left'] {
+  float: left;
+  max-width: min(40%, 18rem);
+  height: auto;
+  margin: 0 1.5rem 1rem 0;
+}
+
+.theme-doc-markdown > :is(.alert, blockquote, pre, .table-frame) {
+  display: flow-root;
+}
+
+.theme-doc-markdown > :is(h2, h3, h4, h5, h6) {
+  clear: both;
+}
+
 .theme-doc-markdown p:has(> img:only-child) {
   text-align: center;
 }
@@ -716,6 +739,15 @@ html[data-theme='light'] .theme-admonition-danger {
 @media (max-width: 996px) {
   body:not(:has(.kingdomsx-not-found)) .theme-doc-markdown {
     max-width: none;
+  }
+}
+
+@media (max-width: 640px) {
+  .theme-doc-markdown > img[align] {
+    float: none;
+    display: block;
+    max-width: 100%;
+    margin: 1rem auto;
   }
 }
 
