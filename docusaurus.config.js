@@ -26,6 +26,7 @@ export default {
   baseUrl: '/',
   favicon: 'img/favicon.ico',
   tagline: siteDescription,
+  themes: ['@docusaurus/theme-mermaid'],
 
   i18n: {
     defaultLocale: 'en',
@@ -148,6 +149,15 @@ export default {
 
   themeConfig: {
     image: 'img/social-card.webp',
+    mermaid: {
+      theme: {
+        light: 'neutral',
+        dark: 'dark',
+      },
+      options: {
+        fontFamily: 'var(--wiki-body-font)',
+      },
+    },
     metadata: [
       {
         name: 'description',
@@ -309,6 +319,7 @@ export default {
 
   markdown: {
     format: 'detect',
+    mermaid: true,
     parseFrontMatter: createWikiPageMetadataParser({
       fallbackDescription: siteDescription,
     }),

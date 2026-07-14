@@ -328,6 +328,11 @@ body:not(:has(.kingdomsx-not-found)) .theme-doc-markdown {
   box-shadow: var(--wiki-panel-shadow);
 }
 
+.theme-doc-markdown .docusaurus-mermaid-container > svg {
+  display: block;
+  margin-inline: auto;
+}
+
 .theme-doc-markdown .table-frame table {
   display: table;
   width: 100%;
@@ -570,6 +575,22 @@ html[data-theme='light'] .theme-admonition-danger {
 
 .theme-doc-markdown details.alert[open] {
   border-color: var(--wiki-line-warm);
+}
+
+.theme-doc-markdown .docusaurus-mermaid-container {
+  padding: 1.25rem;
+  margin-bottom: 1rem;
+  overflow-x: auto;
+  border: 0.0625rem solid var(--wiki-panel-border);
+  border-radius: var(--wiki-radius-panel);
+  background: var(--wiki-panel-background);
+  box-shadow: var(--wiki-panel-shadow);
+}
+
+@media (max-width: 575px) {
+  .theme-doc-markdown .docusaurus-mermaid-container {
+    padding: 1rem 0.75rem;
+  }
 }
 
 /* GitHub Wiki still uses legacy aligned images for side illustrations. */
