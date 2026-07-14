@@ -11,17 +11,35 @@ import remarkGitHubLatex from "./plugins/remark-github-latex.js";
 import normalizeWikiLinks from "./plugins/normalize-wiki-links.js";
 import removeToC from "./plugins/remove-manual-toc.js";
 import normalizeWikiWhitespace from "./plugins/normalize-wiki-whitespace.js";
-import applyWikiPageTitles from "./plugins/wiki-page-titles.js";
+import createWikiPageMetadataParser from './plugins/wiki-page-metadata.js';
 
 import {themes} from 'prism-react-renderer';
 import prism from 'prismjs';
 
+const siteUrl = 'https://wiki.kingdomsx.com';
+const siteDescription = 'Official wiki for KingdomsX, a Minecraft plugin similar to Factions which provides more advanced features, mechanics & invasions to make the game more fun.';
+const siteKeywords = 'Kingdoms, KingdomsX, KingdomsX wiki, Minecraft kingdoms plugin, Minecraft factions plugin, Spigot plugin, land claiming plugin, Minecraft server plugin, PvP plugin';
+
 export default {
   title: 'KingdomsX Wiki',
-  url: 'https://wiki.kingdomsx.com',
+  url: siteUrl,
   baseUrl: '/',
   favicon: 'img/favicon.ico',
-  tagline: 'The official KingdomsX comprehensive wiki.',
+  tagline: siteDescription,
+
+  i18n: {
+    defaultLocale: 'en',
+    locales: ['en'],
+    localeConfigs: {
+      en: {
+        htmlLang: 'en-US',
+      },
+    },
+  },
+
+  customFields: {
+    siteDescription,
+  },
 
   organizationName: 'CryptoMorin',
   projectName: 'KingdomsX',
@@ -60,6 +78,36 @@ export default {
       },
     },
     {
+      tagName: 'meta',
+      attributes: {
+        name: 'color-scheme',
+        content: 'dark light',
+      },
+    },
+    {
+      tagName: 'meta',
+      attributes: {
+        name: 'referrer',
+        content: 'strict-origin-when-cross-origin',
+      },
+    },
+    {
+      tagName: 'meta',
+      attributes: {
+        name: 'format-detection',
+        content: 'telephone=no',
+      },
+    },
+    {
+      tagName: 'link',
+      attributes: {
+        rel: 'icon',
+        type: 'image/png',
+        sizes: '96x96',
+        href: '/favicon-96x96.png',
+      },
+    },
+    {
       tagName: 'link',
       attributes: {
         rel: 'icon',
@@ -82,6 +130,20 @@ export default {
         href: '/site.webmanifest',
       },
     },
+    {
+      tagName: 'meta',
+      attributes: {
+        name: 'apple-mobile-web-app-title',
+        content: 'KingdomsX',
+      },
+    },
+    {
+      tagName: 'meta',
+      attributes: {
+        name: 'msapplication-TileColor',
+        content: '#071019',
+      },
+    },
   ],
 
   themeConfig: {
@@ -89,7 +151,51 @@ export default {
     metadata: [
       {
         name: 'description',
-        content: 'Comprehensive documentation for KingdomsX Minecraft plugin.',
+        content: siteDescription,
+      },
+      {
+        name: 'keywords',
+        content: siteKeywords,
+      },
+      {
+        name: 'author',
+        content: 'Crypto Morin',
+      },
+      {
+        name: 'application-name',
+        content: 'KingdomsX',
+      },
+      {
+        property: 'og:type',
+        content: 'website',
+      },
+      {
+        property: 'og:site_name',
+        content: 'KingdomsX',
+      },
+      {
+        property: 'og:image:type',
+        content: 'image/webp',
+      },
+      {
+        property: 'og:image:secure_url',
+        content: `${siteUrl}/img/social-card.webp`,
+      },
+      {
+        property: 'og:image:width',
+        content: '1200',
+      },
+      {
+        property: 'og:image:height',
+        content: '630',
+      },
+      {
+        property: 'og:image:alt',
+        content: 'KingdomsX plugin banner',
+      },
+      {
+        name: 'twitter:image:alt',
+        content: 'KingdomsX plugin banner',
       },
     ],
 
@@ -203,7 +309,9 @@ export default {
 
   markdown: {
     format: 'detect',
-    parseFrontMatter: applyWikiPageTitles,
+    parseFrontMatter: createWikiPageMetadataParser({
+      fallbackDescription: siteDescription,
+    }),
     hooks: {
       onBrokenMarkdownLinks: 'warn',
       onBrokenMarkdownImages: 'warn',
@@ -234,6 +342,13 @@ export default {
         docs: {
           path: './docs',                  // Points to the cloned folder
           routeBasePath: '/',              // Wiki at root URL
+          exclude: [
+            '**/_*.{js,jsx,ts,tsx,md,mdx}',
+            '**/_*/**',
+            '**/*.test.{js,jsx,ts,tsx}',
+            '**/__tests__/**',
+            'sidenav/**',
+          ],
           sidebarPath: './sidebars.js',
           editUrl: ({ permalink }) => {
             if (!permalink) return undefined;
@@ -274,6 +389,9 @@ export default {
         },
 
         blog: false,
+        sitemap: {
+          ignorePatterns: ['/search'],
+        },
         pages: {
           path: './src/pages',
         },

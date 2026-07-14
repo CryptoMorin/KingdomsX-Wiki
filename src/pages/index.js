@@ -1,5 +1,7 @@
 import React from 'react';
 import { Redirect } from '@docusaurus/router';
+import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
+import {PageMetadata} from '@docusaurus/theme-common';
 
 // export default function Home() {
 //   console.log("redirect home")
@@ -21,5 +23,12 @@ import { Redirect } from '@docusaurus/router';
 //   );
 // }
 export default function HomeRedirect() {
-  return <Redirect to="/Home" />;
+  const {siteConfig} = useDocusaurusContext();
+
+  return (
+    <>
+      <PageMetadata description={siteConfig.customFields.siteDescription} />
+      <Redirect to="/Home" />
+    </>
+  );
 }

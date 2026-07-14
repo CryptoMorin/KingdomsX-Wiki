@@ -1,5 +1,6 @@
 import React, {useEffect, useRef} from 'react';
-import {useHistory} from '@docusaurus/router';
+import Head from '@docusaurus/Head';
+import {useHistory, useLocation} from '@docusaurus/router';
 import {PAGE_TRANSITION_READY_EVENT} from '@site/src/js/page-transition';
 
 const FADE_DURATION = 250;
@@ -37,8 +38,13 @@ function getInternalDestination(event) {
 
 export default function Root({children}) {
   const history = useHistory();
+  const location = useLocation();
   const transitioning = useRef(false);
   const activeAnimation = useRef(null);
+  let robots = null;
+
+  if (location.pathname === '/search') robots = 'noindex, follow';
+  if (location.pathname === '/404.html') robots = 'noindex, nofollow';
 
   useEffect(() => {
     const finishTransition = () => {
@@ -121,5 +127,15 @@ export default function Root({children}) {
     };
   }, [history]);
 
-  return <>{children}</>;
+  return (
+    <>
+      {robots && (
+        <Head>
+          <meta name="robots" content={robots} />
+          <meta name="googlebot" content={robots} />
+        </Head>
+      )}
+      {children}
+    </>
+  );
 }

@@ -11,7 +11,10 @@ export default function NotFound() {
 
   return (
     <>
-      <PageMetadata title={title} />
+      <PageMetadata title={title}>
+        <meta name="robots" content="noindex, nofollow" />
+        <meta name="googlebot" content="noindex, nofollow" />
+      </PageMetadata>
       <NotFoundContent />
     </>
   );
