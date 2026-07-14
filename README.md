@@ -21,7 +21,7 @@ This repository contains the public [wiki](https://wiki.kingdomsx.com) for the p
 - `src/js/` - client modules (hash scroll, sidebar active links, page transitions, etc.)
 - `plugins/` - custom Remark/Rehype plugins and sidebar/metadata helpers
 - `static/` - files copied directly to the site root
-- `scripts/` - helpers for populating docs and normalizing wiki content
+- `scripts/` - helper for normalizing imported wiki content
 - `docusaurus.config.js` - site configuration
 - `sidebars.js` - sidebar definition
 
