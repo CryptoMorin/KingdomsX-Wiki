@@ -227,20 +227,36 @@
   height: 1rem;
 }
 
-.DocSearch {
+.DocSearch,
+.DocSearch-Container {
   --docsearch-primary-color: var(--wiki-amber);
+  --docsearch-soft-primary-color: color-mix(in srgb, var(--wiki-amber) 13%, transparent);
+  --docsearch-subtle-color: var(--wiki-line);
   --docsearch-text-color: var(--wiki-text);
+  --docsearch-secondary-text-color: var(--wiki-muted);
+  --docsearch-background-color: var(--wiki-surface-raised);
+  --docsearch-focus-color: var(--wiki-amber);
+  --docsearch-highlight-color: var(--wiki-amber);
   --docsearch-muted-color: var(--wiki-muted);
+  --docsearch-icon-color: var(--wiki-muted);
   --docsearch-container-background: rgba(3, 7, 12, 0.8);
+  --docsearch-logo-color: var(--wiki-amber);
+  --docsearch-search-button-background: var(--wiki-control-background);
+  --docsearch-search-button-text-color: var(--wiki-muted);
   --docsearch-modal-background: var(--wiki-bg);
+  --docsearch-modal-shadow: var(--wiki-panel-shadow);
   --docsearch-searchbox-background: var(--wiki-surface);
   --docsearch-searchbox-focus-background: var(--wiki-surface-raised);
   --docsearch-hit-color: var(--wiki-text);
-  --docsearch-hit-active-color: var(--wiki-bg-deep);
+  --docsearch-hit-highlight-color: color-mix(in srgb, var(--wiki-amber) 13%, var(--wiki-surface-raised));
   --docsearch-hit-background: var(--wiki-surface);
+  --docsearch-key-background: var(--wiki-surface-raised);
+  --docsearch-key-color: var(--wiki-muted);
+  --docsearch-key-pressed-shadow: none;
   --docsearch-footer-background: var(--wiki-surface);
-  --docsearch-key-gradient: linear-gradient(-225deg, var(--wiki-surface-raised), var(--wiki-surface));
-  --docsearch-key-shadow: none;
+  --docsearch-footer-shadow: none;
+  --docsearch-dropdown-menu-background: var(--wiki-surface);
+  --docsearch-dropdown-menu-item-hover-background: var(--wiki-surface-raised);
 }
 
 .DocSearch-Modal,
