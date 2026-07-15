@@ -670,6 +670,26 @@ html[data-theme='light'] .theme-admonition-danger {
   box-shadow: none;
 }
 
+.theme-doc-markdown .wiki-media-attachment {
+  display: block;
+  width: 100%;
+  max-width: 60rem;
+  max-height: 70vh;
+  margin: 1.5rem auto;
+  border: 0.0625rem solid var(--wiki-line);
+  border-radius: var(--wiki-radius-panel);
+  box-shadow: var(--wiki-panel-shadow);
+}
+
+.theme-doc-markdown img.wiki-media-attachment {
+  width: auto;
+  max-width: 100%;
+}
+
+.theme-doc-markdown video.wiki-media-attachment {
+  background: #000;
+}
+
 .theme-edit-this-page {
   display: inline-flex;
   padding: 0.25rem 0;
