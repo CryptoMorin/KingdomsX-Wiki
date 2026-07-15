@@ -41,6 +41,21 @@
   .theme-doc-sidebar-container nav.menu {
     padding: 0;
   }
+
+  .theme-doc-sidebar-container button[class*='collapseSidebarButton'] {
+    border-color: var(--wiki-line);
+    border-radius: var(--wiki-radius-control);
+    background: var(--wiki-control-background);
+    color: var(--wiki-amber);
+    transition: color var(--wiki-transition), background var(--wiki-transition), border-color var(--wiki-transition);
+  }
+
+  .theme-doc-sidebar-container button[class*='collapseSidebarButton']:hover,
+  .theme-doc-sidebar-container button[class*='collapseSidebarButton']:focus-visible {
+    border-color: var(--sidebar-menu-hover-border-color);
+    background: var(--wiki-control-hover-background);
+    color: var(--wiki-amber);
+  }
 }
 
 .menu__list__category {
