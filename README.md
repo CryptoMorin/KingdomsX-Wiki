@@ -80,7 +80,7 @@ Refresh wiki pages whenever you need newer content from `KingdomsX/wiki`. This d
 ```bash
 rm -rf docs
 git clone --depth 1 https://github.com/CryptoMorin/KingdomsX.wiki.git docs
-python scripts/normalize_latex.py docs/
+python3 scripts/normalize_latex.py docs/
 ```
 
 ## Checks
