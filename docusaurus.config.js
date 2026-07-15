@@ -265,15 +265,16 @@ export default {
           position: "left",
         },
         {
-          href: "https://kingdomsx.com",
-          label: "Website",
-          position: "left",
-        },
-        {
           href: "https://discord.kingdomsx.com",
           label: "Discord",
           position: "right",
           className: "navbar-discord-link",
+        },
+        {
+          href: "https://kingdomsx.com",
+          label: "Website",
+          position: "right",
+          className: "navbar-website-link",
         },
         {
           href: "https://github.com/CryptoMorin/KingdomsX",

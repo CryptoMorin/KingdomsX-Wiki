@@ -121,6 +121,7 @@
 }
 
 .navbar-discord-link,
+.navbar-website-link,
 .navbar-github-link {
   display: inline-flex;
   width: 1.625rem;
@@ -139,12 +140,15 @@
 }
 
 .navbar-discord-link > svg:has(> use[href='#theme-svg-external-link']),
+.navbar-website-link > svg:has(> use[href='#theme-svg-external-link']),
 .navbar-github-link > svg:has(> use[href='#theme-svg-external-link']) {
   display: none;
 }
 
 .navbar-discord-link:hover,
 .navbar-discord-link:focus-visible,
+.navbar-website-link:hover,
+.navbar-website-link:focus-visible,
 .navbar-github-link:hover,
 .navbar-github-link:focus-visible {
   opacity: 1;
@@ -493,7 +497,7 @@
   flex: 0 0 auto;
 }
 
-.navbar-sidebar__main-menu :is(.navbar-discord-link, .navbar-github-link) {
+.navbar-sidebar__main-menu :is(.navbar-discord-link, .navbar-website-link, .navbar-github-link) {
   display: flex;
   width: auto;
   height: auto;
@@ -548,6 +552,7 @@
   }
 
   .navbar-discord-link,
+  .navbar-website-link,
   .navbar-github-link {
     width: 1.5rem;
     height: 1.5rem;
@@ -604,6 +609,7 @@
   }
 
   .theme-layout-navbar-right .navbar-discord-link,
+  .theme-layout-navbar-right .navbar-website-link,
   .theme-layout-navbar-right .navbar-github-link {
     display: inline-flex;
     width: 1.5rem;
@@ -618,20 +624,24 @@
     margin-left: auto;
   }
 
-  .theme-layout-navbar-right .navbar-github-link {
+  .theme-layout-navbar-right .navbar-website-link {
     order: 3;
+  }
+
+  .theme-layout-navbar-right .navbar-github-link {
+    order: 4;
   }
 
   .theme-layout-navbar-right > :has(> .DocSearch) {
     position: static;
-    order: 4;
+    order: 5;
     margin-left: 0.25rem;
     align-self: center;
   }
 
   .navbar__toggle {
     display: grid;
-    order: 5;
+    order: 6;
     margin-right: 0;
     margin-left: 0.5rem;
     align-self: center;

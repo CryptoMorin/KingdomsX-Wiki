@@ -24,5 +24,6 @@ export const mainMenuIcons = {
 
 export const navbarIcons = {
   Discord: faDiscord,
+  Website: faGlobe,
   GitHub: faGithub,
 };
