@@ -672,24 +672,34 @@ html[data-theme='light'] .theme-admonition-danger {
 
 .theme-edit-this-page {
   display: inline-flex;
-  min-height: 2.75rem;
-  padding: 0.55rem 0.8rem;
+  padding: 0.25rem 0;
   align-items: center;
-  gap: 0.45rem;
-  border: 0.0625rem solid var(--wiki-control-border);
-  border-radius: var(--wiki-radius-control);
-  background: var(--wiki-control-background);
-  box-shadow: none;
+  gap: 0.25rem;
+  border: 0;
+  background: transparent;
   color: var(--wiki-muted);
-  font-size: 0.875rem;
-  font-weight: 700;
+  font-size: 0.75rem;
+  font-weight: 600;
+  opacity: 0.7;
 }
 
 .theme-edit-this-page:hover,
 .theme-edit-this-page:focus-visible {
-  border-color: var(--wiki-amber);
-  background: var(--wiki-control-hover-background);
-  color: var(--wiki-amber);
+  background: transparent;
+  color: var(--wiki-text);
+  opacity: 1;
+  text-decoration: underline;
+  text-underline-offset: 0.2em;
+}
+
+.theme-edit-this-page:focus-visible {
+  outline: 0.125rem solid var(--wiki-amber);
+  outline-offset: 0.1875rem;
+}
+
+.theme-edit-this-page svg {
+  width: 0.875rem;
+  height: 0.875rem;
 }
 
 .pagination-nav__link {
