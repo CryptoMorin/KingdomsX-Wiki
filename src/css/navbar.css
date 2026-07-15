@@ -1,5 +1,8 @@
-.theme-layout-navbar.navbar {
+:root {
   --ifm-navbar-height: 4.375rem;
+}
+
+.theme-layout-navbar.navbar {
   isolation: isolate;
   background: transparent;
   border-bottom: 0.0625rem solid rgba(251, 176, 59, 0.2);

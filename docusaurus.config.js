@@ -221,7 +221,7 @@ export default {
     },
     docs: {
       sidebar: {
-        hideable: false,
+        hideable: true,
       },
     },
 
