@@ -15,6 +15,8 @@
   --sidebar-menu-hover-border-color: var(--wiki-amber);
   --sidebar-menu-active-border-color: var(--wiki-amber);
   --sidebar-menu-active-background: color-mix(in srgb, var(--wiki-amber) 15%, var(--wiki-surface));
+  --sidebar-collapse-duration: 180ms;
+  --sidebar-collapse-easing: cubic-bezier(0.4, 0, 1, 1);
 }
 
 [data-theme='dark'] {
@@ -28,13 +30,13 @@
   border-right-color: var(--sidebar-shell-border) !important;
   background: var(--sidebar-shell-background);
   color: var(--sidebar-color);
+  -webkit-user-select: none;
+  user-select: none;
 }
 
 .theme-doc-sidebar-menu {
   padding: 1rem 0.5rem;
   list-style: none;
-  -webkit-user-select: none;
-  user-select: none;
 }
 
 @media (min-width: 997px) {
@@ -47,7 +49,7 @@
     border-radius: var(--wiki-radius-control);
     background: var(--wiki-control-background);
     color: var(--wiki-amber);
-    transition: color var(--wiki-transition), background var(--wiki-transition), border-color var(--wiki-transition);
+    transition: var(--wiki-control-transition);
   }
 
   .theme-doc-sidebar-container button[class*='collapseSidebarButton']:hover,
@@ -85,7 +87,7 @@
 .theme-doc-sidebar-menu .menu__list-item-collapsible {
   color: var(--sidebar-color);
   font-weight: 500;
-  transition: color var(--wiki-transition), background var(--wiki-transition), border-color var(--wiki-transition), box-shadow var(--wiki-transition), transform var(--wiki-transition), filter var(--wiki-transition);
+  transition: var(--wiki-control-lift-transition);
 }
 
 .theme-doc-sidebar-menu .menu__list-item > .menu__link,
@@ -145,7 +147,6 @@
 .theme-doc-sidebar-menu .menu__caret:hover,
 .theme-doc-sidebar-menu .menu__caret:focus-visible {
   background: transparent;
-  filter: brightness(1.08);
 }
 
 .theme-doc-sidebar-menu .menu__list-item > .menu__link:hover,
@@ -156,7 +157,6 @@
   background: var(--sidebar-menu-hover-background);
   color: var(--sidebar-color);
   box-shadow: none;
-  filter: brightness(1.04);
 }
 
 .theme-doc-sidebar-menu .menu__list-item-collapsible > .menu__link:hover,
@@ -184,6 +184,25 @@
 .theme-doc-sidebar-menu .menu__list {
   margin: 0;
   padding: 0.25rem 0 0.5rem 1.25rem;
+}
+
+.theme-doc-sidebar-menu .menu__list[style*='transition'] {
+  opacity: 1;
+  transition-property: height !important;
+  transition-duration: var(--sidebar-collapse-duration) !important;
+  transition-timing-function: ease-out !important;
+}
+
+.theme-doc-sidebar-menu .menu__list-item--collapsed > .menu__list[style*='transition'] {
+  opacity: 0;
+  transition-property: height, opacity !important;
+  transition-timing-function: var(--sidebar-collapse-easing) !important;
+}
+
+.theme-doc-sidebar-menu .menu__caret::before,
+.theme-doc-sidebar-menu .menu__link--sublist-caret::after {
+  transition-duration: var(--sidebar-collapse-duration);
+  transition-timing-function: ease-out;
 }
 
 .theme-doc-sidebar-menu .menu__list > .menu__list-item {

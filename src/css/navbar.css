@@ -7,6 +7,8 @@
   background: transparent;
   border-bottom: 0.0625rem solid rgba(251, 176, 59, 0.2);
   box-shadow: none;
+  -webkit-user-select: none;
+  user-select: none;
 }
 
 .theme-layout-navbar.navbar::before {
@@ -307,7 +309,7 @@
   background: var(--wiki-control-background);
   color: var(--wiki-muted);
   box-shadow: none;
-  transition: color var(--wiki-transition), background var(--wiki-transition), border-color var(--wiki-transition), box-shadow var(--wiki-transition);
+  transition: var(--wiki-control-transition);
 }
 
 .DocSearch-Button:hover,
@@ -356,6 +358,8 @@
   max-height: 100dvh;
   background: transparent;
   box-shadow: none;
+  -webkit-user-select: none;
+  user-select: none;
 }
 
 .navbar-sidebar__drawer {
@@ -448,7 +452,7 @@
   font-size: 0.9rem;
   font-weight: 750;
   text-align: left;
-  transition: color var(--wiki-transition), background var(--wiki-transition), border-color var(--wiki-transition);
+  transition: var(--wiki-control-transition);
 }
 
 /* .navbar-sidebar__menu-switch--forward {
@@ -487,7 +491,7 @@
   font-size: 0.95rem;
   font-weight: 750;
   opacity: 1;
-  transition: color var(--wiki-transition), background var(--wiki-transition), border-color var(--wiki-transition), transform var(--wiki-transition);
+  transition: var(--wiki-control-lift-transition);
 }
 
 .navbar-sidebar__main-menu .menu__link:hover,

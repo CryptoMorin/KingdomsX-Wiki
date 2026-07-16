@@ -7,7 +7,7 @@ This repository contains the public [wiki](https://wiki.kingdomsx.com) for the p
 ## Stack
 - **Docusaurus** - documentation site framework
 - **React** - theme customizations and client modules
-- **Remark / Rehype** - Markdown transforms for GitHub wiki content (math, admonitions, Minecraft formatting, placeholders, etc.)
+- **Remark / Rehype** - Markdown transforms for GitHub wiki content
 
 ## Requirements
 - Node.js 24
@@ -21,7 +21,7 @@ This repository contains the public [wiki](https://wiki.kingdomsx.com) for the p
 - `src/js/` - client modules (hash scroll, sidebar active links, page transitions, etc.)
 - `plugins/` - custom Remark/Rehype plugins and sidebar/metadata helpers
 - `static/` - files copied directly to the site root
-- `scripts/` - helper for normalizing imported wiki content
+- `scripts/` - helpers for normalizing imported wiki content
 - `docusaurus.config.js` - site configuration
 - `sidebars.js` - sidebar definition
 

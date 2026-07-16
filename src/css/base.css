@@ -38,6 +38,14 @@
   --wiki-radius-control: 0.5rem;
   --wiki-radius-panel: 0.75rem;
   --wiki-transition: 180ms ease;
+  --wiki-control-transition:
+    color var(--wiki-transition),
+    background-color var(--wiki-transition),
+    border-color var(--wiki-transition);
+  --wiki-control-lift-transition:
+    var(--wiki-control-transition),
+    transform var(--wiki-transition);
+  --wiki-selection-color: #fffaf2;
 
   --ifm-background-color: var(--wiki-bg);
   --ifm-background-surface-color: var(--wiki-surface);
@@ -108,6 +116,7 @@ html[data-theme='dark'] {
   --wiki-control-hover-background: rgba(28, 44, 60, 0.9);
   --wiki-shadow: 0 1.5rem 5rem rgba(0, 0, 0, 0.4);
   --wiki-shadow-soft: 0 0.75rem 2rem rgba(0, 0, 0, 0.25);
+  --wiki-selection-color: #071019;
   --content-shadow: 0 5px 14px rgba(0, 0, 0, 0.35);
   --bg-scrollbar: #191d24;
 
@@ -146,6 +155,16 @@ body {
   min-height: 100vh;
   background-color: var(--wiki-bg);
   color: var(--wiki-text);
+}
+
+::selection {
+  background: var(--wiki-orange);
+  color: var(--wiki-selection-color);
+  text-shadow: none;
+}
+
+a::selection {
+  color: var(--wiki-selection-color);
 }
 
 body::before,
@@ -755,6 +774,28 @@ html[data-theme='light'] .theme-admonition-danger {
   background: var(--wiki-control-background) !important;
   color: var(--wiki-amber) !important;
   box-shadow: none;
+  transition:
+    var(--wiki-control-lift-transition),
+    box-shadow var(--wiki-transition),
+    opacity var(--wiki-transition),
+    visibility var(--wiki-transition);
+}
+
+.theme-back-to-top-button::after {
+  background-color: currentColor;
+}
+
+.theme-back-to-top-button:hover,
+.theme-back-to-top-button:focus-visible {
+  transform: translateY(-0.125rem) scale(1.04);
+  border-color: var(--wiki-amber) !important;
+  background: var(--wiki-control-hover-background) !important;
+  color: var(--wiki-orange) !important;
+  box-shadow: var(--wiki-shadow-soft);
+}
+
+.theme-back-to-top-button:active {
+  transform: scale(0.98);
 }
 
 .search-page-wrapper input[type='search'] {

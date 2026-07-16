@@ -39,6 +39,7 @@ html[data-theme='dark'] {
   background: var(--wiki-control-background);
   color: var(--wiki-muted);
   box-shadow: none;
+  transition: var(--wiki-control-transition);
 }
 
 .theme-code-block button:hover,
