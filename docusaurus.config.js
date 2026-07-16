@@ -8,13 +8,13 @@ import remarkArrows from "./plugins/remark-arrows.js";
 import remarkMinecraftFormat from "./plugins/remark-minecraft-codes.js";
 import rehypeForceH1Slug from './plugins/ultra-hyped-slug.js';
 import remarkGitHubLatex from "./plugins/remark-github-latex.js";
-import remarkGithubOnlyContent from "./plugins/remark-github-only-content.js";
 import remarkMediaAttachments from "./plugins/remark-media-attachments.js";
 import remarkYoutubeEmbeds from "./plugins/remark-youtube-embeds.js";
 import normalizeWikiLinks from "./plugins/normalize-wiki-links.js";
 import removeToC from "./plugins/remove-manual-toc.js";
 import normalizeWikiWhitespace from "./plugins/normalize-wiki-whitespace.js";
 import createWikiPageMetadataParser from './plugins/wiki-page-metadata.js';
+import preprocessGithubOnlyContent from './plugins/preprocess-github-only-content.js';
 
 import {themes} from 'prism-react-renderer';
 import prism from 'prismjs';
@@ -324,6 +324,7 @@ export default {
   markdown: {
     format: 'detect',
     mermaid: true,
+    preprocessor: preprocessGithubOnlyContent,
     parseFrontMatter: createWikiPageMetadataParser({
       fallbackDescription: siteDescription,
     }),
@@ -374,7 +375,6 @@ export default {
           },
 
           beforeDefaultRemarkPlugins: [
-            remarkGithubOnlyContent,
             remarkGithubAdmonitionsToDirectives,
             normalizeWikiLinks,
             removeToC,
