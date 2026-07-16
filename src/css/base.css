@@ -46,6 +46,7 @@
     var(--wiki-control-transition),
     transform var(--wiki-transition);
   --wiki-selection-color: #fffaf2;
+  --wiki-link-selection-color: #a5f3fc;
 
   --ifm-background-color: var(--wiki-bg);
   --ifm-background-surface-color: var(--wiki-surface);
@@ -117,6 +118,7 @@ html[data-theme='dark'] {
   --wiki-shadow: 0 1.5rem 5rem rgba(0, 0, 0, 0.4);
   --wiki-shadow-soft: 0 0.75rem 2rem rgba(0, 0, 0, 0.25);
   --wiki-selection-color: #071019;
+  --wiki-link-selection-color: #fff5df;
   --content-shadow: 0 5px 14px rgba(0, 0, 0, 0.35);
   --bg-scrollbar: #191d24;
 
@@ -164,8 +166,7 @@ body {
 }
 
 a::selection {
-  background: var(--wiki-amber);
-  color: var(--wiki-selection-color);
+  color: var(--wiki-link-selection-color);
 }
 
 body::before,
