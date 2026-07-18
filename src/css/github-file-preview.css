@@ -1,0 +1,180 @@
+/******************************************************************/
+/****************************** Main ******************************/
+/******************************************************************/
+
+#gh-global-persistent-popup {
+    position: absolute;
+    display: block;
+    /* Keep it fixed right above the link layout (won't offset during active scrolling) */
+    z-index: 2;
+    background-color: #1e1e1e;
+    border-radius: 6px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    width: max-content;
+    max-width: 60vw;
+    max-height: 60vh;
+    overflow: hidden;
+    /* Cut off edge leaks to support the styled header boundary */
+    border: 1px solid #3c3c3c;
+    transform: translateX(-50%);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.2s ease-in-out, visibility 0.2s ease-in-out;
+}
+
+#gh-global-persistent-popup pre {
+    overflow-x: auto;
+    max-width: 100%;
+    width: 100%;
+}
+
+#gh-global-persistent-popup code {
+    display: block;
+    width: max-content;
+    min-width: 100%;
+}
+
+#gh-global-persistent-popup.gh-visible {
+    opacity: 1;
+    visibility: visible;
+}
+
+
+
+
+/******************************************************************/
+/***************************** Header *****************************/
+/******************************************************************/
+
+#gh-global-persistent-popup .gh-popup-header {
+    background-color: #2d2d2d;
+    color: #c9d1d9;
+    padding: 6px 12px;
+    font-family: system-ui, -apple-system, sans-serif;
+    font-size: 11px;
+    font-weight: 600;
+    border-bottom: 1px solid #3c3c3c;
+    text-transform: lowercase;
+    /* Matches GitHub's subtle tab aesthetics */
+}
+
+#gh-global-persistent-popup .file_path_separator {
+    color: gray;
+    padding: 0 2px;
+}
+
+#gh-global-persistent-popup .gh-popup-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#gh-global-persistent-popup .gh-popup-header .header__right {
+    display: flex;
+    gap: 10px;
+}
+
+#gh-global-persistent-popup .gh-popup-header .header__right * {
+    cursor: pointer;
+    width: 15px;
+    height: 15px;
+    padding: 0;
+    transition: all 0.3s linear;
+}
+
+#gh-global-persistent-popup .gh-popup-header .close-btn {
+    color: red;
+    border: none;
+    background: none;
+}
+
+#gh-global-persistent-popup .gh-popup-header .close-btn:hover {
+    color: darkred;
+    background: none;
+}
+
+#gh-global-persistent-popup .gh-popup-header .clean-btn,
+#gh-global-persistent-popup .gh-popup-header .github-redirect-btn {
+    color: #DDD;
+}
+
+#gh-global-persistent-popup .gh-popup-header .clean-btn:hover,
+#gh-global-persistent-popup .gh-popup-header .github-redirect-btn:hover {
+    color: #777;
+}
+
+
+
+
+/******************************************************************/
+/****************************** Body ******************************/
+/******************************************************************/
+
+
+#gh-global-persistent-popup pre {
+    margin: 0 !important;
+    padding: 12px !important;
+    /* Move code spacing margins inward away from borders */
+    background: transparent !important;
+    border: none !important;
+    overflow: auto;
+    max-height: 300px;
+}
+
+#gh-global-persistent-popup code {
+    font-family: ui-monospace, SFMono-Regular, SF Mono, Menlo, Consolas, monospace !important;
+    font-size: 13px !important;
+    line-height: 1.5 !important;
+    padding: 0 !important;
+    background: transparent !important;
+    white-space: pre;
+}
+
+#gh-global-persistent-popup .loading {
+    color: #8b949e;
+    font-family: system-ui, -apple-system, sans-serif;
+    font-size: 13px;
+    padding: 14px;
+}
+
+#gh-global-persistent-popup .loading.error {
+    color: red;
+}
+
+
+
+
+
+
+/******************************************************************/
+/****************************** Lines *****************************/
+/******************************************************************/
+
+#gh-global-persistent-popup .gh-code-line {
+    display: flex;
+    white-space: pre;
+    width: 100%;
+    min-width: max-content;
+}
+
+#gh-global-persistent-popup .gh-line-number {
+    user-select: none;
+    opacity: 0.5;
+    width: 45px;
+    text-align: right;
+    padding-right: 12px;
+    border-right: 1px solid gray;
+    margin-right: 1em;
+}
+
+#gh-global-persistent-popup .gh-line-content {
+    flex: 1;
+}
+
+#gh-global-persistent-popup .gh-code-line.selected-line {
+    background-color: rgba(40, 40, 0, 1);
+}
+
+#gh-global-persistent-popup .gh-code-line * {
+    flex: 0 0 auto;
+}

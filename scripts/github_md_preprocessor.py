@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-#!/usr/bin/env python3
+
 import re
 import sys
 from pathlib import Path
@@ -86,7 +86,7 @@ def process_file(path: Path):
 
 def main():
     if len(sys.argv) < 2:
-        print("Usage: python preprocess_latex.py <file-or-directory>")
+        print("Usage: python github_md_preprocessor.py <file-or-directory>")
         sys.exit(1)
 
     target = Path(sys.argv[1])

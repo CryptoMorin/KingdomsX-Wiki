@@ -1,0 +1,46 @@
+{
+  "title": {
+    "message": "KingdomsX",
+    "description": "The title in the navbar"
+  },
+  "logo.alt": {
+    "message": "KingdomsX Icon",
+    "description": "The alt text of navbar logo"
+  },
+  "item.label.Home": {
+    "message": "Home",
+    "description": "Navbar item with label Home"
+  },
+  "item.label.API": {
+    "message": "API",
+    "description": "Navbar item with label API"
+  },
+  "item.label.GitHub Version": {
+    "message": "GitHub Version",
+    "description": "Navbar item with label GitHub Version"
+  },
+  "item.label.Download": {
+    "message": "Download",
+    "description": "Navbar item with label Download"
+  },
+  "item.label.Servers": {
+    "message": "Servers",
+    "description": "Navbar item with label Servers"
+  },
+  "item.label.Discord": {
+    "message": "Discord",
+    "description": "Navbar item with label Discord"
+  },
+  "item.label.Website": {
+    "message": "Website",
+    "description": "Navbar item with label Website"
+  },
+  "item.label.GitHub": {
+    "message": "GitHub",
+    "description": "Navbar item with label GitHub"
+  },
+  "item.label.Reload": {
+    "message": "Reload",
+    "description": "Navbar item with label Reload"
+  }
+}

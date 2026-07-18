@@ -1,11 +1,12 @@
 {
   "name": "KingdomsX",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "scripts": {
     "start": "docusaurus start",
     "build": "docusaurus build",
     "serve": "docusaurus serve",
-    "swizzle": "docusaurus swizzle"
+    "swizzle": "docusaurus swizzle",
+    "write-translations": "docusaurus write-translations"
   },
   "dependencies": {
     "@docusaurus/core": "^3.10.2",

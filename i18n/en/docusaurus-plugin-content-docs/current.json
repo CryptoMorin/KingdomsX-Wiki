@@ -1,0 +1,178 @@
+{
+  "version.label": {
+    "message": "Next",
+    "description": "The label for version current"
+  },
+  "sidebar.wikiSidebar.category.📥 Installation": {
+    "message": "📥 Installation",
+    "description": "The label for category '📥 Installation' in sidebar 'wikiSidebar'"
+  },
+  "sidebar.wikiSidebar.category.⚜️ Addons": {
+    "message": "⚜️ Addons",
+    "description": "The label for category '⚜️ Addons' in sidebar 'wikiSidebar'"
+  },
+  "sidebar.wikiSidebar.category.⌨️ Commands": {
+    "message": "⌨️ Commands",
+    "description": "The label for category '⌨️ Commands' in sidebar 'wikiSidebar'"
+  },
+  "sidebar.wikiSidebar.category.🔣 Placeholders": {
+    "message": "🔣 Placeholders",
+    "description": "The label for category '🔣 Placeholders' in sidebar 'wikiSidebar'"
+  },
+  "sidebar.wikiSidebar.category.📁 Config": {
+    "message": "📁 Config",
+    "description": "The label for category '📁 Config' in sidebar 'wikiSidebar'"
+  },
+  "sidebar.wikiSidebar.category.📚 Mechanics": {
+    "message": "📚 Mechanics",
+    "description": "The label for category '📚 Mechanics' in sidebar 'wikiSidebar'"
+  },
+  "sidebar.wikiSidebar.category.⚔️ Invasion": {
+    "message": "⚔️ Invasion",
+    "description": "The label for category '⚔️ Invasion' in sidebar 'wikiSidebar'"
+  },
+  "sidebar.wikiSidebar.category.💻 API": {
+    "message": "💻 API",
+    "description": "The label for category '💻 API' in sidebar 'wikiSidebar'"
+  },
+  "sidebar.wikiSidebar.link.📗 Setup": {
+    "message": "📗 Setup",
+    "description": "The label for link '📗 Setup' in sidebar 'wikiSidebar', linking to '/Installation#setup'"
+  },
+  "sidebar.wikiSidebar.link.📘 Compatibility": {
+    "message": "📘 Compatibility",
+    "description": "The label for link '📘 Compatibility' in sidebar 'wikiSidebar', linking to '/Installation#compatibility'"
+  },
+  "sidebar.wikiSidebar.link.👨‍🦱 Players": {
+    "message": "👨‍🦱 Players",
+    "description": "The label for link '👨‍🦱 Players' in sidebar 'wikiSidebar', linking to '/Commands#players'"
+  },
+  "sidebar.wikiSidebar.link.👩‍⚖️ Admins": {
+    "message": "👩‍⚖️ Admins",
+    "description": "The label for link '👩‍⚖️ Admins' in sidebar 'wikiSidebar', linking to '/Commands#admins'"
+  },
+  "sidebar.wikiSidebar.link.🚹 Players": {
+    "message": "🚹 Players",
+    "description": "The label for link '🚹 Players' in sidebar 'wikiSidebar', linking to '/Placeholders#players'"
+  },
+  "sidebar.wikiSidebar.link.🏛 Kingdoms": {
+    "message": "🏛 Kingdoms",
+    "description": "The label for link '🏛 Kingdoms' in sidebar 'wikiSidebar', linking to '/Placeholders#kingdoms'"
+  },
+  "sidebar.wikiSidebar.link.🏢 Nations": {
+    "message": "🏢 Nations",
+    "description": "The label for link '🏢 Nations' in sidebar 'wikiSidebar', linking to '/Placeholders#nations'"
+  },
+  "sidebar.wikiSidebar.link.🛡️ Preparing": {
+    "message": "🛡️ Preparing",
+    "description": "The label for link '🛡️ Preparing' in sidebar 'wikiSidebar', linking to '/Mechanics#preparing'"
+  },
+  "sidebar.wikiSidebar.link.🧟 Champion": {
+    "message": "🧟 Champion",
+    "description": "The label for link '🧟 Champion' in sidebar 'wikiSidebar', linking to '/Mechanics#champion'"
+  },
+  "sidebar.wikiSidebar.link.🗡 Masswar": {
+    "message": "🗡 Masswar",
+    "description": "The label for link '🗡 Masswar' in sidebar 'wikiSidebar', linking to '/Mechanics#mass-wars'"
+  },
+  "sidebar.wikiSidebar.link.📡 Structures": {
+    "message": "📡 Structures",
+    "description": "The label for link '📡 Structures' in sidebar 'wikiSidebar', linking to '/Mechanics#structures'"
+  },
+  "sidebar.wikiSidebar.link.🔫 Turrets": {
+    "message": "🔫 Turrets",
+    "description": "The label for link '🔫 Turrets' in sidebar 'wikiSidebar', linking to '/Mechanics#turrets'"
+  },
+  "sidebar.wikiSidebar.link.🔹 Basics": {
+    "message": "🔹 Basics",
+    "description": "The label for link '🔹 Basics' in sidebar 'wikiSidebar', linking to '/API#basics'"
+  },
+  "sidebar.wikiSidebar.link.🔹 Turrets & Structures": {
+    "message": "🔹 Turrets & Structures",
+    "description": "The label for link '🔹 Turrets & Structures' in sidebar 'wikiSidebar', linking to '/API#turrets--structures'"
+  },
+  "sidebar.wikiSidebar.link.🔹 Metadata": {
+    "message": "🔹 Metadata",
+    "description": "The label for link '🔹 Metadata' in sidebar 'wikiSidebar', linking to '/API#metadata'"
+  },
+  "sidebar.wikiSidebar.link.🔹 Events": {
+    "message": "🔹 Events",
+    "description": "The label for link '🔹 Events' in sidebar 'wikiSidebar', linking to '/API#events'"
+  },
+  "sidebar.wikiSidebar.link.🔹 Examples": {
+    "message": "🔹 Examples",
+    "description": "The label for link '🔹 Examples' in sidebar 'wikiSidebar', linking to '/API#examples'"
+  },
+  "sidebar.wikiSidebar.doc.🏠 Home": {
+    "message": "🏠 Home",
+    "description": "The label for the doc item '🏠 Home' in sidebar 'wikiSidebar', linking to the doc Home"
+  },
+  "sidebar.wikiSidebar.doc.🔰 Features": {
+    "message": "🔰 Features",
+    "description": "The label for the doc item '🔰 Features' in sidebar 'wikiSidebar', linking to the doc Features"
+  },
+  "sidebar.wikiSidebar.doc.❓ FAQ": {
+    "message": "❓ FAQ",
+    "description": "The label for the doc item '❓ FAQ' in sidebar 'wikiSidebar', linking to the doc FAQ"
+  },
+  "sidebar.wikiSidebar.doc.⁉️ NFAQ": {
+    "message": "⁉️ NFAQ",
+    "description": "The label for the doc item '⁉️ NFAQ' in sidebar 'wikiSidebar', linking to the doc NFAQ"
+  },
+  "sidebar.wikiSidebar.doc.🚩 Outposts": {
+    "message": "🚩 Outposts",
+    "description": "The label for the doc item '🚩 Outposts' in sidebar 'wikiSidebar', linking to the doc Outposts"
+  },
+  "sidebar.wikiSidebar.doc.☮️ Peace Treaties": {
+    "message": "☮️ Peace Treaties",
+    "description": "The label for the doc item '☮️ Peace Treaties' in sidebar 'wikiSidebar', linking to the doc Peace-Treaties"
+  },
+  "sidebar.wikiSidebar.doc.🗺️ Map Viewers": {
+    "message": "🗺️ Map Viewers",
+    "description": "The label for the doc item '🗺️ Map Viewers' in sidebar 'wikiSidebar', linking to the doc Map-Viewers-Addon"
+  },
+  "sidebar.wikiSidebar.doc.🏬 EngineHub": {
+    "message": "🏬 EngineHub",
+    "description": "The label for the doc item '🏬 EngineHub' in sidebar 'wikiSidebar', linking to the doc EngineHub-Addon"
+  },
+  "sidebar.wikiSidebar.doc.🛠 Admin Tools": {
+    "message": "🛠 Admin Tools",
+    "description": "The label for the doc item '🛠 Admin Tools' in sidebar 'wikiSidebar', linking to the doc Admin-Tools"
+  },
+  "sidebar.wikiSidebar.doc.❇️ Introduction": {
+    "message": "❇️ Introduction",
+    "description": "The label for the doc item '❇️ Introduction' in sidebar 'wikiSidebar', linking to the doc Introduction"
+  },
+  "sidebar.wikiSidebar.doc.🔓 Permissions": {
+    "message": "🔓 Permissions",
+    "description": "The label for the doc item '🔓 Permissions' in sidebar 'wikiSidebar', linking to the doc Permissions"
+  },
+  "sidebar.wikiSidebar.doc.📃 YAML": {
+    "message": "📃 YAML",
+    "description": "The label for the doc item '📃 YAML' in sidebar 'wikiSidebar', linking to the doc YAML"
+  },
+  "sidebar.wikiSidebar.doc.💱 Languages": {
+    "message": "💱 Languages",
+    "description": "The label for the doc item '💱 Languages' in sidebar 'wikiSidebar', linking to the doc Languages"
+  },
+  "sidebar.wikiSidebar.doc.📱 GUI": {
+    "message": "📱 GUI",
+    "description": "The label for the doc item '📱 GUI' in sidebar 'wikiSidebar', linking to the doc GUIs"
+  },
+  "sidebar.wikiSidebar.doc.🔒 Protection Signs": {
+    "message": "🔒 Protection Signs",
+    "description": "The label for the doc item '🔒 Protection Signs' in sidebar 'wikiSidebar', linking to the doc Protection-Signs"
+  },
+  "sidebar.wikiSidebar.doc.✉️ Mails": {
+    "message": "✉️ Mails",
+    "description": "The label for the doc item '✉️ Mails' in sidebar 'wikiSidebar', linking to the doc Mails"
+  },
+  "sidebar.wikiSidebar.doc.🧰 Troubleshooting": {
+    "message": "🧰 Troubleshooting",
+    "description": "The label for the doc item '🧰 Troubleshooting' in sidebar 'wikiSidebar', linking to the doc Troubleshooting"
+  },
+  "sidebar.wikiSidebar.doc.🔹 Addons": {
+    "message": "🔹 Addons",
+    "description": "The label for the doc item '🔹 Addons' in sidebar 'wikiSidebar', linking to the doc Addons-API"
+  }
+}

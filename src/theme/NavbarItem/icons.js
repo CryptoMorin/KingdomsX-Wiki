@@ -5,6 +5,7 @@ import {
   faGlobe,
   faHouse,
   faServer,
+  faArrowsRotate
 } from '@fortawesome/free-solid-svg-icons';
 import {
   faDiscord,
@@ -26,4 +27,5 @@ export const navbarIcons = {
   Discord: faDiscord,
   Website: faGlobe,
   GitHub: faGithub,
+  Reload: faArrowsRotate
 };

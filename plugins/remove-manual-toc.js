@@ -1,21 +1,24 @@
 import { visit } from "unist-util-visit";
+import logger from '@docusaurus/logger';
 
 // Removes Table of Content (ToC) we added manually in GitHub's wiki.
 export default function removeToC(pageName) {
   return (tree, file) => {
     // /home/runner/work/KingdomsX-Wiki/KingdomsX-Wiki/docs/FAQ.md
     // /home/runner/work/KingdomsX-Wiki/KingdomsX-Wiki/docs/NFAQ.md
-    const faq = file.path.endsWith("/FAQ.md");
-    const nfaq = file.path.endsWith("/NFAQ.md");
+    const normalizedPath = file.path.replaceAll('\\', '/'); // Happens when ran on Windows.
+    const faq = normalizedPath.endsWith("/FAQ.md");
+    const nfaq = normalizedPath.endsWith("/NFAQ.md");
     if (!faq && !nfaq) return;
-    console.log("Processing ", (faq ? "FAQ" : "NFAQ"), file.path);
+    logger.info`Removing ToC ${faq ? "FAQ" : "NFAQ"}: ${file.path}`
 
     let handle = 0;
     visit(tree, "heading", (node, index, parent) => {
-      console.log(handle, "Found node", node);
-      console.log(handle, "Found index", index);
-      console.log(handle, "First child", (node.children.length > 0 ? node.children[0] : "NO CHILD"));
-      handle++;
+      // console.log(handle, "Found node", node);
+      // console.log(handle, "Found index", index);
+      // console.log(handle, "First child", (node.children.length > 0 ? node.children[0] : "NO CHILD"));
+      // handle++;
+
       if (
         !parent ||
         typeof index !== "number" ||

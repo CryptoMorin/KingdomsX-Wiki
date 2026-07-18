@@ -1,0 +1,114 @@
+.hover-popup {
+    position: fixed;
+    z-index: 99999;
+    width: 260px;
+    height: 120px;
+    pointer-events: none;
+}
+
+
+/* down from button */
+.popup-vertical {
+    position: absolute;
+    top: 5px;
+    left: 12px;
+    width: 2px;
+    height: 0;
+    background: orange;
+    transition: height .1s ease;
+}
+
+.popup-vertical::after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-radius: 50%;
+    background: orange;
+    left: -2px;
+}
+
+/* goes left */
+.popup-horizontal {
+    position: absolute;
+    width: 70px;
+    height: 2px;
+    top: 103px;
+    left: -58px;
+
+    transform: scaleX(0);
+    transform-origin: right center;
+
+    background: orange;
+
+    transition: transform .1s ease;
+    transition-delay: .1s;
+}
+
+
+/* popup */
+.popup-box {
+    position: absolute;
+
+    top: 60px;
+    left: -250px;
+
+    width: 220px;
+    padding: 12px;
+
+    background-image: linear-gradient(45deg, #111, #222);
+    color: white;
+    border: 1px solid orange;
+    border-radius: 8px;
+
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.8);
+
+    transform-origin: right center;
+    transform: scaleX(0);
+
+    opacity: 0;
+
+    transition:
+        transform .2s ease,
+        opacity .2s ease;
+
+    transition-delay: .15s;
+}
+
+.hover-popup.visible .popup-vertical::after {
+    width: 6px;
+    height: 6px;
+}
+
+.hover-popup.visible .popup-vertical {
+    height: 100px;
+}
+
+
+.hover-popup.visible .popup-horizontal {
+    transform: scaleX(0.7);
+}
+
+
+.hover-popup.visible .popup-box {
+    transform: scaleX(1);
+    opacity: 1;
+}
+
+
+/* reverse timing */
+.hover-popup:not(.visible) .popup-box {
+    transition-delay: 0s;
+}
+
+.hover-popup:not(.visible) .popup-horizontal {
+    transition-delay: .03s;
+}
+
+.hover-popup:not(.visible) .popup-vertical {
+    transition-delay: .1s;
+}
+
+.hover-popup:not(.visible) .popup-vertical::after {
+    transition-delay: .18s;
+}

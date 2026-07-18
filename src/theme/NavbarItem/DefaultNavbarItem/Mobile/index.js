@@ -1,8 +1,8 @@
 import React from 'react';
 import clsx from 'clsx';
-import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import NavbarNavLink from '@theme/NavbarItem/NavbarNavLink';
-import {mainMenuIcons} from '@theme/NavbarItem/icons';
+import { mainMenuIcons } from '@theme/NavbarItem/icons';
 
 export default function DefaultNavbarItemMobile({
   className,

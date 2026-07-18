@@ -18,10 +18,18 @@ import preprocessGithubOnlyContent from './plugins/preprocess-github-only-conten
 
 import {themes} from 'prism-react-renderer';
 import prism from 'prismjs';
+import logger from '@docusaurus/logger';
 
 const siteUrl = 'https://wiki.kingdomsx.com';
 const siteDescription = 'Official wiki for KingdomsX, a Minecraft plugin similar to Factions which provides more advanced features, mechanics & invasions to make the game more fun.';
 const siteKeywords = 'Kingdoms, KingdomsX, KingdomsX wiki, Minecraft kingdoms plugin, Minecraft factions plugin, Spigot plugin, land claiming plugin, Minecraft server plugin, PvP plugin';
+const localKingdomsX = process.env.LOCAL_KINGDOMSX === 'true';
+const currentLocale = process.env.DOCUSAURUS_CURRENT_LOCALE;
+
+if (!currentLocale) {
+  // Each locale executes this file. We only want to print it the global one.
+  logger.info`Running local KingdomsX: ${localKingdomsX}`;
+}
 
 export default {
   title: 'KingdomsX Wiki',
@@ -53,10 +61,15 @@ export default {
   trailingSlash: false,
   onBrokenLinks: 'warn',
 
+  customFields: {
+    LOCAL_KINGDOMSX: localKingdomsX
+  },
+
   clientModules: [
     './src/js/hash-scroll.js',
     './src/js/sidebar-active-links.js',
     './src/js/page-transition.js',
+    './src/js/github-file-preview.js'
   ],
 
   headTags: [
@@ -285,6 +298,12 @@ export default {
           position: "right",
           className: "navbar-github-link",
         },
+        (localKingdomsX ? {
+          type: "custom-reloadRequest",
+          label: "Reload",
+          position: "right",
+          className: "navbar-reload-link",
+        } : {})
       ],
     },
 
@@ -406,7 +425,10 @@ export default {
             './src/css/sidebar.css',
             './src/css/navbar.css',
             './src/css/footer.css',
-            './src/css/placeholder.css'
+            './src/css/placeholder.css',
+            './src/css/github-file-preview.css',
+            './src/css/hover-popup.css',
+            ...(localKingdomsX ? ["./src/css/local-dev.css"] : [])
           ],
         },
 
