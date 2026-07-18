@@ -36,6 +36,9 @@ export default function remarkMediaAttachments() {
         return;
       }
 
+      // Keep normal markdown links as links, even when their URL ends in a media extension
+      if (!isGitHubAttachmentUrl(child.url)) return;
+
       attachments.push({node, url: child.url});
     });
 
@@ -63,26 +66,18 @@ export default function remarkMediaAttachments() {
 }
 
 async function getMediaType(url, file) {
-  let parsedUrl;
-  try {
-    parsedUrl = new URL(url);
-  } catch {
-    return null;
-  }
-
-  const extension = parsedUrl.pathname.match(/\.([^.]+)$/)?.[1]?.toLowerCase();
-  const typeFromExtension = MEDIA_TYPES_BY_EXTENSION.get(extension);
-  if (typeFromExtension) return typeFromExtension;
-
-  if (
-    parsedUrl.protocol !== 'https:' ||
-    parsedUrl.hostname !== 'github.com' ||
-    !GITHUB_ATTACHMENT_PATH.test(parsedUrl.pathname)
-  ) {
-    return null;
-  }
-
   return getGitHubAttachmentType(url, file);
+}
+
+function isGitHubAttachmentUrl(value) {
+  try {
+    const url = new URL(value);
+    return url.protocol === 'https:'
+      && url.hostname === 'github.com'
+      && GITHUB_ATTACHMENT_PATH.test(url.pathname);
+  } catch {
+    return false;
+  }
 }
 
 function getGitHubAttachmentType(url, file) {
