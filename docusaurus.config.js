@@ -16,7 +16,7 @@ import normalizeWikiWhitespace from "./plugins/normalize-wiki-whitespace.js";
 import createWikiPageMetadataParser from './plugins/wiki-page-metadata.js';
 import preprocessGithubOnlyContent from './plugins/preprocess-github-only-content.js';
 
-import {themes} from 'prism-react-renderer';
+import { themes } from 'prism-react-renderer';
 import prism from 'prismjs';
 import logger from '@docusaurus/logger';
 
@@ -298,12 +298,13 @@ export default {
           position: "right",
           className: "navbar-github-link",
         },
-        (localKingdomsX ? {
-          type: "custom-reloadRequest",
-          label: "Reload",
-          position: "right",
-          className: "navbar-reload-link",
-        } : {})
+        ...(localKingdomsX
+          ? [{
+            type: 'custom-reloadRequest',
+            label: 'Reload',
+            position: 'right',
+            className: 'navbar-reload-link',
+          }] : []),
       ],
     },
 
