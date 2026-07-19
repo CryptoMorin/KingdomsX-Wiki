@@ -9,6 +9,11 @@ import 'prismjs/components/prism-kotlin';
 import 'prismjs/components/prism-python';
 import 'prismjs/components/prism-yaml';
 import loadLanguages from 'prismjs/components/';
+
+// Docusaurus renders highlighted code during SSR. Keep Prism from rewriting
+// those blocks before React hydrates them. Previews call Prism.highlight()
+// explicitly when loading a snippet
+Prism.manual = true;
 loadLanguages(['yaml']);
 
 const languageAliases = {
