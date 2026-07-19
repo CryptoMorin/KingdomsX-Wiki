@@ -3,7 +3,7 @@ import clsx from 'clsx';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import NavbarNavLink from '@theme/NavbarItem/NavbarNavLink';
 import { navbarIcons } from '@theme/NavbarItem/icons';
-import Translate, { translate } from '@docusaurus/Translate';
+import { translate } from '@docusaurus/Translate';
 import addHoverPopup from '../../../../js/hoverPopup';
 
 const descriptions = {
@@ -37,15 +37,15 @@ export default function DefaultNavbarItemDesktop({
 }) {
   const description = descriptions[label.toLowerCase()];
 
-  if (className) {
-    useEffect(() => {
-      // NavbarNavLink doesn't forward ref, we can't useRef().
-      const ele = document.querySelector(`.${className}`);
-      const liveDesc = ele.dataset.description;
+  useEffect(() => {
+    if (!className) return;
 
-      if (liveDesc) addHoverPopup(ele, liveDesc);
-    }, []);
-  }
+    // NavbarNavLink doesn't forward ref, we can't useRef().
+    const ele = document.querySelector(`.${className}`);
+    const liveDesc = ele?.dataset.description;
+
+    if (liveDesc) return addHoverPopup(ele, liveDesc);
+  }, [className]);
 
   const navbarIcon = navbarIcons[label];
   const linkLabel = navbarIcon ? (

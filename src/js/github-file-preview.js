@@ -28,37 +28,14 @@ const UNHOVER_TIMEOUT = 10 * 1000;
 const MAX_DANGLING_LINES = 10; // If the target line is less that this, fill it with the surrounding lines.
 const GITHUB_REGEX = /(?:https:\/\/)github\.com\/(?<user>[^\/]+)\/(?<repo>[^\/]+)\/blob\/(?<hash>[a-f0-9]+)\/(?<filePath>.+\/(?<fileName>[^\/]+?\.(?<extension>[a-zA-Z0-9]+)))#L(?<lineStart>\d+)(?:-L(?<lineEnd>\d+))?/;
 
-function waitForMainWrapper(callback) {
-    const existing = document.querySelector('.main-wrapper');
-
-    // Already exists
-    if (existing) {
-        callback(existing);
-        return;
-    }
-
-    const observer = new MutationObserver(() => {
-        const mainWrapper = document.querySelector('.main-wrapper');
-
-        if (mainWrapper) {
-            observer.disconnect();
-            callback(mainWrapper);
-        }
-    });
-
-    observer.observe(document.body, {
-        childList: true,
-        subtree: true,
-    });
-}
-
 function setupGitHubPreviews() {
     // Ensure we create exactly ONE global popup instance for the entire page lifecycle
     let popup = document.getElementById('gh-global-persistent-popup');
     if (!popup) {
         popup = document.createElement('div');
         popup.id = 'gh-global-persistent-popup';
-        waitForMainWrapper(wrapper => wrapper.appendChild(popup));
+        // Keep imperative UI outside React's hydrated Docusaurus root.
+        document.body.appendChild(popup);
     }
 
     let activeLink = null;

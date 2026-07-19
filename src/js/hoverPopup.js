@@ -3,8 +3,9 @@ const CLOSE_ANIMATION_DURATION = 300;
 export default function addHoverPopup(element, text) {
     let activePopup = null;
     let currentWorkerId = 0;
+    let closeTimeout = null;
 
-    element.addEventListener("mouseenter", () => {
+    const handleMouseEnter = () => {
         if (window.innerWidth < 450) return;
         const capturedId = ++currentWorkerId;
 
@@ -35,19 +36,30 @@ export default function addHoverPopup(element, text) {
             if (capturedId !== currentWorkerId) return;
             popup.classList.add("visible");
         });
-    });
+    };
 
-    element.addEventListener("mouseleave", () => {
+    const handleMouseLeave = () => {
         const capturedId = currentWorkerId;
         if (!activePopup) return;
 
         activePopup.classList.remove("visible");
 
-        setTimeout(() => {
+        closeTimeout = setTimeout(() => {
             if (currentWorkerId === capturedId && activePopup) {
                 activePopup.remove();
                 activePopup = null;
             }
         }, CLOSE_ANIMATION_DURATION);
-    });
+    };
+
+    element.addEventListener("mouseenter", handleMouseEnter);
+    element.addEventListener("mouseleave", handleMouseLeave);
+
+    return () => {
+        currentWorkerId++;
+        clearTimeout(closeTimeout);
+        activePopup?.remove();
+        element.removeEventListener("mouseenter", handleMouseEnter);
+        element.removeEventListener("mouseleave", handleMouseLeave);
+    };
 }
