@@ -48,15 +48,17 @@ function setupGitHubPreviews() {
 
     let pointer = document.getElementById('gh-global-popup-pointer');
     if (!pointer) {
-        pointer = document.createElement('div');
+        pointer = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
         pointer.id = 'gh-global-popup-pointer';
         pointer.setAttribute('aria-hidden', 'true');
+        pointer.innerHTML = '<line></line><circle r="3"></circle>';
         document.body.appendChild(pointer);
     }
 
     let activeLink = null;
     let dismissTimeout = null;
     let hoverIntentTimeout = null; // 1-second delay before loading anything
+    let popupWasDragged = false;
 
     // Helper to stop the countdown if the mouse is inside a safe zone
     function cancelDismissal() {
@@ -85,17 +87,121 @@ function setupGitHubPreviews() {
 
     function keepPreviewBelowNavbar() {
         const navbarBottom = document.querySelector('.navbar--fixed-top')?.getBoundingClientRect().bottom ?? 0;
+        const hiddenPopupHeight = Math.max(0, navbarBottom - popup.getBoundingClientRect().top);
+        popup.style.clipPath = hiddenPopupHeight ? `inset(${hiddenPopupHeight}px 0 0)` : '';
+        pointer.style.clipPath = navbarBottom ? `inset(${navbarBottom}px 0 0)` : '';
+    }
 
-        for (const previewPart of [popup, pointer]) {
-            const hiddenHeight = Math.max(0, navbarBottom - previewPart.getBoundingClientRect().top);
-            previewPart.style.clipPath = hiddenHeight ? `inset(${hiddenHeight}px 0 0)` : '';
+    function pointOnRect(rect, target) {
+        const x = Math.min(Math.max(target.x, rect.left), rect.right);
+        const y = Math.min(Math.max(target.y, rect.top), rect.bottom);
+        if (target.x < rect.left || target.x > rect.right || target.y < rect.top || target.y > rect.bottom) {
+            return { x, y };
         }
+
+        const edges = [
+            { x, y: rect.top },
+            { x: rect.right, y },
+            { x, y: rect.bottom },
+            { x: rect.left, y }
+        ];
+        return edges.reduce((closest, point) => {
+            const distance = Math.hypot(point.x - target.x, point.y - target.y);
+            return distance < closest.distance ? { point, distance } : closest;
+        }, { point: edges[0], distance: Infinity }).point;
+    }
+
+    function closestLinkPoint(linkRects, target) {
+        return linkRects.reduce((closest, rect) => {
+            const point = pointOnRect(rect, target);
+            const distance = Math.hypot(point.x - target.x, point.y - target.y);
+            return distance < closest.distance ? { point, distance } : closest;
+        }, { point: target, distance: Infinity }).point;
+    }
+
+    function updateConnector(triggerLink) {
+        const popupRect = popup.getBoundingClientRect();
+        const popupCenter = {
+            x: popupRect.left + popupRect.width / 2,
+            y: popupRect.top + popupRect.height / 2
+        };
+        const linkRects = Array.from(triggerLink.getClientRects());
+        if (!linkRects.length) linkRects.push(triggerLink.getBoundingClientRect());
+
+        const overlapsLink = linkRects.some(rect => (
+            rect.left < popupRect.right &&
+            rect.right > popupRect.left &&
+            rect.top < popupRect.bottom &&
+            rect.bottom > popupRect.top
+        ));
+        if (overlapsLink) {
+            pointer.classList.remove('gh-visible');
+            return;
+        }
+
+        let linkPoint = closestLinkPoint(linkRects, popupCenter);
+        let popupPoint = pointOnRect(popupRect, linkPoint);
+        linkPoint = closestLinkPoint(linkRects, popupPoint);
+        popupPoint = pointOnRect(popupRect, linkPoint);
+
+        const line = pointer.querySelector('line');
+        const dot = pointer.querySelector('circle');
+        line.setAttribute('x1', linkPoint.x);
+        line.setAttribute('y1', linkPoint.y);
+        line.setAttribute('x2', popupPoint.x);
+        line.setAttribute('y2', popupPoint.y);
+        dot.setAttribute('cx', linkPoint.x);
+        dot.setAttribute('cy', linkPoint.y);
+        pointer.classList.add('gh-visible');
+        keepPreviewBelowNavbar();
+    }
+
+    function enablePopupDragging(headerNode) {
+        headerNode.addEventListener('pointerdown', (event) => {
+            if (event.button !== 0 || event.target.closest('a, button')) return;
+
+            event.preventDefault();
+            cancelDismissal();
+            popupWasDragged = true;
+
+            const popupRect = popup.getBoundingClientRect();
+            const pointerOffsetX = event.clientX - popupRect.left;
+            const pointerOffsetY = event.clientY - popupRect.top;
+            headerNode.classList.add('is-dragging');
+            headerNode.setPointerCapture(event.pointerId);
+
+            const movePopup = (moveEvent) => {
+                const boundaryGap = 8;
+                const navbarBottom = document.querySelector('.navbar--fixed-top')?.getBoundingClientRect().bottom ?? 0;
+                const maximumLeft = Math.max(boundaryGap, document.documentElement.clientWidth - popupRect.width - boundaryGap);
+                const maximumTop = Math.max(navbarBottom + boundaryGap, window.innerHeight - popupRect.height - boundaryGap);
+                const popupLeft = Math.min(Math.max(moveEvent.clientX - pointerOffsetX, boundaryGap), maximumLeft);
+                const popupTop = Math.min(Math.max(moveEvent.clientY - pointerOffsetY, navbarBottom + boundaryGap), maximumTop);
+
+                popup.style.left = `${window.scrollX + popupLeft + popupRect.width / 2}px`;
+                popup.style.top = `${window.scrollY + popupTop}px`;
+                if (activeLink) updateConnector(activeLink);
+            };
+
+            const finishDragging = () => {
+                headerNode.classList.remove('is-dragging');
+                headerNode.removeEventListener('pointermove', movePopup);
+                headerNode.removeEventListener('pointerup', finishDragging);
+                headerNode.removeEventListener('pointercancel', finishDragging);
+            };
+
+            headerNode.addEventListener('pointermove', movePopup);
+            headerNode.addEventListener('pointerup', finishDragging);
+            headerNode.addEventListener('pointercancel', finishDragging);
+        });
     }
 
     // Attach dismissal safeguards to the shared popup node
     popup.addEventListener('mouseenter', cancelDismissal);
     popup.addEventListener('mouseleave', startDismissalCountdown);
-    window.addEventListener('scroll', keepPreviewBelowNavbar, { passive: true });
+    window.addEventListener('scroll', () => {
+        if (activeLink && popup.classList.contains('gh-visible')) updateConnector(activeLink);
+    }, { passive: true });
 
     // Immediately remove the popup if any other part of the page is clicked
     document.addEventListener('click', (event) => {
@@ -153,6 +259,7 @@ function setupGitHubPreviews() {
         headerNode.className = 'gh-popup-header';
         headerNode.innerHTML = leftHeader + rightHeader;
         popup.appendChild(headerNode);
+        enablePopupDragging(headerNode);
 
         const closeBtn = headerNode.querySelector('.close-btn');
         closeBtn.addEventListener('click', () => hidePopup(true));
@@ -245,7 +352,7 @@ function setupGitHubPreviews() {
         const lastLinkRect = linkRects.at(-1) ?? firstLinkRect;
         const boundaryGap = 8;
         const viewportLeft = boundaryGap;
-        const viewportRight = window.innerWidth - boundaryGap;
+        const viewportRight = document.documentElement.clientWidth - boundaryGap;
         const contentRect = triggerLink.closest('.theme-doc-markdown')?.getBoundingClientRect();
         const contentLeft = Math.max(viewportLeft, contentRect?.left ?? viewportLeft);
         const contentRight = Math.min(viewportRight, contentRect?.right ?? viewportRight);
@@ -255,7 +362,7 @@ function setupGitHubPreviews() {
         const popupRect = popup.getBoundingClientRect();
         const useContentBounds = contentRect && contentWidth >= popupRect.width + boundaryGap * 2;
 
-        const pointerLength = pointer.offsetHeight;
+        const pointerLength = 48;
         const navbarBottom = document.querySelector('.navbar--fixed-top')?.getBoundingClientRect().bottom ?? 0;
         const topAboveLink = firstLinkRect.top - popupRect.height - pointerLength;
         const popupIsAboveLink = topAboveLink > navbarBottom;
@@ -269,18 +376,13 @@ function setupGitHubPreviews() {
         const popupCenter = Math.min(Math.max(linkCenter, minimumPopupCenter), maximumPopupCenter);
 
         activeLink = triggerLink;
-        popup.style.left = `${window.scrollX + popupCenter}px`;
-        popup.style.top = `${window.scrollY + (popupIsAboveLink
-            ? targetRect.top - popupRect.height - pointerLength
-            : targetRect.bottom + pointerLength)}px`;
-
-        pointer.style.left = `${window.scrollX + linkCenter}px`;
-        pointer.style.top = `${window.scrollY + (popupIsAboveLink
-            ? targetRect.top - pointerLength
-            : targetRect.bottom)}px`;
-        pointer.classList.toggle('gh-pointer--popup-above', popupIsAboveLink);
-        pointer.classList.add('gh-visible');
-        keepPreviewBelowNavbar();
+        if (!popupWasDragged) {
+            popup.style.left = `${window.scrollX + popupCenter}px`;
+            popup.style.top = `${window.scrollY + (popupIsAboveLink
+                ? targetRect.top - popupRect.height - pointerLength
+                : targetRect.bottom + pointerLength)}px`;
+        }
+        updateConnector(triggerLink);
     }
 
     function attachPreviewToLink(link) {
@@ -332,6 +434,7 @@ function setupGitHubPreviews() {
         const showPreview = () => {
             popup.dataset.currentLinkHash = link.hash;
             popup.classList.add('gh-visible');
+            popupWasDragged = false;
 
             if (parsedContent) {
                 renderSnippet(fileName, parsedContent, lang, startLine, endLine);
