@@ -7,19 +7,16 @@
     display: block;
     /* Keep it fixed right above the link layout (won't offset during active scrolling) */
     z-index: 2;
-    background-color: #1e1e1e;
-    border-radius: 6px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
     width: max-content;
-    max-width: 60vw;
+    min-width: min(28rem, calc(100vw - 1rem));
+    max-width: min(60rem, calc(100vw - 1rem));
     max-height: 60vh;
     overflow: hidden;
     /* Cut off edge leaks to support the styled header boundary */
-    border: 1px solid #3c3c3c;
     transform: translateX(-50%);
     opacity: 0;
     visibility: hidden;
-    transition: opacity 0.2s ease-in-out, visibility 0.2s ease-in-out;
+    transition: opacity var(--wiki-transition), visibility var(--wiki-transition);
 }
 
 #gh-global-persistent-popup pre {
@@ -39,6 +36,40 @@
     visibility: visible;
 }
 
+#gh-global-popup-pointer {
+    position: absolute;
+    z-index: 2;
+    width: 2px;
+    height: 48px;
+    pointer-events: none;
+    background: var(--wiki-orange);
+    opacity: 0;
+    visibility: hidden;
+    transform: translateX(-50%);
+    transition: opacity var(--wiki-transition), visibility var(--wiki-transition);
+}
+
+#gh-global-popup-pointer::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: var(--wiki-orange);
+    transform: translate(-50%, -50%);
+}
+
+#gh-global-popup-pointer.gh-pointer--popup-above::after {
+    top: 100%;
+}
+
+#gh-global-popup-pointer.gh-visible {
+    opacity: 1;
+    visibility: visible;
+}
+
 
 
 
@@ -47,19 +78,25 @@
 /******************************************************************/
 
 #gh-global-persistent-popup .gh-popup-header {
-    background-color: #2d2d2d;
-    color: #c9d1d9;
+    background-color: var(--wiki-code-title-bg);
+    color: var(--wiki-muted);
     padding: 6px 12px;
-    font-family: system-ui, -apple-system, sans-serif;
+    font-family: var(--wiki-body-font);
     font-size: 11px;
     font-weight: 600;
-    border-bottom: 1px solid #3c3c3c;
-    text-transform: lowercase;
+    border-bottom: 1px solid var(--wiki-line);
     /* Matches GitHub's subtle tab aesthetics */
 }
 
+#gh-global-persistent-popup .gh-popup-header .header__left {
+    min-width: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
 #gh-global-persistent-popup .file_path_separator {
-    color: gray;
+    color: var(--wiki-dim);
     padding: 0 2px;
 }
 
@@ -71,36 +108,80 @@
 
 #gh-global-persistent-popup .gh-popup-header .header__right {
     display: flex;
-    gap: 10px;
+    flex: 0 0 auto;
+    align-items: center;
+    gap: 4px;
 }
 
-#gh-global-persistent-popup .gh-popup-header .header__right * {
+#gh-global-persistent-popup .gh-popup-header .header__right > * {
     cursor: pointer;
-    width: 15px;
-    height: 15px;
+    width: 2rem;
+    height: 2rem;
     padding: 0;
-    transition: all 0.3s linear;
+    transition: var(--wiki-control-transition);
+}
+
+#gh-global-persistent-popup :is(.github-redirect-btn, .github-loading-link) {
+    border: 1px solid var(--wiki-line);
+    border-radius: 0.375rem;
+    background: var(--wiki-control-background);
+    color: var(--wiki-muted);
+    text-decoration: none;
+    transition: var(--wiki-control-transition);
+    white-space: nowrap;
+}
+
+#gh-global-persistent-popup .gh-popup-header button {
+    border-color: var(--wiki-line);
+}
+
+#gh-global-persistent-popup .gh-popup-header button:is(:hover, :focus-visible) {
+    border-color: var(--wiki-amber);
+}
+
+#gh-global-persistent-popup .gh-popup-header button:disabled {
+    border-color: var(--wiki-line);
+    background: var(--wiki-control-background);
+    color: var(--wiki-muted);
+    cursor: not-allowed;
+    opacity: 0.4;
+}
+
+#gh-global-persistent-popup :is(.github-redirect-btn, .github-loading-link):is(:hover, :focus-visible) {
+    border-color: var(--wiki-amber);
+    background: var(--wiki-control-hover-background);
+    color: var(--wiki-amber);
+    text-decoration: none;
+}
+
+#gh-global-persistent-popup .gh-popup-header .github-redirect-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    width: auto;
+    padding: 0 8px;
+    text-transform: none;
+}
+
+#gh-global-persistent-popup .gh-popup-header .header__right > *:focus-visible {
+    outline: 2px solid currentColor;
+    outline-offset: 2px;
 }
 
 #gh-global-persistent-popup .gh-popup-header .close-btn {
-    color: red;
-    border: none;
-    background: none;
+    color: var(--wiki-danger);
 }
 
 #gh-global-persistent-popup .gh-popup-header .close-btn:hover {
-    color: darkred;
-    background: none;
+    color: var(--wiki-danger);
 }
 
-#gh-global-persistent-popup .gh-popup-header .clean-btn,
-#gh-global-persistent-popup .gh-popup-header .github-redirect-btn {
-    color: #DDD;
+#gh-global-persistent-popup .gh-popup-header .clean-btn:not(.close-btn) {
+    color: var(--wiki-muted);
 }
 
-#gh-global-persistent-popup .gh-popup-header .clean-btn:hover,
-#gh-global-persistent-popup .gh-popup-header .github-redirect-btn:hover {
-    color: #777;
+#gh-global-persistent-popup .gh-popup-header .clean-btn:not(.close-btn):not(:disabled):hover {
+    color: var(--wiki-amber);
 }
 
 
@@ -110,19 +191,53 @@
 /****************************** Body ******************************/
 /******************************************************************/
 
+#gh-global-persistent-popup .gh-popup-body {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+}
+
+#gh-global-persistent-popup .peek-controls {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    gap: 4px;
+    padding: 8px;
+    border-left: 1px solid var(--wiki-line);
+    background: var(--wiki-code-title-bg);
+}
+
+#gh-global-persistent-popup .peek-controls .clean-btn {
+    width: 2rem;
+    height: 2rem;
+    padding: 0;
+    border-color: var(--wiki-line);
+    color: var(--wiki-muted);
+    transition: var(--wiki-control-transition);
+}
+
+#gh-global-persistent-popup .peek-controls .clean-btn:is(:hover, :focus-visible) {
+    border-color: var(--wiki-amber);
+    color: var(--wiki-amber);
+}
+
+#gh-global-persistent-popup .peek-controls .clean-btn:disabled {
+    border-color: var(--wiki-line);
+    color: var(--wiki-muted);
+    cursor: not-allowed;
+    opacity: 0.4;
+}
 
 #gh-global-persistent-popup pre {
     margin: 0 !important;
     padding: 12px !important;
     /* Move code spacing margins inward away from borders */
-    background: transparent !important;
     border: none !important;
     overflow: auto;
     max-height: 300px;
 }
 
 #gh-global-persistent-popup code {
-    font-family: ui-monospace, SFMono-Regular, SF Mono, Menlo, Consolas, monospace !important;
+    font-family: var(--wiki-code-font) !important;
     font-size: 13px !important;
     line-height: 1.5 !important;
     padding: 0 !important;
@@ -131,14 +246,21 @@
 }
 
 #gh-global-persistent-popup .loading {
-    color: #8b949e;
-    font-family: system-ui, -apple-system, sans-serif;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: var(--wiki-muted);
+    font-family: var(--wiki-body-font);
     font-size: 13px;
     padding: 14px;
 }
 
+#gh-global-persistent-popup .github-loading-link {
+    padding: 3px 6px;
+}
+
 #gh-global-persistent-popup .loading.error {
-    color: red;
+    color: var(--wiki-danger);
 }
 
 
@@ -158,23 +280,22 @@
 }
 
 #gh-global-persistent-popup .gh-line-number {
+    flex: 0 0 45px;
     user-select: none;
     opacity: 0.5;
     width: 45px;
     text-align: right;
     padding-right: 12px;
-    border-right: 1px solid gray;
+    border-right: 1px solid var(--wiki-line);
+    color: var(--wiki-dim);
     margin-right: 1em;
 }
 
 #gh-global-persistent-popup .gh-line-content {
-    flex: 1;
+    flex: 1 0 auto;
 }
 
 #gh-global-persistent-popup .gh-code-line.selected-line {
-    background-color: rgba(40, 40, 0, 1);
-}
-
-#gh-global-persistent-popup .gh-code-line * {
-    flex: 0 0 auto;
+    background: color-mix(in srgb, var(--wiki-amber) 10%, transparent);
+    box-shadow: inset 0.1875rem 0 var(--wiki-amber);
 }
