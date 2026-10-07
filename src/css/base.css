@@ -1,5 +1,4 @@
 :root {
-  /* Light */
   --wiki-bg: #f7f1e7;
   --wiki-bg-deep: #eee3d3;
   --wiki-surface: #fffaf2;
@@ -26,22 +25,31 @@
   --wiki-panel-background:
     linear-gradient(180deg, rgba(255, 255, 255, 0.8), rgba(255, 250, 242, 0.8)),
     rgba(255, 250, 242, 0.7);
-  --wiki-panel-shadow: 0 1.125rem 2.75rem rgba(35, 27, 19, 0.1);
-  --wiki-control-border: var(--wiki-line-warm);
+  --wiki-panel-shadow: 0 1.125rem 2.75rem rgba(35, 27, 19, 0.1), inset 0 0.0625rem 0 rgba(255, 255, 255, 0.65);
+  --wiki-control-border: var(--wiki-line);
   --wiki-control-background: rgba(255, 250, 242, 0.8);
   --wiki-control-hover-background: rgba(255, 255, 255, 0.95);
+  --wiki-control-shadow: inset 0 0 0 0.0625rem rgba(255, 255, 255, 0.45);
+  --wiki-control-hover-shadow: 0 0.65rem 1.5rem rgba(35, 27, 19, 0.1), 0 0 0 0.1875rem rgba(138, 88, 0, 0.075);
+  --wiki-control-selected-background: color-mix(in srgb, var(--wiki-amber) 15%, var(--wiki-surface));
+  --wiki-control-selected-border: color-mix(in srgb, var(--wiki-amber) 45%, transparent);
+  --wiki-control-lift: -0.125rem;
+  --wiki-focus-ring: 0.125rem solid var(--wiki-amber);
+  --wiki-focus-offset: 0.1875rem;
   --wiki-shadow: 0 1.125rem 2.75rem rgba(35, 27, 19, 0.1);
   --wiki-shadow-soft: 0 0.5rem 1.5rem rgba(35, 27, 19, 0.1);
   --wiki-display-font: 'Lora', serif;
   --wiki-body-font: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
   --wiki-code-font: "Cascadia Mono", "SFMono-Regular", Consolas, "Liberation Mono", monospace;
   --wiki-radius-control: 0.5rem;
-  --wiki-radius-panel: 0.75rem;
+  --wiki-radius-compact: 0.375rem;
+  --wiki-radius-panel: 0.5rem;
   --wiki-transition: 180ms ease;
   --wiki-control-transition:
     color var(--wiki-transition),
     background-color var(--wiki-transition),
-    border-color var(--wiki-transition);
+    border-color var(--wiki-transition),
+    box-shadow var(--wiki-transition);
   --wiki-control-lift-transition:
     var(--wiki-control-transition),
     transform var(--wiki-transition);
@@ -90,7 +98,7 @@ html[data-theme='dark'] {
   --wiki-surface: #101b27;
   --wiki-surface-raised: #162434;
   --wiki-line: rgba(115, 144, 169, 0.2);
-  --wiki-line-warm: rgba(251, 176, 59, 0.3);
+  --wiki-line-warm: rgba(251, 176, 59, 0.2);
   --wiki-gold: #f6c80d;
   --wiki-amber: #fbb03b;
   --wiki-orange: #ff7417;
@@ -107,14 +115,14 @@ html[data-theme='dark'] {
   --wiki-glare-orange: rgba(255, 116, 23, 0.2);
   --wiki-glare-blue: rgba(45, 64, 83, 0.35);
   --wiki-glare-amber: rgba(251, 176, 59, 0.1);
-  --wiki-panel-border: var(--wiki-line);
   --wiki-panel-background:
     linear-gradient(180deg, rgba(22, 36, 52, 0.8), rgba(16, 29, 41, 0.8)),
     rgba(16, 27, 39, 0.7);
-  --wiki-panel-shadow: 0 1.125rem 2.75rem rgba(0, 0, 0, 0.25);
-  --wiki-control-border: rgba(251, 176, 59, 0.8);
+  --wiki-panel-shadow: 0 1.125rem 2.75rem rgba(0, 0, 0, 0.25), inset 0 0.0625rem 0 rgba(255, 255, 255, 0.05);
   --wiki-control-background: rgba(16, 27, 39, 0.7);
   --wiki-control-hover-background: rgba(28, 44, 60, 0.9);
+  --wiki-control-shadow: inset 0 0 0 0.0625rem rgba(255, 255, 255, 0.025);
+  --wiki-control-hover-shadow: 0 0.65rem 1.5rem rgba(0, 0, 0, 0.225), 0 0 0 0.1875rem rgba(251, 176, 59, 0.075);
   --wiki-shadow: 0 1.5rem 5rem rgba(0, 0, 0, 0.4);
   --wiki-shadow-soft: 0 0.75rem 2rem rgba(0, 0, 0, 0.25);
   --wiki-selection-color: #071019;
@@ -136,7 +144,7 @@ html[data-theme='dark'] {
   --ifm-link-color: var(--wiki-orange);
   --ifm-link-hover-color: var(--wiki-amber);
   --ifm-navbar-background-color: rgba(7, 16, 25, 0.8);
-  --ifm-navbar-link-color: #f4eadc;
+  --ifm-navbar-link-color: var(--wiki-text);
   --ifm-code-background: rgba(255, 255, 255, 0.1);
   --ifm-table-head-background: rgba(251, 176, 59, 0.1);
   --ifm-table-stripe-background: rgba(255, 255, 255, 0.05);
@@ -218,8 +226,8 @@ body:not(:has(.kingdomsx-not-found)) a:focus-visible,
 body:not(:has(.kingdomsx-not-found)) button:focus-visible,
 body:not(:has(.kingdomsx-not-found)) summary:focus-visible,
 body:not(:has(.kingdomsx-not-found)) [tabindex]:focus-visible {
-  outline: 0.125rem solid var(--wiki-amber);
-  outline-offset: 0.1875rem;
+  outline: var(--wiki-focus-ring);
+  outline-offset: var(--wiki-focus-offset);
 }
 
 body:not(:has(.kingdomsx-not-found)) .theme-doc-markdown {

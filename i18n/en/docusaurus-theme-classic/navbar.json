@@ -27,6 +27,10 @@
     "message": "Servers",
     "description": "Navbar item with label Servers"
   },
+  "item.label.Editor": {
+    "message": "Editor",
+    "description": "Navbar item with label Editor"
+  },
   "item.label.Discord": {
     "message": "Discord",
     "description": "Navbar item with label Discord"

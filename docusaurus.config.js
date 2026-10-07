@@ -281,6 +281,11 @@ export default {
           position: "left",
         },
         {
+          href: "https://editor.kingdomsx.com",
+          label: "Editor",
+          position: "left",
+        },
+        {
           href: "https://discord.kingdomsx.com",
           label: "Discord",
           position: "right",

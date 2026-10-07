@@ -5,6 +5,7 @@ import {
   faGlobe,
   faHouse,
   faServer,
+  faSliders,
   faArrowsRotate
 } from '@fortawesome/free-solid-svg-icons';
 import {
@@ -18,6 +19,7 @@ export const mainMenuIcons = {
   'GitHub Version': faCodeBranch,
   Download: faDownload,
   Servers: faServer,
+  Editor: faSliders,
   Website: faGlobe,
   Discord: faDiscord,
   GitHub: faGithub,

@@ -13,8 +13,8 @@
   --sidebar-menu-border-color: var(--wiki-line);
   --sidebar-menu-hover-background: var(--wiki-control-hover-background);
   --sidebar-menu-hover-border-color: var(--wiki-amber);
-  --sidebar-menu-active-border-color: var(--wiki-amber);
-  --sidebar-menu-active-background: color-mix(in srgb, var(--wiki-amber) 15%, var(--wiki-surface));
+  --sidebar-menu-active-border-color: var(--wiki-control-selected-border);
+  --sidebar-menu-active-background: var(--wiki-control-selected-background);
   --sidebar-collapse-duration: 180ms;
   --sidebar-collapse-easing: cubic-bezier(0.4, 0, 1, 1);
 }
@@ -97,7 +97,7 @@
   border: 0.0625rem solid var(--sidebar-menu-border-color);
   border-radius: var(--wiki-radius-control);
   background: var(--sidebar-menu-background);
-  box-shadow: none;
+  box-shadow: var(--wiki-control-shadow);
 }
 
 .theme-doc-sidebar-menu .menu__list-item > .menu__link {
@@ -149,14 +149,19 @@
   background: transparent;
 }
 
+.theme-doc-sidebar-menu .menu__list-item-collapsible :focus-visible {
+  outline-offset: -0.1875rem;
+}
+
 .theme-doc-sidebar-menu .menu__list-item > .menu__link:hover,
 .theme-doc-sidebar-menu .menu__list-item > .menu__link:focus-visible,
-.theme-doc-sidebar-menu .menu__list-item-collapsible:hover {
-  transform: translateY(-0.125rem);
+.theme-doc-sidebar-menu .menu__list-item-collapsible:hover,
+.theme-doc-sidebar-menu .menu__list-item-collapsible:focus-within {
+  transform: translateY(var(--wiki-control-lift));
   border-color: var(--sidebar-menu-hover-border-color);
   background: var(--sidebar-menu-hover-background);
   color: var(--sidebar-color);
-  box-shadow: none;
+  box-shadow: var(--wiki-control-hover-shadow);
 }
 
 .theme-doc-sidebar-menu .menu__list-item-collapsible > .menu__link:hover,
@@ -171,10 +176,14 @@
 }
 
 .theme-doc-sidebar-menu .menu__list-item > .menu__link--active,
-.theme-doc-sidebar-menu .menu__list-item-collapsible:has(> .menu__link--active) {
+.theme-doc-sidebar-menu .menu__list-item > .menu__link--active:is(:hover, :focus-visible),
+.theme-doc-sidebar-menu .menu__list-item-collapsible:has(> .menu__link--active),
+.theme-doc-sidebar-menu .menu__list-item-collapsible:has(> .menu__link--active):is(:hover, :focus-within) {
+  transform: none;
   border-color: var(--sidebar-menu-active-border-color);
   background: var(--sidebar-menu-active-background);
   color: var(--sidebar-color);
+  box-shadow: var(--wiki-control-shadow);
 }
 
 .theme-doc-sidebar-menu .menu__list-item-collapsible > .menu__link--active {
@@ -260,6 +269,7 @@
 }
 
 .theme-doc-sidebar-menu .menu__list .menu__link--active,
+.theme-doc-sidebar-menu .menu__list .menu__link--active:is(:hover, :focus-visible),
 .theme-doc-sidebar-menu .menu__list .menu__list-item-collapsible:has(> .menu__link--active) {
   border-color: var(--sidebar-menu-active-border-color);
   background: var(--sidebar-menu-active-background);

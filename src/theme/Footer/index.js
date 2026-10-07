@@ -31,6 +31,7 @@ export default function Footer() {
           <a href="https://kingdomsx.com" target="_blank" rel="noopener noreferrer">Website</a>
           <a href="https://discord.kingdomsx.com" target="_blank" rel="noopener noreferrer">Discord</a>
           <a href="https://servers.kingdomsx.com" target="_blank" rel="noopener noreferrer">Servers</a>
+          <a href="https://editor.kingdomsx.com" target="_blank" rel="noopener noreferrer">Editor</a>
           <a href="https://download.kingdomsx.com" target="_blank" rel="noopener noreferrer">Download</a>
         </nav>
       </div>
