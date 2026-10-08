@@ -88,7 +88,10 @@ export default function NavbarMobileSidebar() {
         const closedDetails = element.closest('details:not([open])');
         return !element.closest('[inert]') && (!closedDetails || element.tagName === 'SUMMARY');
       });
-    requestAnimationFrame(() => sidebar.querySelector('.navbar-sidebar__close')?.focus());
+    // Prevent focus from scrolling the offscreen drawer during its opening transition
+    requestAnimationFrame(() =>
+      sidebar.querySelector('.navbar-sidebar__close')?.focus({preventScroll: true}),
+    );
 
     const handleKeyDown = (event) => {
       if (event.key === 'Escape') {
