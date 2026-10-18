@@ -177,8 +177,7 @@ a::selection {
   color: var(--wiki-link-selection-color);
 }
 
-body::before,
-body::after {
+body::before {
   content: "";
   position: fixed;
   inset: 0;
@@ -193,14 +192,6 @@ body::before {
     radial-gradient(circle at 88% 72%, var(--wiki-glare-amber), transparent 28rem),
     radial-gradient(circle at 18% 92%, color-mix(in srgb, var(--wiki-glare-blue) 62%, transparent), transparent 30rem),
     linear-gradient(180deg, var(--wiki-bg) 0%, var(--wiki-bg-deep) 100%);
-}
-
-body::after {
-  background-image:
-    linear-gradient(rgba(251, 176, 59, 0.03) 0.0625rem, transparent 0.0625rem),
-    linear-gradient(90deg, rgba(251, 176, 59, 0.03) 0.0625rem, transparent 0.0625rem);
-  background-size: 5rem 5rem;
-  opacity: 0.35;
 }
 
 #__docusaurus {
