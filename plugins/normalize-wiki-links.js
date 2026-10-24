@@ -2,7 +2,7 @@ import { visit } from "unist-util-visit";
 
 const WIKI_ROOTS = [
   "https://github.com/CryptoMorin/KingdomsX/wiki",
-  "https://wiki.kingdomsx.com",
+  "https://kingdoms.wiki",
 ];
 
 export default function normalizeWikiLinks() {

@@ -2,7 +2,7 @@
 
 [KingdomsX](https://github.com/CryptoMorin/KingdomsX) is a Minecraft plugin similar to Factions, with more advanced core features and additional mechanics such as turrets, structures, and invasions.
 
-This repository contains the public [wiki](https://wiki.kingdomsx.com) for the project. It is built with Docusaurus and deployed on GitHub Pages. Wiki page content is sourced from the [KingdomsX/wiki](https://github.com/CryptoMorin/KingdomsX/wiki) repository.
+This repository contains the public [wiki](https://kingdoms.wiki) for the project. It is built with Docusaurus and deployed on GitHub Pages. Wiki page content is sourced from the [KingdomsX/wiki](https://github.com/CryptoMorin/KingdomsX/wiki) repository.
 
 ## Stack
 - **Docusaurus** - documentation site framework

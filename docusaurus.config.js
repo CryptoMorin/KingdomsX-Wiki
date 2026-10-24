@@ -20,7 +20,7 @@ import { themes } from 'prism-react-renderer';
 import prism from 'prismjs';
 import logger from '@docusaurus/logger';
 
-const siteUrl = 'https://wiki.kingdomsx.com';
+const siteUrl = 'https://kingdoms.wiki';
 const siteDescription = 'Official wiki for KingdomsX, a Minecraft plugin similar to Factions which provides more advanced features, mechanics & invasions to make the game more fun.';
 const siteKeywords = 'Kingdoms, KingdomsX, KingdomsX wiki, Minecraft kingdoms plugin, Minecraft factions plugin, Spigot plugin, land claiming plugin, Minecraft server plugin, PvP plugin';
 const localKingdomsX = process.env.LOCAL_KINGDOMSX === 'true';
