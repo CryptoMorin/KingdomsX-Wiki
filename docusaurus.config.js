@@ -53,11 +53,6 @@ export default {
     siteDescription,
   },
 
-  organizationName: 'CryptoMorin',
-  projectName: 'KingdomsX',
-  deploymentBranch: 'gh-pages',
-  githubHost: 'github.io',
-
   trailingSlash: false,
   onBrokenLinks: 'warn',
 
