@@ -1,8 +1,12 @@
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCodeBranch } from '@fortawesome/free-solid-svg-icons';
+import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 
 export default function Footer() {
+  const { siteConfig } = useDocusaurusContext();
+  const { source } = siteConfig.customFields;
+
   return (
     <div className="footer">
       <div className="container footer-container">
@@ -19,10 +23,17 @@ export default function Footer() {
             </span>
 
             <span className="footer-source">
-              <FontAwesomeIcon icon={faCodeBranch} aria-hidden="true" />{' '}
-              <a href="https://github.com/CryptoMorin/KingdomsX-Wiki" target="_blank" rel="noopener noreferrer">KingdomsX-Wiki</a>
-              &bull; Powered by <a href="https://docusaurus.io/" target="_blank" rel="noopener noreferrer">Docusaurus</a>
-              <img src="/img/docusaurus_keytar.svg" alt="" />
+              <span>
+                <FontAwesomeIcon icon={faCodeBranch} aria-hidden="true" />{' '}
+                <a href={source.repository} target="_blank" rel="noopener noreferrer">KingdomsX-Wiki</a>
+                {source.commit && (
+                  <> @ <a href={`${source.repository}/commit/${source.commit}`} target="_blank" rel="noopener noreferrer">{source.commit.slice(0, 7)}</a></>
+                )}
+              </span>
+              <span className="footer-source-attribution">
+                (<a href="https://docusaurus.io/" target="_blank" rel="noopener noreferrer">Docusaurus</a>
+                <img src="/img/docusaurus_keytar.svg" alt="" />)
+              </span>
             </span>
           </div>
         </div>

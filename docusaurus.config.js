@@ -25,6 +25,7 @@ const siteDescription = 'Official wiki for KingdomsX, a Minecraft plugin similar
 const siteKeywords = 'Kingdoms, KingdomsX, KingdomsX wiki, Minecraft kingdoms plugin, Minecraft factions plugin, Spigot plugin, land claiming plugin, Minecraft server plugin, PvP plugin';
 const localKingdomsX = process.env.LOCAL_KINGDOMSX === 'true';
 const currentLocale = process.env.DOCUSAURUS_CURRENT_LOCALE;
+const gitCommit = process.env.GITHUB_SHA?.trim() || '';
 
 if (!currentLocale) {
   // Each locale executes this file. We only want to print it the global one.
@@ -51,14 +52,15 @@ export default {
 
   customFields: {
     siteDescription,
+    LOCAL_KINGDOMSX: localKingdomsX,
+    source: {
+      repository: 'https://github.com/CryptoMorin/KingdomsX-Wiki',
+      commit: gitCommit,
+    },
   },
 
   trailingSlash: false,
   onBrokenLinks: 'warn',
-
-  customFields: {
-    LOCAL_KINGDOMSX: localKingdomsX
-  },
 
   clientModules: [
     './src/js/hash-scroll.js',

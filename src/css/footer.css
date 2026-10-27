@@ -42,11 +42,17 @@
 
 .footer-source {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   flex-shrink: 0;
   gap: 0.25rem;
   color: var(--wiki-dim);
   white-space: nowrap;
+}
+
+.footer-source-attribution {
+  display: inline-flex;
+  align-items: center;
 }
 
 .footer .footer-source img {
@@ -91,6 +97,10 @@
 
   .footer-copy {
     align-items: center;
+  }
+
+  .footer-source {
+    justify-content: center;
   }
 
   .footer-right {
