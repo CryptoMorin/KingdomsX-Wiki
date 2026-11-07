@@ -1,5 +1,6 @@
 import fs from 'node:fs';
 import path from 'node:path';
+import preprocessGithubOnlyContent from './preprocess-github-only-content.js';
 
 const githubWikiPath = '/CryptoMorin/KingdomsX/wiki';
 const githubWikiPathLower = githubWikiPath.toLowerCase();
@@ -139,6 +140,9 @@ export function createWikiSidebar({sidebarFile = 'docs/_Sidebar.md'} = {}) {
     throw new Error(`GitHub wiki sidebar not found at ${absolutePath}. Populate docs/ before building.`);
   }
 
-  const source = fs.readFileSync(absolutePath, 'utf8');
+  const source = preprocessGithubOnlyContent({
+    fileContent: fs.readFileSync(absolutePath, 'utf8'),
+    filePath: absolutePath,
+  });
   return parseSidebarMarkdown(source, absolutePath).map(toSidebarItem);
 }
